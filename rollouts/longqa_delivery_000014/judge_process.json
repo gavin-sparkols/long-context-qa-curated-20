@@ -1,0 +1,178 @@
+{
+  "question_audit": {
+    "valid_for_difficulty": true,
+    "answer_supported_by_evidence": true,
+    "answer_unique": true,
+    "instructions_consistent": true,
+    "answer_leakage": false,
+    "format_trap": false,
+    "issues": [],
+    "reason": "题目以 typing.NamedTuple 小节弃用说明为范围，要求识别并输出两类在 3.15 被禁止的函数式调用模式；标准答案由两条证据直接支持，文档恰好给出两条弃用说明，答案唯一；题目要求格式明确（[Answer] + 两行调用模式｜版本），标准答案满足该格式；题干未泄露具体调用写法，且需定位原文并跨版本提取信息，具有长上下文必要性。",
+    "recommendation": "keep",
+    "checks": {
+      "evidence_support": {
+        "passed": true,
+        "reason": "两条证据分别对应关键字参数语法与省略 fields/传 None 两种弃用说明，完整支持标准答案两行内容。"
+      },
+      "answer_uniqueness": {
+        "passed": true,
+        "reason": "NamedTuple 小节中从 3.13 起弃用并在 3.15 禁止的内容只有这两条；第二条虽含两种写法，但属于同一弃用说明，合并为一行不影响唯一性。"
+      },
+      "instruction_consistency": {
+        "passed": true,
+        "reason": "标准答案以[Answer]开头，随后两行，每行均为“调用模式｜3.15”，且未列替代方案，符合题目要求。"
+      },
+      "leakage": {
+        "passed": true,
+        "reason": "题干仅提示去 NamedTuple 小节查找弃用说明，未给出具体调用示例，答案信息未在题干中泄露。"
+      },
+      "long_context_necessity": {
+        "passed": true,
+        "reason": "需要从长文档中定位 typing.NamedTuple 小节并提取弃用版本与调用示例，无法仅凭题干作答。"
+      },
+      "difficulty_signal": {
+        "passed": true,
+        "reason": "候选回答在是否包含 NamedTuple(\"NT\", None) 变体及是否遗漏关键字参数模式上产生实质差异，反映内容理解而非格式问题。"
+      }
+    }
+  },
+  "judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "reason": "第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\"NT\", None) 变体，实质信息不完整。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", None) 调用变体"
+      ],
+      "wrong_points": [],
+      "score": 0.5
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "reason": "第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\"NT\", None) 变体，实质信息不完整。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", None) 调用变体"
+      ],
+      "wrong_points": [],
+      "score": 0.5
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "reason": "第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\"NT\", None) 变体，实质信息不完整。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", None) 调用变体"
+      ],
+      "wrong_points": [],
+      "score": 0.5
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "reason": "第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\"NT\", None) 变体，实质信息不完整。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", None) 调用变体"
+      ],
+      "wrong_points": [],
+      "score": 0.5
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "correct",
+      "reason": "去除可选的赋值前缀后，两行内容与标准答案逐行等价，第二行同时包含省略 fields 与传 None 两种写法，语义完整。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": true,
+      "substantive_error": false,
+      "error_type": "none",
+      "missing_points": [],
+      "wrong_points": [],
+      "score": 1.0
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "reason": "两行分别列出省略 fields 与传 None 的变体，但完全遗漏第一种弃用模式 NamedTuple(\"NT\", x=int)，且输出顺序不符合文档出现顺序，未回答题目所问的两类模式。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", x=int) 调用模式"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "reason": "两行分别列出省略 fields 与传 None 的变体，但完全遗漏第一种弃用模式 NamedTuple(\"NT\", x=int)，且输出顺序不符合文档出现顺序，未回答题目所问的两类模式。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", x=int) 调用模式"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "reason": "两行分别列出省略 fields 与传 None 的变体，但完全遗漏第一种弃用模式 NamedTuple(\"NT\", x=int)，且输出顺序不符合文档出现顺序，未回答题目所问的两类模式。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "NamedTuple(\"NT\", x=int) 调用模式"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    }
+  ],
+  "question_issue": false,
+  "question_issue_reason": "",
+  "judge_policy_version": "comprehensive-v4",
+  "judge_model": "deepseek-reasoner",
+  "usage": {
+    "prompt_tokens": 2612,
+    "completion_tokens": 6594,
+    "total_tokens": 9206,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 5136
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 1332
+  },
+  "elapsed_seconds": 42.892,
+  "raw_judge_output": "{\"question_audit\": {\"valid_for_difficulty\": true, \"answer_supported_by_evidence\": true, \"answer_unique\": true, \"instructions_consistent\": true, \"answer_leakage\": false, \"format_trap\": false, \"issues\": [], \"reason\": \"题目以 typing.NamedTuple 小节弃用说明为范围，要求识别并输出两类在 3.15 被禁止的函数式调用模式；标准答案由两条证据直接支持，文档恰好给出两条弃用说明，答案唯一；题目要求格式明确（[Answer] + 两行调用模式｜版本），标准答案满足该格式；题干未泄露具体调用写法，且需定位原文并跨版本提取信息，具有长上下文必要性。\", \"recommendation\": \"keep\", \"checks\": {\"evidence_support\": {\"passed\": true, \"reason\": \"两条证据分别对应关键字参数语法与省略 fields/传 None 两种弃用说明，完整支持标准答案两行内容。\"}, \"answer_uniqueness\": {\"passed\": true, \"reason\": \"NamedTuple 小节中从 3.13 起弃用并在 3.15 禁止的内容只有这两条；第二条虽含两种写法，但属于同一弃用说明，合并为一行不影响唯一性。\"}, \"instruction_consistency\": {\"passed\": true, \"reason\": \"标准答案以[Answer]开头，随后两行，每行均为“调用模式｜3.15”，且未列替代方案，符合题目要求。\"}, \"leakage\": {\"passed\": true, \"reason\": \"题干仅提示去 NamedTuple 小节查找弃用说明，未给出具体调用示例，答案信息未在题干中泄露。\"}, \"long_context_necessity\": {\"passed\": true, \"reason\": \"需要从长文档中定位 typing.NamedTuple 小节并提取弃用版本与调用示例，无法仅凭题干作答。\"}, \"difficulty_signal\": {\"passed\": true, \"reason\": \"候选回答在是否包含 NamedTuple(\\\"NT\\\", None) 变体及是否遗漏关键字参数模式上产生实质差异，反映内容理解而非格式问题。\"}}}, \"judgments\": [{\"rollout_id\": 1, \"verdict\": \"partial\", \"reason\": \"第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\\\"NT\\\", None) 变体，实质信息不完整。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", None) 调用变体\"], \"wrong_points\": []}, {\"rollout_id\": 2, \"verdict\": \"partial\", \"reason\": \"第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\\\"NT\\\", None) 变体，实质信息不完整。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", None) 调用变体\"], \"wrong_points\": []}, {\"rollout_id\": 3, \"verdict\": \"partial\", \"reason\": \"第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\\\"NT\\\", None) 变体，实质信息不完整。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", None) 调用变体\"], \"wrong_points\": []}, {\"rollout_id\": 4, \"verdict\": \"partial\", \"reason\": \"第一行正确；第二行只列出省略 fields 的写法，遗漏同一弃用说明中的 NamedTuple(\\\"NT\\\", None) 变体，实质信息不完整。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", None) 调用变体\"], \"wrong_points\": []}, {\"rollout_id\": 5, \"verdict\": \"correct\", \"reason\": \"去除可选的赋值前缀后，两行内容与标准答案逐行等价，第二行同时包含省略 fields 与传 None 两种写法，语义完整。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": true, \"substantive_error\": false, \"error_type\": \"none\", \"missing_points\": [], \"wrong_points\": []}, {\"rollout_id\": 6, \"verdict\": \"incorrect\", \"reason\": \"两行分别列出省略 fields 与传 None 的变体，但完全遗漏第一种弃用模式 NamedTuple(\\\"NT\\\", x=int)，且输出顺序不符合文档出现顺序，未回答题目所问的两类模式。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", x=int) 调用模式\"], \"wrong_points\": []}, {\"rollout_id\": 7, \"verdict\": \"incorrect\", \"reason\": \"两行分别列出省略 fields 与传 None 的变体，但完全遗漏第一种弃用模式 NamedTuple(\\\"NT\\\", x=int)，且输出顺序不符合文档出现顺序，未回答题目所问的两类模式。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", x=int) 调用模式\"], \"wrong_points\": []}, {\"rollout_id\": 8, \"verdict\": \"incorrect\", \"reason\": \"两行分别列出省略 fields 与传 None 的变体，但完全遗漏第一种弃用模式 NamedTuple(\\\"NT\\\", x=int)，且输出顺序不符合文档出现顺序，未回答题目所问的两类模式。\", \"format_only_difference\": false, \"format_compliance\": true, \"semantic_correct\": false, \"substantive_error\": true, \"error_type\": \"substantive_omission\", \"missing_points\": [\"NamedTuple(\\\"NT\\\", x=int) 调用模式\"], \"wrong_points\": []}]}"
+}

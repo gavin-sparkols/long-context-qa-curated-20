@@ -1,0 +1,71 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目、证据与标准答案成立。正文属于IETF密码算法序列化与注册规范，domain“技术与软件文档”正确；题目需跨第3—8节及附录整合不同作用的远距离证据，T1.1/Full分类合理。8轮均未完整表达JOSE签名经base64url编码后长度大于3309字节；部分回答还欠缺私钥长度验证细节或误写COSE算法值，因此完全正确数为0，严格低于4，终审接受。",
+  "issue_codes": [
+    "ROLLOUT_OMITS_JOSE_ENCODED_SIZE",
+    "ROLLOUT_UNDERSPECIFIES_PRIVATE_VALIDATION"
+  ],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "score": 0.94,
+      "format_only": false,
+      "reason": "主体字段正确，但jose_signature_encoding遗漏编码后长度大于3309字节；私钥验证仅写seed length check，未明确256 bits/32 bytes及强制性。换行不是判错原因。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "score": 0.94,
+      "format_only": false,
+      "reason": "绝大多数字段正确，但遗漏JOSE编码后签名长度大于3309字节，且私钥验证未明确长度和MUST要求。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.96,
+      "format_only": false,
+      "reason": "私钥验证已给出32 bytes，其他核心字段正确；仍遗漏JOSE签名base64url编码后长度大于3309字节。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.94,
+      "format_only": false,
+      "reason": "核心配置正确，但未写明JOSE编码后签名长度超过3309字节，私钥验证也未明确256 bits/32 bytes和强制性。换行不影响判断。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "partial",
+      "score": 0.95,
+      "format_only": false,
+      "reason": "已表达长度检查的强制性，且多数配置正确；仍未在验证说明中明确256 bits/32 bytes，并遗漏JOSE编码后长度大于3309字节。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.82,
+      "format_only": false,
+      "reason": "除共同遗漏JOSE编码后长度和私钥验证细节外，还把cose_alg错误写成字符串ML-DSA-65而非-49；COSE拇指纹标签顺序也未按要求输出。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.94,
+      "format_only": false,
+      "reason": "多数标量、拇指纹成员和kid正确，但遗漏JOSE编码后签名长度大于3309字节，私钥验证未明确强制性及256 bits/32 bytes。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.84,
+      "format_only": false,
+      "reason": "多数配置字段正确，但required_private_validation仅为布尔值，未给出必须检查种子长度及256 bits/32 bytes；同时遗漏JOSE编码后长度说明，COSE标签顺序也与要求不符。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目、证据与标准答案成立。正文属于IETF密码算法序列化与注册规范，domain“技术与软件文档”正确；题目需跨第3—8节及附录整合不同作用的远距离证据，T1.1/Full分类合理。8轮均未完整表达JOSE签名经base64url编码后长度大于3309字节；部分回答还欠缺私钥长度验证细节或误写COSE算法值，因此完全正确数为0，严格低于4，终审接受。\",\"issue_codes\":[\"ROLLOUT_OMITS_JOSE_ENCODED_SIZE\",\"ROLLOUT_UNDERSPECIFIES_PRIVATE_VALIDATION\"],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"partial\",\"score\":0.94,\"format_only\":false,\"reason\":\"主体字段正确，但jose_signature_encoding遗漏编码后长度大于3309字节；私钥验证仅写seed length check，未明确256 bits/32 bytes及强制性。换行不是判错原因。\"},{\"rollout_id\":2,\"verdict\":\"partial\",\"score\":0.94,\"format_only\":false,\"reason\":\"绝大多数字段正确，但遗漏JOSE编码后签名长度大于3309字节，且私钥验证未明确长度和MUST要求。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.96,\"format_only\":false,\"reason\":\"私钥验证已给出32 bytes，其他核心字段正确；仍遗漏JOSE签名base64url编码后长度大于3309字节。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.94,\"format_only\":false,\"reason\":\"核心配置正确，但未写明JOSE编码后签名长度超过3309字节，私钥验证也未明确256 bits/32 bytes和强制性。换行不影响判断。\"},{\"rollout_id\":5,\"verdict\":\"partial\",\"score\":0.95,\"format_only\":false,\"reason\":\"已表达长度检查的强制性，且多数配置正确；仍未在验证说明中明确256 bits/32 bytes，并遗漏JOSE编码后长度大于3309字节。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.82,\"format_only\":false,\"reason\":\"除共同遗漏JOSE编码后长度和私钥验证细节外，还把cose_alg错误写成字符串ML-DSA-65而非-49；COSE拇指纹标签顺序也未按要求输出。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.94,\"format_only\":false,\"reason\":\"多数标量、拇指纹成员和kid正确，但遗漏JOSE编码后签名长度大于3309字节，私钥验证未明确强制性及256 bits/32 bytes。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.84,\"format_only\":false,\"reason\":\"多数配置字段正确，但required_private_validation仅为布尔值，未给出必须检查种子长度及256 bits/32 bytes；同时遗漏JOSE编码后长度说明，COSE标签顺序也与要求不符。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T06:04:12.129Z"
+}

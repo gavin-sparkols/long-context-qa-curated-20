@@ -1,0 +1,1 @@
+[Answer] current=8;allocated=8;ephemeralWaiting=8;imageID=7;actualResources=7;manager=kubelet

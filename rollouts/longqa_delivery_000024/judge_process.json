@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "文档类型、领域及T4.2/Partial分类均符合正文和题目真实要求。题目需跨章节整合四项制度角色，并辨析现有活动与新角色、赞助方与秘书处提供方，证据完整且答案唯一。8轮中2轮完全正确，6轮均遗漏建议8对应的AMEC当然委员来源角色，正确率25%，严格低于50%，终审接受。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整列出建议5、8、10、11的四项角色及理由；虽将ex-officio译作“行政成员”，但同时明确其非投票性质与组织联络功能，语义可识别且正确。A、B消歧均准确。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整覆盖四项角色及对应建议，A、B回答准确。“荣誉成员”不是ex-officio的理想译法，但其来源、功能和制度含义表述清楚，属于术语措辞差异。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.833,
+      "format_only": false,
+      "reason": "建议5、10、11及两项消歧均正确，但完全遗漏建议8中NC3Rs监管科学论坛作为AMEC当然委员来源的制度角色。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.833,
+      "format_only": false,
+      "reason": "遗漏建议8对应的AMEC当然委员来源角色，其余三项角色和A、B基本正确；另称NC3Rs为“非部门公共机构”不够严谨，但不是主要失分点。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "partial",
+      "score": 0.833,
+      "format_only": false,
+      "reason": "正确回答建议5、10、11及A、B，但遗漏监管科学论坛作为AMEC当然委员来源的建议8。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.833,
+      "format_only": false,
+      "reason": "三项已列角色和两项消歧均有充分支持，但未列出建议8规定的AMEC当然委员来源角色。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.833,
+      "format_only": false,
+      "reason": "遗漏建议8角色，因而未完整回答“哪些不同的制度性角色”；其余角色及主要消歧结论正确。B中把NC3Rs称为联络桥梁略有失准，原文要求由DBIST内部官员维系该联络。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.833,
+      "format_only": false,
+      "reason": "准确列出建议5、10、11并正确回答A、B，但遗漏建议8中监管科学论坛作为AMEC当然委员来源的第四项角色。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"文档类型、领域及T4.2/Partial分类均符合正文和题目真实要求。题目需跨章节整合四项制度角色，并辨析现有活动与新角色、赞助方与秘书处提供方，证据完整且答案唯一。8轮中2轮完全正确，6轮均遗漏建议8对应的AMEC当然委员来源角色，正确率25%，严格低于50%，终审接受。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整列出建议5、8、10、11的四项角色及理由；虽将ex-officio译作“行政成员”，但同时明确其非投票性质与组织联络功能，语义可识别且正确。A、B消歧均准确。\"},{\"rollout_id\":2,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整覆盖四项角色及对应建议，A、B回答准确。“荣誉成员”不是ex-officio的理想译法，但其来源、功能和制度含义表述清楚，属于术语措辞差异。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.833,\"format_only\":false,\"reason\":\"建议5、10、11及两项消歧均正确，但完全遗漏建议8中NC3Rs监管科学论坛作为AMEC当然委员来源的制度角色。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.833,\"format_only\":false,\"reason\":\"遗漏建议8对应的AMEC当然委员来源角色，其余三项角色和A、B基本正确；另称NC3Rs为“非部门公共机构”不够严谨，但不是主要失分点。\"},{\"rollout_id\":5,\"verdict\":\"partial\",\"score\":0.833,\"format_only\":false,\"reason\":\"正确回答建议5、10、11及A、B，但遗漏监管科学论坛作为AMEC当然委员来源的建议8。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.833,\"format_only\":false,\"reason\":\"三项已列角色和两项消歧均有充分支持，但未列出建议8规定的AMEC当然委员来源角色。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.833,\"format_only\":false,\"reason\":\"遗漏建议8角色，因而未完整回答“哪些不同的制度性角色”；其余角色及主要消歧结论正确。B中把NC3Rs称为联络桥梁略有失准，原文要求由DBIST内部官员维系该联络。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.833,\"format_only\":false,\"reason\":\"准确列出建议5、10、11并正确回答A、B，但遗漏建议8中监管科学论坛作为AMEC当然委员来源的第四项角色。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T03:21:32.092Z"
+}

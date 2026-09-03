@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目、标准答案与证据链成立。正确组合唯一为B、D、F，分别涉及Article 24主体资格、含肉餐饮废料的二次处理约束、车辆清洗例外、Hub-and-Pod抽样地点、洁净区隔离及不同堆肥方法参数。题目符合T6.2目标子集聚类识别和Partial门槛；8轮仅1轮完全正确，正确率12.5%，满足终审接受条件。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项F；少选属于实质错误。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项D；少选属于实质错误。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项F；少选属于实质错误。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项F；少选属于实质错误。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项D和F；少选属于实质错误。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项D；少选属于实质错误。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整且准确输出唯一正确组合B、D、F。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏正确项D；少选属于实质错误。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目、标准答案与证据链成立。正确组合唯一为B、D、F，分别涉及Article 24主体资格、含肉餐饮废料的二次处理约束、车辆清洗例外、Hub-and-Pod抽样地点、洁净区隔离及不同堆肥方法参数。题目符合T6.2目标子集聚类识别和Partial门槛；8轮仅1轮完全正确，正确率12.5%，满足终审接受条件。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项F；少选属于实质错误。\"},{\"rollout_id\":2,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项D；少选属于实质错误。\"},{\"rollout_id\":3,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项F；少选属于实质错误。\"},{\"rollout_id\":4,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项F；少选属于实质错误。\"},{\"rollout_id\":5,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项D和F；少选属于实质错误。\"},{\"rollout_id\":6,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项D；少选属于实质错误。\"},{\"rollout_id\":7,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整且准确输出唯一正确组合B、D、F。\"},{\"rollout_id\":8,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏正确项D；少选属于实质错误。\"}],\"repair\":null}",
+  "judged_at": "2026-08-12T06:51:58.184Z"
+}

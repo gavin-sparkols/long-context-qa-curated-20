@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目与证据成立，答案唯一为A、C、E。六项均包含复合约束，干扰项分别利用校验路径、版本阈值和单体尺寸口径错误；正确项依赖跨文档及远距离证据整合，符合T3.1、Full。document_type与domain匹配正文。8轮仅2轮完全正确，正确率25%，严格低于50%，终审接受。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "漏选C；固定多选题少选属于实质错误。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整且仅选择A、C、E。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "漏选C；固定多选题少选属于实质错误。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "漏选C；固定多选题少选属于实质错误。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "漏选C；固定多选题少选属于实质错误。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "漏选C；固定多选题少选属于实质错误。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "漏选C；固定多选题少选属于实质错误。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整且仅选择A、C、E。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目与证据成立，答案唯一为A、C、E。六项均包含复合约束，干扰项分别利用校验路径、版本阈值和单体尺寸口径错误；正确项依赖跨文档及远距离证据整合，符合T3.1、Full。document_type与domain匹配正文。8轮仅2轮完全正确，正确率25%，严格低于50%，终审接受。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"漏选C；固定多选题少选属于实质错误。\"},{\"rollout_id\":2,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整且仅选择A、C、E。\"},{\"rollout_id\":3,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"漏选C；固定多选题少选属于实质错误。\"},{\"rollout_id\":4,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"漏选C；固定多选题少选属于实质错误。\"},{\"rollout_id\":5,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"漏选C；固定多选题少选属于实质错误。\"},{\"rollout_id\":6,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"漏选C；固定多选题少选属于实质错误。\"},{\"rollout_id\":7,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"漏选C；固定多选题少选属于实质错误。\"},{\"rollout_id\":8,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整且仅选择A、C、E。\"}],\"repair\":null}",
+  "judged_at": "2026-08-12T05:37:01.497Z"
+}

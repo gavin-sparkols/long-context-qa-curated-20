@@ -1,0 +1,4 @@
+[Answer]
+1. C与B：前者更早；A与D：文档无法确定；E与F：文档无法确定；A与E：前者更早；D与E：前者更早；B与D：前者更早；C与A：文档无法确定
+2. 25 英镑
+3. 不能。文档指出 CMA 的调查基于现有的不公平商业惯例相关立法（existing and established legislation），而 Digital Markets, Competition, and Consumers Act 2024 是在政府关于订阅合同立法框架咨询中提到的，且明确说明调查与该咨询分开。

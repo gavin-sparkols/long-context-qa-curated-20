@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目、标准答案与证据成立。document_type符合英国政府竞争监管调查新闻稿，domain取值正确。核心要求是依据明确时间锚点、因果关系及信息缺口判断局部事件对，T2.2与Partial分类合理；价格口径和法源归属辨析进一步提供了有效干扰。8轮仅第3轮完全正确，正确率为12.5%，严格低于50%。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "第2、3问正确；第1问中6对正确，但将B与D判为“前者更早”，文档没有给出二者可确定的相对时间。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "第2、3问正确；第1问中6对正确，但把B与D判为“后者更早”，超出了文档明确支持的时间关系。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "七个事件对、Family年度差价以及DMCCA 2024的文内关系边界均与标准答案一致。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "第2、3问正确；仅B与D被判为“后者更早”，而文档不足以确定其先后。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "价格计算和法源辨析正确；七个事件对中仅B与D错误地判为“前者更早”。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "第2、3问正确；B与D应为“文档无法确定”，不是“前者更早”。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "价格及法律关系回答正确；事件关系中错误补出了B早于D，其他六对正确。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.8333,
+      "format_only": false,
+      "reason": "第2、3问完整正确；第1问仅B与D关系错误，原文不能确定B早于D。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目、标准答案与证据成立。document_type符合英国政府竞争监管调查新闻稿，domain取值正确。核心要求是依据明确时间锚点、因果关系及信息缺口判断局部事件对，T2.2与Partial分类合理；价格口径和法源归属辨析进一步提供了有效干扰。8轮仅第3轮完全正确，正确率为12.5%，严格低于50%。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"第2、3问正确；第1问中6对正确，但将B与D判为“前者更早”，文档没有给出二者可确定的相对时间。\"},{\"rollout_id\":2,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"第2、3问正确；第1问中6对正确，但把B与D判为“后者更早”，超出了文档明确支持的时间关系。\"},{\"rollout_id\":3,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"七个事件对、Family年度差价以及DMCCA 2024的文内关系边界均与标准答案一致。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"第2、3问正确；仅B与D被判为“后者更早”，而文档不足以确定其先后。\"},{\"rollout_id\":5,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"价格计算和法源辨析正确；七个事件对中仅B与D错误地判为“前者更早”。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"第2、3问正确；B与D应为“文档无法确定”，不是“前者更早”。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"价格及法律关系回答正确；事件关系中错误补出了B早于D，其他六对正确。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.8333,\"format_only\":false,\"reason\":\"第2、3问完整正确；第1问仅B与D关系错误，原文不能确定B早于D。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T06:12:13.206Z"
+}

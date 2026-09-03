@@ -1,0 +1,73 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "正文属于A股上市公司年度报告，document_type与“财务报告”领域正确；T5.1 Full分类成立，四句的完整引用对齐依赖多个远距离章节，并包含主体、时间、统计口径及相近金额等真实干扰。8轮均把赤壁威世达净利润的“-12,838,807.89元”错误写成正数，故correct为0，严格低于50%；多轮还未直接覆盖S3的15,620,854.83元单项净现金流入或存在章节归属偏差。题目本身证据充分、答案可判定，终审接受。",
+  "issue_codes": [
+    "ROLLOUT_SIGN_ERROR",
+    "ROLLOUT_EVIDENCE_COVERAGE_GAP",
+    "ROLLOUT_CITATION_SECTION_MISMATCH",
+    "ROLLOUT_7_JSON_SYNTAX_ERROR"
+  ],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "score": 0.7,
+      "format_only": false,
+      "reason": "S1正确；S2将净利润负数写成正数；S3未直接引用15,620,854.83元单项净现金流入；S4把“不影响2025年度财务报表”归入第五节，章节归属不准。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "score": 0.8,
+      "format_only": false,
+      "reason": "主要事实基本覆盖，但S2遗漏净利润负号；S3仅以支付额和购买日现金支持净流入，未直接对齐15,620,854.83元的现金流附注。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.78,
+      "format_only": false,
+      "reason": "S1、S4基本正确；S2把-12,838,807.89元写成正数；S3未直接引用15,620,854.83元单项净现金流入。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.8,
+      "format_only": false,
+      "reason": "引用结构和主要覆盖较好，但S2净利润符号错误；S3缺少对15,620,854.83元单项净现金流入的直接引用。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "partial",
+      "score": 0.7,
+      "format_only": false,
+      "reason": "S1基本正确；S2净利润负号遗漏；S3以股权投资金额代替现金合并成本证据且未直接覆盖15,620,854.83元净现金流入；S4将远距离事实合并为一条宽泛引用。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.92,
+      "format_only": false,
+      "reason": "除S2将赤壁威世达净利润-12,838,807.89元写成正数外，其余句子的核心事实及S3单项净现金流入均得到覆盖。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.75,
+      "format_only": false,
+      "reason": "S2净利润符号错误，S3未直接覆盖15,620,854.83元单项净现金流入；末尾多出方括号导致JSON语法错误，但并非唯一问题。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.7,
+      "format_only": false,
+      "reason": "S2遗漏净利润负号；S3未直接引用15,620,854.83元净现金流入，且将“合并成本及商誉”错误归到合并财务报表项目注释；S4把不同位置的事实合并成单条宽泛引用。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"正文属于A股上市公司年度报告，document_type与“财务报告”领域正确；T5.1 Full分类成立，四句的完整引用对齐依赖多个远距离章节，并包含主体、时间、统计口径及相近金额等真实干扰。8轮均把赤壁威世达净利润的“-12,838,807.89元”错误写成正数，故correct为0，严格低于50%；多轮还未直接覆盖S3的15,620,854.83元单项净现金流入或存在章节归属偏差。题目本身证据充分、答案可判定，终审接受。\",\"issue_codes\":[\"ROLLOUT_SIGN_ERROR\",\"ROLLOUT_EVIDENCE_COVERAGE_GAP\",\"ROLLOUT_CITATION_SECTION_MISMATCH\",\"ROLLOUT_7_JSON_SYNTAX_ERROR\"],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"partial\",\"score\":0.7,\"format_only\":false,\"reason\":\"S1正确；S2将净利润负数写成正数；S3未直接引用15,620,854.83元单项净现金流入；S4把“不影响2025年度财务报表”归入第五节，章节归属不准。\"},{\"rollout_id\":2,\"verdict\":\"partial\",\"score\":0.8,\"format_only\":false,\"reason\":\"主要事实基本覆盖，但S2遗漏净利润负号；S3仅以支付额和购买日现金支持净流入，未直接对齐15,620,854.83元的现金流附注。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.78,\"format_only\":false,\"reason\":\"S1、S4基本正确；S2把-12,838,807.89元写成正数；S3未直接引用15,620,854.83元单项净现金流入。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.8,\"format_only\":false,\"reason\":\"引用结构和主要覆盖较好，但S2净利润符号错误；S3缺少对15,620,854.83元单项净现金流入的直接引用。\"},{\"rollout_id\":5,\"verdict\":\"partial\",\"score\":0.7,\"format_only\":false,\"reason\":\"S1基本正确；S2净利润负号遗漏；S3以股权投资金额代替现金合并成本证据且未直接覆盖15,620,854.83元净现金流入；S4将远距离事实合并为一条宽泛引用。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.92,\"format_only\":false,\"reason\":\"除S2将赤壁威世达净利润-12,838,807.89元写成正数外，其余句子的核心事实及S3单项净现金流入均得到覆盖。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.75,\"format_only\":false,\"reason\":\"S2净利润符号错误，S3未直接覆盖15,620,854.83元单项净现金流入；末尾多出方括号导致JSON语法错误，但并非唯一问题。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.7,\"format_only\":false,\"reason\":\"S2遗漏净利润负号；S3未直接引用15,620,854.83元净现金流入，且将“合并成本及商誉”错误归到合并财务报表项目注释；S4把不同位置的事实合并成单条宽泛引用。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T02:50:31.133Z"
+}

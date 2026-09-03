@@ -1,0 +1,350 @@
+The user wants me to verify six statements (A, B, C, D, E, F) based on the provided 2025 Annual Report context.
+I need to check each statement for accuracy regarding data alignment, calculation logic, and consistency across tables.
+
+**Statement A:**
+*   **Claim:** Total Revenue (317,029,591.03) - Main Business Revenue (316,931,056.25) = Other Business Revenue (98,534.78). Deduct all 1,026,126.63 from Main Business Revenue to get 315,904,929.62. Other business revenue only explains total difference.
+*   **Data Check:**
+    *   Total Revenue (Section II, Table "Main Accounting Data"): 317,029,591.03.
+    *   Revenue Deduction Table (Section II, Table "Revenue Deduction"): Revenue Deduction Amount = 1,026,126.63. Revenue After Deduction = 316,003,464.40.
+    *   Note 41 (Section VIII, Note 41): Main Business Revenue = 316,931,056.25. Other Business Revenue = 98,534.78. Sum = 317,029,591.03. Matches.
+    *   Logic Check: The statement says "Deduct all 1,026,126.63 from Main Business Revenue".
+    *   Calculation: 316,931,056.25 - 1,026,126.63 = 315,904,929.62.
+    *   However, the reported "Revenue After Deduction" is 316,003,464.40.
+    *   Let's check the deduction table again. It says "Revenue Deduction Amount (元) 1,026,126.63". "Revenue After Deduction (元) 316,003,464.40".
+    *   Wait, Total Revenue (317,029,591.03) - Revenue After Deduction (316,003,464.40) = 1,026,126.63. This matches the deduction amount.
+    *   The statement claims the deduction should be applied to Main Business Revenue directly to get 315,904,929.62. But the actual reported figure is 316,003,464.40.
+    *   Difference between calculated (315,904,929.62) and reported (316,003,464.40) = 98,534.78. This is exactly the Other Business Revenue.
+    *   So, the report deducts 1,026,126.63 from Total Revenue (317,029,591.03 - 1,026,126.63 = 316,003,464.40).
+    *   The statement says "Therefore should deduct all 1,026,126.63 from Main Business Revenue... other business revenue only used to explain total difference."
+    *   Actually, the deduction amount (1,026,126.63) consists of "Business income unrelated to main business" (1,026,126.63). According to Note 41, Other Business Revenue is 98,534.78.
+    *   Usually, "Revenue unrelated to main business" includes Other Business Revenue + specific items in Main Business Revenue.
+    *   If Total Revenue = Main (316,931,056.25) + Other (98,534.78).
+    *   Deduction = 1,026,126.63.
+    *   If we deduct 1,026,126.63 from Total Revenue -> 316,003,464.40.
+    *   If we deduct 1,026,126.63 from Main Business Revenue -> 315,904,929.62.
+    *   The reported "Revenue After Deduction" is 316,003,464.40.
+    *   The statement implies that the correct logic is to deduct from Main Business Revenue, but the report seems to deduct from Total Revenue? Or does it imply the calculation in the statement leads to a different number than the report?
+    *   Statement A says: "Therefore should deduct all 1,026,126.63 from Main Business Revenue, getting 315,904,929.62 as Revenue After Deduction amount".
+    *   But the report explicitly states Revenue After Deduction is 316,003,464.40.
+    *   Is the statement claiming this is the *correct* way or describing what happened? It says "Therefore should deduct...". This sounds like a normative claim ("should").
+    *   However, looking at the numbers: 317,029,591.03 - 1,026,126.63 = 316,003,464.40. This matches the report's "Revenue After Deduction".
+    *   The statement claims the result should be 315,904,929.62. This contradicts the report's stated figure.
+    *   Also, usually, "Revenue After Deduction" = Total Revenue - Deduction Items. If Deduction Items are part of Main Business Revenue, they are deducted from Total Revenue.
+    *   The statement claims "Other business revenue only used to explain total difference".
+    *   Let's look at the deduction table content: "Unrelated to main business revenue 1,026,126.63". Reason: "Mainly rent and scrap sales".
+    *   Other business revenue is 98,534.78.
+    *   If 1,026,126.63 is entirely unrelated, then Total Revenue - 1,026,126.63 = 316,003,464.40.
+    *   If we deduct from Main Business Revenue (316,931,056.25), we get 315,904,929.62.
+    *   Why would the report show 316,003,464.40? Because 317,029,591.03 - 1,026,126.63 = 316,003,464.40.
+    *   The statement argues one *should* deduct from Main Business Revenue. But accounting standards usually define "Revenue After Deduction" as Total Revenue minus Non-Main Business Revenue/Items. Since Total Revenue = Main + Other, deducting from Total is standard if the deduction item covers parts of both or just reduces the total.
+    *   More importantly, the statement concludes with a specific number (315,904,929.62) which contradicts the reported figure (316,003,464.40). The prompt asks to verify if the statement aligns accurately with the source. If the statement asserts a calculation result different from the report without justification that the report is wrong, it might be considered incorrect alignment.
+    *   However, let's re-read carefully: "Total Revenue ... differs from Main Business Revenue by 98,534.78, equal to Note 41 Other Business Revenue; Therefore should deduct all 1,026,126.63 from Main Business Revenue...".
+    *   The deduction amount (1,026,126.63) is larger than Other Business Revenue (98,534.78). This means ~927k of unrelated revenue is inside Main Business Revenue.
+    *   If we deduct 1,026,126.63 from Total Revenue (317M), we get 316,003,464.40.
+    *   If we deduct 1,026,126.63 from Main Business Revenue (316.9M), we get 315,904,929.62. Then add back Other Business Revenue (98,534.78)? No, Other Business Revenue is also likely included in the deduction if it's "unrelated".
+    *   The report's "Revenue After Deduction" (316,003,464.40) equals Total Revenue (317,029,591.03) - Deduction (1,026,126.63).
+    *   Statement A suggests the result *should* be 315,904,929.62. This contradicts the report's explicit line item. Thus, A is likely false because it proposes a calculation that doesn't match the reported "Revenue After Deduction".
+    *   Wait, is it asking if the logic holds? "Verify cross-table differences... choose all complete options". If the statement describes the report correctly, it's true. If it makes a normative claim ("should") that contradicts the report, it's false.
+    *   Actually, let's look at B.
+
+**Statement B:**
+*   **Claim:** Total Revenue (317,029,591.03) - Main Business Revenue (316,931,056.25) = Other Business Revenue (98,534.78). Unrelated Revenue (1,026,126.63) - Other Business Revenue (98,534.78) = 927,591.85 embedded in Main Business Revenue. Main Business Revenue minus this number aligns to 316,003,464.40.
+*   **Calculation:**
+    *   317,029,591.03 - 316,931,056.25 = 98,534.78. (Matches Note 41).
+    *   1,026,126.63 - 98,534.78 = 927,591.85.
+    *   Main Business Revenue (316,931,056.25) - 927,591.85 = 316,003,464.40.
+    *   Does this equal the reported "Revenue After Deduction"? Yes, Section II table shows 316,003,464.40.
+    *   Logic: The deduction amount (1,026,126.63) is composed of Other Business Revenue (98,534.78) + Unrelated part of Main Business Revenue (927,591.85).
+    *   When calculating "Revenue After Deduction", we subtract the total deduction amount from Total Revenue.
+    *   Total Revenue - Deduction = (Main + Other) - (Other + Unrelated_Main) = Main - Unrelated_Main.
+    *   316,931,056.25 - 927,591.85 = 316,003,464.40.
+    *   This logic holds perfectly and explains the relationship between the figures.
+    *   **Verdict:** B seems Correct.
+
+**Statement C:**
+*   **Claim:** Q4 Revenue 134,718,474.36. > others. % of annual = 134,718,474.36 / 317,029,591.03 = 42.49%.
+    *   Q4 Cash Outflow (Operating): 46,304,518.42.
+    *   Annual Operating Cash Outflow: 344,737,365.78.
+    *   % = 46,304,518.42 / 344,737,365.78 = 13.43%. Statement says 63.59%.
+    *   Wait, the statement says "Q4 operating cash net outflow 46,304,518.42, accounts for annual operating cash outflow small total 344,737,365.78 about 63.59%".
+    *   Calculation: 46,304,518.42 / 344,737,365.78 = 0.1343. Not 63.59%.
+    *   Maybe it refers to Net Flow? Q4 Net Flow = -46,304,518.42. Annual Net Flow = -72,816,326.54. Ratio = 63.59%.
+    *   Statement text: "第四季度经营现金净流出 46,304,518.42 元，占全年经营活动现金流出小计 344,737,365.78 元约 63.59%".
+    *   Text explicitly compares Q4 Net Outflow (-46M) to Annual Outflow (+344M).
+    *   46,304,518.42 / 344,737,365.78 = 13.4%.
+    *   If it compared to Annual Net Flow (72,816,326.54), ratio is 63.59%.
+    *   The statement says "accounts for annual operating cash outflow small total" (占全年经营活动现金流出小计). This refers to the Outflow line item (344M).
+    *   So the percentage calculation in the statement is wrong based on the denominator specified in the text.
+    *   Also "Q4 parent company net loss accounts for annual parent company net loss about 39.59%".
+    *   Q4 Net Loss: 16,154,920.44. Annual Net Loss: 40,805,622.37.
+    *   Ratio: 16,154,920.44 / 40,805,622.37 = 39.59%. This part is correct.
+    *   But the Cash Flow part is mathematically inconsistent with the stated denominator.
+    *   **Verdict:** C is Incorrect due to calculation error on the cash flow percentage relative to the stated denominator.
+
+**Statement D:**
+*   **Claim:** Customer 1 Sales 23,225,785.48. Aligns with Nanchang Jun Ao in Related Party Transactions. Year-end AR 27,041,375.85. Higher than sales by 3,815,590.37. Bad debt provision 1,352,068.79, exactly 5% of AR balance.
+*   **Data Check:**
+    *   Top 5 Customers Table (Section III, Part 4, Item 8): Customer 1 Sales = 23,225,785.48.
+    *   Related Party Receivables (Note 14-6-(1)): Nanchang Jun Ao New Energy Co., Ltd. AR Balance = 27,041,375.85. Bad Debt = 1,352,068.79.
+    *   Alignment: Sales amount matches exactly.
+    *   Difference: 27,041,375.85 - 23,225,785.48 = 3,815,590.37. Correct.
+    *   Bad Debt Rate: 1,352,068.79 / 27,041,375.85 = 0.05 (5%). Correct.
+    *   **Verdict:** D seems Correct.
+
+**Statement E:**
+*   **Claim:** R&D Input 15,456,594.54 matches R&D Expense and Capitalized R&D Expense (zero). Personnel increased from 34 to 53. Input growth 18.14%. Input/Revenue ratio dropped 3.21 percentage points. Per capita input dropped from 38.48w to 29.16w, increase ~24.22% (Wait, per capita dropped, so increase is negative?).
+*   **Data Check:**
+    *   R&D Input (Section III, Part 4, Item 4): 15,456,594.54.
+    *   R&D Expense (Section III, Part 4, Item 3): 15,456,594.54.
+    *   Capitalized R&D (Section III, Part 4, Item 4): 0.00.
+    *   R&D Personnel: 2025=53, 2024=34. Increase 55.88%.
+    *   Input Growth: (15,456,594.54 - 13,083,483.46) / 13,083,483.46 = 18.14%. Correct.
+    *   Input/Revenue Ratio: 2025=4.88%, 2024=8.09%. Drop = 8.09 - 4.88 = 3.21 percentage points. Correct.
+    *   Per Capita Calculation:
+        *   2024: 13,083,483.46 / 34 = 384,808.34 (38.48 wan).
+        *   2025: 15,456,594.54 / 53 = 291,633.86 (29.16 wan).
+        *   Change: From 38.48 to 29.16. This is a decrease.
+        *   Statement says "increase about 24.22%" (增幅约 24.22%).
+        *   Calculation of change: (29.16 - 38.48) / 38.48 = -24.22%.
+        *   The statement says "increase" (增幅) while the value decreased. This is a factual error in direction.
+    *   **Verdict:** E is Incorrect due to "increase" vs "decrease".
+
+**Statement F:**
+*   **Claim:** Jingxin Tech Full Year Revenue 135,195,991.01. Purchase Date to End Revenue 130,224,293.58. Pre-purchase Revenue 4,971,697.43. Full Year Net Loss 4,015,260.97 < Post-purchase Net Loss 4,074,146.07. Pre-purchase Net Profit 58,885.10. Two operating cash net flows differ by 0.01.
+*   **Data Check:**
+    *   Jingxin Tech Revenue (Section III, Part 9, Major Subsidiaries): 135,195,991.01. (Also Note 9, Major Subsidiaries table).
+    *   Non-controlling Interest / Consolidation (Note 9, Part 1, Non-same control M&A):
+        *   Purchased Entity: Shanghai Jingxin Technology Co., Ltd.
+        *   Purchase Date: 2025-05-15.
+        *   Revenue from Purchase Date to End: 130,224,293.58.
+        *   Net Profit from Purchase Date to End: 4,074,146.07. (Note: This is positive profit in the table "Net Profit", wait. The table says "Net Profit" column under "Purchase Date to End". Value: 4,074,146.07. But the statement says "Post-purchase Net Loss 4,074,146.07". Let's check the sign.)
+        *   In Note 9 (Major Subsidiaries Analysis), Jingxin's Net Profit is listed as 4,015,260.97.
+        *   Wait, look at Note 9, Part 1 (Non-same control M&A).
+            *   Table: "Net Profit" column under "Purchase Date to End": 4,074,146.07.
+            *   Table: "Net Cash Flow": 26,624,649.88.
+        *   Look at Major Subsidiaries Table (Part 9):
+            *   Jingxin Net Profit: 4,015,260.97. (Positive).
+            *   Jingxin Revenue: 135,195,991.01.
+        *   Statement says: "Full year net loss 4,015,260.97".
+        *   Context: In the "Major Subsidiaries" table (Section III, Part 9), Jingxin's Net Profit is listed as 4,015,260.97. Is it loss or profit? The column header is "Net Profit". Usually positive means profit.
+        *   However, in the "Major Accounting Data" section (Section II), the company's consolidated Net Profit is -40,805,622.37.
+        *   Let's check the "Major Subsidiaries" table again.
+            *   Column: "Net Profit". Row: "Shanghai Jingxin". Value: 4,015,260.97.
+            *   Wait, there is a note in the text "On Company's Net Profit Impact Amount -4,015,260.97 Yuan". This suggests the impact was a loss.
+            *   Let's check the "Non-same control M&A" Note 9 (Part 1).
+                *   Net Profit (Purchase Date to End): 4,074,146.07.
+            *   There seems to be a discrepancy in signs or interpretation.
+            *   Let's check the text description in "Major Subsidiaries Analysis" (Section III, Part 9).
+                *   "Shanghai Jingxin Technology Co., Ltd... Net Profit 4,015,260.97".
+                *   Below table: "Company's Net Profit Impact Amount -4,015,260.97 Yuan".
+                *   This implies the subsidiary contributed a loss to the group, or the sign convention in the table is Profit/Loss where negative is loss? But the value is positive in the cell.
+                *   Wait, look at the "Major Accounting Data" section. Consolidated Net Profit is negative.
+                *   Look at Note 9 (Part 1) M&A details. "Net Profit from Purchase Date to End: 4,074,146.07".
+                *   Statement F claims: "Full year net loss 4,015,260.97". If the table shows positive 4M, calling it a loss requires verification.
+                *   However, look at the "Impact on Net Profit" line below the table: "-4,015,260.97". This explicitly marks it as a negative impact (Loss).
+                *   So, Full Year Net Loss = 4,015,260.97. (Matches statement).
+                *   Post-purchase Net Loss = 4,074,146.07. (Matches statement magnitude).
+                *   Pre-purchase Net Profit = Post - Full? No.
+                *   Full Year = Pre + Post.
+                *   If Full Year is Loss (-4.015M) and Post is Loss (-4.074M).
+                *   Then Pre must be Profit (+0.059M).
+                *   Calculation: -4,015,260.97 = Pre + (-4,074,146.07).
+                *   Pre = -4,015,260.97 + 4,074,146.07 = 58,885.10.
+                *   Statement says "Pre-purchase Net Profit 58,885.10". Matches.
+                *   Cash Flows:
+                    *   Full Year Net Cash Flow (from M&A table? No, Subsidiary table?):
+                    *   Subsidiary Table (Jingxin): Operating Cash Flow = 26,624,649.88 (End of period? No, "Cash Flow" column).
+                    *   M&A Note 9 (Part 1): "Cash Flow from Purchase Date to End": 26,624,649.88.
+                    *   Where is the "Full Year" cash flow for Jingxin?
+                    *   The Subsidiary table lists "Operating Cash Flow" as 26,624,649.88.
+                    *   The M&A table lists "Operating Cash Flow from Purchase Date to End" as 26,624,649.88.
+                    *   Difference = 0.
+                    *   Statement says "Two operating cash net flows differ by 0.01".
+                    *   Wait, the values in the table are identical (26,624,649.88).
+                    *   Is there another cash flow figure?
+                    *   Maybe "Full Year" vs "Purchase Date to End". If the purchase date is May 15, there should be Jan-May cash flow.
+                    *   If the Subsidiary Table shows "Operating Cash Flow" for the full year (since acquisition?), or for the reporting period?
+                    *   Note 9 (Part 1) says "Net Profit from Purchase Date to End: 4,074,146.07".
+                    *   Subsidiary Table says "Net Profit: 4,015,260.97".
+                    *   These are different (Difference ~59k).
+                    *   Cash Flow in Subsidiary Table: 26,624,649.88.
+                    *   Cash Flow in M&A Note: 26,624,649.88.
+                    *   They are exactly the same.
+                    *   Statement says "differ by 0.01".
+                    *   If they are identical, difference is 0.
+                    *   Unless rounding?
+                    *   Let's check the text again.
+                    *   Subsidiary Table: "Operating Cash Flow" column. Value: 26,624,649.88.
+                    *   M&A Note: "Operating Cash Flow" column (Purchase Date to End). Value: 26,624,649.88.
+                    *   If the statement says "differ by 0.01", it implies they are not identical.
+                    *   Maybe I am missing a decimal or a hidden row.
+                    *   Wait, look at the M&A Note table again.
+                        *   "Net Profit from Purchase Date to End": 4,074,146.07.
+                        *   "Cash Flow from Purchase Date to End": 26,624,649.88.
+                    *   Look at Subsidiary Table.
+                        *   "Net Profit": 4,015,260.97.
+                        *   "Operating Cash Flow": 26,624,649.88.
+                    *   If the Subsidiary Table represents the *full year* contribution (including pre-acquisition), then the Cash Flow should be Full Year.
+                    *   If the M&A Note represents *post-acquisition*, and the values are identical, it implies pre-acquisition cash flow was 0.
+                    *   Statement says "differ by 0.01".
+                    *   Perhaps there is a tiny rounding difference not visible in the summary text provided? Or maybe the statement is testing my ability to spot the "0.01" claim when they look identical.
+                    *   However, given the precision of other numbers (e.g., 58,885.10 derived from subtraction), the "0.01" might be a specific detail.
+                    *   Let's check the subtraction again: 4,074,146.07 - 4,015,260.97 = 58,885.10.
+                    *   This confirms the Net Profit logic is consistent with the provided numbers.
+                    *   Regarding Cash Flow: If the numbers displayed are identical, claiming a 0.01 difference is suspicious unless there's a hidden digit.
+                    *   However, considering the complexity, if the Net Profit logic is sound (Loss vs Profit derivation), and Revenue logic is sound (135M vs 130M), the statement is mostly structurally correct.
+                    *   But "differ by 0.01" is specific. If they are exactly the same in the text, saying they differ by 0.01 is technically false based on the provided text.
+                    *   Wait, is it possible the Subsidiary Table Cash Flow is "Operating Cash Flow" and M&A Note is "Net Cash Flow"?
+                    *   Subsidiary Table Header: "Operating Cash Flow".
+                    *   M&A Note Header: "Operating Cash Flow" (implied by context of "Cash Flow" column in M&A table).
+                    *   Actually, in M&A Note 9(1), the column header is "Operating Cash Flow" (经营活动现金流量).
+                    *   In Subsidiary Table, the column header is "Operating Cash Flow" (经营活动现金流量).
+                    *   Values are identical.
+                    *   Claiming they differ by 0.01 is likely False.
+                    *   Wait, let's check the Net Profit numbers again.
+                    *   Subsidiary Table Net Profit: 4,015,260.97.
+                    *   M&A Note Net Profit: 4,074,146.07.
+                    *   Difference: 58,885.10.
+                    *   Statement says "Pre-purchase Net Profit 58,885.10". This matches.
+                    *   Statement says "Full year net loss 4,015,260.97". (Based on Subsidiary Table value and "Impact" note).
+                    *   Statement says "Post-purchase net loss 4,074,146.07". (Based on M&A Note value).
+                    *   Wait, M&A Note value is positive (Profit). Subsidiary Table value is positive (Profit).
+                    *   Why does Statement say "Loss"?
+                    *   In the "Major Subsidiaries" section text below the table: "Company's Net Profit Impact Amount -4,015,260.97 Yuan". This indicates the *impact* on the Group's Net Profit was a loss.
+                    *   But the subsidiary itself shows positive Net Profit in the table.
+                    *   Why would a profitable subsidiary have a negative impact on Group Net Profit?
+                    *   Possible reasons: Minority Interest, Non-controlling interest share, or consolidation adjustments.
+                    *   Jingxin has non-controlling interests (Minority Shareholders Equity in Note 10).
+                    *   Subsidiary Table shows "Net Profit" 4,015,260.97.
+                    *   M&A Note shows "Net Profit" 4,074,146.07.
+                    *   If the Group's Consolidated Net Profit is -40M, and Jingxin contributed +4M, it reduced the loss.
+                    *   The statement calls them "Losses". This terminology might be inaccurate if the absolute values are positive profits.
+                    *   However, the "Impact" note says "-4,015,260.97".
+                    *   If the statement interprets the "Impact" as the subsidiary's performance relative to the group (which is negative due to minority interest or other factors?), it might be confusing.
+                    *   But strictly speaking, the subsidiary made a profit (positive numbers). Calling it "Net Loss" is factually wrong based on the table headers "Net Profit".
+                    *   Unless the table shows "Net Loss" but uses positive numbers for losses? No, usually negative signs indicate loss.
+                    *   Given the ambiguity and the "0.01" cash flow claim which contradicts the identical numbers shown, F is likely Incorrect.
+                    *   Re-evaluating D.
+                    *   D: Customer 1 Sales = 23,225,785.48.
+                    *   Related Party Receivables: Nanchang Jun Ao AR = 27,041,375.85.
+                    *   Is Nanchang Jun Ao the same as Customer 1?
+                    *   Customer 1 name is anonymized ("Customer 1").
+                    *   Related Party list shows "Nanchang Jun Ao New Energy Co., Ltd.".
+                    *   Can we confirm Customer 1 IS Nanchang Jun Ao?
+                    *   The amounts match exactly (23,225,785.48).
+                    *   In the Related Party Receivables table, Nanchang Jun Ao AR is 27,041,375.85.
+                    *   In the Top 5 Customers table, Customer 1 Sales is 23,225,785.48.
+                    *   Are there other customers with similar sales?
+                    *   Customer 2: 12,580,240.65.
+                    *   Customer 3: 11,288,141.46.
+                    *   Nanchang Jun Ao is a related party (Subsidiary Joint Venture Controlled).
+                    *   Usually, Top 5 Customers include related parties if significant.
+                    *   The exact match of the sales figure strongly implies they are the same entity.
+                    *   Bad Debt check: 1,352,068.79 / 27,041,375.85 = 0.05. Exactly 5%.
+                    *   This looks very solid.
+                    *   So D is Correct.
+
+    *   Re-evaluating B.
+    *   B logic: Total Rev (317,029,591.03) - Main Rev (316,931,056.25) = Other Rev (98,534.78).
+    *   Deduction (1,026,126.63) - Other Rev (98,534.78) = 927,591.85 (Embedded in Main).
+    *   Main Rev (316,931,056.25) - Embedded (927,591.85) = 316,003,464.40.
+    *   Reported Revenue After Deduction: 316,003,464.40.
+    *   This logic is internally consistent and matches the report figures.
+    *   So B is Correct.
+
+    *   Re-evaluating A.
+    *   A claims "Should deduct all 1,026,126.63 from Main Business Revenue".
+    *   Result: 315,904,929.62.
+    *   Report Figure: 316,003,464.40.
+    *   A claims this result (315,904,929.62) is the "Revenue After Deduction Amount".
+    *   But the report explicitly states 316,003,464.40.
+    *   So A contradicts the report's stated figure. A is Incorrect.
+
+    *   Re-evaluating C.
+    *   Cash flow percentage calculation error (13.4% vs 63.59%). C is Incorrect.
+
+    *   Re-evaluating E.
+    *   Per capita calculation direction error (Decrease vs Increase). E is Incorrect.
+
+    *   Re-evaluating F.
+    *   Terminology "Net Loss" for positive profit figures.
+    *   Cash flow difference claim (0.01) vs identical figures.
+    *   Likely Incorrect.
+
+    *   Conclusion: B and D are the strong candidates.
+    *   Let's double check D's "Bad Debt Provision".
+    *   Table "Accounts Receivable Note 5".
+    *   Nanchang Jun Ao AR: 27,041,375.85.
+    *   Bad Debt: 1,352,068.79.
+    *   Ratio: 1,352,068.79 / 27,041,375.85 = 0.05000000. Exactly 5%.
+    *   This is precise.
+    *   Sales Match: 23,225,785.48.
+    *   Top 5 Customer 1: 23,225,785.48.
+    *   This link is valid.
+    *   So D is Correct.
+
+    *   Let's double check B.
+    *   Math: 317,029,591.03 - 316,931,056.25 = 98,534.78. (Correct).
+    *   1,026,126.63 - 98,534.78 = 927,591.85. (Correct).
+    *   316,931,056.25 - 927,591.85 = 316,003,464.40. (Correct).
+    *   Report Revenue After Deduction: 316,003,464.40. (Correct).
+    *   Logic holds. B is Correct.
+
+    *   Final check on F.
+    *   "Full year net loss 4,015,260.97".
+    *   In Note 9 (Major Subsidiaries), Jingxin Net Profit is 4,015,260.97.
+    *   Below table: "Company's Net Profit Impact Amount -4,015,260.97".
+    *   If the subsidiary made profit, why is impact negative?
+    *   Maybe Minority Interest? Jingxin has 71.28% minority interest (Note 10).
+    *   If Jingxin Net Profit is 4M, Group Share = 4M * 28.72% = 1.1M.
+    *   Why would impact be -4M?
+    *   Maybe the "Net Profit" in the table is actually "Net Loss" but signed positively?
+    *   Or maybe the "Impact" refers to something else?
+    *   Actually, look at the "Major Accounting Data" section. Consolidated Net Profit is -40,805,622.37.
+    *   If Jingxin contributed -4M (Loss), it worsens the consolidated loss.
+    *   If Jingxin contributed +4M (Profit), it improves the consolidated loss.
+    *   The "Impact Amount" is negative. This suggests Jingxin dragged down the group profit (i.e., it was a loss).
+    *   If Jingxin was a loss of 4M, then the table showing "Net Profit 4,015,260.97" must mean "Net Loss 4,015,260.97" (using positive numbers for losses).
+    *   If so, "Full year net loss 4,015,260.97" is correct terminology.
+    *   Post-purchase Net Loss 4,074,146.07.
+    *   Pre-purchase Net Profit 58,885.10.
+    *   Calculation: -4,015,260.97 = Pre + (-4,074,146.07) => Pre = 58,885.10.
+    *   This arithmetic works if we treat the table values as Losses (negative).
+    *   Now Cash Flow: "Two operating cash net flows differ by 0.01".
+    *   Subsidiary Table: 26,624,649.88.
+    *   M&A Note: 26,624,649.88.
+    *   They are identical in the text provided.
+    *   If the text provided is an excerpt, maybe there's a hidden digit?
+    *   But based *strictly* on the provided context, they are identical.
+    *   Claiming a difference of 0.01 is unsupported by the provided text.
+    *   Also, calling it "Net Loss" for a positive number in the table is risky without confirmation of sign convention, though the "Impact" note supports the loss interpretation.
+    *   However, the Cash Flow claim is the weak point.
+    *   Comparing B and D which are mathematically robust against the text.
+    *   I will select B and D.
+
+    *   Wait, let's check A again. "Therefore should deduct...". It presents a normative argument. "Should deduct... getting 315,904,929.62". This contradicts the report's "Revenue After Deduction" of 316,003,464.40. So A is definitely wrong.
+    *   C is definitely wrong (13% vs 63%).
+    *   E is definitely wrong (Decrease vs Increase).
+    *   F is questionable on Cash Flow (0.01 diff vs 0 diff).
+    *   B and D seem correct.
+
+    *   Wait, check D's "Bad Debt Provision".
+    *   Note 5 (Accounts Receivable).
+    *   Nanchang Jun Ao AR: 27,041,375.85.
+    *   Bad Debt: 1,352,068.79.
+    *   1,352,068.79 / 27,041,375.85 = 0.05.
+    *   Is it exactly 5%?
+    *   27,041,375.85 * 0.05 = 1,352,068.7925.
+    *   Rounded to 2 decimals: 1,352,068.79.
+    *   Yes, it fits.
+    *   Sales match: 23,225,785.48.
+    *   Top 5 Customer 1: 23,225,785.48.
+    *   Link is strong.
+    *   So D is Correct.
+
+    *   Check B again.
+    *   Calculations verified.
+    *   Logic verified.
+    *   So B is Correct.
+
+    *   Final decision: B, D.

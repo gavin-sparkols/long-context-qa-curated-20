@@ -1,0 +1,69 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Input: A research paper text (context) and a specific question.
+    *   Task: Match each part of the provided summary sentence to the corresponding section number in the paper where that content is first detailed.
+    *   Summary Sentence: "本研究首先采用自由联想测验构建了任务态语义网络（S1），接着通过相似性评分任务构建了个体静态语义网络（S2），最终结合静息态 fMRI 数据发现，语义加工网络的基线活动水平可以调节语义网络模块化与创造性倾向的关系（S3）。"
+        *   Part S1: "采用自由联想测验构建了任务态语义网络" (Constructed task-based semantic network using free association test).
+        *   Part S2: "通过相似性评分任务构建了个体静态语义网络" (Constructed individual static semantic network through similarity judgment task).
+        *   Part S3: "结合静息态 fMRI 数据发现，语义加工网络的基线活动水平可以调节语义网络模块化与创造性倾向的关系" (Found that baseline activity of semantic processing network moderates the relationship between semantic network modularity and creative tendency, combined with resting-state fMRI data).
+    *   Output Format: Start with `[Answer]`, then output the section numbers for S1, S2, S3 on separate lines. No explanations.
+
+2.  **Scan the Context for Section Numbers:**
+    *   The paper structure seems to be:
+        *   Title/Abstract/Intro
+        *   2 研究 1:高创造性者的语义网络结构特征 (Study 1: Semantic Network Structure Characteristics of High Creative Individuals)
+        *   3 研究 2:语义网络结构与创造性人格倾向的关系 (Study 2: Relationship between Semantic Network Structure and Creative Personality Tendency)
+        *   4 研究 3:语义网络结构影响创造性人格倾向的神经调节机制 (Study 3: Neural Moderating Mechanism of Semantic Network Structure Influencing Creative Personality Tendency)
+        *   5 综合讨论 (General Discussion)
+        *   6 结论 (Conclusion)
+        *   References
+        *   Appendix
+
+3.  **Map Summary Parts to Sections:**
+    *   **Part S1 (Free Association Test -> Task-based Semantic Network):**
+        *   Look for "自由联想测验" (Free Association Test).
+        *   Found in Section 2: "研究 1:高创造性者的语义网络结构特征".
+        *   Subsection 2.1.3 mentions: "为构建组水平的语义网络，研究 1 采用了自由联想测验的方法...".
+        *   So, S1 corresponds to Section 2.
+    *   **Part S2 (Similarity Judgment Task -> Individual Static Semantic Network):**
+        *   Look for "相似性评分任务" (Similarity Judgment Task) or "个体静态语义网络" (Individual Static Semantic Network).
+        *   Found in Section 3: "研究 2:语义网络结构与创造性人格倾向的关系".
+        *   Subsection 3.1.2 mentions: "研究 2 采用相似性评分任务范式构建个体水平语义网络...".
+        *   So, S2 corresponds to Section 3.
+    *   **Part S3 (Resting-state fMRI -> Baseline Activity Moderation):**
+        *   Look for "静息态 fMRI" (Resting-state fMRI), "基线活动" (Baseline Activity), "调节" (Moderate/Moderation).
+        *   Found in Section 4: "研究 3:语义网络结构影响创造性人格倾向的神经调节机制".
+        *   Subsection 4.1.2 mentions: "随后进行静息态功能磁共振成像 (rs-fMRI)...".
+        *   Subsection 4.1.4 mentions: "...构建了以个体语义网络属性为自变量、创造性倾向分数为因变量、大脑语义加工网络平均 BOLD 信号强度为调节变量的调节效应模型...".
+        *   So, S3 corresponds to Section 4.
+
+4.  **Verify Section Numbering:**
+    *   The text uses Chinese numerals for main sections (1 引言，2 研究 1..., 3 研究 2..., 4 研究 3...).
+    *   The prompt asks for "章节编号" (Section Number).
+    *   S1 -> Section 2 (研究 1)
+    *   S2 -> Section 3 (研究 2)
+    *   S3 -> Section 4 (研究 3)
+
+5.  **Format Output:**
+    *   Start with `[Answer]`.
+    *   Each section number on a new line.
+    *   Order: S1, S2, S3.
+
+    Expected Output:
+    [Answer]
+    2
+    3
+    4
+
+6.  **Final Check:**
+    *   Does S1 match Section 2? Yes, Study 1 uses Free Association.
+    *   Does S2 match Section 3? Yes, Study 2 uses Similarity Judgment Task.
+    *   Does S3 match Section 4? Yes, Study 3 uses Resting-state fMRI and moderation analysis.
+    *   Is the format correct? Yes.
+
+7.  **Construct Final Response.**
+    [Answer]
+    2
+    3
+    4

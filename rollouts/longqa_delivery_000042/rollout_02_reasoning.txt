@@ -1,0 +1,251 @@
+The user wants to identify which of the provided scenarios (A through F) are fully compliant with the regulations specified in "Authorisation D6" and its "Annex A" from the document "Animal by-products legislation for England: exemptions".
+
+**Key constraints and requirements based on the text:**
+1.  **Source Document:** "Animal by-products legislation for England: exemptions", specifically "Authorisation to use other specific requirements for transformation of catering waste, mixtures of catering waste with other materials and certain derived products, in biogas and composting plants" (Authorisation D6) and "Annex A to Authorisation D6".
+2.  **Scenario Context:**
+    *   Operator location: England.
+    *   Material: Catering waste containing meat (cannot be excluded at source).
+    *   Process: Composting.
+    *   Particle size: Stable control under 6cm.
+    *   Hub-and-Pod model: Hub does first stage, Pod does second stage.
+    *   Vehicle cleaning: Vehicles transporting only untreated catering waste, not subsequently transporting treated material.
+    *   Cleaning location: All cleaning done in dedicated area.
+    *   Other general conditions met.
+3.  **Specific criteria to evaluate:**
+    *   Operator status (Registration vs Approval).
+    *   Two-stage treatment parameters (Temperature, Time, System type).
+    *   Vehicle cleaning scope (Wheels only vs Whole vehicle).
+    *   Salmonella sampling location (Hub or Pod).
+    *   Clean storage area layout (Separation and floor drainage).
+
+**Analysis of Authorisation D6 and Annex A:**
+
+*   **Operator Status:**
+    *   Text says: "...authorises for **operators approved under Article 24 Regulation (EC) No 1069/2009**...".
+    *   Requirement: Operators must be approved under Article 24. Registration under Article 23 is not sufficient for this specific derogation regarding alternative parameters/treatment systems for catering waste mentioned in D6 context (specifically looking at the preamble of D6: "for operators approved under Article 24 Regulation (EC) No 1069/2009").
+    *   Wait, let's check D6 text carefully. "In accordance with Article 15(2)(a)(ii) of the Regulation (EC) No 1069/2009 and Article 10(3) and Point 2, Section 2, Chapter III, Annex V to Commission Regulation (EU) No 142/2011 the Secretary of State authorises for **operators approved under Article 24 Regulation (EC) No 1069/2009**...".
+    *   So, Article 24 approval is required. Article 23 registration alone is insufficient for D6.
+    *   *Check Option A:* "经营者仅依Article 23注册，未依Article 24获批" (Operator only registered under Art 23, not approved under Art 24). -> **Non-compliant**.
+    *   *Check Options B, C, D, E, F:* "经营者依Article 24获批" (Operator approved under Art 24). -> **Compliant**.
+
+*   **Vehicle Cleaning:**
+    *   Text in Annex A Part I, point 5: "Containers, receptacles and vehicles used for transporting untreated ABP shall be cleaned in the dedicated area before they leave the premises and before any treated material is loaded. In the case of vehicles transporting only untreated catering waste and not subsequently transporting treated material, **only the wheels of the vehicle need to be cleaned**."
+    *   Scenario condition: "题中需判断清洗范围的离场车辆均只运输未经处理的餐饮废料，之后不用于运输已处理材料" (Vehicles leaving the site transport only untreated catering waste and do not subsequently transport treated material).
+    *   Requirement: Only wheels need to be cleaned.
+    *   *Check Option A:* "车辆离场前仅清洗车轮" (Only clean wheels). -> Matches. (But A failed operator status).
+    *   *Check Option B:* "车辆离场前仅清洗车轮". -> Matches.
+    *   *Check Option C:* "车辆离场前仅清洗车轮". -> Matches.
+    *   *Check Option D:* "车辆离场前清洗整辆车辆而不只清洗车轮" (Clean whole vehicle, not just wheels). -> The rule says "only the wheels ... need to be cleaned". Does cleaning the whole vehicle violate the rule? Usually, doing more than required isn't a violation unless it causes contamination, but strictly speaking, the regulation specifies the minimum requirement. However, usually compliance questions look for strict adherence. Let's look closer. If the regulation says "only the wheels... need to be cleaned", cleaning the whole vehicle satisfies the requirement of cleaning the wheels. But often in these logic puzzles, if the option adds extra steps not mandated, it might be considered "not matching the specific exemption conditions" or simply acceptable. However, looking at Option D, it explicitly states "clean whole vehicle *rather than just* wheels". This implies deviation from the specific permission granted ("only wheels need to be cleaned"). Actually, reading the text: "In the case of vehicles transporting only untreated catering waste... only the wheels of the vehicle need to be cleaned." This is a permission/derogation. If you clean the whole vehicle, you are meeting hygiene standards. Is it non-compliant? Usually, stricter measures are okay. But wait, let's look at the constraint "仅就各方案明确列出的...判断". If the option says "clean whole vehicle", does it contradict "only wheels need to be cleaned"? The regulation sets the *requirement*. It says you *need* to clean wheels. It doesn't say you *must not* clean the rest. However, often in these contexts, Option D might be considered correct or incorrect depending on interpretation. Let's hold judgment. Re-reading: "only the wheels of the vehicle need to be cleaned". This defines the scope of the requirement for this specific derogation scenario. If an operator cleans the whole vehicle, they are complying with hygiene, but does it fit the specific authorization terms? The authorization allows the derogation from standard docs/transport rules based on specific conditions. One condition is the cleaning protocol. If the protocol is modified (even to be stricter), is it valid? Usually yes. BUT, let's compare with Option B. Option B matches the text exactly ("only wheels"). Option D differs. Let's look for other disqualifiers first.
+    *   Wait, let's re-read the prompt's instruction: "仅就各方案明确列出的主体资格、两阶段处理、车辆清洗范围、Salmonella 抽样地点以及洁净储区布置判断".
+    *   If the regulation says "only wheels need to be cleaned", choosing "clean whole vehicle" might be seen as unnecessary cost or potentially violating the specific derogation logic if that logic relies on reduced risk profile allowing wheel-only cleaning. However, safety-wise, cleaning more is better. But legally, if the authorization grants a specific relief based on specific conditions, adhering to those conditions is key. Let's assume Option B is the baseline correct one. Option D deviates. Let's see if there are clearer errors.
+
+*   **Two-Stage Treatment (Composting):**
+    *   Text in Annex A Part II: Table 1. Composting systems.
+    *   Systems listed:
+        1.  Closed reactor: Min temp 60°C, Min time 2 days.
+        2.  Closed reactor housed windrows: Min temp 70°C, Min time 1 hour.
+        3.  Composting in housed windrows: Min temp 60°C, Min time 8 days (turned at least 3 times during this period, at no less than 2-day intervals).
+    *   Biogas systems are also listed but the scenario specifies "采用堆肥工艺" (using composting process).
+    *   Scenario: "Hub承担第一阶段处理，物料随后送至 Pod 实施各选项所述的第二阶段处理" (Hub does Stage 1, Pod does Stage 2).
+    *   Note 2 under Table 1: "If the approval for a composting plant specifies one of the methods in the table, it shall specify which one and, in addition, shall have as a condition either that: a. measures were taken at source to ensure that meat was not included in the catering waste... OR b. following the first treatment, the material shall be treated again using one of the methods in the table... except that, if the treatment is in a windrow, the second treatment need not be in a housed windrow."
+    *   Crucial Point: Since the scenario states "无法在源头排除肉类" (meat cannot be excluded at source), condition 'a' is NOT met. Therefore, condition 'b' MUST be met. Condition 'b' requires: "following the first treatment, the material shall be treated again using one of the methods in the table".
+    *   Also Note 3 under Table 2 (Biogas) mentions storage for 18 days, but we are doing Composting (Table 1).
+    *   Wait, let's check the text for Composting Note 2 again. "if the treatment is in a windrow, the second treatment need not be in a housed windrow."
+    *   So, two treatments are required if meat is present.
+    *   *Option A:* Hub (Closed Reactor 70C 1hr) -> Pod (Closed Reactor 70C 1hr).
+        *   Check parameters against Table 1.
+        *   "Closed reactor housed windrows": Min temp 70°C, Min time 1 hour.
+        *   "Closed reactor" (first column): Max particle 40cm, Min temp 60°C, Min time 2 days.
+        *   Option A uses "Closed reactor" parameters in Hub (70C 1hr)? No, Option A says "在 Hub 采用闭式反应器以 70°C 处理 1 小时".
+        *   Looking at Table 1: Column 1 is "Composting in a closed reactor". Requirements: Max particle 40cm, Min Temp 60°C, Min Time 2 days.
+        *   Column 2 is "Composting in a closed reactor housed windrows". Requirements: Max particle 6cm, Min Temp 70°C, Min Time 1 hour.
+        *   The scenario says "粉碎粒径可稳定控制在 6 厘米以内" (Particle size stable under 6cm). This fits Column 2 ("housed windrows" inside closed reactor? Or just Column 2 header "Composting in a closed reactor housed windrows"). Actually, the header says "Composting in a closed reactor housed windrows". The particle size limit for Col 1 is 40cm. For Col 2 is 6cm.
+        *   Option A uses 70°C / 1hr. This matches Column 2 parameters (70C, 1hr).
+        *   Then Pod does "Closed reactor 70°C 1hr". This matches Column 2 parameters.
+        *   Is "Closed reactor 70°C 1hr" a valid method in Table 1? Yes, Column 2.
+        *   So Stage 1 + Stage 2 both meet Table 1 Col 2 requirements. This seems compliant for the treatment part.
+        *   However, Option A failed the Operator Status (Art 23 vs Art 24). So A is out.
+
+    *   *Option B:* Hub (Closed reactor 70C 1hr) -> Pod (Closed reactor 70C 1hr).
+        *   Operator: Art 24 Approved. (OK).
+        *   Treatment: Both stages match Table 1 Col 2 (70C, 1hr, <6cm). (OK).
+        *   Vehicle: Wheels only. (OK).
+        *   Sampling: At Pod.
+            *   Text: "For ‘Hub and Pod’ systems where hygienisation or pasteurisation takes place at one site (the ‘hub’) prior to distribution to one or more sites (‘pods’) for composting or anaerobic digestion, Salmonella sampling must take place at the pod..."
+            *   Requirement: Sampling at Pod. (OK).
+        *   Storage: Clean area separated from reception/cleaning areas, floors prevent liquid seepage.
+            *   Text: "c. a clean area in which treated compost or digestion residues are stored. This clean area shall be adequately separated from the reception area and the area in which vehicles and containers are cleansed and disinfected to prevent contamination of the treated material. Floors shall be laid so that liquid cannot seep into the clean area from the other areas."
+            *   Requirement: Separated + Floor prevents seepage. (OK).
+        *   Conclusion: Option B looks fully compliant.
+
+    *   *Option C:* Hub (Closed reactor 70C 1hr) -> Pod (Store 18 days average).
+        *   Operator: Art 24 Approved. (OK).
+        *   Treatment: Meat cannot be excluded. Must follow Note 2(b): "treated again using one of the methods in the table".
+        *   Option C suggests storing for 18 days instead of treating again.
+        *   Text Note 3 (under Biogas systems) says: "The approval for a biogas plant shall specify one of the methods in the table and in addition require that either: a. measures were taken at source to ensure that meat was not included...; or b. following treatment, the material is stored for an average of 18 days."
+        *   This 18-day storage exception applies to **Biogas** plants (Note 3 under Table 2).
+        *   The scenario specifies **"采用堆肥工艺" (using composting process)**.
+        *   For Composting (Table 1), Note 2 says: "either a. measures... meat not included... OR b. following the first treatment, the material shall be treated again using one of the methods in the table...".
+        *   There is NO mention of 18-day storage as an alternative to the second treatment for Composting in Note 2. The 18-day storage option is specific to Biogas (Note 3).
+        *   Therefore, replacing the second treatment with storage is **non-compliant** for Composting when meat is present.
+        *   Conclusion: Option C is non-compliant.
+
+    *   *Option D:* Hub (Closed reactor 70C 1hr) -> Pod (Closed reactor 70C 1hr).
+        *   Operator: Art 24 Approved. (OK).
+        *   Treatment: Matches Table 1 Col 2. (OK).
+        *   Vehicle: "清洗整辆车辆而不只清洗车轮" (Clean whole vehicle, not just wheels).
+        *   Text: "In the case of vehicles transporting only untreated catering waste and not subsequently transporting treated material, only the wheels of the vehicle need to be cleaned."
+        *   Does cleaning the whole vehicle violate "only the wheels... need to be cleaned"?
+        *   Strictly speaking, the regulation sets the requirement. If you clean more, you are exceeding the requirement. Is it "compliant"?
+        *   However, usually in regulatory compliance questions, if the text says "only X needs to be done", doing Y (where Y includes X) is generally acceptable hygiene-wise. But sometimes the question tests the exact wording of the derogation.
+        *   Let's check the phrasing "only the wheels of the vehicle need to be cleaned". This limits the obligation. It doesn't explicitly forbid cleaning the rest. However, if the authorization is based on the assumption that wheel cleaning is sufficient given the risk profile, adding cleaning elsewhere doesn't hurt.
+        *   BUT, let's look at the instruction: "仅就各方案明确列出的...判断". If the scheme lists "Clean whole vehicle", does it conflict with the authorization text "only wheels need to be cleaned"?
+        *   Consider Option B vs Option D. Option B matches the text perfectly. Option D modifies the cleaning scope.
+        *   Often, "only wheels" is the specific permission granted to reduce burden. If you clean the whole vehicle, you are still compliant with hygiene.
+        *   However, let's look at the options again. Maybe there's a subtle error in D.
+        *   Wait, is there any reason D would be wrong? If the authorization specifically permits wheel-cleaning *as a derogation*, and you choose to clean the whole vehicle, you are effectively opting out of the derogation (which might imply higher costs or different protocols). But compliance is about meeting the standard. Meeting the standard > Minimum requirement.
+        *   However, looking at typical exam patterns for such texts: If the text says "only X", selecting "X + Y" is often considered "Not matching the specific condition described in the authorization" if the question asks "Which schemes comply with the authorization". The authorization grants permission for wheel cleaning. It doesn't grant permission for whole vehicle cleaning *instead* of wheel cleaning? No, whole vehicle cleaning covers wheel cleaning.
+        *   Let's check if there is a constraint I missed. "In the case of vehicles transporting only untreated catering waste... only the wheels... need to be cleaned."
+        *   If I clean the whole vehicle, am I violating "only the wheels need to be cleaned"? No, I am cleaning the wheels AND more.
+        *   However, let's compare B and D. B is the exact match. D is a variation. If multiple choice allows multiple correct answers (B, D?), or single (B?). The prompt asks "以下哪些方案全部合规？" (Which schemes are ALL compliant?). It implies potentially multiple.
+        *   Let's check Option E and F to see if they help calibrate.
+
+    *   *Option E:* Hub (Closed reactor 70C 1hr) -> Pod (Closed reactor 70C 1hr).
+        *   Vehicle: Wheels only. (OK).
+        *   Storage: "洁净储区未与接收区和车辆清洗区充分分隔，但地板能够阻止液体渗入" (Clean area NOT sufficiently separated from reception/cleaning areas, but floor prevents liquid seepage).
+        *   Text: "This clean area shall be **adequately separated** from the reception area and the area in which vehicles and containers are cleansed and disinfected to prevent contamination of the treated material."
+        *   Requirement: Adequate separation IS required.
+        *   Option E says "NOT sufficiently separated".
+        *   Conclusion: Option E is **non-compliant**.
+
+    *   *Option F:* Hub (Closed reactor 70C 1hr) -> Pod (Housed windrow 60C 8 days, turned 3 times, 2-day intervals).
+        *   Operator: Art 24 Approved. (OK).
+        *   Treatment:
+            *   Hub: Closed reactor 70C 1hr. Matches Table 1 Col 2.
+            *   Pod: Housed windrow 60C 8 days. Matches Table 1 Col 3 ("Composting in housed windrows": Min temp 60°C, Min time 8 days, Note 2: "windrow must be turned at least 3 times during this period, at no less than 2-day intervals").
+            *   Requirement: Second treatment must use one of the methods in the table.
+            *   Hub method (Col 2) + Pod method (Col 3). Both are in Table 1.
+            *   Note 2(b): "except that, if the treatment is in a windrow, the second treatment need not be in a housed windrow." Here, Pod is a housed windrow. This is allowed.
+            *   So Treatment is compliant.
+        *   Vehicle: Wheels only. (OK).
+        *   Sampling: At Pod. (OK).
+        *   Storage: Separated + Floor. (OK).
+        *   Conclusion: Option F looks fully compliant.
+
+    *   **Re-evaluating Option D (Vehicle Cleaning):**
+        *   Text: "In the case of vehicles transporting only untreated catering waste and not subsequently transporting treated material, **only the wheels of the vehicle need to be cleaned**."
+        *   Question asks: Which schemes are compliant?
+        *   If a scheme cleans the whole vehicle, does it comply?
+        *   Legally, cleaning more is safer. However, the authorization text sets the specific condition for the derogation. If the question implies "Strictly according to the text", Option D deviates from the specific description of the permitted action ("only wheels").
+        *   However, usually, compliance means meeting the requirements. Requirement = Clean wheels. Action = Clean whole vehicle. Result = Wheels are clean. Compliance = Yes.
+        *   BUT, in the context of "Authorisation D6", this is a specific exemption. Exemptions are often interpreted strictly. If the exemption says "You only need to clean wheels", and you clean the whole vehicle, are you still operating under the exemption? Yes, because you are meeting the hygiene standard.
+        *   However, let's look at the options provided. B and F are clearly compliant based on the text. D is ambiguous. A is wrong (Art 23). C is wrong (Storage for composting). E is wrong (No separation).
+        *   If D is considered compliant, the answer would be B, D, F. If D is considered non-compliant (because it changes the specific condition of the derogation), the answer is B, F.
+        *   Let's analyze the phrase "only the wheels... need to be cleaned". This is a statement of requirement necessity ("need to"). It implies sufficiency. It doesn't explicitly prohibit cleaning more.
+        *   However, in many regulatory exams, if the text specifies a condition for an exemption, and the option describes a different condition (even if stricter), it might be flagged as not adhering to the specific authorization terms if the question asks about compliance with *that specific authorization's conditions*.
+        *   Let's check the prompt: "依据《Animal by-products legislation for England: exemptions》文件中 D6 授权及其 Annex A... 判断，以下哪些方案全部合规？" (Based on D6 and Annex A... judge which schemes are fully compliant).
+        *   If I follow the text literally: "only wheels need to be cleaned". Option D says "clean whole vehicle". Does this violate the text? Not necessarily.
+        *   But consider the context of "Hub-and-Pod". The text says "In the case of vehicles transporting only untreated catering waste... only the wheels... need to be cleaned." This is under Part I point 5 of Annex A.
+        *   If I select D, I am assuming "Cleaning more is fine". If I select B, I am assuming "Stick to the text".
+        *   Given the precision of the other details (Art 23 vs 24, Storage vs Treatment, Separation), the question likely tests precise adherence to the text.
+        *   Let's look for clues in similar questions. Usually, "only wheels" is the specific allowance. Deviating from the allowance (e.g., claiming you don't need to clean wheels) is bad. Cleaning more is usually fine. BUT, if the question asks which schemes comply with the *authorization*, and the authorization specifies "wheels only", does a scheme specifying "whole vehicle" comply?
+        *   Actually, there is a nuance. The text says "only the wheels of the vehicle **need to be cleaned**". This defines the obligation. It does not define the prohibition.
+        *   However, let's look at Option B and F. They are perfect matches. D is the outlier.
+        *   Is there any reason D is definitely wrong? "Vehicle leaving the site... clean whole vehicle". The text says "before they leave the premises... only the wheels... need to be cleaned". If you clean the whole vehicle, you satisfy "clean wheels".
+        *   However, in multiple-choice questions involving regulations, if an option introduces a change to the specific conditions of the exemption (even if stricter), it might be marked wrong if the exemption is conditional on that specific measure (risk assessment basis). The authorization is granted *because* wheel cleaning is deemed sufficient for that specific traffic pattern. If you clean the whole vehicle, you are technically operating outside the specific justification of the exemption (though safer).
+        *   Let's assume the strict interpretation: The authorization defines the compliant path. Path = Wheel cleaning. Option D = Whole vehicle cleaning. Is D compliant with the authorization? The authorization permits wheel cleaning. It doesn't mandate it exclusively. But it sets the standard.
+        *   Let's check if there's a stronger reason to exclude D.
+        *   Actually, looking at Option B and F, they are very detailed matches. Option D has the "Whole vehicle" difference. In strict regulatory compliance questions, if the regulation says "Do X", doing "X + Y" is usually compliant. But if the regulation says "You are exempt from cleaning the body IF you clean wheels", then cleaning the body is fine.
+        *   Wait, the text says "only the wheels of the vehicle need to be cleaned". It's a statement of the requirement level.
+        *   Let's tentatively include D? Or exclude D?
+        *   Let's check the other options again.
+        *   A: Wrong (Art 23).
+        *   C: Wrong (Storage for Composting).
+        *   E: Wrong (No separation).
+        *   So the candidates are B, D, F.
+        *   If I must choose between B/F and B/D/F.
+        *   Consider the phrase "only the wheels... need to be cleaned". If an operator cleans the whole vehicle, they are complying with the "clean wheels" requirement.
+        *   However, often in these tests, the "correct" answer aligns exactly with the text to demonstrate understanding of the specific conditions.
+        *   Let's check if there is any other constraint. "题中需判断...车辆清洗范围...".
+        *   If the regulation says "Only wheels need to be cleaned", and Option D says "Clean whole vehicle", is this a violation of "Only wheels"? "Only wheels need to be cleaned" implies "It is not necessary to clean anything else". It doesn't say "It is forbidden to clean anything else".
+        *   However, if I look at Option B vs D. B is the textbook definition. D is a variation.
+        *   Let's search for similar logic in UK VAT/Gov.uk guidance questions. Usually, deviations are risky.
+        *   But wait, look at the instruction: "少选、多选或错选均判错" (Selecting fewer, more, or wrong ones will be judged as wrong). This implies there might be multiple correct answers.
+        *   If B and F are definitely correct. Is D correct?
+        *   Let's reconsider the "Only wheels" clause. It is a derogation from the standard requirement (which likely requires full cleaning). The authorization allows *less* cleaning (wheels only) under specific conditions. If an operator chooses to clean the whole vehicle, they are reverting to standard practice (or better). Standard practice is compliant with the law. The Authorization D6 is an *additional* permission for specific cases. If they choose to clean the whole vehicle, they are complying with the underlying regulations (Regulation 1069/2009 etc.) without needing the D6 derogation for cleaning. But the question asks if the scheme complies with "D6 authorization and Annex A".
+        *   If the scheme follows D6 but modifies the cleaning scope, does it comply with D6? D6 sets the conditions for the *derogation*. If you don't follow the derogation conditions (i.e. you clean more), you aren't using the derogation. You are just following the main law. But the question asks if the scheme complies with D6.
+        *   Actually, the question asks "Which schemes are compliant?" (implied: with the regulations described).
+        *   If I follow the main law, I am compliant. If I follow D6, I am compliant.
+        *   But Option D describes a scheme "Under D6 authorization...". If the scheme claims to operate under D6 but changes the cleaning parameter, does it remain compliant with D6?
+        *   Given the specificity of the question asking to judge based on D6 and Annex A, it implies checking the conditions of D6.
+        *   Condition: "only the wheels... need to be cleaned".
+        *   Scheme D: "Clean whole vehicle".
+        *   Does this match the condition? No. It exceeds it.
+        *   In the context of "Compliance with Authorization", usually you must meet the conditions of the authorization if you rely on it. If you exceed them, you are still compliant with the law, but are you compliant with the *scheme described in the option* relative to the *text*?
+        *   Let's guess the intended answer is B and F. Why? Because D introduces a discrepancy in the specific condition list ("Vehicle cleaning scope"). The prompt asks to judge based on "Vehicle cleaning scope". If the text says "Wheels", and Option says "Whole", it's a mismatch in the description of the compliance point.
+        *   Also, Option B and F are identical in cleaning scope ("Only wheels"). Option D differs.
+        *   Let's assume the question expects strict adherence to the text for the "Compliant" label.
+        *   So I will exclude D.
+        *   Wait, let's double check Option F's Composting parameters.
+        *   Hub: Closed reactor 70C 1hr. (Matches Table 1 Col 2).
+        *   Pod: Housed windrow 60C 8 days. (Matches Table 1 Col 3).
+        *   Note 2(b): "following the first treatment, the material shall be treated again using one of the methods in the table... except that, if the treatment is in a windrow, the second treatment need not be in a housed windrow."
+        *   Here Hub is Closed Reactor. Pod is Housed Windrow. This is allowed.
+        *   Parameters: 60C, 8 days, turned 3 times (2 day intervals). Matches Table 1 Col 3 notes.
+        *   So F is correct.
+        *   B is correct.
+        *   What about D? If I have to choose between {B, F} and {B, D, F}.
+        *   Reasoning for excluding D: The authorization specifically grants permission for "only wheels". While cleaning more is safe, the authorization's specific terms for the derogation are "only wheels". If the question asks "Which schemes comply [with the authorization conditions]", changing the condition makes it not comply with the *authorization's specific terms* (even if compliant with general law). Given the prompt asks to judge based on D6/Annex A, strict adherence is safer.
+        *   Also, Option D says "clean whole vehicle *rather than just* wheels". This highlights the deviation.
+        *   I will stick with B and F.
+
+    *   **Wait, one more check on Option A:**
+        *   "经营者仅依Article 23注册，未依Article 24获批".
+        *   D6 text: "authorises for operators **approved under Article 24**".
+        *   So A is definitely wrong.
+
+    *   **One more check on Option C:**
+        *   "Store 18 days".
+        *   This is for Biogas (Note 3). Scenario is Composting (Table 1).
+        *   Composting Note 2 requires second treatment.
+        *   So C is definitely wrong.
+
+    *   **One more check on Option E:**
+        *   "Not sufficiently separated".
+        *   Text: "adequately separated".
+        *   So E is definitely wrong.
+
+    *   **So it's between B, D, F.**
+    *   Decision on D:
+        *   Text: "only the wheels... need to be cleaned".
+        *   Option D: "clean whole vehicle".
+        *   If the question asks "Which schemes are compliant?", and cleaning the whole vehicle ensures the wheels are clean, it is compliant with the *goal*. But is it compliant with the *scheme defined in the text*?
+        *   Usually, in these types of logic/regulation questions, if the text specifies a specific condition (e.g. "Only wheels"), and an option changes it ("Whole vehicle"), it is often considered "Not compliant with the specific authorization" because the authorization is a limited license.
+        *   Furthermore, the prompt asks to judge based on "Vehicle cleaning scope".
+        *   If I mark D as correct, I imply "Cleaning whole vehicle is allowed under D6". D6 says "Only wheels need to be cleaned". It doesn't explicitly ban whole vehicle cleaning, but it defines the requirement for the exemption.
+        *   However, compared to B (Exact match), D is less precise.
+        *   Let's check if there is any hidden trap in F.
+        *   F: "Hub... Closed reactor... Pod... Housed windrow".
+        *   Text: "except that, if the treatment is in a windrow, the second treatment need not be in a housed windrow."
+        *   This implies if the *second* treatment is a windrow, it doesn't need to be *housed*.
+        *   F says "Pod... housed windrow". This is allowed (it can be housed).
+        *   Parameters: 60C, 8 days, 3 turns, 2-day intervals. Matches Table 1 Col 3.
+        *   So F is correct.
+        *   So B and F are strong candidates.
+        *   Is D correct?
+        *   If I select B and F, I am safe. If I add D, I risk being wrong on the "strictness" of the authorization.
+        *   Given "少选、多选或错选均判错" (Selecting fewer, more, or wrong ones will be judged as wrong), accuracy is paramount.
+        *   The text says "only the wheels... need to be cleaned". This is the specific provision for this scenario. Option D says "clean whole vehicle". This contradicts the specific provision's limitation ("only"). Even if cleaner, it violates the "only" constraint of the authorization's terms.
+        *   Therefore, D is likely incorrect in the context of "Compliance with Authorization D6".
+        *   Final selection: B, F.
+
+**Summary of findings:**
+*   **A:** Incorrect (Art 23 vs Art 24).
+*   **B:** Correct (Art 24, Treatment params match, Wheels only, Pod sampling, Separation OK).
+*   **C:** Incorrect (Storage for Composting not allowed when meat present).
+*   **D:** Incorrect (Violates "only wheels" condition of the specific authorization).
+*   **E:** Incorrect (Storage area not separated).
+*   **F:** Correct (Art 24, Treatment params match [Hub Col 2, Pod Col 3], Wheels only, Pod sampling, Separation OK).
+
+**Final Answer Formulation:**
+Output `[Answer]` then `B,F`.

@@ -1,0 +1,294 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Source Material: Provided context about the `typing` module in Python documentation.
+    *   Task: Identify two function-style calling patterns for `typing.NamedTuple` that are deprecated since Python 3.13 and will be prohibited in Python 3.15, based *only* on the "typing.NamedTuple" section's deprecation notes.
+    *   Output Format:
+        *   First line: `[Answer]`
+        *   Subsequent lines: "Calling Pattern | Prohibited Version" (one per line), ordered by appearance in the document.
+        *   Constraint: Use the exact writing style from the document examples for calling patterns. Do not list alternatives.
+        *   Constraint: Strictly follow the given document. No explanations.
+
+2.  **Scan the Context for "typing.NamedTuple":**
+    *   Locate the section `### 特殊类型原语` -> `#### 构造泛型类型与类型别名` -> `*class* typing.NamedTuple`.
+    *   Look for deprecation notes within this section.
+    *   Found text:
+        > 从 3.13 版起不建议使用，将在 3.15 版中移除：创建命名元组 NamedTuple 的关键字参数语法 (`NT = NamedTuple("NT", x=int)`) 未被写入文档且已被弃用，它将在 3.15 中被禁止。使用基于类的语法或函数式语法作为替代。
+        > 从 3.13 版起不建议使用，将在 3.15 版中移除：使用函数式语法创建 NamedTuple 类时，不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为已被弃用，且在 Python 3.15 中都将被禁止。要创建一个无字段的 NamedTuple 类，请使用 `class NT(NamedTuple): pass` 或 `TD = TypedDict ("TD", {})`。
+
+3.  **Extract the Specific Patterns:**
+    *   Pattern 1: `NT = NamedTuple("NT", x=int)` (Keyword argument syntax mentioned as deprecated).
+    *   Pattern 2: `NT = NamedTuple("NT")` (Not passing value to 'fields' parameter).
+    *   Pattern 3: `NT = NamedTuple("NT", None)` (Passing `None` to 'fields' parameter).
+
+    The prompt asks for "two function-style calling patterns" (两种函数式调用模式).
+    Looking at the text:
+    1.  `NT = NamedTuple("NT", x=int)`
+    2.  `NT = NamedTuple("NT")` or `NT = NamedTuple("NT", None)` are grouped together in the second bullet point regarding passing no value or `None` to 'fields'.
+
+    However, the prompt asks for "two... patterns". Let's look closely at the text structure.
+    Text segment 1: `NT = NamedTuple("NT", x=int)`
+    Text segment 2: `NT = NamedTuple("NT")` or `NT = NamedTuple("NT", None)`
+
+    The prompt says "list ... two function-style calling patterns" (列出...两种函数式调用模式).
+    The text explicitly mentions two distinct scenarios in the deprecation notes under `typing.NamedTuple`:
+    1. Keyword argument syntax: `NT = NamedTuple("NT", x=int)`
+    2. Not passing value or passing None to 'fields': `NT = NamedTuple("NT")` or `NT = NamedTuple("NT", None)`
+
+    Wait, the instruction says "按文档出现顺序逐行输出“调用模式｜禁止版本”" (Output "Calling Pattern | Prohibited Version" line by line according to document order).
+    And "列出...两种函数式调用模式" (List two function-style calling patterns).
+
+    Let's identify the specific strings used in the examples within the deprecation notes.
+    Note 1: `NT = NamedTuple("NT", x=int)`
+    Note 2: `NT = NamedTuple("NT")`
+    Note 3: `NT = NamedTuple("NT", None)`
+
+    Are these considered separate patterns? The text groups Note 2 and 3 together: "不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为".
+    However, the first note is distinct: "关键字参数语法 (`NT = NamedTuple("NT", x=int)")".
+
+    If I need to list exactly two patterns based on the text flow:
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")` (or `NT = NamedTuple("NT", None)`?)
+
+    The prompt asks for "two... patterns". The text has two paragraphs of deprecation warnings.
+    Paragraph 1 warns about `NT = NamedTuple("NT", x=int)`.
+    Paragraph 2 warns about `NT = NamedTuple("NT")` and `NT = NamedTuple("NT", None)`.
+
+    To be precise and cover the request for "two patterns", I should probably extract the distinct code snippets provided as examples of what is deprecated.
+    Snippet 1: `NT = NamedTuple("NT", x=int)`
+    Snippet 2: `NT = NamedTuple("NT")` (This appears before `NT = NamedTuple("NT", None)` in the text sequence).
+    Or should I combine them? The prompt says "two function-style calling patterns".
+    Let's look at the wording: "列出从 3.13 起弃用、并将在 3.15 禁止的两种函数式调用模式" (List two function-style calling patterns...).
+    The text lists:
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+    3. `NT = NamedTuple("NT", None)`
+
+    Since the prompt asks for *two*, and there are three specific code examples in the deprecation section, I need to decide which two to pick or if I should treat the second paragraph as one pattern type. However, the instruction says "按文档出现顺序" (according to document order).
+    Document order of examples in the deprecation section:
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+    3. `NT = NamedTuple("NT", None)`
+
+    If I must output two lines, I should pick the first two distinct examples found in the text flow regarding the prohibition.
+    Actually, looking at the text:
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：创建命名元组 NamedTuple 的关键字参数语法 (`NT = NamedTuple("NT", x=int)`)..."
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：使用函数式语法创建 NamedTuple 类时，不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为..."
+
+    There are two distinct *descriptions* of deprecation behavior.
+    Behavior 1: Keyword argument syntax (`NT = NamedTuple("NT", x=int)`).
+    Behavior 2: Not passing value OR passing None (`NT = NamedTuple("NT")` / `NT = NamedTuple("NT", None)`).
+
+    If I treat "Behavior 2" as one category, I might just list `NT = NamedTuple("NT")` as representative, or list both if the prompt implies specific code snippets.
+    However, the prompt asks for "two... patterns" (两种...模式).
+    Given the constraint "按文档出现顺序" (in order of appearance), the first example is `NT = NamedTuple("NT", x=int)`. The next example appearing is `NT = NamedTuple("NT")`. Then `NT = NamedTuple("NT", None)`.
+    If I output two lines, I should probably output the first two distinct code snippets mentioned in the deprecation notes.
+    Line 1: `NT = NamedTuple("NT", x=int)`
+    Line 2: `NT = NamedTuple("NT")`
+    (Skipping `NT = NamedTuple("NT", None)` because it's grouped with the previous one in the same sentence, but technically appears after).
+    However, the prompt says "two function-style calling patterns".
+    Let's check if the text considers them separate.
+    Text: "不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为".
+    These are two variations of the same warning block.
+    The first warning block is: `NT = NamedTuple("NT", x=int)`.
+
+    So we have Warning Block 1 (Pattern A) and Warning Block 2 (Patterns B & C).
+    If I need to list "two patterns", listing Pattern A and Pattern B makes sense as they appear sequentially.
+    Pattern A: `NT = NamedTuple("NT", x=int)`
+    Pattern B: `NT = NamedTuple("NT")`
+    (Pattern C is also valid but comes after B in the same sentence).
+
+    Let's re-read carefully: "列出...两种函数式调用模式" (List two function-style calling patterns).
+    If I list `NT = NamedTuple("NT", x=int)` and `NT = NamedTuple("NT")`, that covers the first two explicit code examples in the deprecation notes.
+    The version is 3.15 for all of them ("将在 3.15 版中移除", "在 Python 3.15 中都将被禁止").
+
+    Let's verify the exact text for the patterns.
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+    (The text also mentions `NT = NamedTuple("NT", None)`).
+
+    Is there a way to interpret "two patterns" as the two *paragraphs* of deprecation?
+    Paragraph 1 describes `NT = NamedTuple("NT", x=int)`.
+    Paragraph 2 describes `NT = NamedTuple("NT")` and `NT = NamedTuple("NT", None)`.
+    If I have to choose two *patterns*, picking the first example from each paragraph seems most logical to represent the two distinct deprecation reasons mentioned.
+    Reason 1: Keyword args (`x=int`).
+    Reason 2: Missing fields arg (`NT = NamedTuple("NT")`).
+
+    Let's check the instruction again: "按文档出现顺序逐行输出... 调用模式须使用文档中的示例写法".
+    Order in document:
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+    3. `NT = NamedTuple("NT", None)`
+
+    Since I need exactly two lines, and there are three examples, I will select the first two unique examples that appear in the text sequence within the deprecation notes.
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+
+    Wait, checking the text again:
+    "不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为"
+    These are presented as alternatives ("or").
+    The first paragraph presents one pattern.
+    The second paragraph presents two patterns combined with "or".
+    To be safe and strictly follow "document order", I will list the first one found, then the second one found.
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+
+    Wait, is there any ambiguity about "two patterns"? Maybe it means the two categories described?
+    Category 1: Keyword argument syntax.
+    Category 2: Passing no value/None.
+    But the instruction says "调用模式须使用文档中的示例写法" (Calling pattern must use the example writing style in the document). This implies I should write the code snippet.
+    If I write `NT = NamedTuple("NT", x=int)` and `NT = NamedTuple("NT")`, that satisfies "two patterns".
+    What about `NT = NamedTuple("NT", None)`? It appears after `NT = NamedTuple("NT")`. If I only output two lines, I stop at the second example.
+
+    Let's confirm the version. Both say "将在 3.15 版中移除" / "在 Python 3.15 中都将被禁止". So "3.15".
+
+    Final check on constraints:
+    - Only based on "typing.NamedTuple" section's deprecation notes. (Yes)
+    - List two function-style calling patterns. (Yes)
+    - Deprecated since 3.13, prohibited in 3.15. (Yes)
+    - First line: `[Answer]`
+    - Subsequent lines: "Calling Pattern | Prohibited Version"
+    - Order by document appearance.
+    - Use document example writing style.
+    - Do not list alternatives.
+
+    Draft:
+    [Answer]
+    NT = NamedTuple("NT", x=int)｜3.15
+    NT = NamedTuple("NT")｜3.15
+
+    Wait, looking at the text: "使用函数式语法创建 NamedTuple 类时，不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为已被弃用".
+    Technically there are three code snippets. But the prompt asks for "two".
+    If I include `NT = NamedTuple("NT", None)`, I would have three lines.
+    If I combine them, e.g., `NT = NamedTuple("NT") or NT = NamedTuple("NT", None)`, that violates "example writing style".
+    So I must pick two. The first two appearing are `NT = NamedTuple("NT", x=int)` and `NT = NamedTuple("NT")`.
+    However, `NT = NamedTuple("NT", None)` is part of the same logical group (passing nothing/None).
+    Is it possible the prompt considers the two *paragraphs* as the two patterns?
+    Paragraph 1 pattern: `NT = NamedTuple("NT", x=int)`
+    Paragraph 2 pattern: `NT = NamedTuple("NT")` (representative of the group).
+    This seems the most robust interpretation.
+
+    One more check: The prompt says "两种函数式调用模式" (two function-style calling patterns).
+    In the text:
+    1. `NT = NamedTuple("NT", x=int)` (Keyword argument syntax)
+    2. `NT = NamedTuple("NT")` (Not passing fields)
+    3. `NT = NamedTuple("NT", None)` (Passing None)
+
+    If I strictly follow "document order", 1 comes before 2, 2 comes before 3.
+    Selecting 1 and 2 covers the requirement of "two".
+    Selecting 1 and 3 skips 2.
+    Selecting 2 and 3 skips 1.
+    1 and 2 is the natural choice for "first two".
+
+    Wait, I should check if there are other deprecation notes in that section.
+    The section ends with:
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：创建命名元组 NamedTuple 的关键字参数语法 (`NT = NamedTuple("NT", x=int)`) 未被写入文档且已被弃用，它将在 3.15 中被禁止。使用基于类的语法或函数式语法作为替代。"
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：使用函数式语法创建 NamedTuple 类时，不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为已被弃用，且在 Python 3.15 中都将被禁止。"
+
+    Okay, I will list the first two code snippets found in this sequence.
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+
+    Wait, is `NT = NamedTuple("NT", None)` considered a separate pattern? Yes, syntactically.
+    But since I am limited to "two", and 1 and 2 appear first.
+    Actually, maybe I should list the two *types* of behaviors described?
+    Type 1: Keyword args.
+    Type 2: Missing/None fields.
+    But the output format requires "Calling Pattern".
+    If I write `NT = NamedTuple("NT", None)`, it appears after `NT = NamedTuple("NT")`.
+    I'll stick with the first two distinct code examples.
+
+    Wait, re-reading the prompt: "列出...两种函数式调用模式" (List ... two function-style calling patterns).
+    It doesn't say "the first two". It says "list two".
+    However, the constraint "按文档出现顺序" (according to document order) applies to the output lines.
+    So I should list the ones that appear earliest.
+    So `NT = NamedTuple("NT", x=int)` is #1.
+    `NT = NamedTuple("NT")` is #2.
+    `NT = NamedTuple("NT", None)` is #3.
+    I will output #1 and #2.
+
+    Wait, one detail: "禁止版本" (Prohibited Version).
+    Text says: "将在 3.15 版中移除" (will be removed in 3.15) and "在 Python 3.15 中都将被禁止" (will be prohibited in Python 3.15).
+    So "3.15" is correct.
+
+    Final check on format:
+    [Answer]
+    Pattern|Version
+    Pattern|Version
+
+    Example writing style: `NT = NamedTuple("NT", x=int)`
+    My draft: `NT = NamedTuple("NT", x=int)|3.15`
+
+    One nuance: The prompt says "仅依据...弃用说明" (Only based on... deprecation notes).
+    The notes are at the end of the `typing.NamedTuple` class description.
+    The text:
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：创建命名元组 NamedTuple 的关键字参数语法 (`NT = NamedTuple("NT", x=int)`)..."
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：使用函数式语法创建 NamedTuple 类时，不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为..."
+
+    I will output the first two specific code examples found in this text block.
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+
+    Wait, does "两种" imply I should capture the essence of the two paragraphs?
+    Paragraph 1: `NT = NamedTuple("NT", x=int)`
+    Paragraph 2: `NT = NamedTuple("NT")` (and `None`).
+    If I output `NT = NamedTuple("NT")` and `NT = NamedTuple("NT", None)`, I miss the keyword argument one.
+    If I output `NT = NamedTuple("NT", x=int)` and `NT = NamedTuple("NT")`, I cover the start of each paragraph.
+    Given "按文档出现顺序", 1 then 2 is the strict adherence.
+
+    Wait, I need to make sure I don't add extra spaces or change quotes.
+    Document: `NT = NamedTuple("NT", x=int)`
+    Document: `NT = NamedTuple("NT")`
+
+    Okay, ready to generate.
+
+    Wait, one more check. "两种函数式调用模式".
+    Is `NT = NamedTuple("NT", x=int)` a function-style calling pattern? Yes.
+    Is `NT = NamedTuple("NT")` a function-style calling pattern? Yes.
+    Is `NT = NamedTuple("NT", None)` a function-style calling pattern? Yes.
+    Since I can only output two lines (implied by "two patterns"), I pick the first two.
+
+    Wait, could it be interpreted that the two patterns are:
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT", None)` (Representing the second paragraph's group)?
+    No, `NT = NamedTuple("NT")` appears first in the second paragraph.
+    So 1 and 2 is the safest bet for "document order".
+
+    Wait, looking at the instruction "先单独输出一行 [Answer]，再按文档出现顺序逐行输出“调用模式｜禁止版本”".
+    It implies multiple lines after [Answer].
+    If I only output 2 lines, that fits "two patterns".
+
+    Let's finalize the strings.
+    String 1: `NT = NamedTuple("NT", x=int)`
+    String 2: `NT = NamedTuple("NT")`
+    Version: `3.15`
+
+    Double Check: "禁止版本" (Prohibited Version).
+    Text: "将在 3.15 版中移除" (Removed in 3.15). "在 Python 3.15 中都将被禁止" (Prohibited in 3.15).
+    So `3.15` is the key.
+
+    One thing: The prompt asks for "两种函数式调用模式" (two function-style calling patterns).
+    Does the text consider `NT = NamedTuple("NT")` and `NT = NamedTuple("NT", None)` as separate patterns or one category?
+    They are listed with "或" (or).
+    However, syntactically they are different calls.
+    Given the constraint to list "two", and the order constraint, taking the first two occurrences is the most logical interpretation of "document order".
+
+    Wait, I should check if there are any other deprecation notes in the "typing.NamedTuple" section.
+    Scanning...
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：创建命名元组 NamedTuple 的关键字参数语法 (`NT = NamedTuple("NT", x=int)`)..."
+    "从 3.13 版起不建议使用，将在 3.15 版中移除：使用函数式语法创建 NamedTuple 类时，不向 'fields' 形参传值 (`NT = NamedTuple("NT")`) 或向 'fields' 形参传递 `None` (`NT = NamedTuple("NT", None)`) 的行为..."
+    That's it.
+    So the candidates are:
+    1. `NT = NamedTuple("NT", x=int)`
+    2. `NT = NamedTuple("NT")`
+    3. `NT = NamedTuple("NT", None)`
+
+    I will select 1 and 2.
+
+    Wait, I need to ensure I don't add explanation. Just the lines.
+    Format:
+    [Answer]
+    Pattern|Version
+    Pattern|Version
+
+    Let's write it.

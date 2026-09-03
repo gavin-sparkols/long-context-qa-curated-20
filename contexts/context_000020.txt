@@ -1,0 +1,2370 @@
+[文档 1/1]
+标题：Numerical analysis and coarsening dynamics of the Active Cahn-Hilliard equation
+发布日期：2026-08-07
+来源：arXiv
+来源地址：http://arxiv.org/abs/2608.07450v1
+
+NUMERICAL ANALYSIS AND COARSENING DYNAMICS
+OF THE ACTIVE CAHN-HILLIARD EQUATION
+
+ABRAMO AGOSTI
+
+Universit degli Studi di Pavia, Dipartimento di Matematica, Via Ferrata 5, 27100, Pavia (Italy)
+
+ANDREA GIORGINI
+
+Politecnico di Milano, Dipartimento di Matematica, Via E. Bonardi 9, 20133, Milano (Italy)2026
+
+ABSTRACT. In this paper, we investigate the analysis and phase ordering dynamics of the active Cahn–Hilliard
+equation (active Model B), which is a non-integrable variant of the Cahn–Hilliard equation used to modelAug active materials. In particular, we provide novel results beyond the current state of the art concerning the
+7 well-posedness and the characterization of its coarsening dynamics. We consider both regular polynomial and
+singular logarithmic (Flory-Huggins) bulk energy potentials. We make use of phase-plane methods, rigorous
+partial differential equation (PDE) analysis and discrete numerical approximations. In particular, we exploit a
+new method based on heteroclinic trajectories in the phase plane to characterize static kink profiles and spheri-
+cal droplet states. Through phase-plane trajectory analysis at leading perturbative orders, we recover the exact
+values of key quantities related to static phase-separated configurations which have already been characterized,
+exactly or numerically, by alternative approaches presented in the literature; moreover, we develop a theory[math.NA] accounting for surface tension modifications driven simultaneously by activity and local interface curvature,
+which explains the power-law shift L(t) ∼t z1 from z = 3 to z = 4 induced by activity for the characteristic
+domain length conjectured in the literature. This shows that there is a transitory effect before the attainment of
+a finite saturation length. We also design an efficient numerical scheme, based on piecewise linear continuous
+finite elements and semi-implicit time discretization, to approximate the model, proving its well-posedness and
+stability both for regular and singular double-well potentials. In dimensions d = 2, 3 with singular potentials,
+the convergence analysis of the finite element approximation proves the local-in-time existence and unique-
+ness of weak solutions for active Model B strictly satisfying the physical constraint φ ∈(−1, 1). In dimension
+d = 1 with singular potential, we establish global-in-time well-posedness and regularity of weak solutions un-
+der a smallness condition on the activity parameter λ. Finally, we show numerical simulations for different test
+cases which prove that our numerical algorithm correctly reproduces the expected phase separation dynamics,
+verifying that regular and singular potentials produce qualitatively identical phase separation behaviors. More-
+over, we show the numerical results for coarsening dynamics at late times which present a power law shift from
+z = 3 to z = 4 prior to reaching late-time length saturation, which confirms our theoretical findings.arXiv:2608.07450v1
+
+E-mail addresses: abramo.agosti@unipv.it, andrea.giorgini@polimi.it.
+Date: August 10, 2026.
+Key words and phrases. Active Cahn–Hilliard equation, Phase Separation, Coarsening Dynamics, Existence of Weak Solu-
+tions, Finite Element Approximation, Convergence Analysis.
+
+CONTENTS
+
+1. Introduction 2
+2. Static kink solutions and coarsening dynamics 5
+2.1. Existence of static kink solutions 6
+2.2. Existence of spherical droplet solutions 10
+2.3. Power law shift for domain growth 11
+3. Formal estimates for the case with singular potential 18
+3.1. Notation and preliminary lemmas 18
+3.2. Formal estimates for d = 2, 3. 19
+3.3. The one dimensional case: global well-posedness 22
+4. Finite Element approximation 30
+4.1. Preliminaries and technical lemmas 30
+4.2. Discretisation scheme 36
+4.3. Well-posedness and conditional stability for Problem P h 37
+4.4. Higher order estimates and convergence analysis in the singular case 44
+5. Numerical results 51
+5.1. Test Case 1 51
+5.2. Test Case 2 51
+5.3. Test Case 3 52
+Appendix A. Detailed calculations for the static droplet solution at II order 53
+References 56
+
+1. INTRODUCTION
+
+We study the active Cahn-Hilliard equation, also known as active Model B,
+∂tφ = ∆μ, μ = −∆φ + Ψ′(φ) + λ|∇φ|2 in Ω× (0, ∞), (1.1)
+
+where Ωis either the interval (0, L) in one dimension or a bounded and smooth domain Ω⊂Rd, d = 2, 3,
+equipped with the following boundary and initial conditions
+
+∂nφ = ∂nμ = 0 on ∂Ω× (0, T), φ(·, 0) = φ0 in Ω. (1.2)
+
+Here, n is the outward normal vector on ∂Ω. The active Cahn-Hilliard (1.1) can also be rewritten as
+∂tφ = −∆2φ + ∆(Ψ′(φ)) + λ∆ |∇φ|2 in Ω× (0, ∞). (1.3)
+
+When λ = 0, the model (1.1)-(1.2) corresponds to the classical Cahn-Hilliard equation, also known as
+passive Model B [11,12].
+
+The nonlinear function Ψ, which represents the bulk free energy, is typically a regular double-well po-
+tential given by a quartic polynomial, i.e.
+(s2 −1)2
+Ψ(s) = , (1.4)
+or the singular double-well potential of logarithmic type, called the Flory-Huggins (also Boltzmann-Gibbs
+entropy) potential
+
+θ
+Ψ(s) = (1 + s) ln(1 + s) + (1 −s) ln(1 −s) −θ0 s2, s ∈[−1, 1], (1.5)
+2 2
+where the parameters θ and θ0 satisfy the conditions 0 < θ < θ0. The potential (1.5) is physically relevant
+since it enforces the solution φ to take values in [−1, 1].
+The term λ|∇φ|2 is an active term with strength λ ∈R, which breaks time-reversal symmetry. In the
+case λ ̸= 0, the model is non-integrable and λ can be viewed as the “distance” to the nearest integrable
+model. This means that μ is not derivable as the variational derivative of a Ginzburg-Landau free energy.
+Over the past decade, the Statistical Physics community has made significant progress in the exploration
+of Active Matter [15, 34, 36], which displays extraordinary collective phenomena that are unattainable in
+passive systems. Active Matter refers to the class of materials encompassing particles that convert energy
+into directed motion, known as motility, independently of external forces. The resultant self-propulsion
+induces particles to exhibit collective behavior, such as aggregation in high-density regions. This phenome-
+non is termed Motility-Induced Phase Separation (MIPS). Active Matter is prevalent in biological systems,
+such as living cells, bacteria, actin filaments, and colloids. The potential applications of Active Matter
+in biomedicine and engineering are incredibly promising [35], including the development of selfhealing
+materials, bio-inspired robotics, and biofilms.
+The most straightforward way to describe MIPS within the Phase Field theory involves integrating an
+active term that accounts for the violation of the time-reversal symmetry (TRS). The basic model proposed
+in [36] is the active Cahn-Hilliard equation (or active Model B), which corresponds to (1.1) with the regular
+double-well potential (1.4).
+In comparison with the passive Model B, the term λ|∇φ|2 is responsible for breaking TRS. Although the
+active term is new in the context of Phase Separation, the square of gradient term is common in the realm
+of PDEs modeling nonlinear physical phenomena and pattern formation. This term features prominently in
+models like the Burgers equation or the renowned Kardar-Parisi-Zhang (KPZ) equation. In this context, the
+fundamental question posed within the Statistical Physics community is: when do the explicit TRS breaking
+terms control the physics at large scales? A significant ongoing debate in current literature, initially sparked
+by [36] and persisting through ongoing discussions [27, 28], concerns the extent to which active terms
+impact coarsening dynamics. So far, empirical simulations indicate, at most, quantitative variations rather
+than qualitative shifts when compared to the passive case [27]. Here we summarize some known results
+and open questions on the phase ordering dynamics of Active Model B, which are supported by thorough
+numerical studies of coarsening kinetics reported in [27,36].
+
+- Existence of static kink solutions. Through a Newton mapping of the static solutions associated
+to Active Model B, the authors of [36] proved the existence of static bulk phase separation char-
+acterized by a non-zero constant value of the static chemical potential μ and by two equilibrium
+coexisting phases separated by a planar interface, whose densities are determined by an uncommon
+tangent construction, leading to an activity-induced pressure-jump across the interface.
+- Existence of spherical droplet solutions. In [36] the existence of a particular static configuration
+of a circular droplet of one phase with a large radius of order λ−1 immersed in the other phase,
+for which the active and Laplace pressures are equal and opposite, was also considered. For this
+particular static configuration, common tangency is restored . The Newton mapping method led the
+authors of [36] to obtain only a numerical approximation of the value of the droplet radius.
+- Power law shift for domain growth. In [27] it was conjectured that the domain growth kinetics for
+the active Model B is characterized by a crossover in the power law L(t) ∼t z for the characteristic
+size of separated domains from z = 3 at early times, corresponding to the classical Lifshit-Slyozov
+(LS) growth law for passive Model B, to z = 4 at late times. The authors of [27] were not able to
+prove this conjecture, posing as an open problem the development of a sophisticated theory which
+accounts for the modification of the surface tension not only by the activity term but also by the local
+curvature of the interface in order to prove the conjecture. Also, they provided extensive numerical
+evidences for its validity.
+
+From the mathematical viewpoint, the active CH equation is an evolutionary highly nonlinear fourth-order
+PDE. Despite conserving total mass akin to the passive case, the active term disrupts the gradient flow
+structure inherent in the Passive Cahn-Hilliard equation. Furthermore, the energy equation contains an
+additional unsigned strongly nonlinear term that cannot be directly controlled by either the energy itself
+or the dissipation through known techniques. Hence, the energy not only fails to be non-increasing, as
+in the passive case, but currently, it remains uncertain whether the energy landscape is bounded over the
+dynamics. As a result, the theoretical exploration of the active Cahn-Hilliard model remained completely
+open so far.
+In this work, we firstly give (in Section 2) a new theoretical perspective to characterize the static solutions
+and the phase ordering dynamics of Active Model B, which is alternative to the Newton mapping presented
+in [36]. We will in particular characterize the static bulk phase separation as an heteroclinic trajectory in
+the phase diagram. This theoretical perspective, which has been employed in literature to characterize the
+traveling wave solutions for the bistable equation (see e.g. [21, Chapter 6]), will prove in the present case
+to be more effective than the Newton mapping approach in deriving exact results and in giving a possible
+explanation to the observed shift in the power law for domain growth. In particular, we will be able to
+develop a theory which accounts for the modification of the surface tension not only by the activity term but
+also by the local curvature of the interface, as demanded in [27] to explain the conjectured power law shift
+for domain growth. We will find evidences, both theoretically and numerically, that the active term induces
+qualitative shifts in the coarsening dynamics with respect to the passive case, leading to a saturation effect
+for the characteristic domain size which is similar to the one proved in [10, 34] for another active model
+(the active Model B+), caused by a reverse Ostwald mechanism.
+
+As a second contribution of our work, we will present analytical and numerical results for the active
+Model B. In particular, we will design (in Section 4) a well-posed and conditionally stable numerical ap-
+proximation of active Model B, based on a computationally efficient lowest order finite element and semi-
+implicit time discrete approximation, both for the cases with the regular and with the singular potential. In
+the singular potential case, thanks to the physical bound φ ∈[−1, 1] enforced by the singularities at the
+pure phases, we will be able to prove the existence of a unique local in time weak solution to the active
+Model B, obtained within a convergence analysis for the discrete approximation as the limit point of the
+sequence of discrete solutions as the discretization parameters tend to zero. For the sake of readability,
+we will preliminarily show (in Section 3) the formal a-priori estimates at the continuous level which are
+rigorously reproduced at the discrete level to prove the convergence of the discrete approximation. The
+discrete a-priori estimates and convergence properties will be derived by employing highly technical results
+related to the proposed finite element approximation, like a discrete Gagliardo–Nirenberg inequality and an
+implicit nonlinear Gronwall inequality, which we will derive here as a further novel result for the present
+purpose. Moreover, in the case with the singular potential and spatial dimension d = 1, we will prove that
+the local in time weak solution is actually global in time.
+Finally, we will show (in Section 5) numerical results which illustrate the phase separation and coarsening
+dynamics of the active Model B both for the cases with the regular and the singular potentials, proving that
+they are qualitatively similar. Also, we will show the growth kinetics for the characteristic domain size at
+late times, comparing the results with those reported in [27, 36], proving the shift from z = 3 to z = 4
+before the attainement of a saturation length, which supports our theoretical findings.
+
+2. STATIC KINK SOLUTIONS AND COARSENING DYNAMICS
+
+First, we introduce the following dimensional version of the Active Model B:
+(
+∂tφ = D∆μ,
+(2.1)
+μ = −Γε∆φ + Γ Ψ′(φ) + γΓ|∇φ|2, ε
+where
+• D is a positive parameter representing the cells motility, of units [m4N −1s−1];
+• Γ is a positive parameter representing surface tension, of units [N m−1];
+• ε is a positive parameter representing the interface thickness, of units [m];
+• γ is the activity parameter, representing the signed length associated to interface growth induced by
+cells accumulation, of units [m].
+All the previous units for the model parameters have been reported in three spatial dimensions.
+In order to obtain an adimensionalized version of (2.1), we define the persistence length l, which is a
+characteristic length scale for the active dynamics, and the relaxation time
+l3
+τ = DΓ.
+Next, we make the change of variables
+t x
+̃t = , ̃x = ,
+τ l
+
+and we also introduce the adimensionalized variables and parameters
+lμ ε γ
+̃μ = , ̃ε = , ̃γ = .
+Γ l l
+Then, without reporting the tilde superscript on the variables for ease of notation, we obtain the following
+adimensionalized version of (2.1):
+(
+∂tφ = ∆μ,
+(2.2)
+μ = − ̃ε∆φ + 1 ̃εΨ′(φ) + ̃γ|∇φ|2,
+Taking l ≡ε, system (2.2) coincides with (1.1) with λ := γε . Hence we conclude that the adimensional
+parameter λ in (1.1) can be identified as the ratio between the activity length scale γ and the interface
+thickness ε, when describing the dynamics at the interface length scale.
+
+2.1. Existence of static kink solutions. In this section we develop a new methodology to prove the ex-
+istence of static kink solutions to the active Model B, i. e. of fully phase-separated static states with a
+planar interface. As already said in the Introduction, this was also proved in [36] by means of the Newton
+mapping method, which gave an explanation of the numerical results reporting bulk demixing as the output
+of phase separation dynamics for active Model B. In order to prove the validity of our methodology, we
+will compare our results with the results obtained by the analysis employed in [27,36]. To accomplish this,
+we consider here the system (1.1) with the regular potential (1.4). We start by introducing the basis for our
+methodology in the simple case of passive Model B, i.e. in the case with λ = 0. In the latter situation it is
+known that a static kink solution exists for μ ≡0, with bulk densities φ = ±1 determined by a common
+tangent construction. Let us introduce the spatial coordinate z normal to the interface, which varies from
+−∞to +∞. The static kink solution, which by the translational invariance depends only on the variable z,
+satisfies the equation
+−φ + φ3 −d2φ = 0, (2.3)
+dz2
+with boundary conditions φ(−∞) →∓1, φ(+∞) →±1. We rewrite the second order ODE (2.3) as a
+coupled system of two first order ODEs in the following way:
+
+dφ = χ,
+dz (2.4)
+dχ = Ψ′(φ).
+dz
+We observe that the points with coordinates (−1, 0) and (1, 0) in the phase plane {(φ, χ) ∈R2} are saddle
+points for system (2.4), while the point with coordinates (0, 0) is a center point for cyclic trajectories. A
+static kink solution can be identified as an heteroclinic trajectory, which is a trajectory in the phase plane,
+parametrized by the z coordinate, which connects the two saddle points (−1, 0) and (1, 0), i.e. which
+approaches (−1, 0) for z →∓∞and (1, 0) for z →±∞. If we multiply (2.4)2 by χ and integrate from
+−∞to z, we obtain that
+χ2 z z
+= Ψ(φ) −∞. 2 −∞
+
+Since χ(−∞) = dφdz (−∞) = 0 and Ψ(φ(−∞)) = Ψ(∓1) = 0, we obtain that
+dφ √ p −1) χ(z) = (z) = ± 2 Ψ(φ(z)) = ±(φ2(z)√ ,
+dz 2
+which gives a parabolic trajectory in the phase plane which connects the saddle points (−1, 0) and (1, 0),
+and which has the static kink profile solution
+
+z
+φ(z) = ± tanh √ ,
+with the plus or minus signs determining if the trajectory connects (−1, 0) for z →−∞to (+1, 0) for
+z →∞or vice versa.
+We extend now the previous arguments to the case with λ ̸= 0. Let us firstly characterize the roots of the
+cubic polynomial
+−φ + φ3 = μs, (2.5)
+where μs is the static constant value of the chemical potential, which may be nonzero when λ ̸= 0. When
+− √2 < μs < 2 √ the polynomial (2.5) admits three distinct real roots φa < φb < φc, given by the 3 3 3 3,
+expression s s r r
+3 μs 3 μs
+− + μ2s −1 + μ2s −1 (2.6) {φa, φb, φc} = 2 4 27 2 4 27.
+The static kink solution, if it exists, satisfies the equation
+−φ + φ3 −d2φ + λ dφ 2 = μs, (2.7)
+dz2 dz
+
+with boundary conditions φ(−∞) →φa, φ(+∞) →φc or φ(−∞) →φc, φ(+∞) →φa. In the following,
+√ Also, we will assume that λ << 1 andwe will always assume to operate in the regime − √2 < μs < 2 3 3 3 3.
+we will develop a perturbative analysis at order O(λ), unless otherwise specified, as done in [27, 36]. As
+observed in [27,36], due to the property that μs(−λ) = −μs(λ), which can be deduced from (2.7), we may
+express μs in powers of λ, at order O(λ2N+1), N ∈N, as
+
+XN
+μs(λ) = μs,2i+1λ2i+1, (2.8)
+
+i=0
+where the set of real coefficients {μs,2i+1}Ni=0 must be determined in such a way that a kink solution to (2.7)
+exists. Plugging (2.8) in (2.6) and after some algebraic manipulations it is possible to express the roots
+{φa, φb, φc} as power series in λ. In particular, considering only O(λ) terms, i.e. writing μs = μs,1λ, we
+obtain that
+μs,1 μs,1
+φa = −1 + λ, φb = −μs,1λ, φc = 1 + λ. (2.9)
+2 2
+The same result (2.9) can be obtained by expressing {φa, φb, φc} as small perturbations at order O(λ) of
+the values {−1, 0, 1}, which are the roots of the cubic polynomial (2.5) with λ = 0, i.e. φa = −1 + λχa,
+φb = λχb, φc = 1 + λχc, and plugging their expressions in (2.5) linearized around the values {−1, 0, 1},
+getting finally that χa = χc = μs,12 , χb = −μs,1.
+
+We now rewrite the second order ODE (2.7) as a coupled system of two first order ODEs in the following
+way:
+dφ = χ,
+dz (2.10)
+dχ = Ψ′(φ) −μs + λχ2.
+dz
+We observe that the points with coordinates (φa, 0), (φb, 0) and (φc, 0) are critical points of system (2.10)
+in the phase plane {(φ, χ) ∈R2}. It is possible to prove that, in the regime − √2 < μs < 2 √ (φa, 0) and 3 3 3 3,
+(φc, 0) are saddle points for system (2.10), while (φb, 0) is a center point for cyclic trajectories. Without
+going into long calculations to prove the latter properties, we make the following observations. Given the
+critical point (φi, 0), i ∈{a, b, c}, it is a saddle point if φi < −1 1 √ or φi > √ while it is a centre point 3 3,
+√ 0 is aof cyclic trajectories if −1√ < φi < 1 2 √ In the limiting case μs = √ we have that φa = −2 3 3. 3 3, 3,
+saddle point, while (φb, 0) and (φc, 0) coalesce into an improper double critical point φb = φc = 1 √ 3, 0 .
+For μs < 2 1 1 √ (φb, 0) and (φc, 0) are separated, with φb < √ and φc > √ Similarly, in the limiting case 3 3, 3 3.
+√ we have that φa = φb = −1 √ 0 is a double improper critical point, while φc = √ 0 isμs = − 2 2 3 3, 3, 3,
+√ Hence,a saddle point. For μs > − 2 √ (φa, 0) and (φb, 0) are separated, with φa < −1 √ and φb > −1 3 3, 3 3.
+in the regime − √2 < μs < 2 √ we can deduce that (φa, 0) and (φc, 0) are saddle points and (φb, 0) is a 3 3 3 3,
+center point for cyclic trajectories.
+In the case λ ̸= 0, a static kink solution can be identified as an heteroclinic trajectory in the phase plane,
+parametrized by the z coordinate, which connects the two saddle points (φa, 0) and (φc, 0), i.e. which
+approaches (φa, 0) for z →∓∞and (φc, 0) for z →±∞. Of course, in the present case we cannot proceed
+to identify the heteroclinic trajectory by multiplying (2.10)2 by χ and integrating from −∞to z. We instead
+assume that there exists an heteroclinic trajectory which, at order O(λN), N ∈N, is a polynomial curve of
+degree N + 2 of the form
+XN Xk+1
+χ = λk Ai,j(φ −φa)i(φ −φc)j, (2.11)
+k=0 i,j=1
+i+j=k+2
+where Ai,j are real coefficients to be determined by inserting (2.11) and (2.8) in (2.10) and using the prin-
+ciple of polynomial identity. The specific guess (2.11) is chosen because, at order O(λN), it satisfies that
+dχ dφ = dχdz dφ dz ∼φN+3, and that λχ2 ∼φN+3. The matching of the polynomial degrees of the terms dχdz and
+λχ2 in (2.10) is needed to have the existence of an heteroclinic trajectory for λ ̸= 0. We now focus on the
+calculations at order O(λ). Then, (2.11) becomes
+χ = A1,1(φ −φa)(φ −φc) + λA1,2(φ −φa)(φ −φc)2 + λA2,1(φ −φa)2(φ −φc), (2.12)
+
+which is a cubic heteroclinic trajectory which connects (φa, 0) and (φc, 0) in the phase plane. Using (2.9)
+in (2.12), and keeping only terms at most of order O(λ), we obtain that
+dχ
+= 2A1,1φχ −λA1,1μs,1χ + 2λ(A1,2 + A2,1)(φ2 −1)χ + λA1,2(φ −1)2χ + λA2,1(φ + 1)2χ. (2.13)
+dz
+
+Substituting (2.12) in (2.13), still keeping only terms at most of order O(λ), we ultimately arrive to the
+expression
+dχ
+=2A21,1φ(φ2 −1) −2λA21,1φ2μs,1 + 2λA1,1A1,2φ(φ + 1)(φ −1)2 + 2λA1,1A2,1φ(φ + 1)2(φ −1)
+dz
+−λA21,1(φ2 −1)μs,1 + 2λA1,1(A1,2 + A2,1)(φ2 −1)2
++ λA1,1A1,2(φ + 1)(φ −1)3 + λA1,1A2,1(φ + 1)3(φ −1). (2.14)
+
+Also, substituting (2.12) in (2.10)2 and keeping only terms at most of order O(λ), we obtain that
+dχ
+= φ(φ2 −1) −μs,1λ + λA21,1(φ2 −1)2. (2.15)
+dz
+Equating (2.14) and (2.15), at order O(1) we obtain that A1,1 = ± 1 √ 2, while at order O(λ) we apply the
+principle of polynomial identity and obtain that
+1 4
+A1,2 = A2,1 = ±
+10 √ 2, μs,1 = 15.
+We have thus gained the same result μs,1 = 154 obtained in [36] with the method of Newton mapping.
+Substituting (2.9), together with the values of A1,1, A1,2, A2,1 and μs,1, in (2.12), we conclude that, at order
+O(λ),
+dφ 1 1 4
+χ(z) = = ± √ −1) ± λ √ −1) − √ . (2.16) dz 2(φ2 5 2φ(φ2 15 2φ
+The static kink solution thus must solve the following boundary value problem:
+
+dφ 1 λ = ± √ −1) ± √ φ2 −7 , dz 2(φ2 5 2φ 3
+2 (2.17)
+φ(−∞) →±1 + 15λ, 2
+φ(+∞) →∓1 + 15λ.
+In order to solve (2.17), we assume that its solution can be written as φ(z) = φ0(z) + λφ1(z) + o(λ). Then,
+at order O(λ) we have that
+dφ dφ0 1 √ 1 = + λdφ1 = ± √ 0 −1) ± λ 2φ0φ1 + √ φ20 −7 . dz dz dz 2(φ2 5 2φ0 3
+Hence, at order O(1) we need to solve the boundary value problem
+
+dφ0 1 = ± √ 0 −1), dz 2(φ2
+φ(−∞) →±1, φ(+∞) →∓1,
+
+which has the solution
+z
+φ0(z) = ∓tanh √ .
+
+At order O(λ) we need to solve the boundary value problem
+
+dφ1 √ z 1 z z = − 2 tanh √ φ1(z) − √ tanh √ tanh2 √ −7 , dz 2 5 2 2 2 3
+φ(−∞) → 15,2 2
+φ(+∞) → 15,
+which has the solution
+log cosh √z 1 2 2
+φ1(z) = + 15. 5 cosh2 √z
+We finally obtain the following expression for the static kink solution at order O(λ):
+
+log cosh √z z λ 2 2
+φ(z) = ∓tanh √ + + (2.18) 15λ. 2 5 cosh2 √z
+
+2.2. Existence of spherical droplet solutions. We now consider the existence of a large circular or spheri-
+cal droplet, centered in the origin of the system of coordinates, of one pure phase immersed in a background
+of the other phase as a static solution of active Model B for μs ≡0. Following [36], we indicate with R∗
+the radius of the droplet and we set
+d −1
+ξ := R∗,
+where d = 2, 3 is the spatial dimension. Through the method of the Newton mapping, a perturbative
+calculation to leading order in R∗= O(λ−1) gave in [36] the approximated result ξ ≈0.566|λ|, which √
+approximates the expected exact result ξ = 58 |λ|. The latter result was obtained in [36] within theoretical
+arguments by formally balancing the Laplace pressure at the curved interface of the droplet with the pressure
+at the interface induced by the λ term. Here, we are able to obtain the exact result for ξ employing the
+method of search of heteroclinic trajectories in the phase plane. Due to the rotational symmetry of the
+problem, the static solution depends only on the radial coordinate r. To leading order in R∗, the static
+solution satisfies the equation
+−φ + φ3 −d2φ −ξdφ + λ dφ 2 = 0,
+dr2 dr dr
+
+which can be written as a coupled system of two first order ODEs as
+
+dφ = χ,
+dr (2.19)
+dχ = Ψ′(φ) −ξχ + λχ2.
+dr
+We observe that the points with coordinates (−1, 0) and (1, 0) are saddle points for system (2.19), while the
+point (0, 0) is a stable spyral point for ξ < 2 or a stable node for ξ ≥2 (improper for ξ = 2). We assume
+that there exists an heteroclinic trajectory wich connects the saddle points (−1, 0) and (1, 0) in the phase
+
+plane of the form
+χ = A1,1(φ2 −1) + λA1,2(φ + 1)(φ −1)2 + λA2,1(φ + 1)2(φ −1). (2.20)
+
+Making similar calculations to those employed in (2.14), keeping only terms at most of order O(λ), we get
+dχ
+=2A21,1φ(φ2 −1) + 2λA1,1A1,2φ(φ + 1)(φ −1)2 + 2λA1,1A2,1φ(φ + 1)2(φ −1)
+dz
++ 2λA1,1(A1,2 + A2,1)(φ2 −1)2 + λA1,1A1,2(φ + 1)(φ −1)3 + λA1,1A2,1(φ + 1)3(φ −1). (2.21)
+
+Also, substituting (2.20) in (2.19)2, assuming that ξ = O(λ) and keeping only terms at most of order O(λ),
+we obtain that
+dχ
+= φ(φ2 −1) −ξA1,1(φ2 −1) + λA21,1(φ2 −1)2. (2.22)
+dz
+Equating (2.21) and (2.22), at order O(1) we obtain that A1,1 = ± 1 √ 2, while at order O(λ) we apply the
+principle of polynomial identity and obtain that
+√
+1 8
+A1,2 = A2,1 = ± √ ξ = |λ|, 10 2, 5
+the latter of which is the expected exact result.
+
+2.3. Power law shift for domain growth. We conclude this section by developing tools within our the-
+oretical framework to gain insights into the crossover in the growth law for active Model B conjectured
+in [27]. In the latter reference, the authors tried to generalize the shrinking dynamics of a bubble of phase
+φ ≡φa in a background of phase φ ≡φc in space dimension d = 3 to the case of non-zero background
+chemical potential and considering the presence of activity, finding that the bubble radius R(t) obeys the
+ODE:
+dR = −σ + O(λ2) 1 (2.23) dt 2 R2, √
+where σ is the surface tension of passive Model B, i.e. σ = 2 3 2 , and the O(λ2) represents the lower
+order corrections to the surface tensions due to activity. Since (2.23) yields to a LS growth law with a
+λ2-dependent prefactor, it is clear that this argument is not adequate to capture the crossover in the growth
+law observed for the Active Model B. As observed in [27], a more sophisticated theory is needed which
+accounts for the modification of the surface tension not only by the activity term but also by the local
+curvature of the interface. Here we aim to develop such a theory, following the arguments developed in
+the previous sections based on the analysis of phase-plane dynamics. To improve readability, the detailed
+calculations are presented in the Appendix A.
+We consider the shrinking dynamics of a single spherical domain of phase φ ≡φa, with radius R(t),
+immersed in a sea of phase φ ≡φc in space dimension d = 3. As observed in [27], the growth laws are
+expected to be the same for d ≥2. As a first step, we search to represent the local curvature effects for a
+static solution of active Model B given by a spherical droplet phase φ ≡φa, centered in the origin, immersed
+in a sea of phase φ ≡φc, as perturbative corrections to the static flat profile. For reasons which will be
+clear later, we need to develop a perturbative analysis up to second order in the perturbative parameters. We
+observe that, due to the spherical symmetry, a static droplet solution of active Model B does not necessarily
+
+require μ to be constant. Indeed, μ can be a multiple of 1r, where r is the radial coordinate, since
+1 1 d d 1 d 1
+∆ = r2 = 0, →0 for r →∞.
+r r2 dr dr r dr r
+
+Hence, a static droplet solution of Active Model B, if it exists, satisfies the equation
+−φ + φ3 −d2φ −2 dφ + λ dφ 2 = μs(λ) + ρ1 dr2 r dr dr r,
+where we have considered μ = μs(λ) + ρ 1r, ρ ∈R. We observe that, in order to avoid a singularity in
+the origin, the static value of the chemical potential should be expressed as μ = μs(λ) + ρ max R,1 1r .
+Since we are only interested in obtaining perturbative corrections in terms of R−1 to the static flat profile,
+and since in the perturbative analysis we can assume that the factor 1r is approximately constant through
+the interface, we will disregard the singularity issue in the forthcoming analysis. In order to proceed, we
+make the assumption that R >> 1. This means that the droplet radius R is much larger than the interface
+width, which is typically satisfied. Indeed, we have seen that (1.1) corresponds to (2.2) with l ≡ε, i.e. the
+interface length is considered to be of order O(1) in (1.1). Under this hypothesis, we expect that a static
+droplet solution has the form φ(r) = f(r−R), with the function f changing from φa to φc in a small region
+of width O(1) near r = R. Since the droplet interface width is much smaller than its radius, as already said
+the factor 1r is approximately constant through the interface, and a perturbative solution of the static droplet
+equation can be derived by solving the equation
+−f + f 3 −d2f −ξ df + λ df 2 = μs(λ) + ρξ, (2.24)
+d ̃r2 d ̃r d ̃r
+where we set ξ := R2 and we introduced the variable ̃r := r−R. The roots {fa, fb, fc} of the cubic potential
+−f + f 3 = μs(λ) + ρξ (2.25)
+
+can be obtained as small perturbations of the values {−1, 0, 1}. As already anticipated, we need to perform
+the perturbation analysis up to the second order in the parameters λ, ξ, hence from (2.8) we take μs(λ) =
+μs,1λ and we express fa = −1 + (μs,1λ + ρξ)χa + (μs,1λ + ρξ)2ζa, fb = (μs,1λ + ρξ)χb + (μs,1λ + ρξ)2ζb
+and fc = 1 + (μs,1λ + ρξ)χc + (μs,1λ + ρξ)2ζc. Inserting these expressions in (2.25), expanded to second
+order in λ, ξ, we obtain that
+μs,1λ ρξ 3 3 3
+fa = −1 + + + s,1λ2 + + 2 2 8μ2 8ρ2ξ2 4μs,1ρλξ,
+fb = −μs,1λ −ρξ,
+μs,1λ
++ fc = 1 + ρξ −3 s,1λ2 −3 −3 (2.26) 2 2 8μ2 8ρ2ξ2 4μs,1ρλξ.
+
+We now rewrite the static droplet equation as a coupled system of two first order ODEs in the following
+way:
+df = χ,
+d ̃r (2.27)
+df = Ψ′(f) −ξχ + λχ2 −μs,1λ −ρξ.
+d ̃r
+We observe that the points with coordinates (fa, 0), (fb, 0) and (fc, 0) are critical points of system (2.27) in
+the phase plane {(f, χ) ∈R2}. A static droplet solution can be identified as an heteroclinic trajectory in
+the phase plane, parametrized by the ̃r coordinate, which connects the two saddle points (fa, 0) and (fc, 0),
+i.e. which approaches (fa, 0) for ̃r →−∞and (fc, 0) for ̃r →+∞. Let us recall that the static droplet
+solution φ(r) = f(r −R) is sharply peaked around r = R, going from fa to fc in a region of width O(1);
+since R >> 1, we can assume that f →fa for ̃r →−∞and f →fc for ̃r →+∞. The details of the
+calculations of the heteroclinic trajectory and of the associated static droplet profile, expressed up to second
+order O(λ2, ξ2, λξ) as
+f( ̃r) = f0( ̃r) + λf1( ̃r) + ξf2( ̃r) + λ2f3( ̃r) + ξ2f4( ̃r) + λξf5( ̃r) + o(λ2) + o(ξ2) + o(λξ), (2.28)
+
+are reported in Appendix A. We are thus able to describe the local curvature effects of the interface for a
+static droplet solution up to order O(λ2, ξ2, λξ). It is possible to prove that this static solution is unstable.
+Since this is a standard argument, we do not enter into details here (see e.g. [36, Supplementary Note 2]).
+Following [6], (see also [27]), we now characterize the interface dynamics at late times to obtain the domain
+growth law. The bulk domains are saturated to the equilibrium values φa and φc, with small fluctuations that
+drive domain growth by bulk diffusion of the order parameter from interfaces of high curvature to regions
+of low curvature. Linearizing the equations around φa, i.e. putting φ = φa + ̃φ, by standard arguments
+we obtain that ∆ ̃φ = 0 in the bulk domains, and also ∆μ = 0, since μ and ̃φ are proportional in the bulk
+domains. The boundary conditions on μ at the interface determine the interface dynamics. As in the seminal
+work of Lifshitz and Slyozov [24], we assume that the majority phase is supersaturated with the dissolved
+minority species, which have not yet reached equilibrium, and thus we may express the bulk equilibrium
+values as
+2 2
++ 2 −2 −ε(t) , (2.29) φa = −1 + φc = 1 + 15λ 75λ2, 15λ 75λ2 2
+where ε(t) is a time-dependent small supersaturation, with ε(t) << 1. We also assume that the interface
+profile is almost equilibrated to the static droplet solution (A.5). Note that this means that
+√ √
+2 2 1 2 1 2 λ 1 lim = fa = −1 + − + + −2 = −1 1 + + O(λ2, ξ2, λξ), ̃r→0−φ( ̃r) 15λ 3 R 75λ2 3R2 15 R 4∆p
+√
+where ∆p is the excess pressure at the interface, given by the sum of the Laplace pressure ∆pL = 43R2 and
+the activity-induced pressure ∆pγ = −815λ, which drives the Ostwald ripening mechanism. At first order,
+we obtain the same expression as that reported in [36, Supplementary Note 3].
+Near the interface, the equation for the chemical potential is
+μ = Ψ′(φ) −d2φ −2 dφ + λ dφ 2 . (2.30)
+d ̃r2 ̃r d ̃r d ̃r
+
+The value of μ at the interface can be obtained by multiplying equation (2.30) by dφd ̃r , which is sharply
+peaked at the interface, and integrating in ̃r from −∞to +∞. We obtain that
+μ∆φ = ∆Ψ −2 + λβ, (2.31) Rσ
+R +∞ dφ 2 R +∞ dφ 3
+where ∆φ = φc −φa, ∆Ψ = Ψ(φc) −Ψ(φa), σ = −∞ d ̃r d ̃r and β = −∞ d ̃r d ̃r. Moreover, the
+value of μ at +∞is Ψ′(φc).
+At order O(λ2, ξ2, λξ, ε), the previous quantities are
+∆φ = 2 −4 −ε(t) , ∆Ψ = O(λ3, λε(t), ε2(t)), Ψ′(φc) = 4 −ε(t), 75λ2 2 15λ
+which are obtained from (2.29),
+! ! Z +∞ 2 2
+df0 df1 df3 df4 df5 σ = + λ2 + 2df0 + 2ξ2df0 + 2λξdf0 d ̃r
+−∞ d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r
+√ √ √
+
+= 2 2 −103 2 λ2 −2 2 1 + 2 − √ 2) λ 3 1125 3 R2 15(4 R,
+which is expressed as the surface tension of the Passive Model B plus perturbative corrections coming from
+activity and from the interface curvature, and
+! ! Z +∞ 3 2 2 2 2
+df0 df0 df1 df0 df3 df0 df4 df0 df5
+β = + 3λ2 + + 3ξ2 + 3λξ d ̃r
+−∞ d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r d ̃r
+
+= 8 −208 −8 1 + 16 √ 2 −3) λ 15 1575λ2 9 R2 225(5 R.
+The quantities σ and β are obtained using (A.6)–(A.10). We observe that the latter quantities do not contain
+linear contributions in λ and ξ: indeed, it is easy to prove that the latter contributions are null due to
+symmetry considerations. This is the reason why we have developed the perturbative analysis for the static
+droplet solution up to the second order in λ and ξ.
+The right hand side of (2.30) is expressed up to order O(λ2, ξ2, λξ). When multiplied by the factor dφd ̃r , it
+acquires an extra R1 factor. With the previous expressions, the formula (2.31) becomes
+μ 2 −4 −ε(t) = λ 8 −8 1 + 16 √ 2 −3) λ 75λ2 2 15 9 R2 225(5 R
+√ √ √ !
+−2 2 2 −103 2 λ2 −2 2 1 + 2 − √ 2) λ + O(λ3, λε(t), ε2(t)), R 3 1125 3 R2 15(4 R
+
+which we rewrite as
+μ = μβ −2 (2.32) Rμσ,
+where we define
+λ 8 −8 1 + 16 √ 2 −3) λ , μβ := 2 −4 −ε(t) 15 9 R2 225(5 R 75λ2 2
+
+√ √ √ !
+1 2 2 −103 2 λ2 −2 2 1 + 2 − √ 2) λ . μσ := 2 −4 −ε(t) 3 1125 3 R2 15(4 R 75λ2 2
+A solution of the Laplace equation ∆μ = 0 with boundary condition (2.32) for r = R and μ = Ψ′(φc) for
+r →+∞, and which is regular at the origin, is
+(
+Ψ′(φc) + (μβ −Ψ′(φc)) Rr −2rμσ, for r ≥R, μ = (2.33)
+μβ −2rμσ, for r ≤R.
+The movement of the interface, and hence the time rate ̇R, is determined by the imbalance between the
+current flowing into it and the current flowing out of it, which is proportional to the negative gradient of the
+chemical potential at the interface [6,27]. Hence we have that
+̇R(t) = −1 dμ = 1 μβ −Ψ′(φc) −2 ∆φ dr r=R ∆φR Rμσ
+
+= 1 8 λ −4 + ε(t) ∆φR 15 ∆φ 15λ
+√ √ ! √ √
+
++ (202 2 −80) λ2 −4 2 1 −(88 −12 2) λ 1 + 4 2 1 . (2.34)
+375 ∆φ 3∆φ R 45 ∆φ R2 3∆φ R3
+
+In the case with λ = 0, i.e. for the passive Model B, (2.34) becomes
+√
+4 2 1
+̇R(t) = ̄ε(t) −1 + 1 , (2.35)
+3(∆φ)2 R R R3
+with ̄ε(t) := 3∆φ√ For ̄ε(t) sufficiently small, the right hand side of (2.35) admits three real roots, one 4 2ε(t).
+negative and two positive. The smaller positive root has a value ∼1 and is a stable critical point for (2.35).
+As already said, lengths of magnitude ∼1 are of the same order as the interface length, and they are not
+associated to the droplet size. The bigger positive root is R(t) = ̄R(t) ∼ ̄ε(t),1 and it is an unstable critical
+point for (2.35), i.e. we have that ̇R(t) < 0 for R < ̄R(t) and ̇R(t) > 0 for R > ̄R(t). The latter property
+represents the classical Ostwald ripening mechanism: a droplet with a radius less than ̄R(t) decreases,
+while a droplet with a radius greater than ̄R(t) increases. As long as the system reaches equilibrium, i.e.
+as ε(t) →0, the metastable radius ̄R(t) increases in time to +∞. The typical droplet size is comparable
+to ̄R(t), and for a system of non-interacting droplets it can be identified as the value R0(t) defined in the
+following way: R0(t) is the initial droplet radius such that the droplet evaporates at time t, considering
+ε = 0 (see e.g. [6,27]). The latter quantity satisfies the equation
+√
+4 2 1 −1 , ̇R0(t) =
+3(∆φ)2 R20 R40
+
+3 as t →+∞, which is the LSwith initial condition R0(0) > 1. The latter equation implies that R0(t) ∼t
+domain growth law.
+In the case λ > 0, for ε(t) and λ sufficiently small the right hand side of (2.34) still admits a positive real
+root with magnitude ∼1, which is a stable critical point for (2.34), and a positive real root ̄R(t) which is an
+
+λ = 0.1 λ = 1 λ = 2
+
+̄R ≈132252 ≈95.24 ≈3.65
+TABLE 1. Saturation values of ̄R(t), as ε(t) →0, in the particular cases λ = 0.1, 1, 2.
+
+unstable critical point for (2.34). The new fact about active Model B is that ̄R(t) tends to a finite constant,
+which depends non-linearly on λ−1, as the system reaches equilibrium, i.e. as ε(t) →0. This means that
+the typical domain size for a system of non-interacting droplets undergoing Ostwald ripening does not grow
+indefinitely with time, but it reaches a saturation value depending on λ−1. Hence, the domain growth law
+may present power laws for finite times, but eventually reaches a plateau for t →+∞. This is a new and
+unexpected property of active Model B, which partially explains the shifts of exponents in the LS power law
+observed in [27,36]. In table 1 we report the approximate values for ̄R(t), obtained as ε(t) →0, calculated
+in the particular cases λ = 0.1, 1, 2. The equation for R0(t), which as already said can be identified as the
+typical droplet size for a system of non-interacting droplets, is
+1 8 λ −4 ̇R0(t) = − ∆φR 15 ∆φ 15λ
+√ √ ! √ √
+
++ (202 2 −80) λ2 −4 2 1 −(88 −12 2) λ 1 + 4 2 1 . (2.36)
+375 ∆φ 3∆φ R0 45 ∆φ R20 3∆φ R30
+
+In figure 1 we plot the values of R0 which solve (2.36) versus time for the cases λ = 0.1 and λ = 1,
+obtained by choosing R0(0) > 1 in order to avoid the stable point of the solution trajectory of (2.36) at
+∼1, together with the power growth laws R0(t) ∝t 1 1 3 and R0(t) ∝t 4. We observe that, in the time frame
+
+0 1 2 3 4 5 6 7 8 9 10
+10 6 t
+
+FIGURE 1. Plots of the solution R0 of (2.36) versus time, with an initial condition R0(0) >
+1, for the cases λ = 0.1 and λ = 1, together with the plots of the power growth laws
+R0(t) ∝t 1 1 3 and R0(t) ∝t 4.
+
+3 growth law, which remainst ∈[0, 106] reported in figure 1, the profile of R0(t) for λ = 0.1 follows a t 1
+far from the saturation value, while for λ = 1 it initially grows following a t 3 law, then shifts at later times
+to a t 4 profile, and lately it reaches a plateau at the saturation value. We highlight this behavior in figure
+2, where we plot the log(R0(t)) versus log(R(0)3 + t) for the solution of of (2.36) with λ = 1 and for the
+1 1
+power growth laws R0(t) ∝t 3 and R0(t) ∝t 4. We observe from figure 2 that at finite times the profile
+
+5.5
+
+4.5
+
+3.5
+
+2.5
+
+1.5
+
+2 4 6 8 10 12 14 16 18
+
+FIGURE 2. Plots of the log(R0(t)) versus log(R(0)3 + t) for the solution of (2.36) with
+λ = 1 and for the power growth laws R0(t) ∝t 1 1 3 and R0(t) ∝t 4.
+
+1 1
+3 at early times to t 4 at later times, as observed andof R0(t) for λ = 1 shifts from the power growth law t
+conjectured in [27,36], and asymptotically reaches a saturation plateau.
+
+Remark 2.1. We observe that the term
+8 λ −4 ξ0 := 15 ∆φ 15λ
+in the first round brackets on the right hand side of (2.36) is of order O(λ3), since ∆φ = 2 − 75λ24 (for
+ε(t) = 0). This term is the O(R0) contribution of μβ −Ψ′(φc), where 158 ∆φλ comes from μβ, which is defined
+in (2.32) and obtained from the O(λ2, ξ2, λξ, ε) expression of μ in (2.30), while 15λ4 comes from the O(λ)
+contribution in Ψ′(φc). In order to appropriately represent ξ0 at the leading order, we should consider
+also the O(λ3) contribution in Ψ′(φc). We report here for the sake of completeness the results obtained
+by considering the latter contribution, without reporting the undergoing calculations which are extremely
+long. We highlight that these results do not change the qualitative behavior of the growth law derived in the
+text; they only change the approximate values of ̄R reported in Table 1. It is possible to prove that, at order
+O(λ3), we have, for ε(t) = 0, that
+
+φc = 1 + 2 −2 + 1 μ3s,1 + μs,3 λ3, 15λ 75λ2 2
+
+and
+Ψ′(φc) = μs,1λ + μs,3λ3,
+with μs,1 = 154 and μs,3 = −1393780. The latter value is obtained by considering (2.8) and (2.11) up to order
+λ3. Hence, we have that
+8 λ −4 + 139 ∼4 λ 8 −4 + 139 = 4147 ξ0 := 15 ∆φ 15λ 3780λ3 15 ∆+ 1125λ3 15λ 3780λ3 94500λ3.
+
+3. FORMAL ESTIMATES FOR THE CASE WITH SINGULAR POTENTIAL
+
+In this section, we derive formal a-priori estimates for solutions to (1.1)-(1.2), which will be rigorously
+justified in the context of the finite element approximation of the problem in Section 4. They laid the basis
+for proving existence results via the convergence analysis of the discretized problems. In particular, in the
+case with singular potential and spatial dimension d = 2, 3, assuming a proper smallness condition on λ
+and the existence of weak solutions which satisfy the physical bound φ ∈[−1, 1] a.e. in space and time,
+we are able to prove local-in-time high order regularity via a-priori estimates. In the context of our finite
+element and time discrete approximation, thanks to inverse inequalities and energy estimates we will prove
+the well-posedness of the discrete scheme, both in the cases with regular and singular potentials, and, in
+the singular case, the property that the discrete solution remains in the interval (−1, 1) at all times. Thanks
+to this property, and to some technical lemmas regarding piecewise linear finite elements and time discrete
+semi-implicit schemes, some of which we will derive here for the first time, we will rigorously obtain high
+order a-priori estimates. Then, by convergence analysis of the discrete scheme, they will let us prove the
+existence of a local in time weak solution for active Model B in Theorem 4.10. Moreover, in the case with
+singular potential and spatial dimension d = 1, we will show here by further a-priori estimates that the local
+in time weak solution is actually global in time.
+
+3.1. Notation and preliminary lemmas. Let Ω⊂Rd, d = 1, 2, 3, be an open bounded domain with
+smooth boundary, with Ω= (0, L) in the case d = 1. For a normed space X, the associated norm and
+seminorm are denoted by ∥·∥X and |·|X respectively. The dual space of a Banach space X is denoted by X′.
+We denote by Lp(Ω; K) and W r,p(Ω; K) the standard Lebesgue and Sobolev spaces of functions defined
+on Ωwith values in a set K, where K may be R or a multiple power of R. If K ≡R, we simply write
+Lp(Ω) and W r,p(Ω). In the case p = 2, we use the notations H1 := W 1,2 and H2 := W 2,2, and we denote
+by (·, ·) and ∥·∥the L2 scalar product and induced norm between functions with scalar or vectorial values.
+For f ∈L1(Ω), we define ̄f := |Ω|−1(f, 1). The duality pairing between H1(Ω; K) and (H1(Ω; K))′ is
+denoted by < ·, · >.
+For any 1 ≤p ≤∞, we denote by Lp(0, T; V ) and Lpuloc([0, ∞); V ) the Bochner spaces of functions
+from (0, T) and [0, ∞), respectively, with values in a Banach space V . Their norms are defined as
+Z T p1 Z t+1 p1
+∥f∥Lp(0,T;X) := ∥f(s)∥pXds and ∥f∥Lpuloc([0,∞);X) := sup ∥f(s)∥pXds .
+0 t≥0 t
+
+We will also use the notation Ck(Ω; K) and Ck([0, T]; V ), k ≥0, for the spaces of continuously differen-
+tiable functions up to order k defined on Ωwith values in a set K or from [0, T] to the space V , respectively.
+In the following, C denotes a generic positive constant independent of the unknown variables, the dis-
+cretization and the regularization parameters, the value of which might change from line to line. C1, C2, . . .
+indicate generic positive constants whose particular value must be tracked through the calculations. C(a, b, ...)
+denotes a constant depending on the nonnegative parameters a, b, . . . .
+
+We introduce the inverse Laplacian operator G : F →V , such that
+
+(∇Gv, ∇η) =< v, η > ∀η ∈H1(Ω),
+
+where F := {v ∈(H1(Ω))′ : < v, 1 >= 0} and V := {v ∈H1(Ω) : (v, 1) = 0}. For any v ∈F, the
+existence and uniqueness of an element Gv ∈V follows from the Lax–Milgram Theorem. Then, we can
+define a norm on F by setting ∥v∥F := ∥∇Gv∥for any v ∈F.
+
+Let us recall the following form of the Gagliardo–Nirenberg inequality [9,22].
+
+Lemma 3.1. Let Ω⊂Rd, d = 1, 2, 3, be a bounded domain with Lipschitz boundary and f ∈W m,r(Ω) ∩
+Lq(Ω), 1 ≤q ≤+∞, 1 ≤r ≤+∞. For any integer j with 0 ≤j < m, suppose there are p ≥1 and
+α ∈R such that
+j −d = m −d α + (1 −α) −d , j ≤α ≤1. (3.1)
+p r q m
+Then, there exists a positive constant C depending on Ω, d, m, j, q, r, α, such that
+∥Djf∥Lp(Ω) ≤C∥f∥αW m,r(Ω)∥f∥1−αLq(Ω). (3.2)
+
+The form of the Gagliardo–Nirenberg inequality which will be relevant in the sequel is obtained for j =
+1, m = r = 2, d ≤3, p = 4 and q = +∞, i.e.
+
+1 1
+∥∇f∥L4(Ω) ≤C∥f∥ H2(Ω)∥f∥2 L∞(Ω)2 ∀f ∈H2(Ω). (3.3)
+
+3.2. Formal estimates for d = 2, 3. Let us assume that φ0 ∈H1(Ω) ∩L∞(Ω) with |φ0| ≤1 a.e. in Ωand
+̄φ0 ∈(−1, 1), and that μ0 ∈H1(Ω), where μ0 = −∆φ0 + Ψ′(φ0) + λ|∇φ0|2. Let us moreover formally
+assume that there exist sufficiently regular solutions of (1.1)-(1.2) such that φ ∈(−1, 1) a.e. in Ω× (0, T),
+for a given T > 0. We will use the notation Ψ(φ) = F(φ) −θ02 φ2, where F(·) is the convex singular part in
+(1.5). We derive the following a-priori estimates.
+
+First estimate. Let us multiply (1.1)1 by φ and (1.1)2 by ∆φ, integrate over Ωand sum the contributions.
+Upon integration by parts and implementation of the boundary conditions (1.2), we obtain
+Z Z Z
+1 d
++ ∥∆φ∥2 + F ′′(φ)|∇φ|2 dx = −θ0 φ∆φ dx + λ |∇φ|2∆φ dx 2 dt∥φ∥2 Ω Ω Ω
+Thanks to (3.3), to elliptic regularity and to the fact that φ ∈(−1, 1) almost everywhere, we have that
+Z
+|λ| |∇φ|2|∆φ| dx ≤|λ|∥∇φ∥2L4∥∆φ∥≤|λ|C1∥∆φ∥2,
+Ω
+
+where C1 only depends on Ω. Hence, using the Cauchy–Schwarz and Young inequalities, together with the
+property φ ∈(−1, 1), in the first term on the right-hand side, as well as the convexity of F(·), we infer that
+1 d
++ (1 −ε −|λ|C1)∥∆φ∥2 ≤C, 2 dt∥φ∥2
+for any ε > 0, where C depends now on ε. Integrating the previous inequality in time over the interval
+(0, T), using the assumptions on φ0 and assuming that |λ| < C1,1 we can choose ε in a suitable way such
+that
+∥φ∥L∞(0,T;L2(Ω)) ≤C, and ∥∆φ∥L2(Ω×(0,T)) ≤C.
+Moreover, multiplying (1.1)2 by −∆φ and integrating over Ω, there exists ω := 1 −ε −|λ|C1 > 0 such tat
+ω∥∆φ∥2 ≤∥∇μ∥∥∇φ∥+ θ0∥∇φ∥2. (3.4)
+
+Second and Third estimates. Let us multiply (1.1)1 by μ and (1.1)2 by −∂tφ, integrate over Ωand sum
+the contributions. We obtain that
+Z Z
+d 1
++ Ψ(φ) dx + ∥∇μ∥2 = −λ |∇φ|2∂tφ dx. (3.5) dt 2∥∇φ∥2 Ω Ω
+By using the Poincar ́e–Wirtinger inequality, together with the fact that (∂tφ, 1) = 0, the Cauchy–Schwarz
+and Young inequalities, as well as (3.3) and (3.4), we deduce that
+Z
+λ |∇φ|2∂tφ dx ≤1 + C∥∆φ∥2 Ω 4∥∇∂tφ∥2
+≤1 + C∥∇μ∥∥∇φ∥+ C∥∇φ∥2. (3.6) 4∥∇∂tφ∥2
+Next, multiplying (1.1)1 by ∂tμ, and the time derivative of (1.1)2 by −∂tφ, integrating over Ωand sum-
+ming the contributions, we have
+Z Z
+1 d
++ ∥∇∂tφ∥2 + F ′′(φ)|∂tφ|2 dx = θ0∥∂tφ∥2 −2λ ∇∂tφ · ∇φ ∂tφ dx . 2 dt∥∇μ∥2 Ω | {z } Ω
+| {z } I1 | {z }
+≥0 I2
+
+Observe that
+I1 = θ0(∇G∂tφ, ∇∂tφ) ≤θ0∥∂tφ∥(H1(Ω))′∥∇∂tφ∥.
+From comparison in (1.1)1, we get that ∥∂tφ∥(H1(Ω))′ ≤∥∇μ∥. Hence, using the Cauchy–Schwarz and
+Young inequalities, we infer that
+I1 ≤1 + C∥∇μ∥2. 8∥∇∂tφ∥2
+For what concerns I2, using (3.2) with j = 0, p = 4, m = 1, r = 2, q = 2, the Poincar ́e–Wirtinger,
+Cauchy–Schwarz and Young inequalities, we obtain that
+
+4+d 4−d 1
+4 4 |I2| ≤2|λ|∥∇∂tφ∥∥∂tφ∥L4∥∇φ∥L4 ≤2|λ|∥∇∂tφ∥ ∥∂tφ∥ ∥∆φ∥ 2.
+
+1 1
+As for the bound for I1, by exploiting that ∥∂tφ∥≤∥∇μ∥ 2∥∇∂tφ∥ 2, we then find
+
+12+d 4−d 1 8
+8 8 ∥∇μ∥ ∥∆φ∥ 2 ≤1 + C∥∇μ∥2∥∆φ∥ 4−d. |I2| ≤2|λ|∥∇∂tφ∥ 8∥∇∂tφ∥2
+Collecting these results and using (3.4), we conclude that
+1 d 3 8 12−2d 4
++ ≤C∥∇μ∥2 1 + ∥∇φ∥ 4−d + C∥∇μ∥ 4−d ∥∇φ∥ 4−d. (3.7) 2 dt∥∇μ∥2 4∥∇∂tφ∥2
+Let us set
+1 1
+H(t) := 2∥∇φ(t)∥2 + 2∥∇μ(t)∥2.
+Summing (3.5) and (3.7), and integrating in time over the interval (0, t), with t < T, we end up with
+Z t Z Z t 1 8−d
+H(t) + ∥∇μ∥2 + ∥∇∂tφ∥2ds ≤C + H(0) + Ψ(φ0) dx + C 1 + H 4−d(s) ds. (3.8)
+2 0 Ω 0
+Here we have used that Ψ(·) is bounded from below. We observe that 4−d8−d > 1. Hence, thanks to the Bihari
+inequality [5] and to the assumptions on φ0 and μ0, we conclude that there exists a 0 < T < T, which
+depends only on Ωand on the data of the problem, such that
+
+sup H(t) ≤C.
+t∈(0,T)
+
+In addition, a further estimate can be obtained by integrating (1.1)2 over Ωand using the classical mono-
+tonicity argument of the singular nonlinear part (see below (3.64). In particular, this entails a bound on μ in
+L∞(0, T). We do not reproduce this estimate here since it will be detailed in Section 4 for the discrete sys-
+tem (see also below for the case d = 1). Owing to this, together with (3.4), and exploiting the convergence
+of mass ̄φ = ̄φ0 and (3.3), we conclude that
+
+∥φ∥L∞(0,T;H2(Ω))∩W 1,∞(0,T;H1(Ω)) ≤C, and ∥μ∥L∞(0,T;H1(Ω)) ≤C. (3.9)
+
+Uniqueness. Let (φ1, μ1) and (φ2, μ2) be two local solutions satisfying (3.9), and originating from the
+same initial datum. We define Φ := φ1 −φ2, Σ := μ1 −μ2. We multiply the difference of the equations
+(1.1)1 satisfied by φ1 and φ2, respectively, by GΦ, and integrate over Ω. Since (Φ, 1) = 0, by using the
+relations of μ1 and μ2, we obtain that
+Z
+1 d
++ ∥∇Φ∥2 + (F ′(φ1) −F ′(φ2), Φ) = θ0∥Φ∥2 + λ ∇Φ · ∇(φ1 + φ2) Φ dx. (H1(Ω))′ 2 dt∥Φ∥2 | {z } Ω
+≥0
+
+We control the last term on right-hand side by interpolation as follows
+Z
+λ ∇Φ · ∇(φ1 + φ2) Φ dx ≤C∥∇(φ1 + φ2)∥L4(Ω)∥Φ∥L4(Ω)∥∇Φ∥
+Ω
+4−d 4+d
+4 ∥∇Φ∥ 4 . ≤C∥∇(φ1 + φ2)∥L4(Ω)∥Φ∥
+
+Here we have used (3.2) with j = 0, p = 4, m = 1, r = 2, q = 2. By the interpolation inequality
+1 1
+∥Φ∥≤∥Φ∥ (H1(Ω))′∥∇Φ∥2 2, we arrive at
+1 d 1 4−d16
+(H1(Ω))′ + ≤C(1 + ∥∇(φ1 + φ2)∥ L4(Ω))∥Φ∥2(H1(Ω))′. (3.10) 2 dt∥Φ∥2 2∥∇Φ∥2
+Then, integrating in time over the interval (0, t), for t ≤ ̄T, thanks to (3.9) and to the Gronwall inequality,
+we conclude that the solution is unique.
+
+3.3. The one dimensional case: global well-posedness. We now consider the one dimensional case. We
+are able to prove that the local-in-time weak solution is actually global in time.
+Setting Ω= (0, L) for some L > 0, the model reads as follows
+∂tφ = ∂xxμ, μ = −∂xxφ + Ψ′(φ) + λ|∂xφ|2 in (0, L) × (0, ∞), (3.11)
+
+which is equipped with the following boundary and initial conditions
+
+∂xφ(0) = ∂xφ(L) = ∂xμ(0) = ∂xμ(L) = 0, and φ|t=0 = φ0 in (0, L). (3.12)
+To state our result, we introduce eΨ(s) = Ψ(s) + CΨ, where CΨ is a non-negative constant, such that
+eΨ(s) ≥0 for any s ∈[−1, 1] and eΨ(s±) = 0 where s± are the two global minima of Ψ(s).
+Our main result reads as follows
+
+Theorem 3.2. For any R > 0, there exists λ0 = λ0(R, L, θ0) > 0 defined in (3.55) such that, for any
+0 < λ ≤λ0 and any φ0 ∈H1(0, L) with φ0 = 0, ∥φ0∥L∞(0,L) ≤1 and
+Z L 1
+dx ≤R, 0 2|∂xφ0|2 + eΨ(φ0)
+there exists a unique global weak solution φ : Ω× [0, ∞) →[−1, 1] to (3.11)-(3.12) in the following sense:
+(i) The global weak solution satisfies the regularity
+φ ∈L∞(0, ∞; H1(0, L)) ∩L4uloc([0, ∞); H2(0, L)) ∩H1uloc([0, ∞); H1(0, L)′),
+φ ∈L∞((0, L) × (0, ∞)) with |φ(x, t)| < 1 a.e. in (0, L) × (0, ∞), (3.13)
+μ = −∂xxφ + Ψ′(φ) + λ|∂xφ|2 ∈L2uloc([0, ∞); H1(0, L)),
+(ii) For any v ∈H1(0, L), the variational formulation
+
+⟨∂tφ, v⟩+ (∇μ, ∇v) = 0 (3.14)
+
+holds almost everywhere in (0, ∞),
+(iii) φ(·, 0) = φ0 almost everywhere in Ω.
+
+Remark 3.3. For the sake of presentation, we consider an initial condition φ0 with mass φ0 = 0 in Theorem
+3.2. Nevertheless, the analysis can be easily extended to the case φ0 ∈(−1, 1).
+
+Proof. We aim to perform some preliminary formal estimates by assuming the existence of a regular solu-
+tion to the model (3.11)-(3.12) in (0, L) × (0, T). This entails that ∥φ∥L∞((0,L)×(0,T)) ≤1. Moreover, since
+the total mass is conserved, we assume without loss of generality that φ(t) = φ0 = 0 for any t ≥0.
+
+First estimate. Multiplying (3.11)1 by φ and integrating over (0, L), we obtain
+Z L Z L Z L d 1
+|φ|2 dx + |∂xxφ|2 dx + F ′′(φ)|∂xφ|2 dx
+dt 2 0 0 0
+Z L Z L (3.15)
+= θ0 |∂xφ|2 dx + λ |∂xφ|2∂xxφ dx.
+0 0
+Concerning the first term on the right-hand side, we notice that
+Z L Z L
+θ0 |∂xφ|2 dx = −θ0 φ ∂xxφ dx
+0 0
+Z L Z L (3.16)
+0 |φ|2 dx. ≤θ0∥φ∥L2(0,L)∥∂xxφ∥L2(0,L) ≤1 |∂xxφ|2 dx + θ2
+2 0 2 0
+On the other hand, we observe that
+Z L Z L 1
+|∂xφ|2∂xxφ dx = ∂x (∂xφ)3 dx = 0. (3.17)
+0 3 0
+Thus, we end up with
+Z L Z L Z L Z L
+d 1 1 0 |φ|2 dx + |∂xxφ|2 dx + F ′′(φ)|∂xφ|2 dx ≤θ2 |φ|2 dx. (3.18)
+dt 2 0 2 0 0 2 0
+An application of the Gronwall lemma gives
+Z L Z L
+|φ(t)|2 dx ≤ |φ0|2 dx eθ20t, ∀t ∈[0, T], (3.19)
+0 0
+and Z T Z L Z L
+|∂xxφ|2 dxdτ ≤ |φ0|2 dx eθ20T. (3.20)
+0 0 0
+In particular, we have
+φ ∈L∞(0, T; L2(Ω)) ∩L2(0, T; H2(Ω)). (3.21)
+
+In addition, by exploiting the global boundedness of any solution (due to the logarithmic potential), the
+global bound in (3.19) can be enhanced as follows. First, we report the one dimensional Poincar ́e inequality
+for zero-mean functions (see [8, Page 233])
+∥f∥L∞(0,L) ≤∥∂xf∥L1(0,L), ∀f ∈W 1,1(0, L), f = 0, (3.22)
+
+which simply entails that
+∥f∥L2(0,L) ≤L∥∂xf∥L2(0,L), ∀f ∈W 1,2(0, L), f = 0. (3.23)
+Since ∥φ∥L∞((0,L)×(0,T)) ≤1, and F ′′(s) ≥θ for any s ∈(−1, 1), we deduce from (3.18) that
+Z L Z L Z L d 2θ
+|φ|2 dx + |∂xxφ|2 dx + |φ|2 dx ≤θ20L. (3.24)
+dt 0 0 L2 0
+
+Hence, the Gronwall lemma entails that
+Z L Z L
+t θ20L3
+L2 + , ∀t ∈[0, T], (3.25) |φ(t)|2 dx ≤ |φ0|2 dx e−2θ
+0 0 2θ
+and Z T Z L Z L
+|∂xxφ|2 dx ≤ |φ0|2 dx + θ20LT. (3.26)
+0 0 0
+
+Second estimate. Multiplying (3.11)1 by μ and integrating over (0, L), we find
+Z L Z L Z L d 1
++ Ψ(φ) dx + |∂xμ|2 dx = −λ |∂xφ|2∂tφ dx. (3.27) dt 0 2|∂xφ|2 0 0
+By using (3.11)1, we have
+Z L Z L Z L d 1
++ Ψ(φ) dx + |∂xμ|2 dx = −λ |∂xφ|2∂xxμ dx. (3.28) dt 0 2|∂xφ|2 0 0
+We observe that an integration by parts yields
+Z L Z L Z L
+−λ |∂xφ|2 ∂xxμ dx = λ ∂x |∂xφ|2 ∂xμ dx = 2λ ∂xxφ ∂xφ ∂xμ dx.
+0 0 0
+By exploiting the one-dimensional Sobolev embedding W 1,2(0, L) ⊂L∞(0, L) and, in particular, the in- √
+equality ∥∂xφ∥L∞(0,L) ≤ L∥∂xxφ∥L2(0,L), which follows from the Neumann boundary condition on φ, it
+follows that
+Z L
+λ |∂xφ|2 ∂xxμ dx ≤2|λ|∥∂xxφ∥L2(0,L)∥∂xφ∥L∞(0,L)∥∂xμ∥L2(0,L)
+0 (3.29)
+√
+≤2|λ| L∥∂xxφ∥2L2(0,L)∥∂xμ∥L2(0,L).
+
+Now, multiplying (1.1)2 by −∂xxφ and integrating on (0, L), we also obtain
+Z L Z L Z L Z L Z
+|∂xxφ|2 dx + F ′′(φ)|∂xφ|2 dx = ∂xμ ∂xφ dx + θ0 |∂xφ|2 dx + λ |∂xφ|2∂xxφ dx
+0 0 0 0 | Ω {z } (3.30)
+=0 by (3.17)
+≤∥∂xμ∥L2(0,L)∥∂xφ∥L2(0,L) + θ0∥∂xφ∥2L2(0,L).
+
+In particular, by (3.16) and the global bound on φ, we further get
+Z L Z L
+|∂xxφ|2 dx + 2 F ′′(φ)|∂xφ|2 dx ≤2∥∂xμ∥L2(0,L)∥∂xφ∥L2(0,L) + θ20L. (3.31)
+0 0
+Combining (3.29) and (3.31), we deduce that
+Z L √
+λ |∂xφ|2 ∂xxμ dx ≤2|λ| L 2∥∂xμ∥L2(0,L)∥∂xφ∥L2(0,L) + θ20L ∥∂xμ∥L2(0,L)
+Z L Z L (3.32)
+≤1 |∂xμ|2 dx + 4|λ| √ L∥∂xφ∥L2(0,L) |∂xμ|2 dx + 2λ2θ40L3.
+2 0 0
+
+By using (3.32) in (3.28), we arrive at
+Z L Z L d 1 1 √
++ Ψ(φ) dx + −4|λ| L∥∂xφ∥L2(0,L) |∂xμ|2 dx ≤2λ2θ40L3. (3.33) dt 0 2|∂xφ|2 2 0
+It is easily seen from (3.33) that
+Z L d 1
++ eΨ(φ) dx dt 0 2|∂xφ|2
+1 Z L 2! Z L 1 √ √ 1
++ −4 2|λ| L + eΨ(φ) dx |∂xμ|2 dx ≤2λ2θ40L3. 2 0 2|∂xφ|2 0
+R L 1 R LSetting X(t) = dx and Y (t) = 0 2|∂xφ|2 + eΨ(φ) 0 |∂xμ|2 dx, we end up with the differential inequality
+1 √ √ p
+X′(t) + −4 2|λ| L X(t) Y (t) ≤2λ2θ40L3. (3.34)
+
+We now assume that
+|λ| < 25√ 2 √ L √ R , (3.35)
+which equivantly implies that
+X(0) ≤R < 211λ2L.
+Since X(t) is differentiable and thus continuous, there exists τ ∈(0, ∞] (notice τ is strictly positive) such
+that
+τ = sup t ∈[0, ∞) : max X(t) ≤ . (3.36)
+t∈[0,τ] 211λ2L
+Owing to this, for any t ∈(0, τ), the differential inequality (3.34) becomes
+X′(t) + 4Y (t) ≤2λ2θ40L3, (3.37)
+which, in turn, entails that
+Z t 1
+X(t) + Y (s) ds ≤X(0) + 2λ2θ40L3t, ∀t ∈[0, τ]. (3.38)
+4 0
+As a consequence, we infer that
+Z τ 1 1
+max X(t) + Y (s) ds ≤ + 2λ2θ40L3τ. (3.39)
+t∈[0,τ] 4 0 29λ2L
+Moreover, using the definition of τ, we can deduce a lower bound on τ as follows
+1 3
+≤X(0) + 2λ2θ40L3τ ⇒ τ ≥ (3.40) 29λ2L 212λ4θ40L4.
+In particular, by setting
+( 4√ )
+1 3
+|λ| < min 25√ 2 √ L √ R , 23θ0L ,
+
+we know that τ > 1.
+
+Next, we try to improve the differential inequality (3.34). First of all, by using (3.30) in (3.29), and
+combining it with (3.28), we have
+Z L Z L d 1 1 √
++ Ψ(φ) dx + −2|λ| L∥∂xφ∥L2(0,L) |∂xμ|2 dx dt 0 2|∂xφ|2 2 0
+≤2λ2θ20L∥∂xφ∥4L2(0,L), (3.41)
+
+namely
+1 √ √ p
+X′(t) + −4 2|λ| L X(t) Y (t) ≤23λ2θ20LX2(t). (3.42)
+In addition, owing to (3.36), we also obtain
+X′(t) + 4Y (t) ≤23λ2θ20LX2(t), in (0, τ). (3.43)
+Now multiplying (3.11)2 by φ and integrating on (0, L), we find
+Z L Z L Z L Z L Z L
+|∂xφ|2 dx + F ′(φ)φ dx −θ0 φ2 dx + λ |∂xφ|2φ dx = μφ dx. (3.44)
+0 0 0 0 0
+Since F is convex and F(0) = 0, we know that F ′(s)s ≥F(s) for any s ∈(−1, 1). Also, exploiting the
+global boundeness and the zero-total mass, we deduce that
+Z L Z L
+(1 −|λ|) |∂xφ|2 dx + F(φ) dx
+0 0
+Z L
+(3.45) ≤θ0 φ2 dx + ∥μ −μ∥L2(0,L)∥φ∥L2(0,L)
+2 0
+
+≤θ0 L + L 2∥∂xμ∥L2(0,L).
+Thus, assuming that 1 −|λ| = ω > 0, we conclude that
+Z L Z L
+3 ω |∂xφ|2 dx + Ψ(φ) dx ≤θ0 L + L 2∥∂xμ∥L2(0,L), (3.46)
+0 0 2
+which in turn can be rewritten as
+Z L Z L
+1 θ0 3
+min{2ω, 1} dx ≤ + CΨ L + L 2∥∂xμ∥L2(0,L). (3.47)
+2 0 2|∂xφ|2 dx + 0 eΨ(φ)
+Following the notation above, this is equivalent to
+
+3 θ0 2p min{2ω, 1}X(t) ≤ Y (t), (3.48) + CΨ L + L
+
+namely
+θ0 2
+min{2ω, 1}2X2(t) ≤2 + CΨ L2 + 2L3Y (t). (3.49)
+
+Exploiting (3.49) in (3.43), we arrive at
+
+1 min{2ω, 1}2
+X′(t) + −23λ2θ20L X2(t) ≤1 3θ0 + CΨ 2 . (3.50) 4 2L3 2L 2
+
+Assuming that |λ| << 1, we have min{2ω, 1} = 1. Then, we rewrite the inequality above as
+
+X′(t) + 1 ≤1 3θ0 + CΨ 2 . (3.51) −24λ2θ20L4 4 2L3X2(t) 2L 2
+
+We now further assume that
+( 4√ )
+1 1 3 1
+. (3.52) |λ| < min 2, 25√ 2 √ L √ R , 23θ0L, 2 52θ0L2
+
+This implies that
+
+X′(t) + 1 ≤1 3θ0 + CΨ 2 , ∀t ∈(0, τ). (3.53) 8L3X2(t) 2L 2
+| {z }
+Cs
+For any initial condition X(0), we can choose λ sufficiently small such that τ > 1 from (3.40).
+We report the following result from [32, Chapter III, Section 5, Lemma 5.1]:
+
+Lemma 3.4 (Superlinear Gronwall lemma). Let f be an absolutely continuous function on [0, T] which
+satisfies
+d
+dtf(t) + γf(t)p ≤δ,
+with p > 1, γ > 0, δ ≥0. Then, we have
+
+δ p 1
+f(t) ≤ + 1 , ∀t ∈[0, T].
+γ p−1 (γ(p −1)t)
+
+Applying this result to (3.53) on [1, τ], we have
+p
+X(t) ≤2 CsL2 + 8L3. (3.54)
+
+In order to show that τ = ∞, it is sufficient that
+p 4
+2 CsL2 + 8L3 < 211λ2L,
+namely
+λ2 < . 211L 2√CsL2 + 8L3
+Therefore, by assuming that
+
+4√ 1 1 3 1 1
+|λ| < λ0 := min √ √ , 5 q (3.55)
+11 ,
+2 2, 25√ 2 L R 23θ0L, 2 2θ0L2, 2 2√CsL3 + 8L4
+
+we deduce that
+p 4
+X(t) ≤ ∀t ∈[0, 1], and X(t) ≤2 CsL2 + 8L3 ∀t ∈[1, ∞), (3.56)
+211λ2L
+namely X(t) is bounded globally in time. In particular, there exists K1 = K1(L, R, θ0, λ0) > 0 such that
+
+X(t) ≤K1, ∀t ≥0.
+
+Furthermore, by using (3.42) and the above estimates, we also obtain
+p 2 1
+X′(t) + 4Y (t) ≤23λ2θ20L 2 CsL2 + 8L3 , t ∈(1, ∞). (3.57)
+This entails that there exists K2 = K2(L, R, θ0, λ0) > 0
+Z T+1
+sup Y (t) dt ≤K2. (3.58)
+T∈[1,∞) T
+
+Finally, by exploiting (3.31), we also deduce that
+Z T+1 Z L 2 Z T+1
+sup |∂xxφ|2 dx dt ≤22 max X(t) sup Y (t) dt + θ40L2. (3.59)
+T∈[0,∞) T 0 t∈[0,∞) T∈[0,∞) T
+
+Thus, we conclude that
+φ ∈L∞(0, ∞; H1(0, L)), φ ∈L4uloc([0, ∞); H2(0, L)), ∇μ ∈L2uloc([0, ∞); L2(0, L)). (3.60)
+
+Third estimate. In light of (3.11), we have
+Z L Z L Z L 1 λ 1 λ
+μ = F ′(φ) dx + |∂xφ|2 dx = F ′(φ) dx + L2(0,L), (3.61) L 0 L 0 L 0 L∥∂xφ∥2
+which gives
+Z L
+|μ| ≤1 F ′(φ) dx + 2λ X(t). (3.62)
+L 0 L
+By (3.44) and the assumption 0 < |λ| < 1, we know that
+Z L Z L Z L
+F ′(φ)φ dx ≤θ0 φ2 dx + μφ dx ≤θ0X(t) + ∥∂xμ∥L2(0,L). (3.63)
+0 0 0
+We now recall that (see e.g. [19,25,26])
+Z L Z L
+|F ′(φ)| dx ≤C1 F ′(φ)φ dx + C2, (3.64)
+0 0
+
+where the positive constants C1 and C2 only depend on θ and φ. Owing to this, we derive that
+Z T+1 Z L 2
+sup |F ′(φ)| dx dt
+T∈[0,∞) T 0
+Z T+1 (3.65)
+≤23C21θ20 sup X(t)2 + 23C21 sup ∥∂xμ(t)∥2L2(0,L) dt + 23C22.
+t∈[0,∞) T∈[0,∞) T
+
+Then, by using the above estimate in (3.62), we find
+Z T+1 2
+sup μ(t) dt
+T∈[0,∞) T
+Z T+1 (3.66)
+24C21θ20 8λ2 24C21 24C22
+≤ + sup X(t)2 + sup ∥∂xμ(t)∥2L2(0,L) dt + .
+L2 L2 t∈[0,∞) L2 T∈[0,∞) T L2
+
+Combining (3.60) and (3.66), and exploiting (3.23), we arrive at
+μ ∈L2uloc([0, ∞); H1(0, L)). (3.67)
+
+Finally, it immediately follows from (3.11) that
+
+∥∂tφ∥H1(0,L)′ ≤∥∇μ∥L2(0,L),
+which, in light of (3.60), entails that ∂tφ ∈L2uloc([0, ∞); H1(0, L)′).
+
+Uniqueness of global weak solutions. Let φ1, φ2 be two global weak solutions corresponding to the
+initial data φ10, φ20, respectively. Set Φ = φ1 −φ2 and M = μ1 −μ2. Testing the equation written for Φ by
+GΦ yields
+Z L 1 d
+L2(0,L) + M Φ dx = 0. 2 dt∥∂xGΦ∥2 0
+According to (3.29)2, we have
+Z L Z L Z L Z L
+M Φ dx = |∂xΦ|2 dx + (Ψ′(φ1) −Ψ′(φ2)) Φ dx + λ |∂xφ1|2 −|∂xφ2|2 Φ dx
+0 0 0 0
+Z L Z L Z L
+≥ |∂xΦ|2 dx −(θ0 −θ) |Φ|2 dx + λ (∂xφ1 + ∂xφ2) ∂xΦ Φ dx.
+0 0 0
+In a classical fashion, we know that
+Z L Z L
+(θ0 −θ) |Φ|2 dx = (θ0 −θ) ∂xΦ ∂xGΦ dx (3.68)
+0 0
+Z L
+≤1 |∂xΦ|2 dx + (θ0 −θ)2 ∥∂xGΦ∥2L2(0,L). (3.69)
+2 0 2
+On the other hand, we infer that
+Z L
+λ (∂xφ1 + ∂xφ2) ∂xΦ Φ dx
+≤|λ| ∥∂xφ1∥L∞(0,L) + ∥∂xφ2∥L∞(0,L) ∥∂xΦ∥L2(0,L)∥Φ∥L2(0,L)
+√ 3 1 (3.70)
+≤|λ| L ∥∂xxφ1∥L2(0,L) + ∥∂xxφ2∥L2(0,L) ∥∂xΦ∥ L2(0,L)∥∂xGΦ∥2 L2(0,L)2
+Z L
+≤1 |∂xΦ|2 dx + λ4L2 ∥∂xxφ1∥L2(0,L) + ∥∂xxφ2∥L2(0,L) 4 ∥∂xGΦ∥2L2(0,L).
+2 0 4
+
+Then, we end up with
+1 d
+L2(0,L) ≤G(t)∥∂xGΦ∥2L2(0,L), (3.71) 2 dt∥∂xGΦ∥2
+where
+(θ0 −θ)2 λ4L2 4
+G(t) = + ∥∂xxφ1∥L2(0,L) + ∥∂xxφ2∥L2(0,L) .
+2 4
+Therefore, since G ∈L1(0, T) in light of (3.60), an application of the Gronwall lemma entails the unique-
+ness of weak solutions.
+□
+
+4. FINITE ELEMENT APPROXIMATION
+
+In this section we introduce the finite element and time discretization of (2.2), and we study its well
+posedness, stability and convergence to the continuous solution, separating the analysis between the cases
+with the logarithmic potential (1.5) and with the polynomial potential (1.4). The convergence results will
+also give existence results for the solution of the continuous problem (2.2).
+
+4.1. Preliminaries and technical lemmas. Let T > 0 and N ∈N∗. We split the interval [0, T] into N
+equidistant subintervals [tn, tn+1], with tn = n∆t, where ∆t := NT , n ∈{0, . . . , N −1}. Let Ω⊂Rd,
+d = 1, 2, 3, be a bounded domain of Rd. We require {Th}h>0 to be a family of conforming partitions of Ω
+into disjoint d−simplices K, with hK := diam(K), h := maxK∈Th hK, such that Ω= ∪K∈ThK. We will
+make the following assumptions on the domain Ωand on the meshes:
+(A0): Ω⊂Rd, d = 1, 2, 3, is a bounded convex domain with polygonal shape for d = 2 and polyhedral
+shape with d = 3;
+(A1): Th is shape-regular, i.e., denoting ρK the diameter of the largest inscribed ball in the simplex K ∈
+Th, it holds that
+sup hKρ−1K ≤C.
+K∈Th
+Moreover, Th is quasi-uniform, i.e. it holds that
+
+hK ≥Ch, ∀K ∈Th.
+
+(A2): Th is an acute partitioning, which means that the angles of any triangle in the case d = 2 is less then
+or equal to π2, while the angle made by any two faces of any tetrahedron is less then or equal to π2
+for d = 3.
+
+Remark 4.1. In (A0) we are assuming a polygonal/polyhedral shape for Ω. This technical constraint
+arises specifically from our finite-element-based existence theory. We pass to the limit in the discretization
+parameters to prove existence at the continuous level within a fixed domain of polygonal or polyhedral
+shape. We could bypass this requirement by working with isoparametric finite elements (see e.g. [7, Chapter
+10.4]), in which a base polygonal-polyedral domain is mapped through piece-wise polynomial functions
+to a domain approximating the smooth domain Ω. In this setting, we can pass to the limit also in the
+approximating geometry. In this situation, the integrals of finite element functions over the approximated
+
+domain can be mapped back to the original domain Ω. We will not delve into these technical details here,
+assuming (A0) for simplicity.
+
+We introduce the following finite element space:
+Sh := {χ ∈C(Ω) : χ|K ∈P1(K) ∀K ∈Th} ⊂W 1,∞(Ω),
+
+where P1(K) indicates the space of polynomials of total order one on K.
+Let I be the set of nodes of Th and {xj}j∈I be the set of their coordinates. Moreover, let {χj}j∈I be the
+Lagrangian basis functions associated with each node j ∈I. Denoting by πh : C(Ω) →Sh the standard
+Lagrangian interpolation operator we define the lumped scalar product as
+Z X
+(η1, η2)h = πh(η1(x)η2(x))dx ≡ (1, χj)η1(xj)η2(xj), (4.1)
+Ω j∈I
+
+for all η1, η2 ∈C(Ω). We observe that, since χj ≥0 for all j ∈I, the lumped scalar product induces a
+norm on Sh, which we indicate as ∥·∥h. We also observe that
+(fh, 1)h = (fh, 1) for any fh ∈Sh.
+We then introduce the L2 projection operators Ph, ˆPh : L2(Ω) →Sh such that
+(Phv, χ) = ( ˆPhv, χ)h = (v, χ) ∀χ ∈Sh. (4.2)
+
+We recall the following well-known inverse estimates and interpolation results (see e.g. [3,4,7]).
+
+Lemma 4.2. Under Assumptions (A0) −(A1), the following properties hold:
+
+p −dq |χh|W s,q(Ω) ∀χh ∈Sh, s, m ∈{0, 1}, s ≤m, 1 ≤q ≤p ≤∞; (4.3) |χh|W m,p(Ω) ≤Chs−m+ d
+||χh||2 ≤∥χh∥2h ≤(d + 2)||χh||2 ∀χh ∈Sh; (4.4)
+|(χh, ξh)h −(χh, ξh)| ≤Ch1+m|χh|Hm(Ω)∥∇ξh∥ ∀χh, ξh ∈Sh, m ∈{0, 1}; (4.5)
+∥(I −πh)η∥Lp(Ω) + h∥∇(I −πh)η∥Lp(Ω) ≤Ch2|η|W 2,p(Ω) ∀η ∈W 2,p(Ω), p ∈[2, +∞]; (4.6)
+lim ∥(I −πh)η∥L∞(Ω) = 0 ∀η ∈C(Ω). (4.7)
+h→0
+We introduce the spaces Fh = {v ∈C( ̄Ω) : (v, 1) = 0} and V h = {vh ∈Sh : (vh, 1)h = 0}.
+Note that, for any vh ∈Sh, we have that (vh, 1)h = (vh, 1). Then, we define the discrete Green operator
+Gh : Fh →V h as follows
+(∇Ghv, ∇χ) = (v, χ)h ∀χ ∈Sh, (4.8)
+
+which is well-posed as a consequence of the Lax–Milgram theorem. Taking χ = v in (4.8) and using (4.4)
+and the Cauchy–Schwarz inequality we deduce that
+
+1 1
+∥v∥≤∥∇Ghv∥ 2∥∇v∥ 2. (4.9)
+
+We also define the discrete Laplacian operator ∆h : Sh →V h as follows:
+−(∆hv, χ)h = (∇v, ∇χ) ∀χ ∈Sh, (4.10)
+
+whose well-posedness is a consequence of the Riesz representation theorem. Taking χ = −∆hv in (4.10)
+and using (4.4), the Cauchy–Schwarz inequality and (4.3), we obtain that
+∥∆hv∥2 ≤∥∇∆hv∥∥∇v∥≤Ch−1∥∆hv∥∥∇v∥, (4.11)
+
+from which, applying again (4.3), we find
+∥∆hv∥≤Ch−2∥v∥. (4.12)
+
+We will need the following Lemma (see, e.g., [14]).
+
+Lemma 4.3. Under Assumption (A2), given g ∈W 1,∞(R), with g(0) = 0 and 0 ≤g′(s) ≤Lg < +∞for
+a.e. s ∈R, the following estimate holds
+∥∇πh (g(χ))∥2 ≤Lg ∇χ, ∇πhg(χ) ∀χ ∈Sh. (4.13)
+
+A crucial argument in the forthcoming numerical analysis will be the validity of discrete Gagliardo–
+Nirenberg inequalities (3.2) with j = 1, m = r = 2. These are not guaranteed at the discrete level, since
+elements of Sh do not have second order derivatives. In the following Lemma 4.4, we will derive the
+discrete analogue of (3.3) in the space Sh. To the best of our knowledge, this is a novel result. Similar
+discrete Gagliardo-Nirenberg inequalities are available in literature for the particular case of piecewise
+constant discrete functions defined on a cartesian grid for finite volume discretization schemes [13]. For
+finite elements, as far as we know only particular forms of the discrete Gagliardo-Nirenberg inequality with
+q = 2 are available in literature [30].
+
+Lemma 4.4. Under the Assumptions (A0) −(A1), there exists a C > 0 independent on h such that
+
+1 1
+∥∇χ∥L4(Ω) ≤C∥∆hχ∥ 2∥χ∥L∞(Ω)2 ∀χ ∈Sh. (4.14)
+
+The proof is inspired by the arguments in the proof of [23, Theorem 2.8], which considers discrete
+versions of Gagliardo–Nirenberg inequalities different from (3.2). In particular, the extension of these
+techniques to the case q = ∞in (3.2) is not straightforward.
+
+Proof. Let us introduce the discrete L2 laplacian ∆h : Sh →V h as follows:
+
+−(∆hv, χ) = (∇v, ∇χ) ∀χ ∈Sh. (4.15)
+
+Comparing with (4.10), we observe that (∆hv, χ) = (∆hv, χ)h. Taking χ ≡∆hv and thanks to (4.4), we
+deduce that
+∥∆hv∥≤C∥∆hv∥. (4.16)
+Let us also introduce the H1 projection P h1 : H1(Ω) →Sh defined, for v ∈H1(Ω), by
+∇P h(v),1 ∇χ = (∇v, ∇χ) ∀χ ∈Sh, (4.17)
+with (P h(v),1 1) = (v, 1). The following interpolation inequality holds under the assumptions (A0) −(A1)
+(see e.g. [23]):
+∥v −P hv∥+1 h∥∇(v −P hv)∥≤Ch2|v|H2(Ω)1 ∀v ∈H2(Ω). (4.18)
+
+We also need the following refined interpolation inequalities for πh (see e.g. [23]), valid under the assump-
+tions (A0) −(A1):
+
+d
+q −d ∥v −πh(v)∥W m,q(Ω) ≤Ch 2h2−m|v|H2(Ω) ∀v ∈H2(Ω), m ∈{0, 1}, 2 ≤q ≤∞. (4.19)
+
+Given χ ∈Sh, by L2 elliptic regularity on convex polygonal or polyhedral domains [17,20], there exists a
+unique u ∈H2N(Ω) := {v ∈H2(Ω) : ∂nv|∂Ω= 0} such that
+(∇u, ∇v) = −(∆hχ, v) ∀v ∈H1(Ω),
+
+with (u, 1) = (χ, 1) and
+∥u∥H2(Ω) ≤C∥∆hχ∥. (4.20)
+We observe from the definition (4.17) and from (4.15) that χ ≡P h(u)1 in Sh.
+We now write
+∥∇χ∥L4(Ω) ≤∥∇u∥L4(Ω) + ∥∇(u −χ)∥L4(Ω) .
+| {z } | {z }
+I1 I2
+For what concerns I1, thanks to (3.3) and to (4.20), we have
+
+1 1 1 1
+I1 ≤C∥u∥H2(Ω)∥u∥2 L∞(Ω)2 ≤C∥∆hχ∥ 2∥u∥L∞(Ω).2
+By exploiting (4.19) with m = 0, q = ∞and (4.3), we get
+∥u∥L∞(Ω) ≤∥χ∥L∞(Ω) + ∥u −χ∥L∞(Ω) ≤∥χ∥L∞(Ω) + ∥u −πhu∥L∞(Ω) + ∥πhu −χ∥L∞(Ω)
+
+2 ≤∥χ∥L∞(Ω) + Ch2−d2∥u∥H2(Ω) + Ch−d ∥u −πhu∥+ ∥u −P hu∥1 .
+
+Then, thanks to (4.6), (4.18) and (4.20), we conclude that
+
+1 2
+I1 ≤C∥∆hχ∥ 2 ∥χ∥L∞(Ω) + Ch2−d2∥∆hχ∥ .
+
+For what concerns I2, thanks to (4.19) with m = 1, q = 4, as well as (4.3) and (4.20), we find
+I2 ≤∥∇(u −πhu)∥L4(Ω) + ∥∇(πhu −χ)∥L4(Ω)
+
+4 ≤Ch1−d4∥∆hχ∥+ Ch−d ∥∇(u −πhu)∥+ ∥∇(u −P hu)∥1 .
+
+Then, thanks to (4.6), (4.18) and (4.20), we infer that
+
+1 2
+I2 ≤Ch1−d4∥∆hχ∥= C∥∆hχ∥ 2 h2−d2∥∆hχ∥ .
+
+We now crucially observe that, thanks to (4.16) and to (4.12), we have
+! 1 Z 2 X
+2 h2−d2∥∆hχ∥≤Ch−d2∥χ∥= Ch−d |χ|2
+K K∈Th
+! 1 Z 2 X d
+≤Ch−d2∥χ∥L∞(Ω) 1 ≤Ch−d2h 2∥χ∥L∞(Ω).
+K K∈Th
+
+Collecting the results we finally obtain that
+
+1 1
+∥∇χ∥L4(Ω) ≤C∥∆hχ∥ 2∥χ∥ L∞(Ω),2
+from which, using (4.16), we get (4.14). □
+
+The last preliminary result we will need in the forthcoming analysis is the following discrete Bihary-type
+inequality.
+
+Lemma 4.5. Let {yn} and {an} be sequences of non-negative real numbers, and let C ≥0 be a constant.
+Let moreover r > 1, and assume that ak < ̄∆for any k = 1, . . . , n, with ̄∆> 0 a constant which depends
+only on C and r defined in (4.28). If the sequence {yn} satisfies, for all integers n with 1 ≤n ≤N,
+N ∈N∗, the inequality
+Xn
+yn ≤C + akyrk, (4.21)
+k=1
+then there exist ̄R > 0 and n1 ∈N∗, with n1 ≤N, which depend only on C and r, such that, for 1 ≤n ≤n1,
+it holds that
+C
+yn ≤ 1 , (4.22) Pn1 r−1 1 −(r −1)Cr−1 ̄Rr k=1 ak
+Pn
+where n1 is such that 1 −(r −1)Cr−1 ̄Rr k=1 ak > 0 for any n ≤n1.
+
+There are different versions of the discrete explicit Bihari inequality, i.e. inequality of type (4.21) where
+the sum on the right hand side is up to n −1, reported in literature, see e.g. [29]. To the best of our
+knowledge, there are no reported proofs of Lemma 4.5 in the implicit case. For this reason, we prove
+Lemma 4.5, providing in the proof the specific form of the constants ̄∆and ̄R.
+
+Pn
+Proof. Let us define zn := C + k=1 akyrk for n ≥1 and z0 = C. We note that yn ≤zn. By definition, it
+follows that zn −zn−1 = anyrn, which implies that
+zn −zn−1 ≤anzrn. (4.23)
+Let us now introduce the strictly decreasing function f(x) = x1−r. By the mean value theorem, for any
+interval [zn−1, zn], there exists a value ξ ∈(zn−1, zn) such that f(zn−1) −f(zn) = f ′(ξ)(zn−1 −zn), which
+implies that
+z1−rn−1 −z1−rn = (r −1)ξ−r(zn −zn−1),
+and, since ξ ≥zn−1,
+z1−rn−1 −z1−rn ≤(r −1)z−rn−1(zn −zn−1).
+Substituting (4.23) in the previous inequality, we obtain that
+z1−rn−1 −z1−rn ≤(r −1)anρrn,
+where ρn := zn/zn−1. Note that in the explicit case the previous inequality would have been z1−rn−1 −z1−rn ≤
+(r −1)an. In the implicit case we need to control the amplification factor ρn. Summing the previous
+
+inequalities over k, we get
+Xn Xn
+C1−r −z1−rn = z1−rk−1 −z1−rk ≤(r −1) akρrk,
+k=1 k=1
+which implies, raising to the power (1 −r)−1 and noting that yn ≤zn, that
+C
+1 . (4.24) yn ≤ Pn r−1 [1 −(r −1)Cr−1 k=1 akρrk]
+In order to bound the amplification factor ρk, we observe from (4.23) that, for any k = 1, . . . , n, it satisfies
+the inequality
+ρk −akzr−1k−1ρrk ≤1. (4.25)
+We also note that ρk ≥1 and ρk →1 as ak →0. Setting δk := akzr−1k−1, the maximum of the function
+1 r−1 1
+f(ρ) := ρ −δkρr is attained at ̄ρ = (rδk)− r−1, with f( ̄ρ) = r (rδk)− r−1. Imposing the smallness
+condition
+(r −1)r−1
+δk < , (4.26)
+rr
+we obtain that f( ̄ρ) > 1. Since f(0) = 0 and f( ̄ρ) > 1, the graph of f crosses the line y = 1 twice at the
+points R1,k and R2,k such that 1 ≤R1,k < ̄ρ < R2,k. Thanks to (4.25), the condition (4.26) implies that
+1 ≤ρk ≤R1,k, with R1,k finite and depending only on r and δk. Now, if there exists a ̄δ > 0 such that
+(r −1)r−1
+δk ≤ ̄δ < for any k = 1, . . . , n, (4.27)
+rr
+setting ̄R to be the first positive root such that ̄R − ̄δ ̄Rr = 1 implies that R1,k ≤ ̄R for all k = 1, . . . , n.
+Indeed, since f(ρ) is increasing in the first branch for 0 ≤ρ ≤ ̄ρ, we have that f ′(ρ) = 1 −rδkρr−1 > 0
+for any 0 ≤ρ < ̄ρ. Hence, given that R1,k −δkRr1,k = 1, and considering the implicit dependence of R1,k
+on δk, we calculate that
+d R1,k Rr1,k
+= > 0,
+d δk 1 −rδkRr−11,k
+which means that the R1,k is increasing in δk. This gives (4.22).
+Since δk depends on zk−1, which is defined through the y1, . . . , yk−1, whose finiteness is determined by
+(4.24) and hence by the validity of (4.26) at 1, . . . , k −1, we need to employ an iterative argument to show
+that it is possible to ensure (4.27) uniformly in k. This will be possible by requiring, via (4.26), smallness
+conditions on the coefficients ak, for k = 1, . . . , n1, in terms of ̄δ and on the yk, for k = 1, . . . , n1 −1, and
+then choosing the infimum of such smallness conditions to be valid for any ak. We follow the following
+constructive reasoning starting from n = 1.
+(r−1)r−1
+Step 1: for n = 1, we have that δ1 = a1zr−10 = a1Cr−1. Choosing ̄δ < rr and imposing that
+a1 < C1−r ̄δ, so that (4.26) is satisfied, we deduce from (4.22) that y1 ≤C 1 −(r −1)Cr−1a1 ̄Rr −1.
+Note that the denominator in the previous inequality is greater than zero, since ̄R < r−1.r Hence, z1 is
+non-negative and finite.
+Step 2: assuming that zk−1 is non-negative and finite, we impose ak < z1−rk−1 ̄δ, so that (4.26) is satisfied,
+and then obtain from (4.22) that zk is non-negative and finite, as long as the denominator of (4.22) is greater
+
+than zero. Setting
+̄δ
+̄∆:= min , (4.28)
+k=1,...,n1 zr−1k−1
+and imposing that ak < ̄∆for any k = 1, . . . , n, we have that (4.27) is uniformly satisfied. Note that the
+bound on the sequence ak is implicit and depends only on r and C. □
+
+4.2. Discretisation scheme. In order to formulate the finite element and time discretization of (2.2) we
+introduce the following convex splitting of the potential Ψ(φ), where we distinguish between the regular
+and the singular cases:
+
+Regular case:
+φ4
+Ψ(φ) = Ψ1,R(φ) + Ψ2,R(φ), where Ψ1,R(φ) = , Ψ2,R(φ) = −φ2 . (4.29)
+4 2
+Singular case:
+
+Ψ(φ) = Ψ1,S(φ) + Ψ2,S(φ), where (4.30)
+θ
+Ψ1,S(φ) = ((1 + φ) log(1 + φ) + (1 −φ) log(1 −φ)) , Ψ2,S(φ) = −θ0 φ2.
+2 2
+We also introduce the regularization of the singular potential, depending on the parameter α > 0, given by
+
+Ψ′′1,S(−1 + α) for s ≤−1 + α,
+Ψ′′1,S,α(s) := Ψ′′1,S(s) for −1 + α < s < 1 −α, (4.31) Ψ′′1,S(1 −α) for s ≥1 −α,
+with Ψ′1,S,α(∓1 ± α) = Ψ′1,S(∓1 ± α), Ψ1,S,α(∓1 ± α) = Ψ1,S(∓1 ± α). Integrating (4.31) twice, we get
+
+Ψ1,S,α(s) := (4.32)
+
+4α(2−α)(sθ + 1)2 −θ2 log 2−αα + 2−α1 (s + 1) + 2θ 2 log(2 −α) + 2(2−α)α for s ≤−1 + α,
+θ ((1 + s) log(1 + s) + (1 −s) log(1 −s)) for −1 + α < s < 1 −α, 2 θ θ 2−α 1 θ α
+4α(2−α)(s −1)2 + 2 log α + 2−α (s −1) + 2 2 log(2 −α) + 2(2−α) for s ≥1 −α,
+
+and
+2α(2−α)(sθ + 1) −θ2 log 2−αα + 2−α1 for s ≤−1 + α,
+Ψ′1,S,α(s) := 2θ log 1+s1−s for −1 + α < s < 1 −α, (4.33) θ θ 2−α 1
+2α(2−α)(s −1) + 2 log α + 2−α for s ≥1 −α.
+Finally, we introduce the concave-preserving extension ̄Ψ2,S ∈C1(R) of Ψ2,R ∈C1([−1, 1]) as
+
+Ψ2,S(−1) + (s + 1)Ψ′2,S(−1) for s ≤−1,
+̄Ψ2,S(s) := Ψ2,S(s) for −1 < s < 1, (4.34) Ψ2,S(1) + (s −1)Ψ′2,S(1) for s ≥1.
+
+It is easy to observe that there exists a sufficiently small value α0 > 0 such that
+θ0 θ
+Ψ1,S,α(s) + ̄Ψ2,S(s) + ≥ [s −1]2+ + [−1 −s]2+ ∀s ∈R, ∀α ≤α0, (4.35)
+2 4α(2 −α)
+
+where [·]+ denoted the positive part. In particular we have, for all s ∈R,
+Ψ1,S,α(s) + ̄Ψ2,S(s) ≥−θ0 . (4.36)
+At the same time, in the case with the regular potential (4.29) we know that, for all s ∈R,
+Ψ1,R(s) + Ψ2,R(s) ≥−1 (4.37) 4.
+The α−regularization of the singular potential will be employed to prove the well-posedness of the dis-
+cretization scheme by studying the α →0 limit of a regularized scheme.
+Let us consider the following assumption for the initial condition:
+(IC) φ0 ∈H1(Ω) and, in the case with the singular potential, |φ0| ≤1 a.e. in Ωand φ0 ∈(−1, 1).
+We note that the bound |φ0| ≤1 a.e. in Ωimplies that Ψ(φ0) ∈L1(Ω). We set φ0h = ˆPh(φ0). Thanks
+to (4.2), it follows that |φ0h| ≤1 in Ωand φ h = φ0 ∈(−1, 1) as well. We consider the following fully-
+discretized problem associated to (2.2):
+Problem Ph: for n = 1, · · · , N, given φn−1h ∈Sh with ∥φn−1h ∥H1(Ω) ≤Cn−1 and, in the case with the
+n−1
+singular potential, with −1 ≤φn−1h ≤1 and φ h ∈(−1, 1), find (φnh, μnh) ∈Sh × Sh such that, for all
+(χ, ξ) ∈Sh × Sh,
+h
+φnh −φn−1h , χ + (∇μnh, ∇χ) = 0,
+∆t (4.38)
+h
+(μnh, ξ)h = (∇φnh, ∇ξ) + Ψ′1(φnh) + Ψ′2(φn−1h ), ξ + λ ∇φnh · ∇φn−1h , ξ .
+In the sequel, the constant Cn−1 may change value for different values of n = 1 . . . , N. We observe that
+we address both the cases with a regular and a singular potential in a unified way employing the notations
+(4.29) and (4.30). We now prove the well-posedness and conditional stability of Problem P h.
+
+4.3. Well-posedness and conditional stability for Problem P h. We prove the following theorem.
+
+Theorem 4.6. Let the Assumptions (IC) −(A0) −(A1) −(A2) be satisfied, and let us also assume that
+∆t < λ−4(F(h))2, where F(h) will be defined in (4.61). Then, for any n = 1, . . . , N, there exists a unique
+solution (φnh, μnh) ∈Sh × Sh to (4.38), which satisfies the stability estimate
+1 ∆t 1 √ λ2
+√ ∥φnh −φn−1h ∥2 + ∥∇μnh∥2 + (Ψ(φnh), 1) + 1 − ∆t ∥∇φnh∥2
+2 ∆t 2 2 F(h)
+≤1 h ∥2 + (Ψ(φn−1h ), 1). (4.39) 2∥∇φn−1
+Besides, in the case with the singular potential, the solution φnh satisfies the property −1 < φnh < 1.
+In addition, in the case with the singular potential, assuming (IC) −(A0) −(A1bis) −(A2) and the √
+smallness condition |λ| < ( 2C2g)−1 (where Cg is the constant appearing in (4.14)), the following estimate,
+
+which is uniform in the discretization parameters ∆t and h, is valid:
+
+XN
+sup ∥φnh∥2 + ∆t ∥∆hφnh∥2 ≤C. (4.40)
+n∈{1,...,N} n=1
+
+Proof. The proof is divided into three steps:
+
+- Step 1: Proof of the well-posedness for a regularized version of (4.38) for a fixed n, given φn−1h
+which satisfies the hypotheses in the statement of Problem P h. The regularization is needed only
+for the case with the singular potential.
+- Step 2: Study of the limit problem for the regularized scheme as the regularization parameter tends
+to zero.
+- Step 3: Extension by induction of the well-posedness result to any n = 1, . . . , N, starting from
+n = 1 with given φ0h. Derivation of the stability estimates (4.39) and (4.40) for (4.38).
+
+Step 1. Given α > 0, in the case with the singular potential let us introduce the regularization
+Ψα(·) = Ψ1,α(·) + Ψ2,α(·) := Ψ1,S,α(s) + ̄Ψ2,S(s), ∀s ∈R.
+
+In order to unify the analysis in the cases with the regular and the singular potentials, let us also introduce
+the notation Ψα(·) = Ψ1,α(·) + Ψ2,α(·) := Ψ1,R(·) + Ψ2,R(·) in the regular case. Note that no dependence
+on the regularization parameter α is present in the latter case.
+We introduce the following regularized problem, for a fixed n ∈{1, . . . , N}.
+
+Problem Ph,nα : given α > 0 and φn−1h ∈Sh, with ∥φn−1h ∥H1(Ω) ≤Cn−1 and, in the case with the singular
+n−1
+potential, with −1 ≤φn−1h ≤1 and φ h ∈(−1, 1), find (φnh, μnh) ∈Sh × Sh such that, for all (χ, ξ) ∈
+Sh × Sh,
+h
+φnh −φn−1h , χ + (∇μnh, ∇χ) = 0,
+∆t (4.41)
+h
+(μnh, ξ)h = (∇φnh, ∇ξ) + Ψ′1,α(φnh) + Ψ′2,α(φn−1h ), ξ + λ ∇φnh · ∇φn−1h , ξ .
+The existence of a unique solution to Problem P αh,n , given φn−1h as in the hypothesis, is obtained via a
+fixed-point argument.
+Setting φn,0h := φn−1h , we introduce the map T : Sh →Sh, with T (φn,i−1h ) = φn,ih , for any i ∈N+,
+defined as the solution of the variational formulation
+!h φn,ih −φn−1h , χ + (∇μn,ih , ∇χ) = 0, ∆t (4.42)
+h
+(μn,ih , ξ)h = (∇φn,ih , ∇ξ) + Ψ′1,α(φn,ih ) + Ψ′2,α(φn−1h ), ξ + λ ∇φn,i−1h · ∇φn−1h , ξ ,
+for all (χ, ξ) ∈Sh × Sh. A fixed point of T is a solution of Problem P αh,n . Note that, since φn−1h , φn,i−1h ∈
+Sh ⊂W 1,∞(Ω), the third L2 inner product on the right-hand side in the second equation of (4.42) is well
+defined.
+
+The existence of a unique solution to (4.42) is obtained through a variational principle. As a consequence
+of the first equation of (4.42), we observe that, given φn−1h ∈Sh, we look for a solution φn,ih in the closed
+and convex space V h(φn−1h ) := {χ ∈Sh : (χ −φn−1h , 1)h = 0}. Moreover, from the first equation of (4.42)
+and from (4.8), we get
+!
+φn,ih −φn−1h (μn,ih , 1)h μn,ih = −Gh + νn,ih , with νn,ih = . (4.43) ∆t |Ω|
+
+Substituting in the second equation of (4.42), we can rewrite (4.42) as follows: given φn−1h , φn,i−1h ∈Sh,
+find φn,ih ∈V h(φn−1h ) and the Lagrange multiplier νn,ih ∈R such that, for all ξ ∈Sh,
+!h
+Gh(φn,ih −φn−1h ) (∇φn,ih , ∇ξ) + , ξ + Ψ′1,α(φn,ih ) + Ψ′2,α(φn−1h ), ξ h + λ ∇φn,i−1h · ∇φn−1h , ξ ∆t
+−νn,ih (1, ξ)h = 0. (4.44)
+We note that (4.44) represents, together with φn,ih ∈V h(φn−1h ), the Karush-Kuhn-Tucker optimality condi-
+tion for the minimization problem
+
+inf sup h )||2 ∥∇vh∥2 + ∆t||∇Gh(vh −φn−1 vh∈Sh ν∈R
+
++ 2(Ψ1,α(vh) + Ψ′2,α(φn−1h )vh, 1)h + 2λ ∇φn,i−1h · ∇φn−1h , vh −ν(vh, 1)h , (4.45)
+
+being ν ∈R the Lagrange multiplier associated to the mass conservation constraint. Noting the convexity
+and the coercivity of Ψ1,α(·) (see equations (4.29) and (4.32)), the primal form associated to the Lagrangian
+(4.45) is a convex, proper, lower semi continuous and coercive function from the closed and convex set
+V h(φn−1h ) to R. Hence, we infer from the Kuhn-Tucker Theorem (see, e.g., theorem 5.1 in [33]) the ex-
+istence of φn,ih ∈V h(φn−1h ), solution to the primal problem, and Lagrange multiplier νn,ih ∈R, for each
+i ∈N+. Therefore, from (4.43) we have the existence of a solution (φn,ih , μn,ih ) to (4.42).
+Let us now prove the uniqueness. If, for fixed i ≥1 and given φn−1h , φn,i−1h ∈Sh, (4.44) has two solutions
+(φn,ih,j, νn,ih,j), j = 1, 2, defining dn,ih := φn,ih,1 −φn,ih,2, ιn,ih := νn,ih,1 −νn,ih,2 and taking the difference between the
+respective equations, we have
+!h
+Ghdn,ih (∇dn,ih , ∇ξ) + , ξ + Ψ′1,α(φn,ih,1) −Ψ′1,α(φn,ih,2), ξ h −ιn,ih (1, ξ)h = 0. ∆t
+
+Choosing ξ ≡∆t dn,ih in the previous equation, employing the monotonicity of Ψ′1,α(·) and observing that
+(dn,ih , 1)h = 0, we find
+∆t∥∇dn,ih ∥2 + ∥∇Ghdn,ih ∥2 ≤0,
+from which we obtain that φn,ih,1 ≡φn,ih,2 in Sh. The uniqueness of νn,ih , and hence of μn,ih , is a straightforward
+consequence of (4.44), (4.43) and of the uniqueness of φn,ih .
+
+Now we prove the existence of a unique fixed point for the map T . Let us denote ei := φn,ih −φn,i−1h ,
+ei−1 := φn,i−1h −φn,i−2h , mi := μn,ih −μn,i−1h . Taking the difference between (4.42) at i and at i −1, we
+obtain
+
+ei h
+∆t, χ + (∇mi, ∇χ) = 0,
+h
+(mi, ξ)h = (∇ei, ∇ξ) + Ψ′1,α(φn,ih ) −Ψ′1,α(φn,i−1h ), ξ + λ ∇ei−1 · ∇φn−1h , ξ ,
+for all (χ, ξ) ∈Sh × Sh. Let us consider χ = Ghei, and, noting that ei ∈V h, ξ = ∆t ei. Using (4.8) and
+the monotonicity of Ψ′1,α(·), we deduce that
+∥∇Ghei∥2 + ∆t∥∇ei∥2 ≤−λ∆t(∇ei−1 · ∇φn−1h , ei) ≤|λ|∆t∥∇ei−1∥∥∇φn−1h ∥L∞(Ω)∥ei∥.
+
+In the case with the regular potential, by using (4.3), we have
+∥∇φn−1h ∥L∞(Ω) ≤ ̄Ch−d2Cn−1 =: G(h), (4.46)
+where ̄C is the constant in (4.3). In the case with the singular potential, using again (4.3) and the fact that
+−1 ≤φn−1h ≤1, we find
+∥∇φn−1h ∥L∞(Ω) ≤ ̄Ch−1∥φn−1h ∥L∞(Ω) ≤ ̄Ch−1 =: G(h). (4.47)
+
+By using (4.9) and the Young inequality, we obtain
+∥∇Ghei∥2 + ∆t∥∇ei∥2 ≤G(h)|λ|∆t∥∇ei−1∥∥ei∥
+
+1 1
+2 ≤G(h)|λ|∆t∥∇ei−1∥∥∇Ghei∥ 2∥∇ei∥
+√ !
+
+2 ≤1 + 1 + 2 3 √ 3 1 4∥∇Ghei∥2 3∆t∥∇ei∥2 3∆t 4 4G(h)2λ2(∆t) ∥∇ei−1∥2.
+
+Finally, by using the Poincar ́e–Wirtinger inequality we conclude that
+√ !
+3 3 1
+2 ∥ei∥2H1(Ω) ≤ √ p + 1)G(h)2λ2(∆t) ∥ei−1∥2H1(Ω), 4 4(C2
+
+where Cp is the Poincar ́e constant. If the term between parenthesis is less than one, namely, if
+
+64 in the case with regular potential, 27(C2p + 1) ̄C4C4n−1λ4h2d ∆t < (4.48) 64 in the case with singular potential, 27(C2p + 1) ̄C4λ4h4
+we have that T is a contraction, and then there exists a unique fixed point for T , which gives the unique
+solution of Problem P αh,n .
+
+Step 2: We now study the limit problem as α →0 and prove a well-posedness result for problem (4.38).
+This is only needed in the case with the singular potential. To this aim, we perform a-priory estimates,
+which hold as well for the regular case. Let us take χ = μn+1h + 1 √ ∆t(φnh −φn+1h ) and ξ = φnh −φn−1h in
+
+(4.41). By using the Cauchy–Schwarz and Young inequalities, we deduce that
+1 1 1
+√ h −φn−1h )∥2 + (Ψα(φnh), 1)h ∥φnh −φn−1h ∥2 + ∆t∥∇μnh∥2 + 2∥∇φnh∥2 + 2∥∇(φn ∆t
+≤1 h ∥2 + (Ψα(φn−1h ), 1)h − √ ∆t(∇μnh, ∇(φnh −φn−1h )) −λ(∇φnh · ∇φn−1h , φnh −φn−1h ) 2∥∇φn−1
+≤1 h ∥2 + (Ψα(φn−1h ), 1)h + ∆t ∥∇μnh∥2 + 1 h −φn−1h )∥2 2∥∇φn−1 2 2∥∇(φn
++ |λ|∥∇φnh∥∥∇φn−1h ∥L∞(Ω)∥φnh −φn−1h ∥.
+
+Then, by exploiting (4.46), (4.47), we have
+1 ∆t 1
+√ ∥φnh −φn−1h ∥2 + ∥∇μnh∥2 + h∥2 + (Ψα(φnh), 1)h ∆t 2 2∥∇φn
+≤1 h ∥2 + (Ψα(φn−1h ), 1)h + |λ|G(h)∥∇φnh∥∥φnh −φn−1h ∥ 2∥∇φn−1 √
+≤1 h ∥2 + (Ψα(φn−1h ), 1)h + 1 ∆t 2∥∇φn−1 2 √ ∆t ∥φnh −φn−1h ∥2 + 2 λ2G(h)2∥∇φnh∥2,
+which entails that
+1 ∆t 1 √
+√ ∥φnh −φn−1h ∥2 + ∥∇μnh∥2 + 1 − ∆tλ2G(h)2 ∥∇φnh∥2 + (Ψα(φnh), 1)h
+2 ∆t 2 2
+≤1 h ∥2 + (Ψα(φn−1h ), 1)h. (4.49) 2∥∇φn−1
+We observe that, in the case with the regular potential, if ∥φn−1h ∥H1(Ω) ≤Cn−1, the right hand side of (4.49)
+is bounded thanks to (4.29), (4.3) and the Sobolev embedding. Similarly, in the case with the singular
+potential, if ∥φn−1h ∥H1(Ω) ≤Cn−1 and −1 ≤φn−1h ≤1, the right hand side of (4.49) is uniformlu bounded
+in α thanks to (4.30). Hence, recalling (4.36), (4.37), the Poincar ́e–Wirtinger inequality, upon noting that
+(φnh, 1)h = (φn−1h , 1)h, and setting
+
+h2d in the case with regular potential,
+∆t < ̄C4C4n−1λ4 (4.50)
+h4 in the case with singular potential,
+̄C4λ4
+we conclude that
+∥φnh∥H1(Ω) ≤Cn uniformly in α. (4.51)
+In addition, in the case with the singular potential, thanks to (4.4), (4.35) and (4.49), we get that
+∥[φnh −1]+∥2 + ∥[−1 −φnh]+∥2 ≤Cα(2 −α). (4.52)
+n
+Let us now consider the specific case with the singular potential. We take ξ = φnh −φ h in (4.41), where
+n
+φ h = |Ω|−1(φnh, 1)h. Recalling that −1 ≤φn−1h ≤1 and (4.34), and by using the Poincar ́e–Wirtinger and
+the Cauchy-Schwarz inequalities, (4.47) and (4.49), we obtain
+Ψ′1,α(φnh), φnh − ̄φnh h
+
+h θ0 h
+= μnh − ̄μnh, φnh − ̄φnh −∥∇φnh∥2 + φn−1h , φnh − ̄φnh −λ ∇φnh · ∇φn−1h , φnh − ̄φnh 2
+≤C (∥∇μnh∥+ 1) ∥∇φnh∥+ Ch−1∥∇φnh∥2 ≤C (∆t)−12, h−1 . (4.53)
+
+n 0
+Thanks to φ h = φ h ∈(−1, 1) ⊂dom (Ψ′1), and observing that Ψ1,α is convex with Ψ′1,α(0) = 0 (see
+(4.33)), following the same arguments as in [19, p. 908] we can prove that, for each node j ∈I of Th, there
+exist C1 > 0, C2 ∈R such that
+C1|Ψ′1,α(φnh(xj))| ≤Ψ′1,α(φnh(xj)) φnh(xj) − ̄φnh + C2.
+
+Multiplying the previous inequality by (1, χj), summing over j ∈I, and using (4.53), we conclude that
+|Ψ′1,α(φnh)|, 1 h ≤C (∆t)−12, h−1 (4.54)
+
+uniformly in α. Taking now ξ = 1 in (4.41), and employing (4.54), the hypotheses on φn−1h and (4.49), we
+obtain
+|(μnh, 1)h| ≤C (∆t)−12, h−1 .
+
+The Poincar ́e–Wirtinger inequality, together with (4.49), implies that
+∥μnh∥H1(Ω) ≤C (∆t)−12, h−1 uniformly in α. (4.55)
+
+Finally, taking ξ = πh Ψ′1,α(φnh) in (4.41), and using (4.13), (4.47), (4.51), (4.55), the hypotheses on φn−1h
+and (4.4), we infer that
+∥πh Ψ′1,α(φnh) ∥2 ≤∥Ψ′1,α(φnh)∥2h ≤C∥μnh∥2 + C∥∇φn−1h ∥2L∞(Ω) + C ≤C (∆t)−1, h−2 , (4.56)
+
+uniformly in α. From the uniform bounds (4.51), (4.55), (4.56) and the Bolzano–Weierstrass theorem, it
+follows that, for any sequence αk →0, there exists a subsequence α′k →0 and φnh, μnh, ξnh ∈Sh such that,
+for k →+∞,
+φnh,α′k →φnh, ∇φnh,α′k →∇φnh, (4.57)
+μnh,α′k →μnh, ∇μnh,α′k →∇μnh, (4.58)
+πh Ψ′1,α′k(φnh,α′k) →ξnh, (4.59)
+
+where we explicitly reported the dependence on α of the solution of (4.41). Passing to the limit in (4.52) we
+also have that |φnh| ≤1 in Ω. Furthermore, in light of (4.57), since Ψ′1,α(·) is maximal monotone (recall that
+it is a continuous non-decreasing function defined on R), standard results on maximal monotone operators
+(see e.g. [2, Proposition 1.1, p.42]) imply that ξnh ≡πh (Ψ′1(φnh)) In addition, by the logarithmic singularity
+n
+in Ψ′1,S, it follows that |φnh| < 1. The latter also implies that φ h ∈(−1, 1).
+Thanks to the previous convergence results, it is easy to pass to the limit as α →0 in (4.41), proving
+that the limit point defined in (4.57)-(4.58) is a solution of (4.38). The uniqueness of the solution of (4.38)
+can be inferred similarly as for the solution of (4.41). In particular, given φn−1h , Let us assume that there
+exist two solutions (φnh,j, μnh,j), j = 1, 2, to (4.38), and let us define Φnh := φnh,1 −φnh,2, Σnh := μnh,1 −μnh,2.
+Taking the difference between the respective equations, choosing χ ≡Gh(Φnh), ξ ≡∆tΣnh, and employing
+
+the monotonicity of Ψ′1,S(·), we get
+∆t∥∇Φnh∥2 + ∥∇Gh(Φnh)∥2 ≤|λ|∆t∥∇Φnh∥∥∇φn−1h ∥L∞(Ω)∥Φnh∥.
+
+Hence, using (4.9), (4.47) and the Young inequality, we obtain that
+∆t 3 1
+2 ∆t∥∇Φnh∥2 + ∥∇Gh(Φnh)∥2 ≤|λ|C ∥∇Φnh∥ 2∥∇Gh(Φnh)∥
+h
+̄C4 ≤∆t3 h∥2 + ∆t|λ|4 ∥∇Gh(Φnh)∥2. (4.60) 4∥∇Φn 4h4
+Thanks to (4.50) we thus obtain that φnh,1 ≡φnh,2 in Sh. The uniqueness of μnh is then a consequence of
+(4.38) and of the uniqueness of φnh.
+
+Step 3: We now extend inductively the well-posedness of (4.38) to each level n = 1, . . . , N, starting from
+n = 1. Setting
+√ !
+4 4 hd min √ 1 min regular potential, n=1...,N ̄C2C2n−1 3 3pC2p + 1,
+F(h) := √ ! (4.61) 4 4 h2 min √ 1 singular potential, ̄C2 3 3pC2p + 1,
+and taking ∆t < λ−4(F(h))2, we obtain the well posedness of (4.38) for any n = 1, . . . , N. Then,
+proceeding as in (4.49), we consider χ = μn+1h + 1 √ ∆t(φnh −φn+1h ) and ξ = φnh −φn−1h in (4.38), which
+leads to the validity of (4.39) for any n = 1, . . . , N, given φn−1h . Repeating the same arguments as those
+employed for the regularized problem, we infer that, if ∥φn−1h ∥H1(Ω) ≤Cn−1, then ∥φnh∥H1(Ω) ≤Cn, and,
+n−1
+in the case with the singular potential, if −1 ≤φn−1h ≤1 and φ h ∈(−1, 1), then −1 ≤φnh ≤1 and
+n
+φ h ∈(−1, 1). We finally observe that, at the level n = 1, we have by hypothesis that ∥φ0h∥H1(Ω) ≤C0 and,
+in the case with the singular potential, −1 ≤φ0h ≤1 and φ h ∈(−1, 1). Hence, we can extend inductively
+the well posedness for any n = 1, . . . , N, starting from n = 1.
+We now consider the case with the singular potential (4.30) and prove (4.40). Let us take χ ≡φnh and
+ξ ≡−∆t ∆hφnh in (4.38). By exploiting (4.10) and (4.13), we obtain
+∥φnh∥2h ∥φnh −φn−1h ∥2h h + − πh(Ψ′1(φnh)), ∆hφnh +∆t∥∆hφnh∥2h
+2 2 | {z }
+≥0
+h ∥2h ≤∥φn−1 + ∆tθ0∥φn−1h ∥h ∥∆hφnh∥h + |λ|∆t∥∇φnh∥L4(Ω)∥∇φn−1h ∥L4(Ω)∥∆hφnh∥. 2
+We recall that −1 ≤φnh ≤1 for any n = 0, . . . , N. By using (4.14), with corresponding constant Cg, as
+well as (4.4), the Cauchy–Schwarz and Young inequalities, we get
+∥φnh∥2h ∥φnh −φn−1h ∥2h + + ∆t∥∆hφnh∥2h
+2 2
+∆t h ∥2h ≤∥φn−1 + ∆tθ20|Ω| + ∥∆hφnh∥2h + λ2∆tC4g∥∆hφnh∥h∥∆hφn−1h ∥h 2 2
+
+∆t ∆t h ∥2h ≤∥φn−1 + C∆t + 1 + λ2C4g ∥∆hφnh∥2h + λ2C4g∥∆hφn−1h ∥2h. 2 2 2
+Summing over n = 1, . . . , N, and using (4.11), we infer that
+∥φNh ∥2h ∆t XN
++ 1 −λ2C4g ∥∆hφnh∥2h
+2 2
+n=1
+
+∆t ∆t ≤∥φ0h∥2 XN h + C + λ2C4g∥∆hφ0h∥2h + λ2C4g ∥∆hφnh∥2h
+2 2 2
+n=1
+XN ∆t ∆t
+≤C + C ∥∇φ0h∥2 + λ2C4g ∥∆hφnh∥2h. h2 2
+n=1
+Since ∥φ0h∥H1(Ω) ≤C and ∆t < λ−4(F(h))2, we conclude that
+∥φNh ∥2h ∆t XN (F(h))2
++ 1 −2λ2C4g ∥∆hφnh∥2h ≤C + C ≤C. 2 2 h2
+n=1
+√
+Assuming that |λ| < ( 2C2g)−1, we then deduce (4.40), which is uniform in ∆t and h. □
+
+Remark 4.7. We emphasize that the estimate (4.40) is uniform in the discretization parameters ∆t and
+h. However, the lack of a uniform bound for Ψ′(φnh) in some Lp space, with p > 1, prevents us to pass
+to the limit in (4.38) and obtain an existence result for a suitable notion of a weak-distributional solution
+satisfying a primal weak formulation of the active CH equation.
+
+4.4. Higher order estimates and convergence analysis in the singular case. In this section we derive
+higher order a-priori estimates for the solution to (4.38) in the case with the singular potential, which are
+uniform in the discretization parameters ∆t, h. These estimates are valid only locally in time, i.e. there
+exists a ̄N ≤N such that they are valid for n = 1, . . . , ̄N. These a-priori estimates will let us identify the
+limit system of (4.38) as ∆t, h →0 and prove an existence and uniqueness result for a local in time weak
+solution to (1.1)-(1.2).
+The higher a-priori estimates are valid under the following higher regularity assumption for the initial
+condition:
+(ICR) φ0 satisfies (IC) and is such that μ0 ∈H1(Ω), where μ0 = −∆φ0 + Ψ′(φ0) + λ|∇φ0|2.
+Setting φ0h = ˆPh(φ0) and μ0h = ˆPh(μ0), we have the following result.
+
+Lemma 4.8. Let the Assumptions (ICR) −(A0) −(A1) −(A2) be satisfied, and let us also assume that √
+∆t < λ−4(F(h))2 ∼h4 and |λ| < ( 6C2g)−1. Let (φnh, μnh) ∈Sh × Sh be the unique solution to (4.38).
+Then, there exists a positive integer ̄N ≤N, which depends only on proper norms of the initial condition,
+and a positive constant C independent on h, ∆t, such that the following higher order stability estimate
+holds
+( )
+φnh −φn−1h 2 sup ∥φnh∥2H1(Ω) + ∥μnh∥2H1(Ω) + ∥πh(Ψ′(φnh))∥2 + + ∥∆hφnh∥2 ≤C. (4.62)
+n∈{1,..., N} ̄ ∆t
+
+φnh−φn−1h
+Proof. First we need to show some preliminary estimates. Let us take χ ≡Gh ∆t in (4.38). Using
+(4.8) and the Cauchy–Schwarz inequality, we easily obtain that
+φnh −φn−1h ∇Gh ≤∥∇μnh∥. (4.63)
+∆t
+Taking χ ≡φnh −φn−1h in (4.38), using (4.3), (4.4) and the fact that ∆t ∼h4, we have
+∥φnh −φn−1h ∥≤Ch3∥∇μnh∥. (4.64)
+We now consider ξ ≡∆hφnh in (4.38). Rearranging terms and exploiting (4.13) and (4.4), we obtain
+∥∆hφnh∥2 −(Ψ′1(φnh), ∆hφnh)h | {z }
+≥0
+≤(∇μnh, ∇φnh) −θ0 φn−1h , ∆hφnh h + λ |∇φnh|2, ∆hφnh −λ ∇φnh · ∇(φnh −φn−1h ), ∆hφnh .
+Considering now that |φn−1h | ≤1 and employing (4.3), (4.14), (4.64), the Cauchy–Schwarz and Young
+inequalities, we deduce that
+1 3 3
+2 ∥φnh −φn−1h ∥2∥∆hφnh∥2 ≤∥∇μnh∥∥∇φnh∥+ 2∥∆hφnh∥2 + C + 2λ2C4g∥∆hφnh∥2 + 2λ2 ∥∇φnh∥2L4(Ω)h−(d+4)
+≤∥∇μnh∥∥∇φnh∥+ 2∥∆hφnh∥2 + C + 3λ2C4g∥∆hφnh∥2 + C∆t h4−d∥∇μnh∥4,
+√
+from which we conclude that, if |λ| < ( 6C2g)−1,
+∥∆hφnh∥2 ≤C∥∇μnh∥∥∇φnh∥+ C∆t h4−d∥∇μnh∥4 + C. (4.65)
+We proceed now by taking χ ≡μnh, ξ ≡φnh −φn−1h in (4.38). Thanks to the convexity of Ψ1(·) and the
+concavity of Ψ2(·), and using the Poincar ́e–Wirtinger inequality and (4.3), we have
+∥∇φnh∥2 ∥∇(φnh −φn−1h )∥2 + + (Ψ(φnh), 1)h + ∆t∥∇μnh∥2
+2 2
+h ∥2 ≤∥∇φn−1 + (Ψ(φn−1h ), 1)h −λ |∇φnh|2, φnh −φn−1h + λ ∇φnh · ∇(φnh −φn−1h ), φnh −φn−1h 2
+h ∥2 ≤∥∇φn−1 + (Ψ(φn−1h ), 1)h + C|λ| ∥∇φnh∥2L4(Ω)∥∇(φnh −φn−1h )∥ 2
+
+4 + C∥∇φnh∥L4(Ω)h−(d+4) ∥φnh −φn−1h ∥2.
+
+Using now (4.14), (4.64) and the Young inequality, we obtain
+∥∇φnh∥2 ∥∇(φnh −φn−1h )∥2 + + (Ψ(φnh), 1)h + ∆t∥∇μnh∥2
+2 2
+h −φn−1h )∥2 h ∥2 ≤∥∇φn−1 + (Ψ(φn−1h ), 1)h + ε∥∇(φn 2 ∆t
++ C∆t∥∆hφnh∥2 + C∆t h1−d4∥∆hφnh∥ 2∥∇μnh∥2, (4.66)
+
+where ε > 0 is a coefficient which will be chosen later on.
+
+Then, we consider the difference between the second equation of (4.38) at time levels n and n−1, where
+we set φ−1h = φ0h. Taking then χ ≡μnh −μn−1h and ξ ≡(φnh −φn−1h )/∆t in the resulting system, we find
+∥∇μnh∥2 ∥∇(μnh −μn−1h )∥2 ∥∇(φnh −φn−1h )∥2 φnh −φn−1h h + + + Ψ′1(φnh) −Ψ′1(φn−1h ), 2 2 ∆t ∆t
+| {z }
+≥0
+∥∇μn−1h ∥2 φnh −φn−1h h φnh −φn−1h = + θ0 φn−1h −φn−2h , −λ ∇(φnh −φn−2h ) · ∇φn−1h , . 2 ∆t ∆t
+| {z } | {z }
+I1 I2
+We observe that
+φnh −φn−1h h φnh −φn−1h 2 φnh −φn−2h h θ0 φn−1h −φn−2h , = −θ0∆t + θ0 , φnh −φn−1h .
+∆t ∆t h ∆t
+Taking the difference between the first equation of (4.38) at time levels n and n −1 and choosing χ ≡
+φnh −φn−1h , we can deduce from the Cauchy–Schwarz and the Young inequalities that
+h −φn−1h )∥2 |I1| ≤ε∥∇(φn + C∆t ∥∇μnh∥2 + ∥∇μn−1h ∥2 . ∆t
+Next, we rewrite I2 as
+φnh −φn−1h φnh −φn−1h I2 = λ ∇(φnh −φn−1h ) · ∇φn−1h , + λ ∇(φn−1h −φn−2h ) · ∇φn−1h , . ∆t ∆t
+| {z } | {z }
+J1 J2
+Using (3.2) with j = 0, p = 4, m = 1, r = 2, q = 2, togetheer with (4.9), (4.63), (4.4), (4.14) and the
+Young inequality, we obtain
+φnh −φn−1h |J1| ≤∥∇(φnh −φn−1h )∥∥∇φn−1h ∥L4(Ω)
+∆t L4(Ω)
+
+4−d
+4 φnh −φn−1h 4 2 ≤∥∇(φnh −φn−1h )∥ 4+d ∥∆hφn−1h ∥ 1 ∆t
+
+8 8 2 ∥∇μnh∥ ≤∥∇(φnh −φn−1h )∥ 12+d 1 4−d ∥∆hφn−1h ∥
+
+8 h −φn−1h )∥2 ≤ε∥∇(φn + C∆t∥∆hφn−1h ∥ 4−d∥∇μnh∥2. ∆t
+Similarly,
+φnh −φn−1h |J2| ≤∥∇(φn−1h −φn−2h )∥∥∇φn−1h ∥L4(Ω)
+∆t L4(Ω)
+
+d+4
+∇(φnh −φn−1h ) h −φn−2h )∥2 4 ≤ε′∥∇(φn−1 4 ∥∇μnh∥ 4−d + C∆t∥∆hφn−1h ∥ ∆t ∆t
+
+8 h −φn−2h )∥2 h −φn−1h )∥2 ≤ε′∥∇(φn−1 + ε∥∇(φn + C∆t∥∆hφn−1h ∥ 4−d∥∇μnh∥2, ∆t ∆t
+where ε′ > 0 is a coefficient which will be chosen properly.
+Collecting the above results, we end up with
+∥∇μnh∥2 ∥∇(μnh −μn−1h )∥2 h −φn−1h )∥2 + + (1 −3ε)∥∇(φn
+2 2 ∆t
+h ∥2 h −φn−2h )∥2 ≤∥∇μn−1 + ε′∥∇(φn−1
+2 ∆t
++ C∆t ∥∇μnh∥2 + ∥∇μn−1h ∥2 + C∆t∥∆hφn−1h ∥ 4−d∥∇μn8 h∥2. (4.67)
+Summing (4.66) and (4.67), choosing ε < 14 and ε′ = 1 −ε =: k, we have
+∥∇φnh∥2 ∥∇(φnh −φn−1h )∥2 ∥∇μnh∥2 ∥∇(μnh −μn−1h )∥2 + + (Ψ(φnh), 1)h + +
+2 2 2 2
+h −φn−1h )∥2 + k∥∇(φn + ∆t∥∇μnh∥2
+∆t
+h ∥2 ∥∇μn−1h ∥2 ≤∥∇φn−1 + (Ψ(φn−1h ), 1)h + 2 2
+
+1 h −φn−2h )∥2 + k∥∇(φn−1 + C∆t∥∆hφnh∥2 + C∆t h1−d4∥∆hφnh∥ 2∥∇μnh∥2,
+∆t
++ C∆t ∥∇μnh∥2 + ∥∇μn−1h ∥2 + C∆t∥∆hφn−1h ∥ 4−d∥∇μn8 h∥2.
+Summing the previous inequality for n = 1, . . . , N, and considering that φ−1h = φ0h, we arrive at
+∥∇φNh ∥2 ∥∇μNh ∥2 h −φN−1h )∥2 XN + (Ψ(φNh ), 1)h + + k∥∇(φN + ∆t ∥∇μnh∥2
+2 2 ∆t
+n=1
+≤∥∇φ0h∥2 + (Ψ(φ0h), 1)h + ∥∇μ0h∥2 + C∆t XN ∥∆hφnh∥2 + ∥∇μnh∥2 + ∥∇μn−1h ∥2 2 2
+n=1
+XN 8 1
++ C∆t ∥∆hφn−1h ∥ 4−d∥∇μnh∥2 + ∆t h1−d4∥∆hφnh∥ 2∥∇μnh∥2 . (4.68)
+n=1
+Let us introduce the function
+∥∇φnh∥2 ∥∇μnh∥2 Hn := + .
+2 2
+Noting that Ψ(φNh ) is bounded from below by a negative constant, using Assumption (ICR) and observing
+from (4.65) that
+∥∆hφnh∥2 ≤CHn + C∆t h4−d(Hn)2 + C ≤C + C(Hn)2,
+we derive from the previous inequality that
+
+XN 12−d
+4−d HN ≤C0 + C∆t 1 + (Hn) , (4.69)
+n=1
+
+where C0 is a positive constant depending on the norms of the initial condition. We observe that (4.69) has
+the form of (4.21), with the constant C and the sequence an in (4.21) equal to C0+CT and C∆t respectively.
+By imposing (4.27), which gives an implicit bound on ∆t in terms of C0, C and (12 −d)/(4 −d), we infer
+from (4.22) that there exists an ̄N ≤N, which depends only C0, C, d, such that
+sup ∥∇φnh∥2 + ∥∇μnh∥2 ≤C. (4.70)
+n∈{1,..., N} ̄
+
+Here we are assuming that, given ∆t ∼h4, h is sufficiently small to ensure that (4.27) is satisfied. There-
+fore, thanks to (4.65) and (4.70) we obtain the last bound in (4.62).
+
+We now take ξ ≡φnh −φn−1h in (4.38) and, similarly to (4.53), we exploit (4.14), (4.70) and the last bound
+in (4.62) to obtain
+n ho
+sup Ψ′+(φnh), φnh − ̄φnh
+n∈{1,..., N} ̄
+≤ sup C(∥∇μnh∥+ 1)∥∇φnh∥+ C∥∆hφnh∥2 + C∥∆hφn−1h ∥2 ≤C.
+n∈{1,..., N} ̄
+
+Then, with similar arguments as those already employed in the proof of Theorem 4.6, we obtain the first,
+the second and the third bounds in (4.62). Finally, taking χ ≡(φnh −φn−1h )/∆t in (4.38), using the Cauchy–
+Schwarz inequality, (4.68) and (4.70), we infer the fourth bound in (4.62). □
+
+We now associate to the sequence of discrete solutions (φnh, μnh) of Problem P h, for h, ∆t > 0, n ∈
+{1, . . . , ̄N}, the following piecewise constant and piecewise linear time interpolants over the interval [0, ̄T],
+where ̄T := ∆t ̄N:
+Φ+h (t) := φnh, Φ−h (t) := φn−1h , M h+ (t) := μnh M h− (t) := μn−1h ,
+t −tn−1 tn −t
+Φh(t) := φnh + φn−1h , (4.71) ∆t ∆t
+for t ∈(tn−1, tn], n = 1, . . . , ̄N. The discrete weak formulation (4.38) becomes:
+
+(∂tΦh, χ)h + (∇M h+ , ∇χ) = 0,
+(4.72)
++ h (M h , ξ)h = (∇Φ+h , ∇ξ) + Ψ′1(Φ+h ) + Ψ′2(Φ−h ), ξ + λ ∇Φ+h · ∇Φ−h , ξ ,
+valid for all (χ, ξ) ∈Sh × Sh and for all t ∈(0, ̄T], with Φh(0) = φ0h. The next lemma provides the
+convergence results, based on the estimates obtained in Lemma 4.8, which are needed to study the limit of
+Problem P h as h, ∆t →0.
+
+Lemma 4.9. Under the assumptions of Lemma 4.8, there exist a subsequence of continuous and piecewise
+constant in time interpolants, which we still label by the index h, and functions
+φ ∈L∞(0, ̄T; W 1,4(Ω)) ∩W 1,∞(0, ̄T; L2(Ω)), μ ∈L∞(0, ̄T; H1(Ω)), χ ∈L∞(0, ̄T; L2(Ω)),
+
+with −1 < φ < 1 a.e. in Ω× (0, ̄T), such that, for h →0 (and hence ∆t ∼h4 →0), the following
+convergence results hold:
+Φh, Φ±h ∗⇀φ in L∞ 0, ̄T; H1(Ω) , (4.73)
+M h± ∗⇀μ in L∞ 0, ̄T; H1(Ω) , (4.74)
+∂tΦh ∗⇀∂tφ in L∞ 0, ̄T; L2(Ω) , (4.75)
+−∆hΦ±h ∗⇀χ in L∞ 0, ̄T; L2(Ω) , (4.76)
+Φ±h ∗⇀φ in L∞ 0, ̄T; W 1,4(Ω) , (4.77)
+Φh, Φ±h →φ in L∞ 0, ̄T; Lr(Ω) and a.e. in Ω× (0, ̄T), (4.78)
+∇Φ±h →∇φ in L2 Ω× (0, ̄T); Rd and a.e. in Ω× (0, ̄T), (4.79)
+πh[Ψ′(Φ±h )] ∗⇀Ψ′(φ) in L∞ 0, ̄T; L2(Ω) , (4.80)
+
+where r ≥1 for d = 2 and r ∈[1, 6) for d = 3.
+
+Proof. The convergence properties (4.73), (4.74), (4.75) and (4.76) are direct consequences of (4.62), (4.71)
+and of the Banach–Alaoglu theorem. We note that the interpolants Φ±h converge to the same limit as Φh.
+This can be proved by showing that
+∥Φh −Φ±h ∥L∞(0, ̄T;H1(Ω) →0 as h, ∆t →0. (4.81)
+
+Indeed, we can write
+t −tn t −tn−1
+Φh −Φ+h = (φnh −φn−1h ), Φh −Φ−h = (φnh −φn−1h ). ∆t ∆t
+Using the latter formula and (4.68), we conclude that
+∥∇(φnh −φn−1h )∥2 ∥Φh −Φ±h ∥L∞(0, ̄T;H1(Ω)) ≤∆t sup →0 as ∆t →0.
+n∈{1,..., N} ̄ ∆t
+
+The convergence properties (4.73), (4.75), (4.81) and the Aubin–Lions lemma imply (4.78), while (4.77) is
+a consequence of (4.14), (4.62) and of the Banach–Alaoglu theorem.
+
+We are now left to prove (4.79) and (4.80), which are nontrivial. Note in particular that Φ±h /∈H2(Ω),
+so the strong convergence result (4.79), which is necessary to pass to the limit in the active term in (4.72)2,
+cannot be derived from the Aubin–Lions lemma starting from (4.76). We obtain (4.79) by a duality argu-
+ment. Given an arbitrary v ∈L2(0, ̄T; H1(Ω)), let us take χ ≡Ph(v(t)), for a.e. t ∈(0, ̄T), in (4.10),
+written for v = Φ±h , integrate in time over (0, ̄T) and pass to the limit as h →0 in the resulting equation.
+By using (4.5), the fact that Phv →v strongly in L2(0, ̄T; H1(Ω)) as h →0, (4.73) and (4.76), we obtain
+(∇φ, ∇v)L2(Ω×(0, ̄T)) = (χ, v)L2(Ω×(0, ̄T)) ∀v ∈L2(0, ̄T; H1(Ω)). (4.82)
+Choosing now χ ≡Φ±h in (4.10), written for v = Φ±h , an integration in time over (0, ̄T) yields
+∥∇Φ±h ∥2L2(Ω×(0, ̄T)) = (−∆hΦ±h , Φ±h )L2(Ω×(0, ̄T)).
+
+Passing to the limit as h →0, using (4.76), (4.78) and (4.82), we conclude that
+h ∥2L2(Ω×(0, ̄T)) = (χ, φ)L2(Ω×(0, ̄T)) = ∥∇φ∥2L2(Ω×(0, ̄T)), h→0∥∇Φ±lim
+which, together with the weak convergence (4.73), implies (4.79) by the Radon–Riesz property of Hilbert
+spaces.
+
+For what concerns (4.80), (4.62) implies that ∥πh[Ψ′(Φ±h )]∥L∞(0, ̄T;L2(Ω)) ≤C uniformly in h, ∆t. Since
+Ψ′2(Φ±h ) = −θ0Φ±h , this entails that ∥πh[Ψ′1(Φ±h )]∥L∞(0, ̄T;L2(Ω)) ≤C. We now exploit this to bound Ψ′1(Φ±h ).
+Given an element K ∈Th, thanks to the monotonicity of Ψ′1 and to the fact that Φ±h is linear on K, using
+moreover (4.3) localized on K, we have
+∥Ψ′1(Φ±h )∥2L2(K)≤|K| max |Ψ′1(Φ±h (xi))|2 ≤C∥πh[Ψ′1(Φ±h )]∥2L2(K). i
+Summing over K, we deduce that ∥Ψ′1(Φ±h )∥L∞(0, ̄T;L2(Ω)) ≤C. Hence, the Banach–Alaoglu theorem gives
+that there exists a ξ ∈L∞(0, ̄T; L2(Ω)) such that, up to a subsequence,
+Ψ′1(Φ±h ) ∗⇀ξ in L∞ 0, ̄T; L2(Ω) .
+The previous convergence property together with (4.78), which in particular implies that Φ±h →φ in
+L1(0, ̄T; L2(Ω)), gives that
+Z ̄T Z ̄T
+lim (Ψ′1(Φ±h ), Φ±h ) dt = (ξ, φ) dt.
+h→0 0 0
+The maximal monotonicity of Ψ′1 then implies that ξ ≡Ψ′1(φ) ∈L∞(0, ̄T; L2(Ω)) (see e.g. [2, Proposition
+1.1, p.42]). Due to the logarithmic term in Ψ′1, we have as a consequence that −1 < φ < 1 a.e. in Ω×(0, ̄T).
+Finally, (4.7), (4.78) and the properties 1 < Φ±h , φ < 1 a.e. in Ω× (0, ̄T) imply that
+πhΨ′1(Φ±h ) −Ψ′1(Φ±h ) ∗⇀0 in L∞ 0, ̄T; L2(Ω) , (4.83)
+which, together with the fact that Ψ′2(Φ±h ) = −θ0Φ±h , conclude the proof of (4.80). □
+
+With the convergence results of Lemma 4.9 it is possible to pass to the limit as h, ∆t →0 in the discrete
+system (4.72) and to identify the limit point (φ, μ) as the unique local in time weak solution of (1.1)-(1.2).
+In particular, the weak convergence (4.77) and the strong convergence (4.79) allow us pass to the limit in
+the active term in (4.72). The identification of the limit of the other terms in (4.72) via the convergence
+results of Lemma 4.9 is straightforward. The techniques to deal with the lumped products are standard and
+rely on the estimates (4.5), (4.6) (see e.g. [16]). Hence, we conclude this section by stating the existence
+theorem without delving into the calculations.
+
+Theorem 4.10. Under the assumptions of Lemma 4.8, the limit point of Lemma 4.9 satisfies the weak
+formulation
+(∂tφ, χ) + (∇μ, ∇χ) = 0,
+(4.84)
+(μ, ξ) = (∇φ, ∇ξ) + (Ψ′(φ), ξ) + λ (|∇φ|2, ξ) ,
+
+valid for all (χ, ξ) ∈H1(Ω) and a.e. t ∈(0, ̄T], with φ(·, 0) = φ0. Hence, it is the unique local in time
+weak solution of (1.1)-(1.2) over the time interval (0, ̄T), where the final time ̄T depends on the data of the
+problem.
+
+Remark 4.11. The uniqueness of the solution of the weak formulation (4.84) is proved with the same
+procedure as performed in Section 2 to obtain (3.10).
+
+5. NUMERICAL RESULTS
+
+In this section we report the results of numerical simulations, obtained by solving (4.38) via a Newton
+method, in two space dimensions for different test cases.
+In particular, we consider, as in [36], Ω= [0, 256]2, and we vary λ throughout the test cases. For λ = 0
+we consider h = 1 and ∆t = 0.01, while for λ ̸= 0 we take h = λ and ∆t = 0.01 h4/λ4. In Test Case
+1 we will consider the case with the regular potential (4.29) and we will vary the value of λ in the set
+{0, 0.1, 1, 2}, in order to observe the different phase separation dynamics associated to increasing values of
+the active strength λ. In Test Case 2 we will compare the phase separation dynamics obtained in the cases
+with regular potential (4.29) and with singular potential (4.30), both for λ = 1. Finally, in Test Case 3 we
+will show the growth law for domain length scale L(t) associated to the coarsening dynamics in the case
+with the regular potential (4.29) for λ ∈0.1, 1.
+
+5.1. Test Case 1. We consider the initial condition φ0 = 0 ± 0.1ι, where ι is a random perturbation
+uniformly distributed in the interval [0, 1]. In Figure 3 we show the numerical results at different time
+points throughout the phase separation dynamics, up to late times at which we can observe the coarsening
+dynamics of the separated domain subregions, for the cases λ = 0, 0.1, 1, 2.
+We observe from figure 3 that the phase separation dynamics for the φ variable consists, for λ = 0, in
+the formation of maze-like bicontinuous structures alternating between the two pure phases φ ∼−1 and
+φ ∼1. For λ > 0, the activity-induced shift (2.9) and mass conservation induce an imbalance between
+the fractions of φa and φc at late times, with the formation of a droplet morphology of clusters of φ ∼φa
+immersed in a background of φ ∼φc phase. This effect is more evident with increasing values of λ, and is
+in accordance with the numerical results reported in [27,36].
+
+5.2. Test Case 2. We now compare the phase separation dynamics between the cases with the regular and
+the singular potentials, considering the initial condition φ0 = 0 ± 0.1ι and λ = 1. In the case with the
+singular potential, we take θ = 12, θ0 = 1 and we solve the regularized problem (4.41) with α = 0.001,
+in order to avoid numerical problems due to the singularities at the pure phases. In Figure 4 we show the
+numerical results at different time points throughout the phase separation dynamics.
+We observe from figure 4 that the phase separation dynamics in the regular and singular cases are qual-
+itatively identical, consisting in the formation of a droplet morphology with shifted core values, which can
+be identified in both cases by the uncommon tangent construction. In the case with the singular potential
+we observe a time delay in the phase separation dynamics, which is slower with respect to the case with
+regular potential.
+
+t=1 t=5 t=100
+
+λ=0
+
+λ=0.1
+
+λ=1
+
+λ=2
+
+FIGURE 3. Snapshots of evolving phase separation in two spatial dimensions at times
+t = 1, 5, 100 for λ = 0, 1, 2. The initial condition is a small uniformly distributed ran-
+dom perturbation around the value φ0 = 0.
+
+5.3. Test Case 3. We consider an ensemble of 20 independent test cases with regular potential, λ = 2
+and with initial conditions given by small uniformly distributed random independent perturbations around
+the value φ0 = 0. We run the numerical simulations up to late times till t ∼5 · 105. We then calculate
+the domain length scale L(t), following [1, 36], as the inverse of the first moment of the spherically and
+ensemble averaged structure factor. In [27] the long-time coarsening dynamics, up to times t ∼5 · 104, of
+the same system (with periodic boundary conditions) was extensively numerically investigated, providing
+evidences for a crossover in the power law L(t) ∼t z from z = 3 at early times to z = 4 at late times. The
+crossover occurred earlier for larger values of λ. In [36], the numerical investigation of the growth law for
+
+t=1 t=5 t=100
+Regular
+
+λ =1
+
+Singular
+
+λ =1
+
+FIGURE 4. Snapshots of evolving phase separation in two spatial dimensions at times t =
+1, 5, 100 for λ = 1, in the case with regular (top) and singular (bottom) potential. The initial
+condition is a small uniformly distributed random perturbation around the value φ0 = 0.
+
+L(t) at longer times, up to t ∼105, led to the observation of even slower asymptotic growth than L(t) ∼t 14
+in the case |λ| = 2 (see Figure 2 in [36]). In figure 5 we report the plot L(t) vs t for λ = 2 up to late times
+t ∼5 · 105, comparing it with the t 13 and t 14 growth laws.
+1 1
+We observe from figure 5 that a crossover from the L(t) ∼t 3 to the L(t) ∼t 4 growth laws at late times
+is indeed observed also in our test case (see the inset A). This confirms the observations reported in [27].
+Going even further in time, we observe, after a transitory growth regime, a slowdown of the growth law,
+as observed in [36], which eventually converges to saturation, confirming the theoretical results found in
+section 2.3. We conclude by noting that, since for lower values of λ the crossover in the growth law for
+L(t) and the possible relaxation to saturation happen at longer times, we actually found too computationally
+demanding to investigate saturation occurrence for λ < 2. This could be also the reason why no slowdown
+of the growth law L(t) ∼t 4 was observed in [36] for |λ| < 2 in the time window up to t ∼105. We leave
+the design of more computationally efficient numerical implementations capable of investigating the full
+long-time coarsening dynamics for values |λ| < 2 for future investigations.
+
+APPENDIX A. DETAILED CALCULATIONS FOR THE STATIC DROPLET SOLUTION AT II ORDER
+
+Following (2.11), we assume that there exists an heteroclinic trajectory for (2.27) which is a quartic curve
+of the form
+χ = (A1,1 + B1,1λξ) (f −fa)(f −fc) + λA1,2(f −fa)(f −fc)2 + λA2,1(f −fa)2(f −fc)
++ λ2A2,2(f −fa)2(f −fc)2 + λ2A1,3(f −fa)(f −fc)3 + λ2A3,1(f −fa)3(f −fc), (A.1)
+
+15 2
+
+10 A 0.550.5 A
+
+0.45
+
+0.4
+
+0.35
+
+0.3
+
+0.25
+
+0.2
+
+0.15
+5 0.050.1 0 2000 4000 6000 8000 10000 12000 14000
+
+0 0.5 1 1.5 2 2.5 3 105 t
+
+FIGURE 5. Plot of the domain length scale L(t) for λ = 2 in two spatial dimensions. The
+1 1
+growth laws L(t) ∼t 3 (LS law) and L(t) ∼t 4 are reported for comparison, together
+with an inset (A) highlighting the growth profile at earlier times. The initial conditions in
+the ensemble are small uniformly distributed random independent perturbations around the
+value φ0 = 0.
+
+where A1,1, A1,2, A2,1, A2,2, A1,3, A3,1, B1,1 are real coefficients to be determined by inserting (A.1) in (2.27)
+and using the principle of polynomial identity. We observe that the term B1,1λξ(f −fa)(f −fc) in (A.1) is
+needed to deal with contributions of order O(λξ) in the term −ξχ in the right hand side of (2.27)2. Using
+(2.26) in (A.1), and keeping only terms at most of order O(λ2), O(ξ2), O(λξ), we obtain that
+χ = (A1,1 + B1,1λξ) (f 2 −1) −A1,1μs,1λf −A1,1ρξf + A1,1μ2s,1λ2 + A1,1ρ2ξ2 + 2A1,1μs,1ρλξ
++ λA1,2(f + 1)(f −1)2 + λA2,1(f + 1)2(f −1) −λ2μs,1 A1,2(f −1)2 −λξρ −1)2 2 2A1,2(f
+
+2 2 −λ2μs,1 A2,1(f + 1)2 −λξρ + 1)2 −λ2μs,1(A1,2 + A2,1)(f −1) −λξρ(A1,2 + A2,1)(f −1) 2 2A2,1(f
++ λ2A2,2(f + 1)2(f −1)2 + λ2A1,3(f + 1)(f −1)3 + λ2A3,1(f + 1)3(f −1). (A.2)
+
+Substituting (A.2) in (2.27)2 and keeping only terms at most of order O(λ2), O(ξ2), O(λξ), we obtain that
+dχ 2 2 =f(f −1) −A1,1ξ(f −1) + A1,1μs,1λξf + A1,1ρξ2f −λξA1,2(f + 1)(f −1)2
+d ̃r
+−λξA2,1(f + 1)2(f −1) + λA21,1(f 2 −1)2 −2λA21,1(μs,1λ + ρξ)f(f 2 −1)
++ 2λ2A1,1A1,2(f + 1)2(f −1)3 + 2λ2A1,1A2,1(f + 1)3(f −1)2 −μs,1λ −ρξ. (A.3)
+
+Taking the derivative of (A.2) with respect to ̃r, still keeping only terms at most of order O(λ2), O(ξ2), O(λξ),
+and equating the result to (A.3), we obtain that
+√
+1 2 A1,1 1 4 A1,1 = −1√ ρ = = − , A1,2 = A2,1 = = − √ μs,1 = 2, 3A1,1 3 10 10 2, 15,
+√
+17 1 1 2
+A2,2 = − √ A1,3 = A3,1 = √ B1,1 = − = . 300 2, 200 2, 20A1,1 20
+We obtain that, at second order in λ, ξ, the static droplet solution must solve the following boundary value
+problem:
+√
+√ − df = −1√ 2(f 2 −1) 5 λ 2f f 2 −73 −13ξf − 450λ2 √ 2(21f 4 −87f 2 + 74) − 92 ξ2 √ √ d ̃r 2 −λξ (18 −9 2)f −(40 −9 2) ,
+180 √ √ (A.4)
+f(−∞) →−1 + 15λ2 −√ 62 ξ + 75λ22 + 12ξ21 −√ 152 λξ, 2 2 2
+f(+∞) →1 + 15λ − 6 ξ −275λ2 −112ξ2 + 15 λξ.
+In order to solve (A.4), we assume that its solution can be written as
+f( ̃r) = f0( ̃r) + λf1( ̃r) + ξf2( ̃r) + λ2f3( ̃r) + ξ2f4( ̃r) + λξf5( ̃r) + o(λ2) + o(ξ2) + o(λξ). (A.5)
+
+At order O(1) we get the boundary value problem
+
+df0 d ̃r = −1√ 2(f 02 −1),
+f0(−∞) →−1, f0(+∞) →1,
+
+which has the solution
+̃r
+f0( ̃r) = tanh √ . (A.6)
+At order O(λ) we get the boundary value problem
+√
+1 df1 √ −7 tanh √ ̃r tanh2 √ ̃r , = − 2 tanh √ ̃r f1( ̃r) − d ̃r 3 2 5 2 2 2
+f1(−∞) → 15,2 2
+f1(+∞) → 15,
+which has the solution
+log cosh √ ̃r 1 2 2
+f1( ̃r) = + (A.7) 15. 5 cosh2 √ ̃r
+At order O(ξ) we get the boundary value problem
+√
+̃r df2 √ , = − 2 tanh √ ̃r d ̃r f2( ̃r) −13 tanh 2 2 √
+2 , f2(−∞) →− √6 2
+f2(+∞) →− 6 ,
+
+√
+which has the constant solution f2 ≡− 62 . At order O(λ2) we get the boundary value problem
+√
+df3 d ̃r = − 2f0( ̃r)f3( ̃r) − √12f1( ̃r) f1( ̃r) + 5f3 0( ̃r)2 −715 − 1507 √ 2f 0( ̃r)4 + 15029 √ 2f 0( ̃r)2 − 22537 √ 2,
+f3(−∞) → 75,2 f3(+∞) →−275,
+
+which has the solution
+
+tanh √ ̃r 2 ̃r ̃r f3( ̃r) = log cosh √ −log2 cosh √ −1
+25 cosh2 √ ̃r 2 2 6
+√
+−2 tanh √ ̃r −13 2 ̃r . (A.8)
+75 2 300 cosh2 √ ̃r
+
+At order O(ξ2) we get the boundary value problem
+√ √
+df4 = − 2 tanh √ ̃r d ̃r f4( ̃r) − 122 , 2
+f4(−∞) → 12,1
+f4(+∞) →−112,
+which has the solution
+̃r ̃r f4( ̃r) = −1 tanh √ − √ . (A.9)
+12 2 12 2 cosh2 √ ̃r
+Finally, at order O(λξ) we get the boundary value problem
+√ √ √
+̃r df5 √ = − 2 tanh √ ̃r + 8−3 2 , d ̃r f5( ̃r) + 202 tanh2 60 2 2 √
+2 , f5(−∞) →− √ 15 2
+f5(+∞) → 15 ,
+which has the solution √ √
+2 ̃r 4 −3 2 ̃r
+f5( ̃r) = tanh √ + . (A.10)
+15 2 60 cosh2 √ ̃r
+
+Acknowledgments. AA and AG are members of Gruppo Nazionale per l’Analisi Matematica, la Probabilit`a
+e le loro Applicazioni (GNAMPA), Istituto Nazionale di Alta Matematica (INdAM).
+
+REFERENCES
+
+[1] A. Agosti, P.F. Antonietti, P. Ciarletta, M. Grasselli, M. Verani, A Cahn–Hilliard-type equation with application to tumor
+growth dynamics, Math. Meth. Appl. Sci. 40 (2017), 7598–7626.
+[2] V. Barbu, Nonlinear semigroups and differential equations in Banach spaces, Editura Academiei Republicii Socialiste
+Romˆania, Bucharest; Noordhoff International Publishing, Leiden., 1976, .
+
+[3] J. W. Barrett, J. F. Blowey and H. Garcke, Finite element approximation of the Cahn–Hilliard equation with degenerate
+mobility, SIAM J. Numer. Anal. 37 (1999), 286–318.
+[4] J. W. Barrett, R. N ̈urnberg, and V. Styles, Finite element approximation of a phase field model for void electromigration,
+SIAM J. Num. Anal. 42(2) (2004), 738–772.
+[5] I. Bihari, A generalisation of a lemma of Bellman and its application to uniqueness problems of differential equations,
+Math. Acad. Sci. Hungar. 7 (1956), 81–94.
+[6] A.J. Bray, Theory of phase ordering kinetics, Adv. Phys. 43 (1994), 357–459.
+[7] S. C. Brenner and L. R. Scott, The Mathematical Theory of Finite Element Methods, Springer-Verlag, New York, 2008.
+[8] H. Brezis, Functional Analysis, Sobolev Spaces and partial Differential Equations, Springer-Verlag, New York, 2010.
+[9] H. Brezis and P. Mironescu, Gagliardo-Nirenberg inequalities and non-inequalities: the full story, Ann. Inst. H. Poincar ́e -
+Anal. Non Lin ́eaire 35 (2018), 1355–1376.
+[10] S. Burekovi ́c, F. De Luca, M. E. Cates, C. Nardini, Active Cahn–Hilliard theory for non-equilibrium phase separation:
+quantitative macroscopic predictions and a microscopic derivation, arXiv:2601.16539 (2026).
+[11] J.W. Cahn, J.E. Hilliard, Free energy of a nonuniform system. I. Interfacial free energy, J. Chem. Phys. 28 (1958), 258–267.
+[12] J.W. Cahn, J.E. Hilliard, Spinodal decomposition: a reprise, Acta Metallurgica 19 (1971), 151–161.
+[13] C. Calgaro, C. Cance‘s, E. Creus ́e, Discrete Gagliardo-Nirenberg inequality and application to the finite volume approxi-
+mation of a convectiondiffusion equation with a Joule effect term, IMA J. Numer. Anal. 44 (2024), 2394–2436.
+[14] J.F. Cialvaldini, Analyse Numerique d’un Probleme de Stefan a Deux Phases Par une Methode d’Elements Finis, SIAM J.
+Numer. Anal. 123 (1975), 464–487.
+[15] M.E. Cates, E. Tjhung, Theories of binary fluid mixtures: from phase-separation kinetics to active emulsions, J. Fluid Mech.
+836 (2018), P1.
+[16] M.I.M. Copetti, C. Elliott, Numerical analysis of the Cahn–Hilliard equation with a logarithmic free energy, Numer. Math.
+63 (1992), 39-65.
+[17] M. Dauge, Neumann and mixed problems on curvilinear polyhedra, ntegr. equ. oper. theory 15 (1992), 227–261.
+[18] C.M. Elliott, The Cahn-Hilliard model for the kinetics of phase separation, Mathematical models for phase change problems
+( ́Obidos, 1988), 35–73, Internat. Ser. Numer. Math. 88, Birkh ̈auser, Basel, 1989.
+[19] G. Gilardi, A. Miranville, G., Schimperna, On the CahnHilliard equation with irregular potentials and dynamic boundary
+conditions, Commun. Pure Appl. Anal. 8 (2009), 881–912.
+[20] P. Grisvard, Elliptic Problems in Non Smooth Domains, Monogr. Stud. Math., vol. 24, Pitman, 1985, .
+[21] Keener, J., Sneyd, J., Mathematical Physiology. I: Cellular Physiology, Springer New York, NY, ISSN 0939-6047, 2010.
+[22] G. Leoni, A First Course in Sobolev Spaces: Second Edition. Graduate Studies in Mathematics. 181, American Mathemat-
+ical Society, 2017, .
+[23] Y. Liu, W. Chen, C. Wang, S. M. Wise, Error analysis of a mixed finite element method for a Cahn–Hilliard–Hele–Shaw
+system, Numer. Math. 135 (2017), 679–709.
+[24] I. M. Lifshitz, V. V. Slyozov, The kinetics of precipitation from supersaturated solid solutions, J. Phys. Chem. Solids
+19(1–2)(1961), 35–50.
+[25] A. Miranville, S. Zelik, Robust exponential attractors for Cahn-Hilliard type equations with singular potentials, Math.
+Methods. Appl. Sci. 27 (2004), 545–582.
+[26] A. Miranville, The Cahn-Hilliard Equation: Recent Advances and Applications, CBMS-NSF Regional Conf. Ser. in Appl.
+Math. 95, SIAM, Philadelphia, PA., 2019.
+[27] S. Pattanayak, S. Mishra, S. Puri, Ordering kinetics in the active model B, Phys. Rev. E 104 (2021), 014606.
+[28] S. Pattanayak, S. Mishra, S. Puri, Domain Growth in the Active Model B: Critical and Off-critical Composition, Soft
+Materials 19 (2021), 286–296.
+[29] B. G. Pachpatte, Integral Inequalities of the Bihari type, Math. Inequal. Appl. 5 (649–6572002), 4.
+[30] D. Kay, V. Styles and E. Suli, Discontinuous Galerkin Finite Element Approximation of the Cahn–Hilliard Equation with
+Convection, SIAM J. NUMER. ANAL. 47 (2660–26852009), 4.
+
+[31] A. Quarteroni and A. Valli, Numerical Approximation of Partial Differential Equations, Springer-Verlag, Berlin, 2008.
+[32] R. Temam, Infinite-dimensional dynamical systems in mechanics and physics, Springer-Verlag, New York, 1997.
+[33] R. Temam, Convex Analysis and Variational Problems, SIAM, 1999, .
+[34] E. Tjhung, C. Nardini, M. E. Cates, Cluster phases and bubbly phase separation in active fluids: reversal of the Ostwald
+process, Phys. Rev. X 8 (2018), 031080.
+[35] E. Tjhung, A. Tiribocchi, D. Marenduzzo, M. E. Cates, A minimal physical model captures the shapes of crawling cells,
+Nat. Commun. 6 (2015), 5420.
+[36] R. Wittkowski, A. Tiribocchi, J. Stenhammar, R. J. Allen, D. Marenduzzo, M. E. Cates, Scalar φ4 field theory for active-
+particle phase separation, Nat. Commun. 5 (2014), 4351.

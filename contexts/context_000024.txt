@@ -1,0 +1,971 @@
+[文档 1/1]
+标题：Establishing the Alternative Methods Expert Committee
+发布日期：2026-07-30
+来源：GOV.UK
+来源地址：https://www.gov.uk/government/publications/establishing-the-alternative-methods-expert-committee
+
+In March 2026, the Animals in Science Committee ( ASC ) was asked to give advice on the establishment of an expert committee in alternatives to animals in science, as committed to in the Replacing Animals in Science Strategy. This included advice on the scope, governance and composition of such a committee, and how it could most effectively support progress on the replacement of animals in science while complementing existing structures.
+
+The associated report and advice, in the form of a series of recommendations to the minister, are reviewed and agreed by the full ASC .
+
+- Animals in Science Committee
+
+# Establishing the Alternative Methods Expert Committee (accessible)
+
+Published 30 July 2026
+
+© Crown copyright 2026
+
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk .
+
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+
+This publication is available at https://www.gov.uk/government/publications/establishing-the-alternative-methods-expert-committee/establishing-the-alternative-methods-expert-committee-accessible
+
+July 2026
+
+## Abbreviations:
+
+### 3Rs
+
+Replacement, Reduction and Refinement
+
+### aNDPB
+
+advisory Non-Departmental Public Body
+
+### AMEC
+
+Alternative Methods Expert Committee
+
+### APHA
+
+Animal and Plant Health Agency
+
+### ARRIVE
+
+Animal Research: Reporting of In Vivo Experiments
+
+### ASC
+
+Animals in Science Committee
+
+### ASPA
+
+Animals (Scientific Procedures) Act 1986
+
+### ASRU
+
+Animals in Science Regulation Unit
+
+### AWERB
+
+Animal Welfare and Ethical Review Body
+
+### CRO
+
+Contract Research Organisation
+
+### DBIST
+
+Department for Business, Innovation, Science and Trade
+
+### DEFRA
+
+Department for Environment, Food and Rural Affairs
+
+### DRIVER
+
+Designing and Reporting In Vitro Experiments Responsibly
+
+### DSIT
+
+Department for Science, Innovation and Technology
+
+### ECVAM
+
+European Centre for the Validation of Alternative Methods
+
+### EEA
+
+European Environment Agency
+
+### EFSA
+
+European Food Safety Authority
+
+### EMA
+
+European Medicines Agency
+
+### ESAC, ECVAM Science Advisory Committee
+
+### ESTIV
+
+European Society of Toxicology In Vitro
+
+### FDA
+
+Food and Drug Administration
+
+### FSA
+
+Food Standards Agency
+
+### HSE
+
+Health and Safety Executive
+
+### ICCVAM
+
+Interagency Coordinating Committee on the Validation of Alternative Methods
+
+### ICH
+
+International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use
+
+### ISO
+
+International Organization for Standardization
+
+### MHRA
+
+Medicines and Healthcare products Regulatory Agency
+
+### MRC
+
+Medical Research Council
+
+### NAM
+
+New Approach Methodology
+
+### NC3Rs
+
+National Centre for the Replacement,
+Refinement and Reduction of Animals in Research
+
+### OECD
+
+Organisation for Economic Cooperation and Development
+
+### OLS
+
+Office for Life Sciences
+
+### OPSS
+
+Office for Product and Safety Standards
+
+### UKCVAM
+
+UK Centre for the Validation of Alternative Methods
+
+### UKRI
+
+UK Research and Innovation
+
+### UKHSA
+
+UK Health Security Agency
+
+### US EPA
+
+United States Environmental Protection Agency
+
+### VMD
+
+Veterinary Medicines Directorate
+
+### WHO
+
+World Health Organisation
+
+## 1. Executive Summary
+
+The Animals in Science Committee (ASC) was commissioned by the Department for Science, Innovation and Technology (now the Department for Business, Innovation, Science and Trade) to provide advice on the establishment of an expert committee on alternatives to the use of animals in science. This forms part of the government’s Replacing Animals in Science Strategy, which aims to accelerate the development, validation and uptake of alternative methods and support progress towards the replacement of animal use.
+
+This report sets out the ASC’s recommendations on the remit, governance, membership and ways of working of the proposed Alternative Methods Expert Committee (AMEC), and how it should operate within the wider system. The ASC has undertaken a mapping of the current landscape to identify gaps, overlaps and barriers, and to ensure that AMEC complements existing structures and strengthens overall system coherence.
+
+A central finding of this review is that, while significant activity already exists across the landscape, the adoption of alternative methods remains slow. Key barriers include a lack of clarity on validation across different contexts, fragmentation between organisations, and the absence of a clear framework for signalling when alternative methods are ready for adoption. These systemic issues limit the ability of regulators, funders and researchers to act confidently, and need to be addressed.
+
+The ASC recommends that AMEC should be established as a strategic, system-level advisory committee, rather than a technical peer review committee. Its primary role should be to facilitate progress towards replacement by providing authoritative advice on the development, validation and uptake of alternative methods across both research (basic and applied) and regulatory testing. To achieve this, AMEC should focus on four core functions: advising, convening, prioritising and horizon scanning. The ASC emphasises that AMEC should operate in close collaboration with existing bodies, particularly the UK Centre for the Validation of Alternative Methods (UKCVAM) and the ASC, with clearly defined complementary remits.
+
+The report makes a series of recommendations to enable AMEC to operate effectively. These include recommendations on governance, membership, and ways of working.
+
+Finally, the ASC makes one further recommendation on locating UKCVAM within NC3Rs in the spirit of addressing the barriers identified above to create an integrated, coherent system and tackling fragmentation.
+
+Taken together, these recommendations are intended to establish AMEC as a focused, authoritative and collaborative body capable of driving meaningful progress towards the replacement of animals in science.
+
+## 2. Introduction
+
+In April 2026, the Animals in Science Committee (ASC) established a task and finish group for the Alternative Methods Expert Committee (AMEC). This was in response to the commissioning letter from officials at the Office for Life Sciences, within the Department for Science, Innovation and Technology (DSIT), requesting advice on the establishment of an expert committee on alternatives to animals in science (DSIT, 2026). Since this letter, DSIT has been replaced by the Department for Business, Innovation, Science and Trade (DBIST). Our recommendations will be directed accordingly.
+
+The detailed commission states that the government wishes to receive advice from the committee on the following:
+
+a) the potential remit of an alternatives committee, including its objectives and scope (Section 6),
+
+b) options for governance, membership and ways of working (Section 7),
+
+c) how such a committee could most effectively support progress on the replacement of the use of animals in science (Section 4, and throughout) and
+
+d) how an alternatives committee could best complement existing structures and organisations involved in animals in science and alternatives. This includes comprehensive mapping of the existing system, and how those that are going to be developed will fit into this (Section 3).
+
+### i. Context
+
+This commission, from DSIT to the ASC, follows the publication of the cross-government Replacing Animals in Science Strategy, referred to throughout this report as “the Strategy” (DSIT, 2025). This Strategy sets out how government intends to develop a research and innovation system that uses alternative methods instead of animals, contributing to the government manifesto commitment to “partner with scientists, industry, and civil society as we work towards the phasing out of animal testing”.
+
+The Strategy makes the following commitment: “We will: enable better advice on alternative methods. We will establish an alternative methods committee, overseen by the ASC, that will provide independent impartial, balanced and objective advice on alternative methods. The committee will comprise representatives from academia, industry, CROs [contract research organisations], NC3Rs and other relevant stakeholders with expertise in the development and application of alternative methods specifically to reduce animal use and ensure animals are only used where no alternative is available.”
+
+To note, the ASC has interpreted the commission’s use of “overseen” in this context as pertaining to the provision of this advice from the ASC. While the ASC expects to interact significantly with AMEC, our recommendations do not include an oversight role for the ASC once AMEC is established.
+
+This commission seeks advice on implementing the above Strategy commitment in practice.
+
+### ii. Definitions
+
+The Strategy defines “alternative methods” as: “scientific methods and testing strategies which do not use protected animals, or which (compared to existing scientific methods and testing strategies) use fewer protected animals”. This encompasses applications in both regulatory and research (basic and applied) contexts.
+
+This scope is important because, although much discussion around alternative methods focuses on regulatory testing (19% of experimental procedures in 2025), a large proportion (80% of experimental procedures in 2025) of animals used in science in the UK are used for basic and applied research (Home Office, 2026).
+
+Progress towards replacement will therefore require attention to both regulatory and research (basic and applied) contexts.
+
+“Replacement” is defined more narrowly as: “the use of alternative methods and/or defined approaches that directly substitute for an animal procedure for a specific, defined purpose, such that animals are no longer required for that application”.
+
+While all replacement methods are alternative methods, not all alternative methods constitute replacement. Many alternative methods contribute indirectly to reducing reliance on animals (e.g. informing decision-making or improving prediction), particularly in research contexts where direct one-to-one substitution is less clearly defined.
+
+Finally, throughout this report, the ASC uses the term “validation” in a broad sense to refer to the process by which sufficient evidence is generated to demonstrate that an alternative method is reliable, fit for purpose and capable of replacing or reducing reliance on an animal method within a defined context of use whether that is in research (basic and applied) or regulatory testing.
+
+The ASC recognises that the terminology used in this area is not applied consistently across sectors and disciplines, and that related terms such as “qualification” and “validation” may carry different meanings in different contexts, particularly between research contexts and regulatory testing. The need for greater clarity and consistency in these terms is discussed later in this report (see Section 5.ii. “Key system barriers”). However, for the purposes of this report, “validation” should be considered to be defined as above.
+
+### iii. Issue
+
+Currently, advice on the use of animals in science is provided to the government by the ASC, as established by the Animals (Scientific Procedures) Act 1986 (ASPA). The Home Office has overall responsibility for overseeing compliance with ASPA. However, more recently it has been agreed that DBIST has policy ownership of Section 20B on alternative strategies, which states that the government “must support the development and validation of alternative strategies” (Animals (Scientific Procedures) Act, 1986).
+
+There is an established landscape of organisations that already contribute to the implementation of the 3Rs principles: replacement, reduction and refinement. The ASC has updated its ways of working (ASC, 2026) to enable direct provision of advice to DBIST, but the ASC does not have the necessary expertise to give focused advice on alternative methods to animal use, as its membership is appointed to provide balanced coverage across the wider animals in science landscape. The Strategy identified the need for a dedicated body to provide this advice.
+
+This report aims to set out recommendations on establishing such a committee, including its scope, governance and composition, and how it might fit into this broader system to complement existing structures, avoiding gaps and duplication.
+
+## 3. Methodology
+
+The ASC has been asked to provide independent, balanced and objective advice on the establishment of an expert committee on alternatives to animals in science, drawing on the available evidence.
+
+As directed by the commission, the ASC has utilised the Strategy and its accompanying references. In considering the governance of such a committee, the ASC has also made use of government guidance on the classification of public bodies (Cabinet Office, 2016). More broadly, the ASC has considered literature as cited throughout the report.
+
+Our findings have also been informed by targeted stakeholder interviews – including representatives from DBIST, NC3Rs, the task-and-finish UKCVAM advisory board, UKRI and research councils, regulators, the Home Office and other government departments, with the aim of understanding the roles and responsibilities of existing bodies in the system, how they interact with one another, and how they might expect to interact with the new bodies established by the system. Where stakeholders have written to the ASC on the establishment of this committee expressing their views, the ASC has taken this into consideration. The ASC would like to thank everyone who contributed their input for this report.
+
+Additionally, as part of addressing objective (d) of the commission, the ASC conducted a mapping exercise which aimed to elucidate the roles and responsibilities of, and the interactions between, the bodies involved in governance of alternative methods. The completed map was then used as evidence in considering the role that AMEC should fulfil in the system, thereby informing the advice provided for objectives (a), (b) and (c).
+
+## 4. Vision for AMEC
+
+The long-term vision of the Strategy is for “a world where the use of animals in science is eliminated in all but exceptional circumstances achieved by creating a research and innovation system that replaces animals with alternative methods wherever possible” (DSIT, 2025). AMEC is intended to serve that goal. It should provide strategic, system-level insight to address the key barriers that currently slow progress.
+
+Currently, the adoption of replacements is often unacceptably slow, with the timeline from innovation to adoption currently measured in decades, as is already widely recognised (e.g. McGlacken and Reed, 2024; Taylor, 2024; Hope and Bailey, 2025; Unwin and Lally, 2026; Drug Target Review, 2026). Consider the example of skin irritation testing in rabbits. Two non-animal methods were endorsed by ECVAM’s Scientific Advisory Committee (ESAC) in 2007 (Hartung, 2007). The Strategy now proposes to end the use of animal methods to satisfy UK regulatory requirements by the end of 2026 (DSIT, 2025). This full timeline has been included for information at Annex 1.
+
+The global scientific and regulatory community needs to shift towards a more flexible, rapid, yet still scientifically rigorous approach to the adoption of replacements. The UK is already playing a key role in this on the international stage, for example, its involvement in the update of Guidance Document 34 (OECD, 2005; ESTIV, 2026), and is well-placed to continue playing an active, leadership role in this area.
+
+AMEC will not be able to overcome all barriers to adoption by itself. Our recommendations are all designed with the aim of empowering AMEC to play a critical role in a broader framework designed to accelerate the process from development to adoption.
+
+With a group of committed, mission-driven members working in close collaboration with each other, the committee will be well placed to have a genuinely transformative impact. It has the potential to become a highly respected strategic advisory body, not just a technical peer review body, for understanding and overcoming barriers to adoption. AMEC will not create this transformation overnight, but it can play an essential role in leading progress.
+
+Broadly, the recommendations in this report have been compiled into indicative terms of reference for AMEC, for DBIST and/or AMEC to then adapt as needed (Annex 2).
+
+## 5. Mapping of the system
+
+### i. Mapping of existing and new bodies
+
+One of the objectives of the commission is for the ASC to conduct “comprehensive mapping of the existing system, and how those that are going to be developed will fit into this”. The ASC viewed this as an essential activity to understand where AMEC would fit into such a system, so conducted this system mapping first (Figure 1).
+
+This mapping exercise has been conducted to show how the ASC envisages the roles and interactions within the new alternative methods system, given the number of new bodies being established which will play a significant role.
+
+In conducting this mapping exercise, we noted that some organisations have a significant role in governance through the number of commitments assigned to them within the Strategy. We have included the relevant number of commitments against organisations in Figure 1.
+
+The alternative methods system is complex and difficult to represent in a single diagram. During the mapping exercise, we identified several groups that have important roles in alternative methods (for example, discussion forums and advisory committees to specific regulators). To reduce the complexity of the diagram, our mapping aims to show the main governance structures and interactions for how alternative methods are developed, validated and taken up throughout the whole system. It is not intended to exhaustively show every interaction that may take place between every organisation represented on the diagram, nor every organisation that may be involved in the alternative methods system.
+
+The interactions shown in red are those that AMEC will be involved in (see Table 1 for more detail). These show:
+
+- AMEC will advise government, primarily DBIST and potentially the Home Office. They should link closely with the ASC (see Section 6.ii. “Relationship with the ASC”).
+
+- AMEC will primarily seek technical evidence from academia, CROs, industry, and organisations such as (but not limited to) the NC3Rs through its convening powers. This will include horizon scanning for evidence related to new and emerging alternative methods on thematic areas.
+
+- AMEC will provide advice to UKRI and UKCVAM on priorities for research and funding for academia (including research institutes such as the Preclinical Translational Models Hub).
+
+On the proposed interactions for UKCVAM and the UKCVAM Scientific Advisory Group, which are being developed in parallel with AMEC, see Section 8.i. “UKCVAM”.
+
+#### Figure 1: Mapping of the existing and new bodies within the alternative methods system, and the interactions between them in governing the development, validation and uptake of alternative methods
+
+Numbers in brackets indicate the number of commitments assigned to an organisation in the Strategy. Organisation acronyms can be found in the Acronyms section of this report.
+
+- NC3Rs is an autonomous body but it is not an independent public authority and operates under the umbrella of MRC and UKRI. For the purpose of their specific role, as outlined in this system, they have been represented as a separate entity.
+
+- Recommended to be NC3Rs Regulatory Sciences Forum – see Section 8.i. “UKCVAM”.
+
+- “UK Regulators” includes (but is not limited to): ASRU, MHRA, HSE, Environment Agency, APHA, VMD, FSA, CEFAS and OPSS.
+
+- “International Regulators, Standards and Harmonisation” includes (but is not limited to): OECD, ISO, WHO, ICH, EMA, EEA, EFSA, FDA and US EPA.
+
+### ii. Key system barriers
+
+One of the key barriers that the ASC has identified in the course of its discussions is that there is currently a lack of clarity on the definitions of “validation” and “qualification”, particularly across different use contexts.
+
+Validation requirements and challenges differ significantly between regulatory testing and research (basic and applied). This creates uncertainty over when an alternative method should be considered “validated”, and which bodies are responsible for oversight.
+
+For regulatory testing, the definition of these criteria will sit with UKCVAM, given its likely focus on regulatory acceptance and alignment with international frameworks. However, for research (basic and applied), defining this clearly may be more difficult, as the context of use can vary significantly and there are fewer formalised pathways for agreement. AMEC may therefore have a role, through its convening and advisory functions (see Section 6.i. “Functions”), in bringing together relevant expertise to support the development of coherent approaches to validation in research.
+
+#### Recommendation 1
+
+AMEC should work with UKCVAM and other relevant bodies to clarify terminology and to establish context-specific validation criteria across the system. UKCVAM should lead on clarifying validation criteria for regulatory testing, while AMEC should provide strategic oversight and coordination for validation approaches in research (basic and applied) to support coherence.
+
+Another gap identified when conducting this mapping exercise, and through discussions with various stakeholders represented in the system, is that there is currently no clear framework for signalling that an alternative is validated and ready for acceptance, and that a particular animal model has an accepted or validated alternative (whether for research (basic and applied) or regulatory testing) and should therefore no longer be funded or licensed. In addition, the effectiveness of alternative methods following replacement should continue to be monitored and evaluated to ensure that both existing in vivo methods and newly adopted alternative methods remain subject to ongoing assessment and evidence-based review.
+
+The ASC initially considered whether this should be a function of AMEC. However, the need for alignment across the system of various bodies – particularly in relation to regulatory expectations, thresholds of evidence, and international expectations, together with the relatively short timeframe of this commission – led the ASC to conclude that it would not be possible to make an authoritative recommendation on an agreed framework at this stage.
+
+The ASC considers this framework to be essential in supporting progress in replacement. Addressing this gap through a coordinated effort across the system should be a priority for DBIST, likely to be led by AMEC in conjunction with UKCVAM (and others) upon its establishment.
+
+#### Recommendation 2
+
+AMEC should work with UKCVAM, DBIST, the ASC and other relevant bodies to develop a clear, system-wide framework [footnote 1] for signalling the readiness of alternative methods and identifying when particular uses of animals should no longer receive funding, licensing approval, or operational support. This framework should include consideration of monitoring and evaluation of alternative methods.
+
+## 6. Remit
+
+### i. Functions
+
+To achieve the vision described above, AMEC must be a strategic-level committee. It should not be responsible for undertaking detailed technical assessments of alternative methods, nor should it be directly conducting validation studies of those alternative methods. It would be impossible for AMEC to represent all the expertise that would be needed to be an effective technical committee providing technical assessments.
+
+Instead, AMEC’s remit should be to provide independent advice on the development, validation and uptake of alternative methods across research (basic and applied) and regulatory testing, with a particular focus on replacement. The core functions of AMEC to facilitate progress in replacement should be advising, convening, prioritising and horizon scanning (see Table 1).
+
+#### Table 1: Functions of the Alternative Methods Expert Committee.
+
+##### Advising
+
+AMEC should play a central advisory role, providing strategic advice to DBIST and, where commissioned, to other bodies within the system. This should include advice on the relative maturity of alternative approaches, the key scientific and systemic barriers to their adoption, and the actions required to overcome these barriers. In line with the Strategy, this advice should be grounded in a balanced consideration of scientific evidence, practical feasibility, and international system-wide implications. AMEC should support system coherence by identifying overlaps, gaps and misalignments across organisations and advising DBIST accordingly.
+
+##### Convening
+
+AMEC should make use of its convening power to bring together the relevant expertise needed to assess particular questions or thematic areas. AMEC should draw on external specialists, including through task-and-finish groups or workshops, to provide detailed input on specific topics. This model will allow AMEC to access deep expertise as required, while maintaining a manageable and strategic core membership.
+
+##### Prioritising
+
+AMEC should provide advice on prioritisation of research and funding, working in collaboration with relevant bodies such as UKRI and the ASC. This should include identifying areas where targeted investment could accelerate the development or uptake of alternative methods, particularly where there is potential for significant animal welfare benefit or where large numbers of animals are currently used.
+
+##### Horizon scanning
+
+AMEC should undertake horizon scanning to identify emerging alternative methods and assess their potential future impact. This should be conducted in a targeted and thematic manner, recognising that meaningful assessment requires focus on specific areas of use rather than broad or generalised reviews.
+
+In carrying out these functions, AMEC should maintain an awareness of international developments in alternative methods and their acceptance, whether through its membership (e.g. appointing members with specific international expertise), direct engagement with international bodies, or via its engagement with other bodies in the UK system (such as UKCVAM). Given the global nature of science and regulation, alignment with international standards and initiatives will be critical to ensuring that UK leadership translates into real-world adoption.
+
+These functions will position AMEC as a central coordinating and advisory body within the system. The ASC considers that a clear and focused remit of this nature will be essential if AMEC is to deliver meaningful impact in accelerating replacement.
+
+#### Recommendation 3
+
+AMEC should be a strategic-level committee which facilitates progress in replacement through its core functions of advising, convening, prioritising and horizon scanning (see Table 1).
+
+### ii. Distinction from the ASC
+
+The ASC has carefully considered how the remit of AMEC differs from that of the ASC.
+
+While AMEC has a primary focus on alternative methods, particularly in relation to accelerating progress towards replacement, the establishment of AMEC should not be seen as a separation of the 3Rs into “replacement”, and “reduction and refinement”, with the latter assigned to the ASC.
+
+The ASC retains its statutory duty under ASPA to advise on matters relating to the use of animals in science, including the application of the 3Rs. In this context, the ASC’s focus is on the use of alternative methods in practice, including, for example, the role of establishments and Animal Welfare and Ethical Review Bodies (AWERBs) in considering alternative methods, and the consideration of alternative methods by the Animals in Science Regulation Unit (ASRU). By contrast, the ASC has recommended that AMEC should be a strategic, system-level advisory body focused on the prioritisation, funding, development, validation, dissemination and uptake of alternative methods.
+
+## 7. Governance, membership and ways of working
+
+### i. Governance
+
+The ASC considered various options for governance of AMEC.
+
+To start, we considered whether AMEC should be a government-sponsored committee, similar to, for example, the ASC, or whether it should sit elsewhere (for example, in the NC3Rs). Ultimately, the ASC decided that the most important factors were independence, strategic overview, and facilitating linkage of other bodies in the system. It was therefore agreed that AMEC should be sponsored by DBIST. This offers a clear link between AMEC and the Replacing Animals in Science strategy, clear pathways to government officials and Ministers when required, and a strategic position in the landscape.
+
+There are two primary options for advisory committees sponsored by government: expert committees and advisory non-departmental public bodies (aNDPBs). The ASC reviewed the Cabinet Office guidance on the classification of public bodies to decide on which of these would be most appropriate for AMEC (Cabinet Office, 2016). Given that there is no statutory requirement for the establishment of this committee, and that the set-up of an expert committee can be quicker and more agile, the ASC determined that this would be the most appropriate classification.
+
+One of the primary differences between expert committees and aNDPBs is in their appointments. Ministerial (public) appointments are mandatory for aNDPBs whereas, with expert committees, Ministers can delegate decision-making to a government official, usually a Director General. This means that decisions about recruitment can be made more quickly, if needed.
+
+Additionally, there is more flexibility in how recruitment is conducted. With an expert committee, appointments can be made directly or via competitive open recruitment.
+
+The ASC has considered this carefully. It will be important for DBIST to balance speed, recognising the desire to implement strategy commitments at pace to make progress on replacement, with fairness and transparency. Direct appointments can be made more quickly, as open competitive recruitment for such committees tends to take 4-6 months. As such, if DBIST would like to make use of direct appointments to quickly appoint key roles, the ASC recommends that this approach is only utilised for the chair and a subset of committee members to meet a quorum. DBIST should also conduct a parallel open recruitment campaign for additional members to make up the full committee. This will allow balance between the two competing interests of speed and fairness.
+
+Recognising the risk of bias associated with direct appointments, the ASC strongly urges DBIST to consider appropriate safeguards to provide public assurance. This might include, for example, giving trusted stakeholders, such as the ASC, the opportunity to review proposed candidates and provide feedback or raise any concerns.
+
+Regardless of how the individual members are appointed, all members should be appointed for a full initial term of three years. This is standard practice among government science advisory committees.
+
+#### Recommendation 4
+
+AMEC should be established as an expert committee sponsored by DBIST. DBIST may wish to make use of official appointments recruited via open competition and, initially, direct appointments where necessary to speed up the establishment of the committee, but should give due consideration to the public perception of fairness by implementing the appropriate safeguards against bias.
+
+### ii. Secretariat
+
+AMEC will need to be resourced by a secretariat to enable effective functioning. The responsibility for arranging or providing the secretariat should fall to DBIST, as the sponsor. However, the ASC would recommend that DBIST seek provision of the secretariat through the NC3Rs.
+
+The ASC recognises that the NC3Rs has established expertise and a unique position within the UK alternative methods landscape. The NC3Rs has a strong track record in supporting the development, validation and adoption of alternative methods, and mature networks spanning academia, industry, regulators and policy.
+
+In Table 2, we have mapped some examples of NC3Rs activities directly to the proposed functions of AMEC to evidence their track record. The breadth of activities in relation to alternative methods, and the 3Rs more widely, positions NC3Rs to support AMEC effectively in its functions, facilitating alignment and avoiding duplication across existing initiatives. This would therefore create greater synergy within the system, enabling AMEC to operate efficiently and draw on existing capabilities.
+
+#### Table 2: Proposed functions of the Alternative Methods Expert Committee (AMEC) and examples of NC3Rs activities that are relevant to these functions.
+
+##### Advising
+
+- Development of ARRIVE guidelines to improve reproducibility in in-vivo research (Percie du Sert et al., 2020)
+
+- Development of DRIVER guidance to improve reproducibility in in vitro research (NC3Rs, no date-a)
+
+##### Convening
+
+- Regulatory Sciences Forum (NC3Rs, no date-b)
+
+- NAMs Network (NC3Rs, no date-c)
+
+- CRACK IT partnerships and collaborations – convening multiple sectors around challenges (NC3Rs, no date-d)
+
+- Antibody Champions programme (Only Good Antibodies, 2026)
+
+##### Prioritising
+
+- Support to UKRI in identifying priority areas of research interest for alternative methods under the strategy (UKRI, 2026)
+
+- CRACK IT partnerships and collaborations – driving focused research (NC3Rs, no date-d)
+
+##### Horizon scanning
+
+- Cross-sector workshops and engagement focused on future opportunities and challenges (e.g. Sewell et al., 2025)
+
+- CRACK IT partnerships and collaborations – identification and support of emerging technologies (NC3Rs, no date-d)
+
+Recognising the importance of maintaining a close link to the sponsoring organisation, if the secretariat support is outsourced (e.g. to the NC3Rs), DBIST should ensure that an official within the appropriate team has responsibility for liaising with the AMEC secretariat. This individual would provide an important bridge between DBIST, AMEC and the secretariat-providing organisation to facilitate effective lines of communication and collaboration.
+
+Importantly, DBIST should have responsibility for ensuring that AMEC is adequately resourced at all times.
+
+#### Recommendation 5: DBIST should be responsible for arranging adequate secretariat resource for the committee. DBIST should seek to agree provision of the secretariat from NC3Rs, due to their unique and strong position in the landscape. DBIST should ensure that an internal official has responsibility for maintaining the secretariat link to the sponsor.
+
+### iii. Membership
+
+The ASC then considered the appropriate membership for AMEC in more detail, including the expertise and skills/attributes required for members.
+
+Firstly, the ASC strongly believes that members of AMEC should be appointed in a personal capacity as individuals for their expertise and skills, not as representatives of their organisations. This is equivalent to how members of the ASC are appointed. Certain organisations may be more likely to have the necessary expertise, skills and networks that the committee requires, but appointments are in a personal capacity.
+
+AMEC members should be representative across the whole landscape of alternative methods and the considerations to be made during their development, validation and uptake. Because AMEC is a strategic committee, less emphasis should be placed on the specific subject matter expertise of its members, and more on their broader awareness and strong networks.
+
+The ASC considers that there are five key pillars that should be represented on AMEC, and has suggested potential sub-categories within these pillars that might be represented. These pillars have been illustrated in Table 3.
+
+#### Table 3: Expertise framework for the Alternative Methods Expert Committee, including the five main pillars of expertise, sub-categories that should be represented, and suggested membership number allocations.
+
+##### Alternatives developers / innovators
+
+3 members
+
+- In vitro technologies
+
+- In silico technologies
+
+##### Alternatives end users
+
+3 members
+
+- In vitro technologies
+
+- In silico technologies
+
+##### Animal research
+
+1-2 members
+
+- In vivo methods and alternatives (multi-modal)
+
+##### Adoption
+
+3 members
+
+- Regulation
+
+- Validation pathways
+
+- Harmonisation
+
+- Standards
+
+##### Public confidence*
+
+2-3 members
+
+- Ethics
+
+- Animal protection
+
+- Public trust
+
+- Communications
+
+- Clinical experts
+
+- Public health
+
+##### Cross-cutting
+
+- Understanding of the landscape and barriers International awareness
+
+- Systems thinking
+
+- Organisational cultural change
+
+- Multi-disciplinary decision making
+
+*Members recruited under the public confidence pillar do not need to cover all suggested sub-categories. These are intended to be examples of where such perspectives may be represented.
+
+The most important breadth of representation will come from the pillars of “Alternative methods development” and “Alternative methods end users”. Across these two pillars, there should be adequate representation of in vitro vs. in silico models.
+
+To ensure there is appropriate awareness of current animal model use, requirements and barriers to transition, it is important in vivo users are represented, to help facilitate effective pathways to transition. Importantly, where those with in vivo expertise are represented, they should also have experience with alternative methods to provide perspectives on transitioning from in vivo to in vitro. We would like to stress that this perspective should be one of many on the committee to provide balance.
+
+Then, more broadly, there should be representation from those with expertise in the adoption of alternative methods. This might include people with regulatory expertise, both domestic and internationally, expertise on validation pathways, and expertise on harmonisation and standards.
+
+From a public confidence standpoint, there should be some representation of ethics, animal protection, public trust, communications, clinical experts and public health.
+
+These members will be especially important in representing civil society, recognising the significant interest and stake that civil society has in this topic.
+
+Finally, across the board, there are some more cross-cutting areas of expertise that should be represented in at least some of its members, but these can come from any of the pillars. Across the board, members should have an understanding of the whole landscape, including representation of international understanding, and the barriers to alternative methods, including the challenges with replacing animals. Expertise in systems thinking, and expertise in organisational cultural change, especially in animal-using establishments, will be relevant. It will also be important to have at least one member with expertise on multi-disciplinary decision-making. By this, we refer to expertise on integrating various types of information and data sources to come to conclusions in practice, not just deep expertise on the technologies themselves.
+
+In addition to the expertise outlined in the Table 3, membership of AMEC should be balanced across several key dimensions:
+
+- Sector: academia, industry, contract research organisations (CROs) and other research organisations
+
+- Research context: basic and applied research, and regulatory testing (safety-focused and efficacy-focused)
+
+- Application domain: human health, animal health, and environmental protection
+
+To ensure that the five pillars are adequately covered, the ASC recommends recruiting about 12-14 members. Suggested allocations across the pillars have been included in Table 2.
+
+#### Recommendation 6
+
+DBIST should recruit 12-14 members across the pillars of alternatives developers, alternatives end users, animal research, adoption and public confidence. Membership should be reasonably balanced across the dimensions of sector, research context and application domain. As a whole, AMEC should be representative of the whole system as in the ASC’s proposed expertise framework in Table 3.
+
+While their area of expertise should determine their eligibility for the committee, their skills and attributes should be the basis by which individuals are selected. Table 4 shows the suggested essential and desirable criteria for the AMEC chair and members.
+
+Where desirable criteria have been suggested, these should be represented by some members but do not need to necessarily be present in all.
+
+#### Table 4: Proposed essential and desirable criteria for the Alternative Methods Expert Committee chair and members.
+
+##### Essential criteria for chair and members
+
+- Demonstrable ability to understand the scientific and technical issues relating to the development, validation and uptake of alternative methods
+*Ability to analyse complex and evolving evidence, drawing on diverse sources
+
+- Ability to think strategically and objectively
+
+- Strong interpersonal and communication skills
+
+- Confidence to engage constructively with complex and/or contested scientific issues
+
+- Broad network in their field
+
+##### Essential criteria for chair only
+
+- Committee experience at a senior level, including experience of chairing high-profile multi-disciplinary meetings to enable discussion through to agreed conclusions
+
+- Experience of working with government, and an understanding of the policy environment
+
+##### Desirable criteria
+
+- Deep understanding of the wider national and international landscape relating to alternative methods, including the roles and interactions
+
+- (Members) Experience of successfully working in committee settings
+
+- (Members) Experience of working with government, and an understanding of the policy environment
+
+The first essential criterion for chair and members is worded carefully: demonstrable ability to understand, not necessarily demonstrable understanding. This is to ensure that those being recruited outside of the field of alternative methods are not excluded from eligibility. When assessing against this criterion, DBIST should seek members who can demonstrate an ability to engage with and understand the challenges facing the system, rather than requiring an existing deep knowledge of the underlying science and technical considerations.
+
+This focus on strategic, collegiate working will ensure that AMEC can work effectively to fulfil its functions.
+
+#### Recommendation 7
+
+DBIST should develop a person specification for AMEC’s chair and members, including but not limited to the criteria identified by the ASC in Table 4, and assess proposed candidates against these criteria.
+
+### iv. Ex-officio members
+
+As above, the ASC strongly recommends that AMEC’s chair and members are appointed as individuals, not as representatives of their organisations, to assure independence. However, to balance this with maintaining linkages and facilitating information flow between AMEC and key organisations within the alternative methods system (see Figure 1), DBIST should make use of ex-officio members.
+
+Ex-officio members of AMEC will hold their position through the virtue of a position that they hold at another organisation. They differ from the AMEC chair and members in that if an ex-officio member moves on from an organisation, their successor will immediately inherit their position on AMEC. Additionally, to assure independence of the committee, whilst ex-officio members are permitted to participate fully in discussions (where there are no conflicts of interest), they should not have voting rights.
+
+Appropriate organisations from which to draw ex-officio members should be regularly reviewed and decided by agreement from the AMEC chair and sponsor. However, the ASC initially recommends that ex-officio members should be drawn from the key non-central government organisations with Strategy commitments or roles (non-exhaustive):
+
+- UKCVAM – as a new body in the landscape and holding responsibility for coordinating validation efforts, linkages and information flow between AMEC and UKCVAM will be essential, and UKCVAM is likely to have organisational expertise that will be consistently relevant to AMEC.
+
+- NC3Rs Regulatory Sciences Forum – as a body comprising representatives from regulators, industry end users, methods developers and policy makers, NC3Rs Regulatory Sciences Forum is well-placed to provide cross-sector expertise to AMEC, and particularly ensure that AMEC has the necessary links to regulators. We have also recommended that they may provide a more significant role in the system (see Section 8.i. “UKCVAM”).
+
+- UKRI – as an established body in the landscape with responsibility for commitments in the Strategy, UKRI can provide organisational expertise and progress updates to AMEC.
+
+- Preclinical Translation Models Hub – as a new body in the landscape committed by the Strategy aiming to develop robust, standardised and validated in vitro models for preclinical drug discovery, linkages and information flow between the Hub and AMEC will provide AMEC with relevant and up-to-date expertise on progress in this space.
+
+Importantly, to ensure that the committee remains independent from government, central government departments should not be appointed as ex-officio members. However, the ASC would encourage the ways of working document developed by AMEC (see Section 7.vi “Ways of Working”.) to include appropriate mechanisms of engaging with the sponsor (DBIST), such as regular attendance and updates at meetings.
+
+#### Recommendation 8
+
+DBIST should, in agreement with the AMEC chair, appoint ex-officio members to AMEC to provide linkages, information flow and organisational expertise. Ex-officio members should not have voting rights. The ASC initially recommends that ex-officio members should be drawn from UKCVAM, NC3Rs Regulatory Sciences Forum, UKRI and the Preclinical Translation Models Hub.
+
+### v. Commissioning
+
+As its sponsor, DBIST should hold primary responsibility for commissioning work. Other bodies within the system, such as the Home Office, UKRI and UKCVAM, should be able to propose topics for consideration, with final agreement resting with DBIST to ensure coherence, avoid duplication, and to manage and prioritise the workload of the committee. Additionally, the ASC may utilise its advisory functions to the Home Office and DBIST to propose commissions.
+
+Similarly to the ASC, AMEC should retain the ability to self-commission work where it identifies emerging issues or opportunities through its horizon scanning and stakeholder engagement activities, with appropriate agreement from DBIST on prioritisation.
+
+This balanced approach will enable AMEC to remain responsive to system needs, while maintaining a clear strategic focus and manageable workload.
+
+### vi. Ways of working
+
+When considering broader governance of AMEC, including the roles and responsibilities of the chair, members and secretariat, and recruitment and reappointments, DBIST should refer to the Code of Practice for Science Advisory Committees (Government Office for Science, 2021).
+
+The ways of working of AMEC should be broadly for the committee itself, particularly the chair, to decide. This should be one of AMEC’s first deliverables when the committee is established. The Code of Practice for Science Advisory Committees, referenced above, will be a useful resource in developing this.
+
+This should include consideration of the working protocol between the ASC and AMEC. As previously described, the ASC envisages a complementary and collaborative relationship between the two committees, including regular engagement between the Chairs and potential joint commissions. This should be discussed and agreed between the AMEC Chair and ASC Chair upon the establishment of AMEC.
+
+Finally, a working protocol should be established between AMEC and DBIST in agreement with the AMEC chair and responsible DBIST Minister. This should cover the expectations of engagement between the committee and sponsoring department.
+
+#### Recommendation 9
+
+AMEC should develop its ways of working document, adhering to best practice guidance and the recommendations made by the ASC in this report. AMEC should also develop a working protocol with DBIST and a working protocol with the ASC, clearly describing respective remits, interactions and regular engagement.
+
+## 8. Other recommendations
+
+### i. UKCVAM
+
+The commission from DSIT (DSIT, 2026) states: “The Committee may wish to make other recommendations as it sees appropriate.”
+
+During the ASC’s deliberations on AMEC, the potential role of UKCVAM was also discussed at length, given their importance and central role within the system, and the envisaged key interactions between AMEC and UKCVAM. Through these discussions, it was clear that the role of UKCVAM, whatever was decided here, would be instrumental in reducing fragmentation and strengthening coherence within the system. The ASC therefore considered whether locating UKCVAM within an existing organisation could further support these aims.
+
+In this context, NC3Rs was identified as being uniquely well placed to host UKCVAM, given its established expertise across the development, validation and uptake of alternative methods, as well as its strong cross-sector networks and convening capability. For example, NC3Rs has experience of working with both industry and regulators to develop validation approaches and to influence change in the regulatory landscape (Chapman et al., 2010; NC3Rs, 2017; Sewell et al., 2018; Burden et al., 2020; Lilley et al., 2021; NC3Rs, 2024; Sewell et al., 2025). Locating UKCVAM within NC3Rs would support closer alignment between validation activities and the wider landscape of alternative methods, enabling greater integration across the system and reducing the risk of duplication.
+
+#### Recommendation 10
+
+DBIST should consider locating UKCVAM within the NC3Rs, recognising the potential to enhance system coherence, capability and synergy across the development, validation and uptake of alternative methods.
+
+Additionally, it is clear that UKCVAM will need a science advisory group (similar to the ECVAM Science Advisory Committee), which we have included in our mapping at Figure 1. The ASC considers that the NC3Rs Regulatory Sciences Forum is the best placed existing group to fulfil this role.
+
+The Forum already brings together regulators, industry end users, methods developers and policymakers to address challenges relating to the regulatory acceptance of alternative methods, giving established expertise, networks and credibility in this area. On this basis, we recommend that this group is the best starting point for the UKCVAM science advisory group. Their membership and terms of reference should be reviewed (e.g. to ensure that all regulators are represented) if it is decided that they will undertake this role to ensure that their membership and ways of working align with these new responsibilities, especially when considering the transparency that may be required if their advice has impacts on regulatory decision-making. However, their existing membership and expertise aligns very closely to what the ASC would envisage from an advisory group to UKCVAM. This would further serve to reduce duplication in the landscape.
+
+#### Recommendation 11
+
+DBIST should appoint the NC3Rs Regulatory Sciences Forum as the science advisory group to UKCVAM. The NC3Rs Regulatory Sciences Forum should review its membership and terms of reference to take on these additional responsibilities.
+
+### ii. Resourcing
+
+The ASC recognises that successful implementation of the recommendations in this report will require sufficient capacity and capability across the alternative methods system.
+
+The establishment of new bodies, including AMEC and UKCVAM, alongside the ambition of the Strategy to accelerate the development, validation and uptake of alternative methods, is likely to place additional demands on a range of organisations. This may include, but is not limited to, NC3Rs, regulators, funding bodies and other key delivery partners.
+
+The ASC therefore encourages DBIST to engage with relevant organisations to understand any resource implications arising from the implementation of these recommendations and to ensure that appropriate capacity is available to support delivery.
+
+#### Recommendation 12
+
+Across all of the recommendations made in this report, DBIST should consider and appropriately address resource implications during implementation.
+
+## 9. Summary of recommendations
+
+### Recommendation 1
+
+AMEC should work with UKCVAM and other relevant bodies to clarify terminology and to establish context-specific validation criteria across the system. UKCVAM should lead on clarifying validation criteria for regulatory testing, while AMEC should provide strategic oversight and coordination for validation approaches in research (basic and applied) to support coherence.
+
+### Recommendation 2
+
+AMEC should work with UKCVAM, DBIST, the ASC and other relevant bodies to develop a clear, system-wide framework for signalling the readiness of alternative methods and identifying when particular uses of animals should no longer receive funding, licensing approval, or operational support. This framework should include consideration of monitoring and evaluation of alternative methods.
+
+### Recommendation 3
+
+AMEC should be a strategic-level committee which facilitates progress in replacement through its core functions of advising, convening, prioritising and horizon scanning (see Table 1).
+
+### Recommendation 4
+
+AMEC should be established as an expert committee sponsored by DBIST. DBIST may wish to make use of official appointments recruited via open competition and, initially, direct appointments where necessary to speed up the establishment of the committee, but should give due consideration to the public perception of fairness by implementing the appropriate safeguards against bias.
+
+### Recommendation 5
+
+DBIST should be responsible for arranging adequate secretariat resource for the committee. DBIST should seek to agree provision of the secretariat from NC3Rs, due to their unique and strong position in the landscape. DBIST should ensure that an internal official has responsibility for maintaining the secretariat link to the sponsor.
+
+### Recommendation 6
+
+DBIST should recruit 12-14 members across the pillars of alternatives developers, alternatives end users, animal research, adoption and public confidence. Membership should be reasonably balanced across the dimensions of sector, research context and application domain. As a whole, AMEC should be representative of the whole system as in the ASC’s proposed expertise framework in Table 3.
+
+### Recommendation 7
+
+DBIST should develop a person specification for AMEC’s chair and members, including but not limited to the criteria identified by the ASC in Table 4, and assess proposed candidates against these criteria.
+
+### Recommendation 8
+
+DBIST should, in agreement with the AMEC chair, appoint ex-officio members to AMEC to provide linkages, information flow and organisational expertise. Ex-officio members should not have voting rights. The ASC initially recommends that ex-officio members should be drawn from UKCVAM, NC3Rs Regulatory Sciences Forum, UKRI and the Preclinical Translation Models Hub.
+
+### Recommendation 9
+
+AMEC should develop its ways of working document, adhering to best practice guidance and the recommendations made by the ASC in this report. AMEC should also develop a working protocol with DBIST and a working protocol with the ASC, clearly describing respective remits, interactions and regular engagement.
+
+### Recommendation 10
+
+DBIST should consider locating UKCVAM within the NC3Rs, recognising the potential to enhance system coherence, capability and synergy across the development, validation and uptake of alternative methods.
+
+### Recommendation 11
+
+DBIST should appoint the NC3Rs Regulatory Sciences Forum as the science advisory group to UKCVAM. The NC3Rs Regulatory Sciences Forum should review its membership and terms of reference to take on these additional responsibilities.
+
+### Recommendation 12
+
+Across all of the recommendations made in this report, DBIST should consider and appropriately address resource implications during implementation.
+
+## 10. References
+
+Animals in Science Committee, Ways of Working: 2026 . (Accessed: 1 July 2026)
+
+Animals (Scientific Procedures) Act, 1986, c.14 . (Accessed: 1 July 2026)
+
+Burden, N., Benstead, R., Benyon, K., Clook, M., Green, C., Handley, J. et al. (2020) Key Opportunities to Replace, Reduce, and Refine Regulatory Fish Acute Toxicity Tests. Environmental Toxicology and Chemistry, https://doi.org/10.1002/etc.4824 .
+
+Cabinet Office, Classification of public bodies: information and guidance: 2016 . (Accessed: 1 July 2026)
+
+Chapman, K., Creton, S., Kupferschmidt, H., Randall Bond, G., Wilks, M.F. and Robinson, S. (2010) The value of acute toxicity studies to support the clinical management of overdose and poisoning: A cross-discipline consensus , Regulatory Toxicology and Pharmacology.
+
+Department for Science, Innovation and Technology (DSIT), Replacing animals in science: 2025 . (Accessed: 1 July 2026)
+
+Department for Science, Innovation and Technology (DSIT), Establishment of alternatives to the use of animals in science committee: 2026. Commission on establishing an alternative methods committee . (Accessed: 1 July 2026)
+
+Drug Target Review, Replacing animals in science: what the UK’s new strategy means: 2026 . (Accessed: 1 July 2026)
+
+European Society ofToxicology in Vitro (ESTIV), Update to OECD Guidance Document 34 on the validation of methods and defined approaches: 2026 .
+
+Government Office for Science, Code of Practice for Scientific Advisory Committees and Councils: 2021 . (Accessed: 1 July 2026)
+
+Home Office, Annual statistics of scientific procedures on living animals, Great Britain 2025: 2026 . (Accessed: 1 July 2026)
+
+Hope, L. and Bailey, J. (2025) Breaking down the barriers to animal-free research. Alternatives to Laboratory Animals .
+
+Hartung, T. (2007) Statement on the Validity of in vitro Tests for Skin Irritation. ECVAM.
+
+Lilley, E., Isbrucker., R., Ragan., I. and Holmes, A. (2021) Integrating 3Rs approaches in WHO guidelines for the batch release testing of biologicals .
+
+McGlacken, R. and Reed, B. (2024) Supporting Replacement in Academia. RSPCA.
+
+National Centre for the 3Rs (NC3Rs), A new test guideline for refined acute inhalation studies: 2017 . (Accessed: 1 July 2026)
+
+National Centre for the 3Rs (NC3Rs), Multi-laboratory validation of a new animal product-free test guideline addition for the in vitro micronucleus test: 2024 . (Accessed: 1 July 2026)
+
+National Centre for the 3Rs (NC3Rs), DRIVER Recommendations: no date-a . (Accessed: 1 July 2026)
+
+National Centre for the 3Rs (NC3Rs), Regulatory Sciences Forum: no date-b . (Accessed: 1 July 2026)
+
+National Centre for the 3Rs (NC3Rs), NAMs Network: no date-c . (Accessed: 1 July 2026)
+
+National Centre for the 3Rs (NC3Rs), CRACK IT Challenges: no date-d . (Accessed: 1 July 2026)
+
+OECD (2005), Guidance Document on the Validation and International Acceptance of New or Updated Test Methods for Hazard Assessment , OECD Series on Testing and Assessment, No. 34, OECD Publishing, Paris.
+
+Only Good Antibodies, Antibody Champions: 2026 . (Accessed: 1 July 2026)
+
+Percie du Sert, N., Hurst, V., Ahluwalia, A., Alam, S., Avey, M.T., Baker, M. et al. (2020) The ARRIVE Guidelines 2.0: Updated guidelines for reporting animal research , PLoS Biol 18(7).
+
+Sewell, F., Ragan, I., Indans, I., Marczylo, T., Stallard, N., Griffiths, D., Holmes, T., Smith, P. and Horgan, G. (2018) An evaluation of the fixed concentration procedure for assessment of acute inhalation toxicity , Regulatory Toxicology and Pharmacology.
+
+Sewell, F., McBlane, J., Sturgeon, K. and Dunmore, H.M. (2025) Incorporating new approach methodologies in the development of new medicines , Health and Environmental Sciences Institute Global.
+
+Taylor, K. (2024) Trends in the use of animals and non-animal methods over the last 20 years , Alternatives to Animal Experimentation
+
+UK Research and Innovation (UKRI), [Identifying areas of research interest for alternative methods – supporting the Government’s strategy: 2026]](https://engagementhub.ukri.org/mrc-peg/expressions-of-interest/). (Accessed: 1 July 2026)
+
+Unwin, L. and Lally, C. (2026) Technology alternatives to animals in life sciences research , UK Parliamentary Office for Science and Technology.
+
+## Annex 1: Timeline for development, validation and acceptance of Reconstructed Human Epidermis (RhE) models for use in regulatory assessment of skin irritation
+
+### Relevant test guidelines
+
+OECD Test Guideline No. 404 : Acute Dermal Irritation/Corrosion (in vivo test in the rabbit, first developed in the 1940s ).
+
+OECD Test Guideline No. 439 : In Vitro Skin Irritation: Reconstructed Human Epidermis Test Method.
+
+### Regulatory use:
+
+Skin irritation information is required under several pieces of UK regulation. Notably:
+
+- GB Classification, Labelling and Packaging (CLP) Regulation which adopts the United Nations’ Globally Harmonized System of the classification and labelling of chemicals (GHS)
+
+- UK REACH (assimilated Regulation (EC) No1907/2006 on REACH and the REACH Enforcement Regulations 2008).
+
+- UK Cosmetics Regulation (assimilated Regulation (EC) No 1223/2009)
+
+Skin irritation information is also required for the majority of regulations relating to these product types worldwide.
+
+### History of development, validation and acceptance of OECD TG No 439:
+
+#### Late 1970s/Early 1980s
+
+Research work into growing human keratinocytes on a dermal equivalent at the liquid-air interface in an attempt to reconstitute a functional epidermis in vitro.
+
+e.g. Asselineau et al, 1986 .
+
+#### 1990s
+
+RhE proposed as a non-animal method for use in dermal toxicology
+
+e.g. Roguet et al, 1994 ; Roguet et al, 1999.
+
+#### 1996
+
+ECVAM (European Centre for the Validation of Alternative Methods*) establish a Skin Irritation Task Force to review the status of the development and validation of alternative tests for predicting skin irritation
+
+Botham et al (1998), Altern Lab Anim. 26,195-211.
+
+#### 1998
+
+Challenge to submit data to ECVAM on 10 specified test chemicals, together with proposed protocols and prediction models which could be used in any subsequent validation trial
+
+#### 1999-2002
+
+Prevalidation and optimisation of 5 in vitro methods (including two RhE methods: EpiDerm and EPISKIN)
+
+Fentem et al, 2001 ; Fentem and Botham (2002) Altern Lab Anim, 30 Suppl 2:61-7; Kandarova et al, 2004 .
+
+#### 2003 (initiation) – 2007 (final reporting)
+
+Formal ECVAM multilab international validation study on 3 in vitro tests for skin irritation (including EpiDerm and EPISKIN)
+
+Spielmann et al (2007) Altern Lab Anim, 35, 559-601
+
+#### 2007
+
+ECVAM Scientific Advisory Committee (ESAC) endorsement of EPISKIN and EpiDerm tests as scientifically valid replacements for the rabbit skin irritation method
+
+Hartung et al, 2007 .
+
+#### 2007
+
+EC scientific committees issue statements on the acceptance of RhE data for skin irritation
+
+e.g. SCCP, 2007
+
+#### 2009
+
+RhE test methods for skin irritation included in the EU Test Methods Regulation
+
+(Annex to 440/2008/EC) via Commission Regulation No 761/2009/EC
+
+#### 2010
+
+Formal adoption of OECD TG 439
+
+OECD TG 439 (2010)
+
+#### 2015
+
+OECD publish Performance Standards for the assessment of new RhE methods for skin irritation
+
+OECD, 2015
+
+#### 2016
+
+EU REACH information requirement for skin irritation updated, making non-animal testing the default requirement
+
+European Commission, 2016
+
+#### 2013, 2015, 2025
+
+Updates to OECD TG439. Now includes 7 RhE models (EPISKIN**, EpiDerm, SkinEthic, LabCyte, EPI-MODEL 24 SIT, epiCS, Skin+, KeraSkin SIT)
+
+OECD TG 439 (2025) (includes details of follow-up validations)
+
+#### 2025
+
+UK government publish policy paper stating ‘by the end of 2026 we will aim to apply only validated alternative methods to satisfy UK regulatory requirements for skin irritation testing’
+
+Replacing animals in science strategy
+
+* Now EU Reference Laboratory for alternatives to animal testing ( EURL ECVAM )
+
+** Not commercially available since 2024
+
+## Annex 2: Indicative Terms of Reference for the Alternative Methods Expert Committee
+
+### 1. Purpose
+
+1.1. The Alternative Methods Expert Committee (AMEC) is an expert advisory committee established to support the delivery of the Replacing Animals in Science Strategy by providing independent expert advice on the development, evaluation, uptake and implementation of alternative methods to the use of animals in science.
+
+### 2. Remit
+
+2.1. AMEC is a strategic-level committee providing advice on alternative methods across both regulatory testing and research (basic and applied) contexts, recognising differences in validation and adoption pathways.
+
+2.2. The primary remit of AMEC is to facilitate progress on replacement through the following functions:
+
+a) Advising – provide strategic advice to DBIST and, where commissioned, other bodies within the system
+
+b) Convening – bring together relevant expertise needed to assess particular questions or thematic areas
+
+c) Prioritising – provide advice on prioritisation of research and funding
+
+d) Horizon scanning – identifying emerging alternative methods in a targeted and thematic manner
+
+2.3. AMEC should maintain an awareness of international developments in alternative methods and their acceptance.
+
+2.4. AMEC does not undertake detailed technical assessments of alternatives, nor is it directly involved in the validation of those alternatives. It assesses the evidence available to signal whether this is sufficient for scientific readiness.
+
+2.5. AMEC does not act as or hold a comprehensive repository of alternative methods and their stages of readiness.
+
+2.6. AMEC supports the fulfilment of Section 20B of the Animals (Scientific Procedures) Act 1986 (ASPA). It is expected that they will work closely with the Animals in Science Committee, who have responsibility to advise on all matters related to the Animals (Scientific Procedures) Act 1986.
+
+### 3. Governance
+
+3.1. AMEC will be set up as an expert committee and sponsored by the Department for Business, Innovation, Science and Trade (DBIST).
+
+3.2. Commissioning AMEC will primarily be the responsibility of DBIST, as its sponsor.
+
+3.3. Other bodies wishing to commission AMEC may do so with approval from DBIST. This may include the Home Office, UKRI, and UK Centre for the Validation of Alternative Methods.
+
+3.4. AMEC has the ability to self-commission on areas of interest. The relative priority of self-commissions versus commissions should be determined with agreement from DBIST.
+
+### 4. Membership
+
+4.1. AMEC Chair and Members will be appointed as individuals on the basis of their experience and expertise, not as organisational representatives.
+
+4.2. Membership will reflect a balance of expertise across:
+
+a) Alternative methods development and end users – in vitro technologies, in silico technologies
+
+b) Animal research – in vivo science and alternatives (multi-modal)
+
+c) Adoption – regulation, validation pathways, harmonisation, standards
+
+d) Public confidence – ethics, animal protection, public trust, communications, clinical experts, public health
+
+4.3. The Chair and Members should be appointed via a combination of direct appointments and open competitive recruitment.
+
+4.4. Ex-officio Members should be represented on AMEC.
+
+a) Ex-officio Members differ from the AMEC Chair and Members as they will be recruited on the basis of organisations they belong to, unlike the Chair and Members, who are recruited as individuals.
+
+b) Ex-officio Members provide linkages to key organisations within the alternative methods system, facilitating information flow and offering their organisational expertise.
+
+c) To assure independence of AMEC, Ex-officio Members may participate fully in discussions but will not have voting rights on decisions.
+
+d) Appropriate organisations to hold Ex-officio Member positions will be decided by agreement from the AMEC Chair and the sponsor.
+
+4.5. The roles and responsibilities of the Chair, Members and Ex-officio members should be fulfilled as detailed in the Code of Practice for Science Advisory Committees [footnote 2] .
+
+### 5. Ways of working
+
+5.1. AMEC will meet on a regular basis, with frequency to be determined by the Chair and Secretariat based on workload.
+
+5.2. Task and finish groups may be convened where appropriate to address specific topics. These groups may be comprised of core AMEC Members and, where relevant, co-opt additional short-term topic-specific experts, as determined by AMEC.
+
+5.3. Additionally, AMEC may utilise its convening powers to more broadly seek expert input on a short-term, ad-hoc basis.
+
+### 6. Deliverables
+
+6.1. AMEC outputs may include (non-exhaustive):
+
+a) Written advice to DBIST and/or other commissioning bodies
+
+b) Meetings and/or workshops with experts on specific alternatives or thematic horizon scanning
+
+c) Advice on priorities for funding and research
+
+### 7. Secretariat
+
+7.1. AMEC will be supported by a Secretariat. Responsibility for organising the provision of the Secretariat and administrative resourcing for AMEC falls to DBIST.
+
+7.2. The Secretariat will be responsible for providing impartial support to AMEC and documenting proceedings, as detailed in the Code of Practice for Science Advisory Committees.
+
+### 8. Review
+
+8.1. This document should be reviewed no later than one year following its agreement to ensure continued relevance and effectiveness.
+
+- This framework should be to signal that tests are no longer appropriate for licensing, but the decision on whether to license legally rests with the Regulator and will involve assessment of the specific scientific, statutory, and regulatory circumstances. ↩
+
+- Code of Practice for Scientific Advisory Committees and Councils: CoPSAC 2021 - GOV.UK ↩

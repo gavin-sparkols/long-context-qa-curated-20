@@ -1,0 +1,281 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Input: Three documents (Context) about Kubernetes (Adding Linux nodes, Object Names and IDs, Secret).
+    *   Task: Audit six options (A-F) based on the provided context. Select all options where *all* sub-judgments within the option are true according to the context. If any sub-judgment in an option is false, do not select that option.
+    *   Output Format: First line `[Answer]`, second line comma-separated uppercase letters (e.g., A,C,E), sorted alphabetically. No explanations.
+
+2.  **Analyze Document 1 (Adding Linux Nodes):**
+    *   Topic: Adding Linux worker nodes using `kubeadm`.
+    *   Key points:
+        *   Node join output example.
+        *   After joining, run `kubectl get nodes` on control-plane.
+        *   Note: Cluster nodes usually initialized sequentially, CoreDNS Pods might run on first control plane node.
+        *   Recommendation for HA: After at least one new node joins, use `kubectl -n kube-system rollout restart deployment coredns` to rebalance CoreDNS Pods.
+        *   Next: Add Windows worker nodes.
+
+3.  **Analyze Document 2 (Object Names and IDs):**
+    *   Topic: Object naming and identification.
+    *   Key points:
+        *   Objects have a Name (unique within same namespace/type/version) and UID (globally unique).
+        *   Identification combination: API Group, Resource Type, Namespace, Name.
+        *   Version is not part of unique ID. Cannot create two objects with same name/resource type/namespace even if different API versions.
+        *   Node object specific note: If physical host recreated without deleting Node object, K8s treats new host as old host (inconsistency).
+        *   generateName: Server generates suffix. Conflict possible (HTTP 409). From v1.31+, server tries max 8 times before returning 409. (Note: Context says "From Kubernetes v1.31").
+        *   Naming constraints:
+            *   DNS Subdomain: Max 253 chars, lowercase alnum + '-' + '.', start/end with alnum.
+            *   RFC 1123 Label: Max 63 chars, lowercase alnum + '-', start with letter, end with alnum. (Exception: Service can start with digit if RelaxedServiceNameValidation enabled).
+            *   RFC 1035 Label: Same as RFC 1123 generally (start with letter).
+            *   Path Segment: Cannot be . or .., cannot contain / or %.
+        *   Example Pod yaml shows `name: nginx-demo`.
+
+4.  **Analyze Document 3 (Secret):**
+    *   Topic: Secret usage, types, security, constraints.
+    *   Key points:
+        *   Definition: Sensitive info (passwords, tokens, keys).
+        *   Security Warning: Stored unencrypted in etcd by default. Anyone with API access or etcd access can read. Anyone who can create Pod in NS can read Secrets in that NS.
+        *   Recommendations: Static encryption, RBAC, limit container access, external storage drivers.
+        *   Types: Opaque, service-account-token, dockercfg, dockerconfigjson, basic-auth, ssh-auth, tls, bootstrap.kubernetes.io/token.
+        *   basic-auth: Must contain `username` OR `password` (one of them? Text says "must contain following two keys ONE OF": username OR password). Wait, text says: "data field must contain the following two keys ONE OF" (actually text says "必须包含以下两个键之一": username OR password). Let's check exact wording: "使用这种 Secret 类型时，Secret 的 data 字段必须包含以下两个键之一：- username ... - password". So only one is needed.
+        *   Data vs stringData: Keys in data/stringData can contain alnum, -, _, . (No / mentioned for keys specifically in this section, but path segment constraint applies to names generally). Wait, Section "对 Secret 名称与数据的约束": "data 和 stringData 中的键名只能包含字母、数字、 - 、 _ 或 . 字符。" (Keys can only contain alnum, -, _, .).
+        *   Size Limit: Max 1MiB per Secret. Many small Secrets can exhaust memory. Use ResourceQuota.
+        *   Editing: Can edit unless immutable. Updates propagate (eventually consistent).
+        *   Propagation delay: Watch (default), Cache TTL, Polling (zero polling delay term). Delay upper bound = sync period + cache propagation delay.
+        *   Optional Secret: If optional and missing, ignored. If non-optional and missing key, Pod fails.
+        *   File mounting: Update triggers update in volume. subPath does not auto-update.
+        *   Env vars: Limited char range for var names.
+        *   ImagePullSecrets: List of refs in same namespace. Can be mounted via ServiceAccount.
+        *   Static Pod: Cannot use ConfigMap or Secret.
+        *   Hidden files: Keys starting with '.' create hidden files (ls -la needed).
+        *   TLS Secret: data/stringData must contain `tls.key` and `tls.crt`. kubectl create secret tls checks cert/key match (PEM encoded, matching pair). Raw manifest doesn't check PEM format/pairing strictly ("API 服务器实际上并不会对每个键的取值作进一步的合法性检查").
+        *   Bootstrap Token: Specific structure.
+        *   Custom Types: Add domain prefix with /. e.g. cloud-hosting.example.net/cloud-api-credentials.
+
+5.  **Evaluate Options:**
+
+    *   **Option A:**
+        1.  *一份 basic-auth Secret 仅给出 username 也满足该内置类型的键约束* -> Doc 3: "必须包含以下两个键之一... username... password". True.
+        2.  *若 username 同时出现在 data 与 stringData，生效值取后者* -> Doc 3: "如果某个主键同时出现在 data 和 stringData 字段中，stringData 所指定的键值具有高优先级。" True.
+        3.  *非可选 Pod 在该 Secret 创建后再创建，可通过此项依赖检查* -> Doc 3: "因此，如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。... 在所有非可选的 Secret 都可用之前，Pod 的所有容器都不会启动。" True.
+        4.  *采用完整卷和 TTL 缓存时，轮换可见延迟上限为同步周期加 TTL* -> Doc 3: "这一延迟的上限是 kubelet 的同步周期加上缓存的传播延迟... 对应上一段中提到的几种传播机制，延迟时长为 watch 的传播延迟、所配置的缓存 TTL 或者对于直接轮询而言是零。" This implies Sync Period + Cache TTL is the calculation for Cache strategy. True.
+        5.  *新节点加入后再重启 CoreDNS 符合时序* -> Doc 1: "为了保证高可用，请在至少一个新节点加入后，使用 kubectl -n kube-system rollout restart deployment coredns 命令重新平衡 CoreDNS Pod。" True.
+        *   **Conclusion:** All sub-judgments seem True. Option A is likely correct.
+
+    *   **Option B:**
+        1.  *名为 9.edge 的 Secret 符合其名称约束* -> Doc 2: Secret Name must be valid DNS Subdomain (Doc 3: "Secret 对象的名称必须是合法的 DNS 子域名"). DNS Subdomain rules (Doc 2): "不能超过 253 个字符", "只能包含小写字母、数字，以及 '-' 和 '.'", "必须以字母数字开头", "必须以字母数字结尾". Name "9.edge" starts with '9' (digit). Doc 2 says DNS Subdomain must start with alphanumeric. Wait, RFC 1123 label allows starting with digit (with exception for Service), but DNS Subdomain rule in Doc 2 says "必须以字母数字开头" (Must start with alphanumeric). However, Doc 2 also mentions "RFC 1123 标签名... 必须以字母开头". And "DNS 子域名... 必须以字母数字开头". Wait, let's look closer at Doc 2 DNS Subdomain section: "- 必须以字母数字开头". So '9' is allowed for DNS Subdomain start? "字母数字" means Letter or Digit. Yes. But wait, RFC 1123 Label requires "必须以字母开头". DNS Subdomain is defined by RFC 1123 in the text ("DNS 子域名的定义可参见 RFC 1123"). Then it lists rules: "必须以字母数字开头". This seems contradictory to standard RFC 1123 which says labels must start with letter. But I must follow the *provided context*. Context says: "DNS 子域名... 必须以字母数字开头". So "9.edge" starts with '9', ends with 'e'. Contains '.'. Looks okay based on text. HOWEVER, Doc 3 says "Secret 对象的名称必须是合法的 DNS 子域名". So "9.edge" should be valid based on Doc 2 text "必须以字母数字开头". Wait, looking at Doc 2 again under "DNS 子域名": "- 必须以字母数字开头". Okay. BUT, looking at "RFC 1123 标签名": "- 必须以字母开头". Usually DNS subdomains consist of labels. If the text explicitly says DNS Subdomain must start with alphanumeric, then '9' is fine. Let's assume True for now.
+        2.  *通过原始清单提交时，只要 TLS Secret 的两个键存在且值可解码，API 不会核验其 PEM 格式和配对关系* -> Doc 3: "尽管 API 服务器实际上并不会对每个键的取值作进一步的合法性检查。" True.
+        3.  *改用 kubectl tls 子命令提交同一组不匹配文件也能成功* -> Doc 3: "--cert 的公钥证书必须采用 .PEM 编码，并且必须与 --key 的给定私钥匹配。" It implies `kubectl create secret tls` checks matching. If they don't match, command likely fails. The statement says "submitting same set of mismatched files via kubectl tls subcommand can also succeed". This contradicts the requirement "must match". False.
+        *   **Conclusion:** Option B contains a False judgment. Do not select.
+
+    *   **Option C:**
+        1.  *静态 Pod 不能直接使用拉取凭据 Secret，故应改成由 API 管理的普通 Pod* -> Doc 3: "你不可以在 静态 Pod 中使用 ConfigMap 或 Secret。" Also "imagePullSecrets" is configured at Pod Spec level. Static pods are managed by kubelet directly, not API server. While you can't use Secret inside static pod spec, the reasoning "should change to API managed normal Pod" is a recommendation/consequence. Is it strictly true based on text? Text says "You cannot use ConfigMap or Secret in Static Pods." Using imagePullSecrets requires Secret. So yes, static pods can't use imagePullSecrets (which rely on Secret). So changing to normal Pod is the implication. True.
+        2.  *拉取 Secret 与 Pod 置于同一名字空间并由其 ServiceAccount 引用后，凭据会进入该 Pod 的 imagePullSecrets* -> Doc 3: "imagePullSecrets 字段是一个列表，包含对同一名字空间中 Secret 的引用。你可以手动创建 imagePullSecret ,并在一个 ServiceAccount 中引用它。对使用该 ServiceAccount 创建的所有 Pod... 其 imagePullSecrets 字段都会设置为该服务账号。" True.
+        3.  *另一个 Secret 的 .registry 键可以挂载成隐藏文件，需用 ls -la 查看* -> Doc 3: "通过定义以句点 ( . ) 开头的主键，你可以“隐藏”你的数据... 当以下 Secret 被挂载到 secret-volume 卷上时，该卷中会包含一个名为 .secret-file 的文件... 以句点开头的文件会在 ls -l 的输出中被隐藏起来;列举目录内容时你必须使用 ls -la 才能看到它们。" True.
+        4.  *这些必需 Secret 均应先于 Pod 创建* -> Doc 3: "Kubernetes 会检查 Secret 的卷数据源... 因此，如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。" True.
+        *   **Conclusion:** All sub-judgments seem True. Option C is likely correct.
+
+    *   **Option D:**
+        1.  *替换同名物理主机时，先删除旧 Node 再注册才能避免沿用旧实体身份，并使新对象取得不同 UID* -> Doc 2: "如果在 Node 对象未被删除并重建的条件下，重新创建了同名的物理主机，则 Kubernetes 会将新的主机看作是老的主机...". Implies deleting old Node avoids this. New Node object gets new UID when created. True.
+        2.  *同一名字空间中的 Pod 与 Deployment 可以同名，但两个同名 Deployment 不能借不同 API 版本并存* -> Doc 2: "在同一个 名字空间 中只能有一个名为 myapp-1234 的 Pod，但是可以命名一个 Pod 和一个 Deployment 同为 myapp-1234 。" (Pod vs Deployment ok). "虽然你可以通过不同的 API 版本... 访问资源，但版本只是同一底层对象的不同表示。因为版本不是唯一标识的一部分，所以不能通过使用不同的 API 版本在同一个命名空间中创建名称和资源类型相同的两个对象。" (Two Deployments same name different version NOT ok). True.
+        3.  *从 v1.30 起，generateName 冲突会最多重试八次* -> Doc 2: "从 Kubernetes v1.31 及更高版本开始，这种情况发生的概率大大降低，因为服务器会尝试最多 8 次生成唯一名称...". Text says **v1.31**. Option says **v1.30**. False.
+        *   **Conclusion:** Option D contains a False judgment (version number). Do not select.
+
+    *   **Option E:**
+        1.  *能在某名字空间创建 Deployment 的主体可能借其间接读取该名字空间的 Secret* -> Doc 3: "任何有权限在命名空间中创建 Pod 的人都可以使用该访问权限读取该命名空间中的任何 Secret;这包括间接访问，例如创建 Deployment 的能力。" True.
+        2.  *仅做静态加密不能消除经 API 读取的风险，仍需最小特权 RBAC* -> Doc 3: "默认情况下,Kubernetes Secret 未加密地存储在 API 服务器的底层数据存储(etcd)中。任何拥有 API 访问权限的人都可以检索或修改 Secret... 为了安全地使用 Secret,请至少执行以下步骤：- 为 Secret 启用静态加密。- 以最小特权访问 Secret 并 启用或配置 RBAC 规则。" Static encryption protects etcd storage, but API access still reads decrypted data (or encrypted data depending on implementation, but risk remains if API access is compromised). Text implies both steps are needed. True.
+        3.  *把前端与签名进程拆开并只向签名容器暴露私钥，可缩小泄露面* -> Doc 3: "这一程序可以分隔成两个容器中的两个进程... 签名容器可以看到私钥... 采用这种划分的方法，攻击者现在必须欺骗应用服务器来做一些其他操作...". True.
+        4.  *外部 Secret 存储与签发短期会话令牌的 Operator 可以组合使用，Pod 无需理解令牌刷新机制* -> Doc 3: "实现 (或部署) 一个 Operator ,从外部服务取回生命期很短的会话令牌，之后基于这些生命期很短的会话令牌来创建 Secret。运行在集群中的 Pod 可以使用这些会话令牌，而 Operator 则确保这些令牌是合法的。这种责权分离意味着你可以运行那些不了解会话令牌如何发放与刷新的确切机制的 Pod。" True.
+        *   **Conclusion:** All sub-judgments seem True. Option E is likely correct.
+
+    *   **Option F:**
+        1.  *两份各 700 KiB 的 Secret 单体都低于 1 MiB，但 API 会因二者合计 1.4 MiB 而拒绝这两个对象* -> Doc 3: "每个 Secret 的尺寸最多为 1MiB。施加这一限制是为了避免用户创建非常大的 Secret... 不过创建很多小的 Secret 也可能耗尽内存。" There is no mention of rejecting multiple secrets based on their sum exceeding 1 MiB. The limit is per Secret. So API would accept both individually. Statement says API rejects because total > 1 MiB. False.
+        2.  *大量较小 Secret 仍可能耗尽内存，可用资源配额约束数量* -> Doc 3: "不过创建很多小的 Secret 也可能耗尽内存。你可以使用 资源配额 来约束每个名字空间中 Secret(或其他资源) 的个数。" True.
+        3.  *Secret 名 7.prod 合法，而数据键 tls/key 因含斜杠不合法* -> Doc 3: "Secret 对象的名称必须是合法的 DNS 子域名". Doc 2 DNS Subdomain: "必须以字母数字开头". '7' is alphanumeric. So "7.prod" is valid name. Doc 3: "data 和 stringData 中的键名只能包含字母、数字、 - 、 _ 或 . 字符。" (Keys can only contain alnum, -, _, .). '/' is NOT allowed. So `tls/key` is invalid key. True.
+        4.  *自定义类型 corp.example/cred 符合公开类型添加域名前缀的约定* -> Doc 3: "如果你要定义一种公开使用的 Secret 类型，请遵守 Secret 类型的约定和结构，在类型名前面添加域名，并用 / 隔开。例如：cloud-hosting.example.net/cloud-api-credentials。" `corp.example/cred` follows this pattern. True.
+        *   **Conclusion:** Option F contains a False judgment (Point 1: API limit is per Secret, not aggregate). Do not select.
+
+6.  **Re-evaluate Option A:**
+    *   Point 4: "采用完整卷和 TTL 缓存时，轮换可见延迟上限为同步周期加 TTL".
+    *   Doc 3: "这一延迟的上限是 kubelet 的同步周期加上缓存的传播延迟，其中缓存的传播延迟取决于所选择的缓存类型。对应上一段中提到的几种传播机制，延迟时长为 watch 的传播延迟、所配置的缓存 TTL 或者对于直接轮询而言是零。"
+    *   If using TTL cache, propagation delay is TTL. Total upper bound = Sync Period + TTL. This matches the statement.
+    *   Point 5: "新节点加入后再重启 CoreDNS 符合时序". Doc 1: "请在至少一个新节点加入后，使用 kubectl -n kube-system rollout restart deployment coredns 命令重新平衡 CoreDNS Pod。" Matches.
+    *   Point 1: basic-auth username only. Doc 3: "必须包含以下两个键之一". True.
+    *   Point 2: data vs stringData priority. Doc 3: "stringData 所指定的键值具有高优先级". True.
+    *   Point 3: Non-optional Pod depends on Secret creation order. Doc 3: "如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。... 在所有非可选的 Secret 都可用之前，Pod 的所有容器都不会启动。" True.
+    *   **Verdict:** Option A is Correct.
+
+7.  **Re-evaluate Option C:**
+    *   Point 1: Static Pod cannot use imagePullSecrets (implied by "cannot use Secret"). Doc 3: "你不可以在 静态 Pod 中使用 ConfigMap 或 Secret。" imagePullSecrets relies on Secret. So Static Pod cannot use it. Recommendation to change to API managed Pod is logical inference. True.
+    *   Point 2: ImagePullSecrets via SA. Doc 3: "你可以手动创建 imagePullSecret ,并在一个 ServiceAccount 中引用它。对使用该 ServiceAccount 创建的所有 Pod... 其 imagePullSecrets 字段都会设置为该服务账号。" True.
+    *   Point 3: Hidden file (.registry) needs ls -la. Doc 3: "以句点开头的文件会在 ls -l 的输出中被隐藏起来;列举目录内容时你必须使用 ls -la 才能看到它们。" True.
+    *   Point 4: Required Secret before Pod. Doc 3: "如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。" True.
+    *   **Verdict:** Option C is Correct.
+
+8.  **Re-evaluate Option E:**
+    *   Point 1: Create Deployment implies ability to read Secret. Doc 3: "任何有权限在命名空间中创建 Pod 的人都可以使用该访问权限读取该命名空间中的任何 Secret;这包括间接访问，例如创建 Deployment 的能力。" True.
+    *   Point 2: Static encryption not enough, need RBAC. Doc 3: "为了安全地使用 Secret,请至少执行以下步骤：- 为 Secret 启用静态加密。- 以最小特权访问 Secret 并 启用或配置 RBAC 规则。" Implies both needed. True.
+    *   Point 3: Split containers reduce exposure. Doc 3: "这一程序可以分隔成两个容器中的两个进程... 签名容器可以看到私钥... 采用这种划分的方法，攻击者现在必须欺骗应用服务器...". True.
+    *   Point 4: External Storage + Operator combo, Pod doesn't need refresh logic. Doc 3: "实现 (或部署) 一个 Operator... 这种责权分离意味着你可以运行那些不了解会话令牌如何发放与刷新的确切机制的 Pod。" True.
+    *   **Verdict:** Option E is Correct.
+
+9.  **Final Check:**
+    *   A: All True.
+    *   B: False (kubectl tls checks matching).
+    *   C: All True.
+    *   D: False (v1.31 vs v1.30).
+    *   E: All True.
+    *   F: False (Limit is per Secret, not aggregate).
+
+    *   Wait, let me double check Option C Point 1: "静态 Pod 不能直接使用拉取凭据 Secret，故应改成由 API 管理的普通 Pod".
+        *   Doc 3: "你不可以在 静态 Pod 中使用 ConfigMap 或 Secret。"
+        *   Does "imagePullSecrets" count as "using Secret"? Yes, it references a Secret.
+        *   Can you use imagePullSecrets in Static Pod? Static Pods are managed by kubelet, not API. They have a config file on disk. The doc says "You cannot use ConfigMap or Secret in Static Pods." This is a general prohibition. So yes, cannot use imagePullSecrets in Static Pod.
+        *   Conclusion: "Should change to API managed normal Pod" is a reasonable audit conclusion based on the restriction.
+    *   Double check Option A Point 4: "轮换可见延迟上限为同步周期加 TTL".
+        *   Doc 3: "这一延迟的上限是 kubelet 的同步周期加上缓存的传播延迟... 延迟时长为... 所配置的缓存 TTL".
+        *   So Upper Bound = Sync Period + TTL. Correct.
+    *   Double check Option D Point 3: "从 v1.30 起". Doc 2: "从 Kubernetes v1.31 及更高版本开始". Definitely False.
+    *   Double check Option F Point 1: "API 会因二者合计 1.4 MiB 而拒绝这两个对象". Doc 3: "每个 Secret 的尺寸最多为 1MiB。" No aggregate limit mentioned. False.
+
+    *   Wait, let's check Option C Point 3 again. "另一个 Secret 的 .registry 键可以挂载成隐藏文件".
+        *   Doc 3: "通过定义以句点 ( . ) 开头的主键，你可以“隐藏”你的数据... 例如... 名为 .secret-file 的文件".
+        *   Does `.registry` work? Yes, starts with dot.
+        *   "需用 ls -la 查看". Doc 3: "列举目录内容时你必须使用 ls -la 才能看到它们。" True.
+    *   Wait, let's check Option A Point 5 again. "新节点加入后再重启 CoreDNS 符合时序".
+        *   Doc 1: "为了保证高可用，请在至少一个新节点加入后，使用 kubectl -n kube-system rollout restart deployment coredns 命令重新平衡 CoreDNS Pod。"
+        *   This implies the timing is after new node join. True.
+
+    *   Are there any subtle traps?
+    *   Option A Point 1: "basic-auth Secret 仅给出 username 也满足该内置类型的键约束". Doc 3: "必须包含以下两个键之一：- username ... - password". So giving only username satisfies "one of". True.
+    *   Option E Point 1: "能在某名字空间创建 Deployment 的主体可能借其间接读取该名字空间的 Secret". Doc 3: "任何有权限在命名空间中创建 Pod 的人都可以使用该访问权限读取该命名空间中的任何 Secret;这包括间接访问，例如创建 Deployment 的能力。" True.
+
+    *   Seems A, C, E are the correct ones.
+
+10. **Formatting:**
+    *   Line 1: [Answer]
+    *   Line 2: A,C,E (Alphabetical order, comma separated).
+
+    *   Wait, check Option C Point 1 again carefully. "静态 Pod 不能直接使用拉取凭据 Secret".
+    *   Doc 3: "你不可以在 静态 Pod 中使用 ConfigMap 或 Secret。"
+    *   ImagePullSecrets uses Secret. So Static Pod cannot use it.
+    *   "故应改成由 API 管理的普通 Pod". This is a suggestion derived from the fact. Is it a strict "judgment"? In the context of auditing recommendations, yes.
+    *   Is there any nuance? Static pods are defined locally on the node. You can't reference a Secret object in the same way. So the recommendation stands.
+    *   Check Option C Point 4: "这些必需 Secret 均应先于 Pod 创建". Doc 3: "如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。" True.
+
+    *   Check Option E Point 2: "仅做静态加密不能消除经 API 读取的风险，仍需最小特权 RBAC".
+    *   Doc 3: "默认情况下,Kubernetes Secret 未加密地存储在 API 服务器的底层数据存储(etcd)中。任何拥有 API 访问权限的人都可以检索或修改 Secret... 为了安全地使用 Secret,请至少执行以下步骤：- 为 Secret 启用静态加密。- 以最小特权访问 Secret 并 启用或配置 RBAC 规则。"
+    *   This implies Static Encryption protects Etcd, but API access still poses risk (decrypted data returned via API). RBAC controls API access. So "Still need RBAC" is correct interpretation.
+
+    *   Check Option A Point 3: "非可选 Pod 在该 Secret 创建后再创建，可通过此项依赖检查".
+    *   Doc 3: "因此，如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。... 在所有非可选的 Secret 都可用之前，Pod 的所有容器都不会启动。"
+    *   Does "可通过此项依赖检查" mean the system checks this dependency? Yes, "Kubernetes 会检查 Secret 的卷数据源...". And "kubelet 会周期性地重试 Pod 运行操作" if Secret content unavailable. So yes, dependency check exists.
+
+    *   One detail on Option A Point 4: "轮换可见延迟上限". The text says "这一延迟的上限是 kubelet 的同步周期加上缓存的传播延迟". For TTL cache, propagation delay is TTL. So Sync Period + TTL. Correct.
+
+    *   One detail on Option D Point 3: "从 v1.30 起". Text: "从 Kubernetes v1.31 及更高版本开始". Clear error.
+
+    *   One detail on Option F Point 1: "API 会因二者合计 1.4 MiB 而拒绝". Text: "每个 Secret 的尺寸最多为 1MiB". No aggregate limit. Clear error.
+
+    *   One detail on Option B Point 3: "改用 kubectl tls 子命令提交同一组不匹配文件也能成功". Text: "--cert 的公钥证书必须采用 .PEM 编码，并且必须与 --key 的给定私钥匹配。" Implies validation happens. Command likely fails if mismatch. Statement says "can also succeed". False.
+
+    *   Final Selection: A, C, E.
+
+11. **Construct Output:**
+    [Answer]
+    A,C,E
+
+    Wait, I need to make sure I don't miss anything.
+    Re-read Option C Point 1: "静态 Pod 不能直接使用拉取凭据 Secret".
+    Doc 3: "你不可以在 静态 Pod 中使用 ConfigMap 或 Secret。"
+    This is explicit.
+    "故应改成由 API 管理的普通 Pod".
+    Since Static Pod cannot use Secret, and ImagePullSecrets requires Secret, you cannot use ImagePullSecrets in Static Pod. To pull private images, you need a Secret. So you must use a normal Pod (managed by API) to use ImagePullSecrets. This logic holds.
+
+    Re-read Option A Point 1: "一份 basic-auth Secret 仅给出 username 也满足该内置类型的键约束".
+    Doc 3: "必须包含以下两个键之一：- username ... - password".
+    So providing only username satisfies "one of". True.
+
+    Re-read Option E Point 4: "外部 Secret 存储与签发短期会话令牌的 Operator 可以组合使用，Pod 无需理解令牌刷新机制".
+    Doc 3: "实现 (或部署) 一个 Operator ,从外部服务取回生命期很短的会话令牌... 这种责权分离意味着你可以运行那些不了解会话令牌如何发放与刷新的确切机制的 Pod。"
+    "External Secret Storage Driver" is mentioned earlier as a separate bullet point ("考虑使用外部 Secret 存储驱动").
+    The last paragraph combines Operator fetching short-lived tokens (which could come from external service) and creating Secrets.
+    The option says "External Secret Storage AND Operator... can be combined".
+    Doc 3: "你还可以将如上选项的两种或多种进行组合... 例如：实现 (或部署) 一个 Operator...".
+    The list of options includes "External Secret Storage Drivers" and "Operator...".
+    So combining them is supported ("You can combine two or more of the above options").
+    And "Pod doesn't need to understand refresh mechanism" is supported ("running Pods that do not understand...").
+    True.
+
+    Everything looks solid.
+
+    Wait, check Option C Point 2: "拉取 Secret 与 Pod 置于同一名字空间并由其 ServiceAccount 引用后，凭据会进入该 Pod 的 imagePullSecrets".
+    Doc 3: "imagePullSecrets 字段是一个列表，包含对同一名字空间中 Secret 的引用。... 在一个 ServiceAccount 中引用它。对使用该 ServiceAccount 创建的所有 Pod... 其 imagePullSecrets 字段都会设置为该服务账号。"
+    This confirms the mechanism. True.
+
+    Check Option C Point 3: "另一个 Secret 的 .registry 键可以挂载成隐藏文件".
+    Doc 3: "通过定义以句点 ( . ) 开头的主键，你可以“隐藏”你的数据...".
+    True.
+
+    Check Option C Point 4: "这些必需 Secret 均应先于 Pod 创建".
+    Doc 3: "如果 Pod 依赖于某 Secret，该 Secret 必须先于 Pod 被创建。"
+    True.
+
+    Final check on Option A Point 4 wording: "轮换可见延迟上限".
+    Text: "从 Secret 被更新到新的主键被投射到 Pod 中，中间存在一个延迟。这一延迟的上限是 kubelet 的同步周期加上缓存的传播延迟...".
+    If using TTL cache, propagation delay = TTL.
+    So Sync Period + TTL.
+    Wording "轮换可见延迟上限" (Rotation visibility delay upper bound). "Rotation" here refers to Secret update/refresh.
+    Matches text.
+
+    Final check on Option A Point 5: "新节点加入后再重启 CoreDNS 符合时序".
+    Doc 1: "请在至少一个新节点加入后，使用... 重新平衡 CoreDNS Pod。"
+    Matches.
+
+    Final check on Option E Point 1: "能在某名字空间创建 Deployment 的主体可能借其间接读取该名字空间的 Secret".
+    Doc 3: "任何有权限在命名空间中创建 Pod 的人都可以使用该访问权限读取该命名空间中的任何 Secret;这包括间接访问，例如创建 Deployment 的能力。"
+    Matches.
+
+    Okay, confident in A, C, E.
+
+    Wait, one detail in Option F Point 3: "Secret 名 7.prod 合法".
+    Doc 2 DNS Subdomain: "必须以字母数字开头". '7' is alphanumeric.
+    "只能包含小写字母、数字，以及 '-' 和 '.'". '7', '.', 'p', 'r', 'o', 'd' are allowed.
+    "不能超过 253 个字符". Length is 7.
+    So "7.prod" is valid DNS Subdomain.
+    Doc 3: "Secret 对象的名称必须是合法的 DNS 子域名".
+    So Name is valid.
+    "数据键 tls/key 因含斜杠不合法".
+    Doc 3: "data 和 stringData 中的键名只能包含字母、数字、 - 、 _ 或 . 字符。"
+    '/' is not in the allowed list. So invalid.
+    This part of F is True.
+    But Part 1 of F was False (Aggregate limit). So F is out.
+
+    One detail in Option D Point 3: "从 v1.30 起".
+    Doc 2: "从 Kubernetes v1.31 及更高版本开始".
+    So D is out.
+
+    One detail in Option B Point 3: "改用 kubectl tls 子命令提交同一组不匹配文件也能成功".
+    Doc 3: "--cert 的公钥证书必须采用 .PEM 编码，并且必须与 --key 的给定私钥匹配。"
+    If they don't match, kubectl command will fail (validation).
+    So "can also succeed" is False.
+    So B is out.
+
+    So A, C, E remain.
+
+    Wait, check Option C Point 1 again. "静态 Pod 不能直接使用拉取凭据 Secret".
+    Is there any case where Static Pod can use Secret?
+    Doc 3: "你不可以在 静态 Pod 中使用 ConfigMap 或 Secret。"
+    This is absolute.
+    So "Cannot use imagePullSecrets" (which uses Secret) is True.
+    "So should change to API managed normal Pod".
+    This is a recommendation based on the constraint.
+    Seems acceptable as a "sub-judgment".
+
+    Wait, check Option A Point 4 again. "采用完整卷和 TTL 缓存时".
+    Doc 3: "kubelet 组件会维护一个缓存... 配置 kubelet 如何检测所缓存数值的变化。kubelet 配置 中的 configMapAndSecretChangeDetectionStrategy 字段控制 kubelet 所采用的策略。默认的策略是 Watch。"
+    "对应上一段中提到的几种传播机制，延迟时长为 watch 的传播延迟、所配置的缓存 TTL 或者对于直接轮询而言是零。"
+    If strategy is TTL cache, propagation delay is TTL.
+    Upper bound = Sync Period + TTL.
+    Matches.
+
+    Okay, ready to write.

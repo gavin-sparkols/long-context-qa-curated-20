@@ -1,0 +1,10 @@
+{
+  "answering_model": "qwen3.5-35b-a3b",
+  "rollouts_per_question": 8,
+  "question_type": "A-F六项多选题，完全匹配评分",
+  "system_prompt": "严格根据上下文回答问题。先输出[Answer]，再按题目要求输出全部正确选项；少选、多选、错选均判错。",
+  "temperature": 0.7,
+  "max_output_tokens": 16384,
+  "judge": "Codex semantic equivalence and question quality judge",
+  "deepseek_prescreen": "后续新增题启用4轮并发预筛；仅0/4完全正确进入千问"
+}

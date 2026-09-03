@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目属于法律法规与行业标准汇编中的全局时间线重建，依赖五份文件中相距较远、作用不同的十处证据，并包含版本日期、生效日期、发布日、刊登日及备用执行日等真实干扰项。答案唯一且证据完整。8轮中仅第2、5、7轮完全正确，correct为3/8，严格低于50%，终审通过。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "score": 0.95,
+      "format_only": false,
+      "reason": "编号顺序、日期及X、V时刻均正确，但P写为09:01而遗漏UTC时区，未完整表达原文的“0901 UTC”。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "十个节点的顺序、日期、必要时刻及UTC时区均与标准答案一致。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.95,
+      "format_only": false,
+      "reason": "整体时间线正确，但P的09:01遗漏UTC时区，时间信息不完整。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.9,
+      "format_only": false,
+      "reason": "将K误写为FAA命令的生效日2025-09-15；K应取该版本成文日2025-08-04。其余节点正确。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整符合标准答案；标点与空格差异不影响语义。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.85,
+      "format_only": false,
+      "reason": "K错误地采用2025-09-15而非2025-08-04，且P的09:01遗漏UTC时区；其余时间线正确。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "十个节点、日期和必要时刻均正确，格式差异不影响判定。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.9,
+      "format_only": false,
+      "reason": "K误用FAA命令生效日2025-09-15，正确节点日期应为版本成文日2025-08-04；其余内容正确。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目属于法律法规与行业标准汇编中的全局时间线重建，依赖五份文件中相距较远、作用不同的十处证据，并包含版本日期、生效日期、发布日、刊登日及备用执行日等真实干扰项。答案唯一且证据完整。8轮中仅第2、5、7轮完全正确，correct为3/8，严格低于50%，终审通过。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"partial\",\"score\":0.95,\"format_only\":false,\"reason\":\"编号顺序、日期及X、V时刻均正确，但P写为09:01而遗漏UTC时区，未完整表达原文的“0901 UTC”。\"},{\"rollout_id\":2,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"十个节点的顺序、日期、必要时刻及UTC时区均与标准答案一致。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.95,\"format_only\":false,\"reason\":\"整体时间线正确，但P的09:01遗漏UTC时区，时间信息不完整。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.9,\"format_only\":false,\"reason\":\"将K误写为FAA命令的生效日2025-09-15；K应取该版本成文日2025-08-04。其余节点正确。\"},{\"rollout_id\":5,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整符合标准答案；标点与空格差异不影响语义。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.85,\"format_only\":false,\"reason\":\"K错误地采用2025-09-15而非2025-08-04，且P的09:01遗漏UTC时区；其余时间线正确。\"},{\"rollout_id\":7,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"十个节点、日期和必要时刻均正确，格式差异不影响判定。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.9,\"format_only\":false,\"reason\":\"K误用FAA命令生效日2025-09-15，正确节点日期应为版本成文日2025-08-04；其余内容正确。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T02:39:02.926Z"
+}

@@ -1,0 +1,1590 @@
+[文档 1/3]
+标题：Revenue and Customs Brief 6 (2026): VAT liability of the supply of temporary medical staff (locum doctors)
+发布日期：2026-07-17
+来源：GOV.UK
+来源地址：https://www.gov.uk/government/publications/revenue-and-customs-brief-6-2026-vat-liability-of-the-supply-of-temporary-medical-staff-locum-doctors
+
+This brief explains:
+
+- HMRC’s updated position on the VAT treatment of past and present supplies of registered locum doctors
+
+- how to claim a refund of overdeclared output tax if you’re affected by this update
+
+- how claims will be handled
+
+- the effect of this update on input and output tax
+
+- HM Revenue & Customs
+
+# VAT liability of the supply of temporary medical staff (2026)
+
+Published 17 July 2026
+
+© Crown copyright 2026
+
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk .
+
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+
+This publication is available at https://www.gov.uk/government/publications/revenue-and-customs-brief-6-2026-vat-liability-of-the-supply-of-temporary-medical-staff-locum-doctors/vat-liability-of-the-supply-of-temporary-medical-staff-2026
+
+## Purpose of the brief
+
+This brief provides an update on HMRC’s position on the VAT treatment of past and present supplies of General Medical Council ( GMC ) registered locum doctors.
+
+This follows the First-tier Tribunal decision in Isle of Wight NHS Foundation Trust v HMRC [2025] UKFTT 1114 (TC).
+
+It also provides guidance on how HMRC will handle claims of overdeclared VAT relating to affected supplies while current legislation remains in force.
+
+## Who should read this
+
+You should read this brief if you’re:
+
+- an NHS body
+
+- a private healthcare provider
+
+- an employment business supplying locum doctors
+
+- a VAT adviser
+
+## HMRC’s current position
+
+Under Item 5, Group 7, Schedule 9 of the VAT Act 1994, “The provision of a deputy for a person registered in the register of medical practitioners” is exempt from VAT.
+
+Having considered the implications of the Tribunal’s decision and reviewed policy, HMRC’s position is that supplies of GMC registered locum doctors may fall within this exemption. This includes where locum doctors are supplied via an employment business.
+
+This position applies only to supplies of GMC registered locum doctors. It does not extend to supplies of other healthcare professionals or to general staffing services outside the scope of Item 5. References to ‘registered locum doctors’ only include individuals who are registered with the GMC and who perform medical services in that professional capacity.
+
+The exemption applies only where the individual supplied is a registered medical practitioner performing a role that must be carried out by such a practitioner. Other health professionals (such as, allied health professionals, anaesthesia and physician associates) registered with the GMC are not within the scope of this exemption.
+
+## Claims
+
+HMRC will review claims on a case-by-case basis. This will include consideration of unjust enrichment, partial exemption and whether overdeclared VAT has been correctly accounted for across the supply chain.
+
+HMRC may request supporting documentation and will not process claims where there is ongoing litigation or where assurance activity is required.
+
+### How to claim a refund of overdeclared output tax
+
+You may be able to claim a refund of overdeclared output tax on supplies of locum doctors if all the following apply:
+
+- you charged output tax at the standard rate
+
+- you now consider the supplies should have been exempt from VAT
+
+- the overdeclared output tax relates to supplies made within the last 4 years
+
+Only the person who made the supply of staff and charged output tax can claim a refund.
+
+Depending on the amount of overdeclared output tax, you can either:
+
+- adjust your return for the period in which you discover the overdeclared tax
+
+- claim a refund by making an error correction notification
+
+HMRC will not pay a claim which would result in your unjust enrichment.
+
+## Error correction notifications
+
+To make an error correction notification, you’ll need to:
+
+- Complete form VAT652 — Notification of errors in VAT Returns .
+
+- Send the completed form by email, to: ccg.locumdoctorsclaim@hmrc.gov.uk .
+
+- Put ‘Locum doctors claim RCB 6/26’ in the subject line of your email.
+
+Make sure you:
+
+- set out the basis of, and the reason for, the claim
+
+- show the amount being claimed
+
+- show how that amount has been calculated
+
+- break the amount down by reference to prescribed accounting periods
+
+- can provide copies of documentation used in the calculation of the claim if requested
+
+## Possible effect on recovered input tax
+
+These supplies would previously have been treated as taxable supplies, but are now treated as exempt. This means you’ll need to consider the impact on associated input tax that you’ve recovered on previous VAT returns.
+
+This includes considering how the partial exemption rules may affect you. You’ll need to make the appropriate adjustments to your claim, as you can only claim for the net amount.
+
+## More information
+
+You can find more information on how to correct VAT errors and make adjustments or claims (VAT Notice 700/45) . This guidance includes:
+
+- section 4 — Correcting VAT errors on a return already submitted
+
+- section 5 — How to claim a refund
+
+- section 9 — Unjust enrichment and the reimbursement scheme
+
+You can find more information on partial exemption (VAT Notice 706) .
+
+[文档 2/3]
+标题：Revenue and Customs brief 9 (2025): VAT liability of the supply of temporary medical staff (locum doctors)
+发布日期：2026-07-17
+来源：GOV.UK
+来源地址：https://www.gov.uk/government/publications/revenue-and-customs-brief-9-2025-vat-liability-of-the-supply-of-temporary-medical-staff-locum-doctors
+
+An updated Revenue and Customs Brief has been published on this subject. Read Revenue and Customs Brief 6 (2026): VAT liability of the supply of temporary medical staff (locum doctors) .
+
+This brief explains:
+
+- HMRC’s updated view on the VAT treatment of the supply of temporary medical staff (locum doctors)
+
+- the effect of this update on input and output tax
+
+- how to claim a refund of overdeclared output tax if you’re affected by this update
+
+- HM Revenue & Customs
+
+# VAT liability of the supply of temporary medical staff
+
+Updated 17 July 2026
+
+© Crown copyright 2026
+
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk .
+
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+
+This publication is available at https://www.gov.uk/government/publications/revenue-and-customs-brief-9-2025-vat-liability-of-the-supply-of-temporary-medical-staff-locum-doctors/vat-liability-of-the-supply-of-temporary-medical-staff
+
+An updated Revenue and Customs Brief has been published on this subject. Read Revenue and Customs Brief 6 (2026): VAT liability of the supply of temporary medical staff (locum doctors) .
+
+## Purpose of the brief
+
+This brief provides an update on the VAT treatment of the supply of temporary medical staff (locum doctors).
+
+This follows the First Tier Tribunal decision in Isle of Wight NHS Trust and others.
+
+It also provides guidance for anyone who wants to claim a refund of overdeclared output tax following the decision.
+
+## Who should read this
+
+You should read this brief if you’re:
+
+- an NHS body
+
+- a private healthcare provider
+
+- an employment business supplying locum doctors
+
+- a VAT adviser
+
+## Background
+
+Under Item 5, Group 7, Schedule 9, VAT Act 1994, “The provision of a deputy for a person registered in the register of medical practitioners,” is exempt from VAT.
+
+HMRC’s position has been that this exemption is restricted to the supply of deputising services, like the GP out of hours service. HMRC considers supplies of temporary staff by employment businesses as taxable supplies of staff, at the standard rate of VAT .
+
+The First Tier Tribunal in Isle of Wight NHS Trust v HMRC [2025] UKFTT 1114 (TC) disagreed with HMRC’s position.
+
+It found that the VAT exemption applied to supplies of staff, not just the supply of medical care. It also found that the exemption applied to locum doctors, including those provided by employment businesses and was therefore not limited to out of hours GP cover.
+
+HMRC has not appealed against this decision. We are now reviewing our policy in this area and will publish updated guidance in due course.
+
+## How to claim a refund of overdeclared output tax
+
+You may be able to claim a refund, if all the following apply:
+
+- you’ve made a supply of locum doctors
+
+- you’ve charged output tax at the standard rate
+
+- you now consider this should have been exempt from VAT
+
+- this was within the last 4 years
+
+Only the person who made the supply of staff and charged output tax can claim a refund.
+
+Depending on the amount of overdeclared output tax, you can either:
+
+- adjust your return for the period in which you discover the overdeclared tax
+
+- claim a refund by making an error correction notification
+
+HMRC will not pay a claim which would result in your unjust enrichment.
+
+### Error correction notifications
+
+To make an error correction notification, you’ll need to:
+
+- Complete form VAT652 —Notification of errors in VAT Returns .
+
+- Send the completed form by email, to: ccg.locumdoctorsclaim@hmrc.gov.uk .
+
+- Put ‘Locum doctors claim RCB 9/25’ in the subject line of your email.
+
+Make sure you:
+
+- set out the basis of, and the reason for, the claim
+
+- show the amount being claimed
+
+- show how that amount has been calculated
+
+- break the amount down by reference to prescribed accounting periods
+
+- can provide copies of documentation used in the calculation of the claim on request
+
+## Possible effect on recovered input tax
+
+These supplies would previously have been treated as taxable supplies, but are now treated as exempt. This means you’ll need to consider the impact on associated input tax that you’ve recovered on previous VAT returns.
+
+This includes considering how the rules on partial exemption may affect you. You’ll need to make the appropriate adjustments to your claim, as you can only claim for the net amount.
+
+## More information
+
+You can find more information in How to correct VAT errors and make adjustments or claims (VAT Notice 700/45) . In particular:
+
+- section 4: Correcting VAT errors on a return already submitted
+
+- section 5: How to claim a refund
+
+- section 9: Unjust enrichment and the reimbursement scheme
+
+You can find more information on partial exemption in Partial exemption (VAT Notice 706) .
+
+[文档 3/3]
+标题：Future of Rural England Report
+发布日期：2026-07-16
+来源：GOV.UK
+来源地址：https://www.gov.uk/government/publications/future-of-rural-england-report
+
+This report sets out:
+
+- the challenges facing rural communities
+
+- the action the government is taking to help address those challenges
+
+- how this work supports Defra ’s objective of flourishing rural communities
+
+The report builds on the work of the Rural Taskforce, a group of rural stakeholders brought together in April 2025, to explore the strengths and opportunities for rural areas.
+
+- Department for Environment, Food & Rural Affairs
+
+# Future of Rural England Report
+
+Published 16 July 2026
+
+## Applies to England
+
+© Crown copyright 2026
+
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk .
+
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+
+This publication is available at https://www.gov.uk/government/publications/future-of-rural-england-report/future-of-rural-england-report
+
+## Foreword
+
+Rural communities are the backbone of the UK – integral to our cultural identity, our economy, and our future prosperity. Rural England is skilled, innovative, ambitious and resilient – with more than half a million small and medium-sized businesses driving agriculture, tourism, and renewable energy, and contributing £259 billion to England’s economy.
+
+The potential for further growth is huge. Yet, for too long, rural communities have been held back from seizing the opportunities ahead by a unique set of challenges: from transport and digital connectivity barriers, to hidden health inequalities and a lack of affordable housing. And, for too long, government’s approach to ‘rural proofing’ has been to look backwards to review how well policies delivered against rural communities’ needs, rather than taking those needs into account when designing policy.
+
+This report seeks to change that: taking a proactive approach and placing rural communities at the centre of decision-making.
+
+Nobody understands rural England better than the communities themselves, and this government believes they should have a say in shaping the policies that will affect them – with their needs fully considered at every stage of policy development.
+
+That is why, in April 2025, we established a Rural Taskforce to bring communities, stakeholders and government together to better understand how government can support rural communities and businesses, tackle rural disadvantage, and unlock the potential of the rural economy.
+
+This process has helped us identify 6 themes that are critical to thriving, inclusive and sustainable rural communities, from skills and education to safety and community resilience.
+
+Now, we must move from conversation to action, embedding rural proofing across government and ensuring all departments systematically assess real-world impacts on rural communities in policy and investment decisions.
+
+This is not a matter of city versus country, it is about delivering for every community, everywhere. The goal is well-connected communities that feel supported to reach their full potential – with access to opportunities, public services they can rely on, and the confidence they need to plan and invest for the future.
+
+With a clearer, considered, and forward-looking approach to the needs of rural England – informed by communities themselves – we can unlock progress and prosperity in every corner of the country.
+
+The Right Honourable Emma Reynolds MP
+
+Secretary of State
+
+Department for Environment, Food and Rural Affairs
+
+## Executive summary
+
+Previous governments have been criticised for seeing rural proofing as an ‘end of pipe’ exercise; looking backwards to review how well policies delivered against rural communities’ needs.
+
+This report, and the work of the Rural Taskforce it builds on, seeks to turn that approach on its head, taking a proactive approach to shaping policy at the outset to ensure it delivers for rural communities and businesses. Rural proofing is about ensuring rural areas are not overlooked and the intended outcomes of policies are deliverable. The needs of rural England must be taken into consideration at every stage of policymaking.
+
+Read more about the government’s approach to rural proofing .
+
+In April 2025, the Department for Environment, Food and Rural Affairs ( Defra ) established a Rural Taskforce to work with external partners and departments across Whitehall to better understand how government can support rural businesses and communities, tackle rural disadvantage, and unlock the potential of the rural economy.
+
+With the help of the Rural Taskforce, Defra gathered evidence underpinned by the Statistical Digest of Rural England, reviewed strengths and opportunities in rural areas, and convened 6 topic-specific workshops. This collaborative process informed the development of a strategic vision and practical recommendations for government action, as well as identifying key government policies and programmes that will help to deliver a thriving, inclusive and sustainable future for them.
+
+### Vision
+
+Together, we will unlock the full potential of rural communities; by ensuring they have equitable access to opportunities, services and infrastructure, enabling them to contribute fully to the nation’s economic and environmental goals.
+
+### Key findings
+
+Using the shared knowledge and reach of the Rural Taskforce members, 6 themes were identified as being critical to thriving, inclusive, and sustainable rural communities. Tackling issues under each of these themes will lead to a strengthened rural economy and resilient communities:
+
+#### Economic potential and barriers
+
+Rural areas contribute over £259 billion annually to the economy, yet productivity lags urban areas. Closing this gap is essential for national growth and improving living standards. Barriers include limited access to finance, skills shortages, and connectivity constraints.
+
+#### Infrastructure and housing
+
+Housing delivery, including affordable housing, remains insufficient, and rural energy infrastructure is ageing. Fuel poverty is deeper in rural areas, and grid limitations risk embedding inequalities in the clean energy transition.
+
+#### Skills and education
+
+While rural pupils often achieve strong GCSE results, progression to higher education is lower, and skills gaps persist across small and medium-sized enterprises (SMEs) and growth sectors. Transport and digital connectivity barriers compound these challenges.
+
+#### Health and wellbeing
+
+Rural communities experience hidden health inequalities, limited access to services, and rising mental health service needs. Digital healthcare offers opportunities but depends on connectivity and digital literacy.
+
+#### Safety and community resilience
+
+Rural crime – including equipment theft and wildlife offences – remains under-reported and poorly understood, requiring better data and co-ordinated policing strategies.
+
+#### Connectivity
+
+Transport and digital access are critical enablers of opportunity. Despite progress through Project Gigabit and the Shared Rural Network, gaps remain that hinder growth and service delivery.
+
+Through this process over 50 government initiatives and programmes have been identified that will help to address these issues and maximise the opportunities available to the rural economy. These are set out in Annex 1.
+
+### Recommendations and next steps
+
+The government will take forward the following actions to deliver on its ambition for thriving, inclusive, and sustainable rural communities:
+
+- embed rural proofing: ensure all departments systematically assess rural impacts in policy and investment decisions
+
+- support the roll out of devolution: implement the English Devolution and Community Empowerment Act and ensure rural priorities are reflected in Local Growth Plans and Spatial Development Strategies
+
+- invest in enablers: deliver affordable housing through the strengthened National Planning Policy Framework and the £39 billion Social and Affordable Homes Programme expand energy resilience via the Warm Homes Plan, Boiler Upgrade Scheme, and Local Power Plan improve transport through the Bus Services Act and Local Authority Bus Grants address the remaining gaps between rural and urban connectivity through Project Gigabit and the Shared Rural Network
+
+- strengthen collaboration: foster joined-up delivery across central government, local authorities, businesses, and the voluntary sector, including through initiatives such as the Local Net Zero Delivery Group, Clean Energy Jobs Plan and Farming in Protected Landscapes.
+
+- develop metrics: create robust indicators to monitor rural sustainability, service delivery, and economic resilience
+
+- promote community engagement: expand initiatives like the Great British Energy Community Fund to ensure rural communities share in the benefits of hosting infrastructure
+
+### Monitoring and accountability
+
+Delivery will be tracked through:
+
+- annual rural proofing reports detailing progress on major programmes
+
+- cross-government metrics published alongside these reports
+
+- programme-level evaluation for initiatives such as Project Gigabit, Warm Homes Plan, and the Social and Affordable Homes Programme
+
+- stakeholder engagement through forums like the Defra Rural Insights Forum
+
+Defra ’s key actions as lead for rural affairs across the government:
+
+Whilst the key policies and programmes outlined in this report are, in the main, the responsibility of other departments, Defra is the lead department for rural affairs. In this capacity there are some specific actions that Defra will lead on:
+
+- Continue funding grass roots action on affordable housing, digital skills and inclusion, affordable energy, crime, transport, and health through our grants, such as the Rural Housing Enablers Grant and the Local Action Grant.
+
+- Develop effective metrics with other departments to better understand what is happening on the ground; to enable monitoring of delivery of government priorities; and assess the sustainability of rural communities and economies, building on existing effective tools such as the Department for Transport ( DfT ) Connectivity Tool.
+
+- Work with the Ministry of Housing, Communities and Local Government ( MHCLG ) to enhance the devolution framework to empower Strategic Authorities to deliver for rural communities
+
+- Encourage departments to enhance their rural proofing practice and promote the redeveloped Rural-Urban Classification and the rural report within the English Indices of Deprivation to ensure that rural needs are effectively identified in policy development and investment plans.
+
+- Establish a cross-government board to review the effectiveness of the rural proofing of policy development and its real-world impact.
+
+- Establish a research programme for rural growth demonstrator projects that are scalable and support sustainable rural communities.
+
+## 1. Background
+
+### 1.1 Rural responsibilities in government
+
+Defra leads on rural proofing, but it is also the responsibility of all Whitehall departments whose policies affect rural areas. For its part, Defra supports the delivery of rural proofing through the provision of guidance, training, data and evidence, and through its links with other government departments and rural organisations. It is important that rural proofing, and its reporting, is not a backward-looking exercise, but is utilised in the early stages of policy development, driving action at the heart of the government to ensure considerations for rural communities are embedded from the outset.
+
+Rural areas make up around 85% of England’s land mass , are home to 9.7 million people (17% of the population) , contain all of England’s 10 National Parks and 34 National Landscapes, and contributed over £259 billion to the economy in England in 2023 . The 2021 Rural-Urban Classification (released on 6 March 2025) is the official statistical classification for England and Wales, used to distinguish rural and urban areas. Rural areas are determined as settlements with populations of less than 10,000, based on the 2021 Census, and include:
+
+- rural towns
+
+- villages
+
+- hamlets
+
+- isolated dwellings
+
+- open countryside
+
+Rural areas are defined as either a larger rural settlement or smaller rural settlement, which is calculated by dwelling density.
+
+Defra gathers evidence on and provides analysis of rural issues, for use by Defra , other government departments and stakeholders in support of their rural proofing activities. Central to this is the Statistical Digest of Rural England , which provides analysis of statistical evidence across 8 thematic reports covering a range of social and economic topics including rural population trends, rural business demographics and rural service provision. These reports regularly provide comparisons between rural and urban areas.
+
+In 2024, the government outlined its commitment to a decade of national renewal, built on the foundations of a stable economy, secure borders and national security. As part of our rural proofing agenda, Defra has taken the opportunity to consider how rural communities could be considered in these long-term goals from the outset, improving the chances of effective delivery.
+
+### 1.2 Rural Taskforce role and purpose
+
+This government has recognised that there is more to do to understand how rural needs and opportunities can be fully embedded in its approach to deliver long-term growth for all people and all places. Stakeholders have also indicated that a more forward-looking strategic approach to how the government plans and reviews its delivery in rural areas is vital if we are to unlock the potential of rural areas and businesses. This is why in 2025 Defra established the Rural Taskforce.
+
+Through closer working with these external partners and other government departments, the Rural Taskforce has helped us to better understand how the government can support rural businesses and communities, to tackle rural disadvantage and unlock the potential of the rural economy.
+
+The Rural Taskforce’s role was to:
+
+- gather and provide evidence on the potential opportunities and challenges in rural areas for delivering the government’s programme and ambitions
+
+- provide challenge and contribute a rural perspective and focus cross-departmental discussions on delivery
+
+Core membership of the Rural Taskforce included Daniel Zeichner MP , former Minister for Food Security and Rural Affairs, and Heather Hancock, Defra Lead Non-Executive Director. Key external members included:
+
+- Rural Coalition
+
+- The Country Land and Business Association
+
+- Action with Communities in Rural England
+
+- National Association of Local Councils
+
+- Rural Services Network
+
+- Plunkett UK
+
+- Campaign to Protect Rural England
+
+- National Farmers Union
+
+- Federation of Small Businesses
+
+- National Innovation Centre for Rural Enterprise
+
+We also received input and support from a range of stakeholders to whom we are extremely grateful (see Annex 2 for details).
+
+Evidence submitted by the members of the Taskforce, for which we are extremely grateful, was distilled and used at 6 thematic workshops, covering:
+
+- economic potential and barriers
+
+- infrastructure and housing
+
+- skills and education
+
+- health and wellbeing
+
+- safety and community resilience
+
+- connectivity
+
+The workshops were held during the summer of 2025 and were attended by members of the Rural Taskforce and officials from:
+
+- Cabinet Office
+
+- HM Treasury
+
+- Home Office
+
+- Department for Education
+
+- Department for Health and Social Care
+
+- Department for Energy Security and Net Zero
+
+- Department for Transport
+
+- Ministry for Housing, Communities and Local Government
+
+- Department for Science, Innovation and Technology
+
+- Department for Work and Pensions
+
+- Department for Business and Trade
+
+The outputs from these workshops were then shared with departments and used to inform the development of this report and its recommendations.
+
+The workshops identified 6 key themes as critical to thriving, inclusive, and sustainable rural communities. This report is structured around these 6 themes, each chapter summarises the challenges rural communities face in relation to the theme and outlines the policies the government is implementing to address them.
+
+## 2. Rural growth
+
+Rural areas contribute over £259 billion a year to the English economy. Whilst this includes traditional rural sectors central to our national cultural heritage such as agriculture, forestry, fishing and the visitor economy, this is not the full story. Rural areas are home to over half a million businesses, and rural residents contribute their skills to all sectors of the national economy.
+
+The economic productivity of the rural economy, prosperity of those who live in it, and the vibrancy of these communities are all intrinsically linked. As such it is important to take a holistic view when considering the economic health of rural areas – this should not only look to support the businesses already present but also recognise the potential benefits of businesses coming into or bordering rural areas.
+
+The economic contribution of rural businesses and communities is diverse and stretches across all sectors of the economy. Agriculture, forestry and fishing combined contribute only about 3% to the rural economy. As with urban areas, publicly funded sectors such as education, health and public administration are large contributors. Commercially, real estate, manufacturing, and wholesale and retail trade are also important sectors. Moreover, rural areas boast vibrant industrial sectors in several key growth areas such as defence and advanced manufacturing, including those identified within the Industrial Strategy.
+
+The Taskforce identified that removing barriers and improving living standards in rural areas is crucial to ensure all businesses and key growth sectors can prosper. Additionally, by ensuring rural communities are adequately represented and included in regional growth initiatives, there is an opportunity to alleviate pressure on urban centres and foster inclusive growth that supports both rural communities and national growth targets.
+
+### 2.1 The urban-rural productivity gap
+
+Rural areas are typically less productive than their urban counterparts . In the most rural authorities (meaning authorities in which the majority of the population live in rural areas, and in which the majority of the population live more than a 30 minute drive from a major town or city), the productivity rate is 82% of the England average excluding London, with the gap shown to be widening in recent years.
+
+Output (Gross Value Added) per workforce job for majority rural authorities was £56,400 in 2023, but £62,700 in urban authorities excluding London. In the most rural authorities, it was £50,600. This disparity is not reflected in many comparable countries, particularly within the Organisation for Economic Co-operation and Development ( OECD ), where many have strong regional development policies.
+
+This gap in productivity is currently seen as a barrier to public and private investment in rural areas, according to the Rural Coalition’s Reigniting Rural Futures report . Technological advances and changes to working practices create opportunities to overcome barriers to productivity. However, for those unable to work remotely, enhanced physical connectivity between rural areas and urban centres could reduce barriers to access high growth sectors and enhance rural residents’ earning potential. In both cases, this requires targeted investment in enablers to growth.
+
+Growth is this government’s number one mission and through our Plan for Change, we will make the UK the best place to start and grow a business, drive investment, and support improved living standards for all. Crucially, this goal is true for all corners of the country, from our urban centres to rural towns and villages. We know the challenges for growth that come from rurality, and we are taking the necessary steps to achieve a prosperous and thriving economy within our rural communities.
+
+If we can close the rural productivity gap, we have a major opportunity to support UK growth more generally. In addition to boosting the national economy, at a household level, improving access to high-productivity high wage sectors in rural areas could boost household income and enhance the standard of living and create spill over effects for rural communities. Additionally, in their 2024 report Reigniting Rural Futures, the Rural Coalition suggest that as a result of closing the productivity gap, rural areas could generate more tax revenue per capita .
+
+Closing the productivity gap is not only an economic imperative, but also a public health one. Secure, fairly paid employment improves mental wellbeing, reduces chronic stress and financial insecurity, and supports healthier lifestyles across rural populations.
+
+Therefore, the government is pursuing a wide-ranging agenda which will help to tackle the root causes of this gap, detailed in the sections below.
+
+Despite the challenges, positive examples exist across the rural economy. For example, in the clean energy sector, the number of jobs supported by clean energy industries could almost triple in Scotland and at least double in Wales, Northern Ireland and almost every region of England, as the sector grows from around 440,000 jobs in 2023 to support 860,000 jobs across the UK by the end of the decade. Opportunities will not just be limited to cities and towns, but rural areas too, with our rural workforce playing an integral role in supporting the clean energy transition. Industries like farming and horticulture also present a success story, with growing opportunities in education including apprenticeships. The Farming in Protected Landscapes ( FiPL ) scheme has for example secured participation of different types of farm landscapes, 33% of FiPL project land holdings are in Severely Disadvantaged Areas. Projects funded through FiPL have made a positive impact, improving biodiversity, managing heritage assets, boosting climate resilience and encouraging sustainable farming in some of England’s most valued rural areas. As agriculture diversifies, it offers new career paths, although colleges often struggle to keep pace due to limited budgets and outdated technology.
+
+### 2.2 Sectoral composition
+
+#### The challenge
+
+Lower productivity can partly be attributed to the sector composition in rural areas, where industries such as agriculture and the visitor economy, which typically have lower productivity, are more prevalent. In 2023/24, there were 67,800 tourism related businesses registered in rural areas , accounting for 12% of all registered businesses in rural areas, employing 15% of the rural workforce. For many local communities, tourism is a vital sector. Rural areas have a high concentration of historic sites, which are central to local communities and drive inbound tourism. 78% of Scheduled Monuments, 67% of Registered Parks and Gardens, and 100% of Registered Battlefields are on agricultural land in rural areas. Historic England research has demonstrated that heritage plays a fundamental role in drawing in inward investment and fostering community pride . Heritage, traditional skills and husbandry are seen as increasingly important in creating a sustainable diverse agri-environmental sector, promoting biodiversity, and achieving our net zero goals.
+
+However, many rural areas are home to high-wage sectors which could grow with further investment, such as in defence sectors, advanced manufacturing and life sciences. In addition, a large majority of renewable energy capacity including solar, onshore wind and offshore wind infrastructure is in majority rural or intermediate (rural or urban) local authorities. Providing the necessary skills base to manage and maintain this infrastructure makes rural investment critical to both accelerating national growth and meeting our 2050 Net Zero targets.
+
+#### What the government is doing
+
+The government is committed to helping the visitor economy grow, through the Department for Culture, Media and Sport’s upcoming Visitor Economy Growth Strategy. Local Visitor Economy Partnerships ( LVEPs ) are nationally accredited destination organisations that are central to supporting the sustainable growth of the tourism sector, particularly within rural areas. LVEPs are essential for enhancing strategic coordination at the local level. Their role is to ensure that visitor-related development is well-planned, targeted, and addresses the specific needs and opportunities of each place. By uniting public, private, and third-sector partners, LVEPs work to stimulate necessary investment, support the growth of local businesses, and consistently improve the overall visitor experience.
+
+The Visitor Economy Growth Strategy will further empower the visitor economy sector, regional leaders including mayors, and LVEPs in driving sustainable growth across their operational areas. This strategic focus ensures that rural visitor destinations remain competitive and are equipped with the necessary tools, up-to-date data, and strong partnerships to prosper. Through its agri-environment schemes, the government is supporting heritage sites, and maintenance of historic features.
+
+Additionally, the government’s modern Industrial Strategy will help rural areas to build on their potential in high-wage sectors. The modern Industrial Strategy is the government’s 10-year plan to back our strengths and realise Britain’s potential. This is about positive choices: backing 8 sectors (the IS-8) with the highest potential, and the frontier industries at their leading edge – and targeting the places and clusters across the UK where those sectors concentrate, to increase national productivity, strengthen our economic security and resilience, and support our environmental goals and the net zero transition. Whilst increased prosperity in urban centres benefits the rural belt around them, higher national growth and the success of the IS-8 will be possible if we successfully harness the potential of rural areas.
+
+The Industrial Strategy is identifying and accelerating the highest-potential opportunities in regions and clusters where the growth-driving sectors concentrate, while tackling their specific investment barriers. This will improve the overall resilience of the economy, delivering well-paid jobs, thriving businesses, and renewed local communities across the whole country.
+
+All regions benefit from the Industrial Strategy’s national policy offer – there are clusters of the growth-driving sectors across the whole country, and the Industrial Strategy package addresses the biggest constraints to growth highlighted by these businesses.
+
+Measures in the Strategy will make it easier and quicker to do business and invest, such as reducing electricity costs by £35 to 40 megawatt-hours from 2027 for electricity-intensive manufacturers in the IS-8 and their supply chains, through the new long term British Industrial Competitiveness Scheme; and the introduction of ambitious policies to drive growth and investment across every nation and region of the UK.
+
+Each of the Industrial Strategy Sector Plans also sets out the most important regions and clusters for that sector, including Clean Energy in the Humber, Advanced Manufacturing in Somerset and Defence in Lancashire. Measures in Sector Plans will support clusters of the IS-8 wherever they are located. Driving growth in these regions will bring benefits to rural communities and businesses, by boosting employment opportunities via projects such as the Agratas gigafactory in Somerset, which is providing up to 4,000 jobs ( Modern Industrial Strategy, Advanced Manufacturing Sector Plan , page. 57).
+
+### 2.3 Supporting small and medium sized enterprises
+
+#### The challenge
+
+Rural residents are much less likely to work for an employer with 250 or more employees (18% in rural versus 31% in urban areas) with rural employment dominated by SMEs. The diverse array of local businesses and services is crucial not only for providing employment but for the provision of specialist services to meet the needs of rural areas, and for fostering a strong sense of community. However, SMEs require tailored support and a supportive regulatory environment to survive and grow.
+
+#### What the government is doing
+
+In our SME Plan the Department for Business and Trade has outlined the steps they are taking to make thriving SMEs a reality across the UK. The plan includes a range of measures to support the more than half a million SMEs in rural areas, including:
+
+- unlocking access to finance by expanding Start-up Loans to offer 69,000 new businesses the chance of finance and mentoring, provide a longer-term commitment to the British Business Bank’s Growth Guarantee Scheme, and expand the capacity of the ENABLE programme by £3 billion to £5 billion
+
+- backing the everyday economy by transforming business rates in this Parliament, introducing permanently lower business rates multipliers for high street retail, hospitality, and leisure ( RHL ). At the Budget, the government announced the rates for the permanently lower RHL business rates multipliers, which will benefit over 750,000 RHL properties, including the shops and pubs that make up the backbone of the high street, worth nearly £900 million
+
+- introducing High Street and Growth Incubators to support high street business and grow the co-operatives and mutuals sector over this parliament. In November 2025, the government launched a call for evidence focusing on how to support co-operative and non-financial mutual businesses to start, grow and scale, and help existing businesses to transition into a co-operative or mutual model
+
+- future-proofing business skills by giving businesses the skills to make the most of digital technologies and artificial intelligence, and develop their leadership and management, alongside improving access to the right staff
+
+- officially launching our new Business Growth Service to make it easier for businesses to find and access the advice and support they need. The Business Growth Service will be integrated with locally led delivery through Growth Hubs in England and a new digital service
+
+Regulatory barriers limit growth and increase costs for rural businesses. As part of the SME Plan, we have outlined a range of measures to fix the fundamentals and reduce burdens on those who are taking the risks to start, run and grow a business. The government will legislate to end the scourge of late payments which costs the UK economy £11 billion per year and closes 38 UK businesses every day. We will also cut the administrative costs of regulations by 25%, simplify and modernise corporate reporting requirements, and modernise the administration of tax and customs.
+
+### 2.4 National Planning Policy Framework
+
+The National Planning Policy Framework ( NPPF ) contains policies to support economic growth, including policies specific to the rural economy. As committed to in the government’s Plan for Change, several pro-growth changes were made to the NPPF in December 2024 to further support business development.
+
+Consultation on a new NPPF began in December 2025, which includes strengthened policies for both plan-making and decision-making to ensure that local authorities plan appropriately for long-term economic growth in their areas, and that substantial weight is given to the economic benefits of planning applications for commercial development. The consultation includes policies which would give strong and specific support for rural business development, including a permanent presumption in favour of suitably located schemes, giving substantial weight where development would have benefits for domestic food production, animal welfare and the environment, and supporting various types of agricultural development and diversification. Our proposed policies also provide strong support for the provision, improvement and retention of important rural services such as local shops and pubs. The government intends to respond to the consultation in summer 2026.
+
+### 2.5 Skills gaps
+
+#### The challenge
+
+Access to a skilled local workforce is a challenge in rural areas. This is particularly true given the predominance of SMEs, 79% of which identified skills gaps in their businesses in the last 12 months according to a recent Chartered Institute of Management Accountants report .
+
+For example, skills and workforce challenges remain a significant issue for the rural visitor economy. Businesses often struggle to recruit and retain staff due to limited local labour pools, seasonal fluctuations in demand, and the outmigration of young people seeking education and opportunities elsewhere, with many young people not returning to their rural area after study. In addition, access to training and professional development is frequently constrained by geographic isolation, limited transport links, and a lack of nearby education providers. These factors combine to create skills gaps across key areas in the visitor economy.
+
+For those progressing into further education ( FE ) where work placements are a key pre-requisite, the Local Government Association has highlighted that young people often find fewer rural firms offering opportunities, longer travel times, and limitations in public transport, particularly when accessing specialist professions. Similarly, the cost and availability of transport can be a barrier to young people accessing college or having choice in which college they attend.
+
+Notwithstanding these challenges, apprenticeship take-up is proportionally higher for those living in Predominantly Rural areas than in Predominantly Urban areas (11 versus 9 apprenticeships respectively per 1,000 working age population in the 2022/23 academic year) This difference is largely driven by a higher rate of apprenticeship starts at the lower levels of Intermediate (level 2, GCSE equivalent) and Advanced (level 3 courses, A level, T Level or Advanced apprenticeship equivalent) in Predominantly Rural areas than in Predominantly Urban areas, notably amongst young men.
+
+#### What the government is doing
+
+The government is committed to providing every young person with the skills they need to follow the pathway that is right for them. This includes actions to identify and address local skills gaps, which will help to ensure that rural businesses have access to the workforce they need to grow.
+
+Central to the government’s vision is Skills England, which has been established to provide comprehensive oversight of skills needs and to increase coordination between different actors in the system. Skills England works in partnership with Mayoral Strategic Authorities, employers, unions and the Labour Market Evidence Group to identify skills gaps and ensure government has provision in place to meet them. These insights will inform, and be informed by, Local Skills Improvement Plans which, together with local growth plans and Get Britain Working Plans, are critical tools for ensuring local people can access key jobs in the economy.
+
+Beyond this, the Post-16 Education and Skills white paper, published in October 2025, set out the government’s plan to give people the skills and knowledge they need to succeed, support growth across the country, and drive national renewal. The white paper outlines reforms to better support all learners, including:
+
+A joined up, data-driven skills system that drives growth and leaves no place or person behind:
+
+- increased join up of the skills and employment systems, strengthening the government’s offer to support people back into work with a new Pathways to Work guarantee, closer integration of the Adult Skills Fund and Jobcentres, and a significant expansion of access to Sector-based Work Academy Programmes in England and Scotland, providing training, work experience and a guaranteed job interview
+
+- ensuring everyone can upskill throughout their working life with access to short, modular courses or longer periods of training – these will be funded through a new loan entitlement, the Lifelong Learning Entitlement, or will be via short courses funded by employers through the Growth and Skills Levy
+
+- with a focus on priority sectors, Skills England will work with employers and local labour market actors to establish a data-driven national view of skills – this will enable a targeted approach to funding provision that drives growth in priority sectors, including through tailored sector skills packages, and that supports people back to work
+
+- strategic authorities will have a stronger role in this system, joining up skills, work, health, and transport interventions to tailor progression pathways to jobs that drive growth locally and bolster pride in places, and delivering change regionally through the devolved adult skills budget
+
+- tackle the rise in the number of young people who are not in education, employment or training ( NEET ) – the government will support young people with access to specialist support to stay in learning, access training or get into work, underpinned by better data to track attendance and reforms to accountability
+
+- the introduction of an automatic guaranteed provider place in reserve for all 16-year-olds, so no one is left behind after Year 11
+
+- delivering tailored sector skills packages, developed by the government in partnership with Skills England and industry, to support sector-led jobs plans – including in defence
+
+A specialist and prestigious FE sector so that everyone can access opportunities through high-quality training:
+
+- FE teachers and leaders will have access to high-quality, national training and professional development that will raise standards in all parts of the country – through our Industry Exchange programme, we will bring workplace skills into the classroom, creating a flow of information that benefits all
+
+- excellent teaching and inspirational leadership will be supported by harnessing the power of AI and technology, employer partnerships, and a move towards greater specialisation – with Technical Excellence Colleges leading this change
+
+- the introduction of new, rigorous qualifications so that all learners, including those with special educational needs and disabilities ( SEND ), will have access to high-quality study pathways and a clear line of sight to employment or further study – these qualifications will include new pathways at level 2 and new English and maths qualifications at level 1 – we will make ‘V levels’ the only pathway of vocational qualifications at level 3 for young people – these will sit alongside A levels and T Levels, providing simplicity and clarity as well as quality
+
+- challenge and support to raise the bar with new governance models and a clear view of performance to enable Ofsted and regional teams, backstopped by the regional commissioner
+
+- delivering foundation apprenticeships, focused on Industrial Strategy and priority areas and now expanded to hospitality and retail to widen access, including for young people in rural areas. These offer a structured, supported route into skilled employment for young people who might otherwise be left behind
+
+- reviewing the adult essential skills offer, including reviewing the National Standards for Essential Digital Skills to ensure individuals are equipped with the relevant digital skills needed for life and work in the context of rapidly developing technology
+
+World-leading and financially sustainable higher education provision that delivers better value for students, local growth, and the skills needed in the labour market:
+
+- legislate when Parliamentary time allows to increase undergraduate tuition fee caps automatically in line with inflation for high quality providers, and to reform research funding
+
+- encourage greater regional collaboration and provider specialisation, to help support access and value for money for students and promote the resilience of the sector
+
+- address poor quality by strengthening the Office for Students ( OfS ) to tackle low quality provision, including by defunding large franchise providers altogether unless they are registered with the OfS , and tackling abuse of the system by recruitment agents
+
+- streamline regulation of higher-level study, with the OfS acting as the primary regulator for all Higher Education providers – as part of its review of degree awarding powers, we have also announced that the OfS will develop new Higher Technical Qualification awarding powers to help support growth of level 4 and 5 qualifications
+
+- offer more flexible learning through the introduction of the Lifelong Learning Entitlement
+
+- increasing maintenance loans in line with forecast inflation every academic year, and – from 2028/29 – introducing targeted maintenance grants for students from low-income households, funded by a levy on income from international student fees
+
+- reforming regulation of access and participation and setting up a new Task and Finish group to drive progress
+
+The new Jobs and Careers Service will enable everyone to access support to find good, meaningful work, and support to help them to progress in work, with an enhanced focus on skills and careers. In England, these reforms include bringing together Jobcentre Plus with the National Careers Service to create a greater awareness and focus on skills and careers as well as better join-up between employability and careers provision. The new service will work with local employers and partners to meet the needs of local labour markets, delivering support directly in communities through initiatives such as Jobcentre vans and community pop-ups. Our vision is for a service that all employers, of all sizes, want to engage with. We will build on Jobcentre Plus’s existing offer to broaden the range of employers – including those requiring specialist skills and talent – we can support, with candidates that meet their recruitment needs.
+
+Across England, areas have been asked to develop local Get Britain Working plans setting out their key labour market challenges, including those impacted by rurality, and work collectively across local government, Jobcentre Plus, local NHS and wider local stakeholders to address this.
+
+Another solution to improve skills development in rural areas is to strengthen links between education, local and regional leaders and businesses, enabling young people to learn and train close to home and ensure that the skill provision on offer is aligned to the local economy. For example, the Sector-based Work Academy Programme, which provides benefit claimants with a work experience placement and sectoral pre-employment training linked to a guaranteed interview. On average participants spent 90 days more in employment, earned £1,400 more and saved the taxpayer over £350 as a result of taking part in the programme. This kind of collaboration relies on targeted funding and support to be effective, and steps need also to be taken to improve delivery models within rural environments to better support micro businesses (for example, by setting up business clusters).
+
+The government is delivering the Youth Guarantee, which aims to give young people extra support to access high quality learning and earning opportunities. We have committed £90 million of investment in Youth Guarantee Trailblazers in England, to test innovative ways to bring together local leadership to tackle youth unemployment. Some areas have chosen to use this funding to address specific barriers experienced by young people in rural areas, for instance in rural areas of northeast Somerset where people can face transport barriers, the West of England Youth Guarantee Trailblazer is facilitating transport solutions including e-bike loans.
+
+Building on this, at Budget 2025 and in March 2026, the government announced £2.5 billion of further investment in the Youth Guarantee and Growth and Skills Levy.
+
+The Growth and Skills Levy is giving employers greater flexibility, creating more opportunities for young people, and directly supporting the Industrial Strategy. This includes new measures to support apprenticeships for young people, including fully funding SME apprenticeships for eligible people under 25, to boost small business starts and prioritise funding to young people, starting from the next academic year. A new incentive of up to £2,000 has been announced for SMEs that take on 16-to 24-year-old apprentices as new employees, and we are launching a £140 million pilot with Mayoral Strategic Authorities to better connect young people aged 16 to 24, especially NEETs , with local apprenticeship opportunities.
+
+We began providing targeted employment support to nearly 900,000 young people aged 16 to 24 over 3 years from April 2026. This includes increasing intensive support meetings through Jobcentres and expanding Youth Hubs to over 360 sites across Great Britain. We will create around 300,000 additional opportunities, including up to 150,000 work experience placements and up to 145,000 Sector-based Work Academy Programme places for Universal Credit claimants.
+
+In addition, the government is taking action to support employers to recruit and train young people, helping to unlock up to 200,000 more employment opportunities. This includes a new £3,000 Youth Jobs Grant for employers who hire 18 to 24-year-olds who have been on Universal Credit for over 6 months, a new £2,000 apprenticeship hiring payment for non-levy employers hiring 16- to 24-year-olds, and the Jobs Guarantee scheme, providing long-term unemployed 18- to 24-year-olds with a fully funded 6 month job.
+
+Employers play a key role in increasing employment and supporting progression of those in work, so we are transforming our service through Jobs and Careers Service, to provide a consistent, reliable and high-quality service to employers. We are therefore working with employers of all shapes and sizes, employer representative bodies, and representatives from local chambers of commerce as part of a structured programme of engagement. This engagement is central to the development of the new service, making sure it genuinely works for employers.
+
+We have also introduced short training courses, called apprenticeship units, to give businesses the flexibility to develop the skills they need. These are available in critical skills areas such as artificial intelligence, digital and engineering. What we learn will shape how we refine and expand the offer over time, within the available budget, and in partnership with Skills England to identify further skills gaps which could benefit from apprenticeship units.
+
+Additionally the Industrial Strategy outlines plans to enhance skills and increase access to talent by reforming the skills and employment support system to create a strong pipeline into the IS-8, with opportunities for good jobs across the country; an increase in technology training and boosts for engineering, digital, and defence skills; and a visa system and new Global Talent Taskforce that supports high-growth sectors and attracts talented individuals to the UK.
+
+### 2.6 Devolution that promotes growth
+
+#### The challenge
+
+According to OECD research, devolution to capable local leaders at strategic scales has been linked to higher productivity . However, England has historically been one of the most centralised countries in the developed world, and has some of the greatest regional inequality among developed countries . This reflects the fact that local leaders lack the power to tailor policies to meet the needs of their communities. This challenge is not unique to rural communities; however, it has contributed to the productivity gap which has constrained rural growth.
+
+#### What the government is doing
+
+The government has introduced a new framework for English devolution, which will empower rural communities to address local challenges and grow their economies. This new framework, detailed in the English Devolution White Paper , aims to transfer power from Westminster to Strategic Authorities – groups of councils operating at a strategic regional scale, enabling them to drive economic growth. The English Devolution and Community Empowerment Act puts the new devolution framework on a statutory footing. Strategic Authorities will be granted enhanced powers and funding control across key sectors including planning, transport, infrastructure, skills, business and energy. The Act also specifies ‘rural affairs and coastal communities’ as an area of competence for Strategic Authorities.
+
+Many areas of England already have Strategic Authorities with devolved powers and funding; this includes several areas with a significant rural footprint including York & North Yorkshire Combined Authority, Cambridge & Peterborough Combined Authority and the North East Combined Authority.
+
+The government is also creating 6 more Mayoral Strategic Authorities through the Devolution Priority Programme. Following their establishment, inaugural elections in Cumbria and Cheshire and Warrington are taking place in May 2027. Elections in Greater Essex; Norfolk and Suffolk; Sussex and Brighton; and Hampshire and the Solent are planned for May 2028. This would bring the proportion of England covered by devolution to 77% or just over 44 million people. In rural areas, the addition of 6 new Mayoral Strategic Authorities will mean that more than half of the nation’s rural population will live in areas with devolved governance arrangements.
+
+Many Strategic Authorities are already considering the important role of these communities; for example, York & North Yorkshire Combined Authority through its Rural Growth Pathfinder, and the North East Combined Authority through its trailblazer Rural and Coastal Taskforce. The Rural and Coastal Taskforce is a time-limited taskforce to develop a Rural and Coastal Economy Transformation Blueprint for the North East. The document will set out a series of policy interventions to support nature recovery and farming, build resilience to climate change on its coast, and boost living standards in the region’s rural and coastal communities.
+
+More broadly, the English Devolution and Community Empowerment Act grants strengthened powers to Strategic Authorities across 9 areas of competence:
+
+- transport and local infrastructure
+
+- skills and employment support
+
+- housing and strategic planning
+
+- economic development and regeneration
+
+- environment and net zero
+
+- health, wellbeing and public service reform
+
+- public safety
+
+- culture
+
+- rural affairs and coastal communities
+
+Mayors may appoint commissioners on any of these areas of competence and convene local partners or collaborate with neighbouring mayors on matters related to them.
+
+These powers present a critical opportunity to support delivery of rural outcomes, and to address many of the challenges identified by Defra ’s Rural Taskforce.
+
+#### Local growth plans
+
+Local growth plans provide a long-term 10-year strategic framework for growth in their region. They are produced and owned by Mayoral Strategic Authorities, focused on the holistic needs and opportunities in their region, and should set out the priorities where the authority will focus its devolved powers and funding to drive productivity and growth – whilst there is no requirement to reference rural areas, existing plans provide examples of priorities focussed on increasing transport and digital connectivity for rural areas
+
+#### Local transport authority functions
+
+Strategic Authorities hold significant powers over public transport provision, including preparation of a local transport plan and powers to secure the provision of passenger transport services. Strategic Authorities also have powers to prepare a bus strategy, enter partnerships with bus operators, and introduce franchising schemes, as well as responsibility for the key route network in their area.
+
+#### Housing and land powers
+
+Powers are conferred to Strategic Authorities to acquire land, develop housing and land, as well as provide services in relation to housing. These powers place a duty on Strategic Authorities to review housing needs in their area and enabling them to provide additional facilities in relation to housing they provide. Strategic Authorities must also prepare a Spatial Development Strategy, and mayors have access to planning and development powers, including call-in powers to decide applications of potential strategic importance, setting up Mayoral Development Corporations, and charging a Mayoral Community Infrastructure Levy.
+
+The government has also invited all areas in England that do not have a devolution settlement in place to bring forward with their neighbours an expression of interest for a Foundation Strategic Authority. This will ensure more areas, including rural areas, can access the benefits of devolution and will provide a stepping stone to mayoral devolution. Foundation Strategic Authorities will be empowered to deliver for their residents, including having some of the powers above to address rural issues.
+
+The English Devolution and Community Empowerment Act also places a new duty on all local authorities to make appropriate arrangements for the effective governance of any neighbourhood area. It provides the Secretary of State with the power to make regulations which define a neighbourhood area, and to specify the criteria that these arrangements must fulfil.
+
+The government anticipates that these reforms will see a stronger role for ward councillors, with the tools to act on local priorities and give a clear route for residents to raise the issues that matter most.
+
+The main goal of neighbourhood governance is to move decision-making closer to residents, so decisions are made by people who understand local needs. An effective neighbourhood governance approach will help people hold their leaders accountable for the most important local issues to them. Through neighbourhood governance, it is expected that local authorities will undertake meaningful engagement with residents, to understand local issues and to address them together, when possible.
+
+The government will continue to work with the local authorities and the community sector to understand best practice models of neighbourhood governance and how best to achieve these aims. It will be reviewing existing local authority-led neighbourhood governance structures, exploring different approaches and their effectiveness. This will enable us to develop a detailed policy that will be reflected in regulations that will set out the requirements on local authorities.
+
+The government also published the Pride in Place Strategy in September 2025 which was developed in consultation with communities and local people. It focuses on 3 overarching objectives: building stronger communities; creating thriving places; and helping communities to take back control of their own lives and areas. Local people will be empowered with the tools and levers to drive meaningful change in their area, helping places to thrive and to grow.
+
+This is supported by the Pride in Place Programme ; £5.8 billion over 10 years for 284 neighbourhoods experiencing the highest levels of deprivation, which includes urban and rural communities. Beyond this, every part of the country will benefit from this whole of government strategy to empower local people with the tools and levers to drive meaningful change in their area, helping places to thrive and to grow.
+
+## 3. Education and skills
+
+Access to high quality education and skills services are fundamental to supporting the productivity of the rural economy and tackling inequality for disadvantaged communities. Many rural residents have less choice over services, including education and employment, and often face longer journey times to reach them.
+
+Supporting greater opportunity for people living in rural communities begins with giving every child the best start in life. To do this, we are making early years education and childcare more accessible and affordable, improving quality in the early years and reception. It continues through excellent schooling to allow every child to achieve and thrive, and opportunities to progress in further and higher education or work-based learning such as apprenticeships, to give young people skills for opportunity and growth. All this must be built on a foundation of support for the most vulnerable in society, tackling the scar of child poverty, and reforming the children’s social care system so it better ensures every child has a safe and loving home.
+
+### 3.1 Educational outcomes
+
+#### The challenge
+
+Although headline educational outcomes are generally better in rural than in urban areas, this situation is reversed for children in the most deprived areas. For example, in the 2022/23 academic year, 71% of pupils living in rural areas left school with English and Maths GCSEs at grades 9 to 4 (equivalent to A* to C) compared to 67% in urban areas. However, when figures are adjusted to compare like-for-like levels of deprivation , 47% of pupils living in the most deprived rural areas achieved grades 9 to 4 in their English and Maths GCSEs, compared to 49% of pupils living in the most deprived urban areas, based on the Income Deprivation Affecting Children Indices ( IDACI ). This analysis was undertaken using 2019 version of the IDACI .
+
+#### What the government is doing
+
+The government will continue to work constructively with partners in rural communities to ensure every child can achieve and thrive, including through the regional improvement for standards and excellence ( RISE ) programme. RISE aims to break the link between young people’s backgrounds and their attainment. RISE teams are now brokering support for schools in every part of the country, especially where that support hasn’t previously been effective or available.
+
+Rural communities are particularly reliant on small schools, and the government is committed to providing them with the funding they need to support students. The Schools National Funding Formula ( NFF ) accounts for the challenges faced by small schools in rural areas through the lump sum and sparsity factor.
+
+In the 2026 to 2027 academic year, the sparsity factor provides eligible primary schools up to £58,600, and all other eligible schools up to £85,200. In addition to this, all small and rural schools have benefited from the increase to core factors in the NFF in 2026 to 2027, including the NFF lump sum set at £152,710. The lump sum provides a fixed amount of funding that is particularly beneficial to small schools, as it is not affected by pupil numbers.
+
+The Department for Education ( DfE ) will review the schools NFF going forward recognising the importance of a fair funding system that directs funding where it is needed.
+
+### 3.2 Higher education attainment
+
+#### The challenge
+
+Students from rural areas are less likely to progress onto higher education than their peers in urban areas. For example, for the 2019/20 cohort of students undertaking level 3 courses (A level or Advanced apprenticeship equivalent), 69% of students in Predominantly Urban Parliamentary Constituencies progressed onto level 4 courses (first year degree or Higher apprenticeship equivalent), but in Predominantly Rural Constituencies it was 66%.
+
+Students from rural areas may experience barriers to accessing higher education that, in part, account for these differences. Higher education establishments are usually in urban areas and therefore students from rural areas are more likely to have to leave home to attend a university. This could act as barrier due to the financial impact and distance from family and friends.
+
+Rural students from disadvantaged backgrounds are disproportionately unlikely to attend university. For example, in 2023 only 19% of students eligible for Free School Meals in the South West progressed to university compared with 51% in Inner London . Lower participation in higher education among rural young people contributes not only to income disparities, but also to long term health inequalities, as educational attainment strongly predicts healthier lifestyles and higher life expectancy.
+
+Students are more likely to attend further and higher education if members of their family have done so previously, and so the consequences of the challenges for rural students could be inter-generational, according to research by King’s College London .
+
+#### What the government is doing
+
+Access to higher education should be based on ability and attainment, not background. Opportunity should be available to all, and it is our aspiration that no groups are left behind. We are determined to support the aspiration of every person who meets the requirements and wants to go to university, regardless of their background, where they live and their personal circumstances.
+
+The DfE have established a Task and Finish group of sector experts, student representatives, charities, the OfS and the Universities and Colleges Admissions Service to consider regional disparities and how to tackle the most systemic barriers across the journey into higher education for disadvantaged students. The Task and Finish group is chaired by Professor Kathryn Mitchell, Vice Chancellor of the University of Derby and we are supporting the group as it carries out this important work. The DfE are also reintroducing targeted means-tested maintenance grants of up to £1,000 per year from academic year 2028/29, for students from low-income households studying courses aligned with the government’s missions and Industrial Strategy.
+
+### 3.3 Access to childcare
+
+#### The challenge
+
+Childcare provision is more limited in rural areas. Families in rural areas are among the least well-served by existing childcare provision, according to the Coram Childcare Survey . This in turn limits parents in rural areas’ ability to pursue work, education and training opportunities, and contributes to the productivity gap between urban and rural communities.
+
+#### What the government is doing
+
+Currently the amount of universal credit funded childcare that families with 2 or more children could claim back is capped at £1835 a month. The government recognises that childcare costs apply to each individual child and it is not right that we have a system that doesn’t reflect this. That is why, at the Autumn Budget, it was announced that the level of these caps will be increased to help with the childcare costs for all children.
+
+The recent Best Start in Life ( BSIL ) Strategy recognises the importance of improving access to early years support for all families, including those in rural communities. The DfE has asked local authorities to develop and publish Best Start local plans by 31 March 2026, setting out their approach to improving early child development and health outcomes locally, including achieving and measuring progress towards a local 2028 target and beyond. Plans should be ambitious, reflecting the needs of children and families locally, particularly for children most likely to need additional support. Plans should set out how areas will strategically target programmes and funding in areas where impact will be highest and build on work already happening across local areas. They also need to set out how they will take bolder action to reach the ambitious local targets that have been set. The DfE will work closely with local authorities as they deliver their Best Start local plans to ensure the needs of rural communities are met.
+
+The BSIL strategy also sets out how:
+
+- the Department for Education is creating more accessible early education and childcare; since September 2025 eligible working families are now entitled to 30 hours free childcare per week from the term after their child turns 9 months old until they start school. Increasing the uptake in childcare by creating sufficient places across England enables parents to work
+
+- the Department for Education is creating new or expanded school-based nurseries, and part of the criteria for that programme will be to increase places in areas where it is currently difficult for parents to access childcare
+
+- local authorities have a legal duty to ensure there is sufficient childcare in their areas – the government is going to take further action to hold them to account in ensuring that disadvantaged children are accessing the funded hours for which they are eligible and will consider new powers for local authorities to strengthen their role in shaping local markets –this will help to ensure local authority provision meets rural communities’ particular childcare needs
+
+In addition, the government will deliver a new Best Start Family Service to bring together parenting, healthcare and education support services to ensure all babies, children and families have access to the early intervention and support they need. Neighbourhood Health Services will also work in partnership with family hubs, schools, nurseries, childminders and colleges, ensuring support for young children’s health and development is available and accessible in communities. The DfE will provide over half a billion pounds of investment in the Best Start Family Service over the 2026 to 2029 spending review period.
+
+The hubs will be located mainly in disadvantaged communities where support is most needed; and the ambition is that 70% of hubs should be in the 30% most deprived areas nationally.
+
+### 3.4 Teacher retention
+
+#### The challenge
+
+Recruiting and retaining teachers is a challenge in both rural and urban schools. However, the barriers are different in rural and urban locations. Rural recruitment is impacted by issues including housing availability, long commute times and limited access to essential services. Nevertheless, attrition rates of teachers leaving the profession in the state sector are lower in many rural areas than urban, and there is also evidence that teachers in rural schools on average have spent longer in teaching than those in urban schools.
+
+#### What the government is doing
+
+Recruiting and retaining more qualified, expert teachers is critical to the government’s mission to break down barriers to opportunity and boost the life chances for every child in every area. The Department for Environment has committed to recruiting an additional 6,500 new teachers across secondary and special schools and in colleges over the course of this parliament. The government has now recruited 4,654 additional teachers of the 6,500 additional teachers pledge, with 3,008 more teachers in secondary and special schools and 1,646 more in FE .
+
+The government’s approach has led to the teaching workforce growing by 2,346 Full-Time Equivalents ( FTE ) between 2023/24 and 2024/25 in secondary and special schools; the schools where they are needed most. This improvement is driven by targeted incentives to recruit and retain expert teachers, including a near 10% pay award over the last 2 years.
+
+The DfE are additionally offering targeted retention incentive payments of up to £6,000 after tax to teachers of maths, physics, computer science and chemistry in years 1 to 5 of their career. The payments are tilted to schools with the greatest disadvantage (measured by pupil premium eligibility) including many in rural and coastal areas.
+
+## 4. Housing, energy and infrastructure planning
+
+### 4.1 Delivering affordable housing
+
+#### The challenge
+
+Affordable housing is essential to the vitality of rural communities. Rural areas face unique challenges; the sparsity and limited local supply of housing result in high costs and requires residents to travel long distances to access essential services and jobs. All this risks deepening disadvantage and undermining community sustainability. Affordable homes help younger and lower income households to remain in their communities, supporting local economies and sustaining key services such as schools and local businesses.
+
+Housing affordability in rural areas is strongly affected by the types of housing available . A person on lower quartile earnings living and working in a majority rural authority might pay 3.7 times their annual earnings to purchase a flat at the lower end of the market, similar to urban authorities (excluding London). This rises to 7.1 times their earnings for a semi-detached house or 10.4 times their earnings for a detached property at the lower end of the market, again similar to urban authorities (excluded London). However, in 2023/24, 40% of property sales in majority rural authorities were for detached houses, compared with 19% in urban authorities (excluding London), while flats and maisonettes accounted for just 10% of property sales in majority rural authorities and 16% in urban authorities (excluding London).
+
+Building new housing in rural areas can bring benefits, including an increased population that may help address local labour shortages and support the viability of rural services and businesses. However, the impact of new housing depends on the type of housing stock and accompanying infrastructure. If new housing is not accompanied by improvements to local supporting infrastructure – such as healthcare, education, utilities and transport links – it risks exacerbating existing issues or inequalities within local communities.
+
+Similarly, communities need to be provided with a range of housing types, including affordable housing (including both homes in the social rented sector, and/or homes to buy through affordable homeownership schemes), supported housing, smaller units for those wishing to downsize and family-sized units. Equally important is the strategic placement of housing, to avoid development in unsuitable or unsustainable locations.
+
+There is also a strong call to better match housing with local jobs and transport connectivity. Without this alignment, communities risk becoming unsustainable. For example, housing that is inaccessible or unaffordable for families and workers undermines both economic resilience and social cohesion.
+
+#### What the government is doing
+
+The government recognises that housing delivery in rural areas is hampered by unique challenges – these include planning barriers and financial challenges - and is acting on multiple fronts to tackle them.
+
+In December 2024, the government strengthened the NPPF to further support the delivery of affordable housing. This includes making clear that local planning authorities should consider the needs of those who require social rent when undertaking needs assessments and setting policies on affordable housing requirements. The Framework also states that local planning authorities should go further with opportunities to bring forward rural exception sites for affordable housing in rural areas. These sites should help meet the local housing needs of rural communities, enabling local people, those with a family connection or those with an employment connection to live locally and help sustain thriving places.
+
+The MHCLG has recently consulted on clearer, more ‘rules-based’ policies for decision-making and plan-making, designed to make planning policy easier to use and underpin the delivery of faster and simpler local plans. The consultation includes a range of policies to better support the provision of affordable housing in rural areas, in recognition that supporting the vitality of rural areas is essential in boosting economic growth and supporting thriving communities, making it easier for rural exception sites to come forward in the planning system and better enabling authorities to require affordable housing on smaller sites on rural areas. In addition, proposals seek to strengthen expectations, relating to mixed tenure development and boost small and medium sites, alongside easements to support SME developers.
+
+The consultation also proposed a number of changes that are intended to unlock additional housing supply, facilitate economic growth and improve the approach to climate change, environmental protection and heritage assets. This includes:
+
+- a permanent presumption in favour of suitably located development – we want to make clear what forms of development are acceptable in principle in different locations
+
+- building homes around stations – we want to establish ‘in principle’ support for a ’default yes’ for developing land around rail stations within existing settlements, and around ‘well-connected’ train stations outside settlements – we are also proposing minimum densities for these locations – maximising opportunities for sustainable development, making the most of high levels of connectivity, and improving access to jobs and services
+
+- securing a diverse mix of homes – we want to better support the needs of different groups through the planning system. This includes stronger support for rural affordable housing and setting clearer expectations for accessible housing to meet the needs of older and disabled people
+
+- supporting small and medium sites –we want to make it easier to bring forward small sites, through clear support for the principle of development in different locations, the policies on building more densely in settlements and strengthened support for mixed tenure development
+
+- we are also introducing a category of ‘medium development’ linked to a range of policy and regulatory easements, to support a more streamlined and proportionate planning system – including testing the option of developers on medium sites discharging affordable housing obligations through payments in lieu
+
+- better addressing climate change – we want to set out how decisions can take a proactive approach to both mitigation and adaptation in relation to climate change, in a way that links to other relevant policies in the draft Framework
+
+- conserving and enhancing the natural environment – we want to make a number of changes, including to reflect Local Nature Recovery Strategies, to deliver green infrastructure and nature-based solutions, to conserve and enhance existing features of high environmental value, to incorporate swift bricks and to provide guidance on sites of local importance for nature – this sits alongside the Nature Restoration Fund which will also provide a significant opportunity for housing and infrastructure development to contribute more strategically to nature recovery
+
+- taking a more positive approach to the use of heritage assets – we want a clearer and more positive approach which can better support suitable heritage-related development, replacing the current policies that are difficult to navigate
+
+Beyond planning reform, the government is also taking action to tackle the funding challenges associated with rural housing delivery. The new 10 year £39 billion Social and Affordable Homes Programme ( SAHP ) recognises that it is often more expensive to deliver in rural areas due to the development typically being small in scale and in more remote locations. While all bids will continue to be assessed for value for money based on their circumstances, the flexibility in grant rates provided for under the new programme will help ensure that rural developments including community-led developments and supported housing receive the support they require. This approach will replace the previous approach of setting numerical targets for types of homes.
+
+The government recognises that the community-led housing sector delivers a wide range of benefits, including strengthening community participation in local decision-making, engendering community cohesion, achieving high quality design and strengthening the co-operative economy. In March, MHCLG announced a £20 million, 10-year social finance investment to provide capital finance for community-led housing, which is expected to directly support the construction of around 2,500 new homes over the next decade, including in rural areas. These housebuilding projects will be led by communities to specifically address local needs in their area. Through revisions to the NPPF in December 2024, MHCLG has strengthened support for community-led housing, including through changes to the size limit on community-led exception sites and a broadening of the definition of organisations able to deliver community-led housing. The government is also undertaking a major research project to inform future interventions to support the sector, with a particular focus on sustainable finance.
+
+The government is also taking action through the Rural Housing Enablers ( RHE ) programme. This provides £2.3 million per annum to fund a network of community-based housing experts to support rural delivery in 34 counties. RHE Programme reporting shows that there are currently over 2,900 new potential affordable homes in the pipeline, identified in response to a local identified need. These are at different stages of the development pipeline, some awaiting confirmation of site availability or capital funding whilst others are seeking planning permission. A recent evaluation showed an overall Benefit-Investment Ratio ( BIR ) of £3.30:1, meaning for every £1 invested over a 3-year period there is an estimated £3.30 generated in social outcome benefits.
+
+The government is also taking action to protect the existing social and affordable housing stock. MHCLG is reforming the Right to Buy ( RtB ) to deliver a fairer, better value and more sustainable scheme and reduced maximum RtB cash discounts in November 2024. These are now £16,000 to £38,000 depending on where a tenant lives. This is estimated to reduce sales by around 25,000 over 5 years, meaning that those homes will stay within the social rented sector. The modelling suggests a long run average of approximately 1,700 council tenants annually will be able to buy under the new maximum discounts (compared to an average of c.9,000 sales annually in recent years).
+
+Following a public consultation in 2024-25 on wider reform to the scheme, the government introduced the Social Housing Bill to Parliament, which will deliver a more comprehensive package of reforms to the RtB , including:
+
+- increasing the time a tenant must have been a public sector tenant, from 3 to 10 years, before they are eligible for the scheme
+
+- reforming discounts so they start at 5% of the property value, rising by 1% for every extra year of secure tenancy up to the maximum of 15% of the property value or the cash discount cap (whichever is lower)
+
+- exempting newly built social homes for 35 years, ensuring councils are not losing homes before they have recovered the costs of building them
+
+The Bill will exempt rural properties from the RtB scheme, which will include homes in National Parks, Areas of Outstanding Natural Beauty and areas designated as rural, given that homes in these areas are particularly hard to replace due to land, planning and supply constraints.
+
+More broadly, the government recognises that rural shared ownership plays an important role in supporting households in rural areas into homeownership who would otherwise struggle to purchase a property that meets their needs on the open market. Rural shared ownership leases contain restrictions to ensure that they are retained as affordable housing in perpetuity and are not lost to open market sales. The development of these properties is funded via developer contributions or via the government’s Affordable Homes Programmes, including the new £39 billion Social and Affordable Homes Programme.
+
+Significantly expanding housing supply across the country will require significant investments in capacity and capability within the planning system. A range of measures have been confirmed to support improved capacity and capability within the planning system:
+
+- the government is significantly increasing its ambition to grow the planning workforce – building on the original commitment to recruit 300 planners, we are now targeting c.1,400 new recruits by the end of this Parliament, supported through MHCLG ’s Planning Capacity and Capability Programme and wider initiatives delivered across government
+
+- at the 2025 Budget, the government committed an additional £48 million to strengthening planning capacity in the public sector, to be allocated across this Parliament – this will open new routes into planning, creating opportunities for graduates and experienced professionals to join and thrive in the sector
+
+- more broadly, the department’s established Planning Capacity and Capability programme is also developing a wider programme of support, working with partners across the planning sector, to ensure that local planning authorities have the skills and capacity they need, both now and in the future. This includes funding to the Planning Advisory Service ( PAS ) to support local planning authorities through specialist training, peer learning and tailored guidance, ensuring planners are well prepared to deliver effectively in a reformed system – in 2025 to 2026 we provided them with c.£2.8 million
+
+- a new Planning Careers Hub will be launched to drive talent into the sector, offering vital training programmes to support retention and open new routes into planning
+
+- to accelerate large-scale development, a multidisciplinary team was established as a partnership between MHCLG and Homes England to support local authorities in unblocking complex planning issues as part of the New Homes Accelerator
+
+All interventions are being actively monitored to ensure maximum impact and sustained delivery on the ground.
+
+### 4.2 Fuel poverty
+
+#### The challenge
+
+Fuel poverty remains a significant concern in rural areas, with 13.8% of households in villages, hamlets, and isolated dwellings in England classified as fuel poor (measured by the Low-Income Low Energy Efficiency indicator) in 2025. Furthermore, where fuel poverty exists in rural areas, it tends to be deeper than in urban areas. Rural fuel-poor households in villages, hamlets, and isolated dwellings have an average fuel poverty gap of £824, more than double that of households in urban areas (£311). Access to energy infrastructure and the make-up of the housing stock both seem to be factors. Households living off the gas grid are more likely to be in fuel poverty. Almost a third of homes in majority rural constituencies are off the gas grid and more likely to be reliant on high-carbon fuels such as oil for domestic heating. Rural areas also have a higher proportion of older housing stock, and homes are more likely to be detached. These homes are typically less energy efficient and can have features, like solid walls, that can be more difficult to retrofit.
+
+#### What the government is doing
+
+The Department for Energy Security and Net Zero ( DESNZ ) has recently published the Warm Homes Plan, which aims to upgrade 5 million homes with technologies such as heat pumps, solar panels, batteries and insulation to reduce bills. Alongside the Warm Homes Plan, DESNZ published the Fuel Poverty Strategy for England with a plan to lift up to 1 million households out of fuel poverty. Low-income and fuel poor households will benefit from around £5 billion in public investment to 2030, with £4.4 billion in direct capital grants backed by an initial £600 million from the Warm Homes Fund. We will deliver initially through the existing Warm Homes Social Housing Fund and Local Grant, before consolidating and integrating our investment into a single scheme for low-income households. In addition, minimum standards across the rental sector will drive energy efficiency improvements for tenants, including those in rural communities.
+
+Rural Homeowners can currently access grants through the Boiler Upgrade Scheme, to replace existing fossil fuel heating with modern alternatives such as heat pumps or biomass boilers to reduce emissions but also potentially benefit from long-term savings on energy bills. In the Warm Homes Plan, DESNZ announced the extension of the Boiler Upgrade Scheme until 2030 with £2.7 billion in additional funding, ensuring that more households, including those in rural areas, can benefit from grant funding to decarbonise their heating with more efficient, low carbon heating systems.
+
+We expect most off-gas grid properties will ultimately switch to a heat pump; however, we recognise that heat pumps may not be feasible in a small number of properties. Data from the Boiler Upgrade Scheme for England and Wales from May 2022 to March 2026 shows strong uptake of heat pump grants in rural properties, with 48% of air source heat pump grants and 84% of ground source heat pump grants redeemed by rural properties, which demonstrates their suitability. 49% of all Boiler Upgrade Scheme grants have gone to rural properties and 38% to homes off the gas grid. Of these, 99% were for heat pumps, and 1% for solid biomass boilers. The government consulted on exploring alternative clean heating solutions that may play a role in some homes, such as infrared heating, solid biomass boilers using agricultural waste, and renewable liquid fuels, and to explore the role of innovative, clean heating technologies in homes. The consultation is now closed, and we will issue a government response in due course.
+
+In June 2025, the government announced an expansion of the Warm Home Discount Scheme, making all households on qualifying means-tested benefits eligible for a £150 discount on winter energy bills. This expansion added an additional 2.7 million families to the scheme, including almost doubling the number of households with children that receive the discount to an estimated 1.9 million and increasing the total number of eligible households to around 6 million. The expansion is also estimated to increase the overall coverage of fuel poor households. In the past, around 30% of fuel poor households received a rebate; following the expansion, around 45% of fuel poor households will receive a rebate. The government has confirmed the continuation of the Warm Home Discount scheme for the next 5 winters – ensuring eligible households continue to receive the £150 rebate for the rest of the decade.
+
+In 2025, DESNZ consulted on increasing the standard to require domestic private rented properties to be an Energy Performance Certificate ( EPC ) ‘C’ rating by 2030. On 21st January 2026 a government response was published alongside the Warm Homes Plan . The response announced that as part of the private rented sector enhancements, landlords will need to upgrade their properties to meet EPC C across 2 metrics by October 2030, unless their property has a valid exemption. Private rented homes will be required to meet a primary standard set against the fabric performance metric on new EPCs and a secondary standard set against either the smart readiness metric or the heating system metric on new EPCs . Landlords will be able to choose what will work best for their property, and the spending cap will be limited to £10,000 per property, with an average predicted cost of around half of that.
+
+In January 2026, MHCLG published the new Decent Homes Standard that will apply to both private rented and social rented homes. The new standard reflects modern expectations of a home, and prioritises safety, decency, and warmth. Following consultation, the government has announced that minimum energy efficiency standards will be introduced in the social rented sector for the first time. These measures will not only help make energy bills cheaper for millions of social tenants and help towards eradicating the scourge of fuel poverty but make homes warmer, more comfortable and less susceptible to damp and mould. The government published their response to the Social Rented Sector Minimum Energy Efficiency Standards consultation on 1 April 2026. Social homes will need to meet either the new EPC fabric performance, smart readiness or heating system metric at band C by 2030, followed by one of the remaining metrics at band C by 2039. The government has also set a maximum required spend of £10,000 per metric, for 10 years.
+
+Social housing tenants deserve to live in decent homes, to be treated with fairness and respect, have a strong voice and have their problems quickly resolved. Reforms are underway which will strengthen tenant voice and improve tenants’ access to redress. The first phase of Awaab’s Law has come into force, requiring landlords in the Social Rented Sector to fix dangerous damp and mould and emergency hazards in fixed timeframes and will be extended to all Housing Health and Safety Rating System hazards (except overcrowding) over the course of 2026 and 2027. MHCLG will also publish a consultation on applying Awaab’s Law to the Private Rented Sector soon.
+
+### 4.3 Addressing equity in rural energy needs
+
+#### The challenge
+
+A reliable and resilient electricity grid is a core enabler of the clean energy transition. Current barriers to connection are slowing progress. To address these challenges investment is needed in local substation networks, and broader infrastructure is needed to ensure capacity, reliability and resilience. The Taskforce suggested that investment is needed in localised solutions such as microgrids and battery storage.
+
+Currently, much of the existing rural energy infrastructure is ageing. Rural distribution lines are particularly vulnerable to damage from extreme weather and the nature of electricity networks in rural areas can make connections more challenging. For example, distance from substations and available network capacity can mean higher connection costs and longer connection timescales.
+
+Delivering a resilient, future-proofed energy network is essential to ensure rural communities are not left behind in the energy transition and avoid embedding inequalities into the future system. For example, currently some houses face unreliable service, and installing an electric vehicle ( EV ) charge point, heat pump, or electric shower can require upgrades to the local distribution network. To enable rural areas to fully participate in the transition, distribution network operators must work proactively and collaboratively to upgrade infrastructure and streamline processes.
+
+#### What the government is doing
+
+As we transition to cleaner energy, it is essential that rural communities are not left behind. Many homes in rural areas still rely on outdated infrastructure that may not always be able to support modern energy needs. DESNZ is working with regulators and industry partners to modernise the system. The end-to-end review of the connection’s regulatory framework, led by Ofgem , has published its latest consultation on updated proposals, with next steps expected later this year. The review aims to improve the connections process at all voltage levels by ensuring timely delivery of connections and high levels of customer service. DESNZ is closely supporting Ofgem in the development of the Review Proposals.
+
+As the independent regulator, Ofgem is responsible for setting price controls that enable investment in electricity networks to support the government’s strategic priorities, while ensuring value for money for consumers. Under the ‘RIIO’ price control framework, network operators receive multi-year funding settlements to maintain and upgrade ageing assets, improve reliability, and increase network capacity, including in rural areas where infrastructure is often more constrained. Ofgem has recently published its ED3 Sector Specific Methodology Decision, which sets out how the next distribution price control will support more proactive and anticipatory investment to accommodate changing demand patterns. DESNZ continues to work closely with Ofgem to ensure the regulatory framework supports timely, efficient and co-ordinated network investment alongside wider reforms, including strategic planning and connections reform.
+
+Alongside this, Regional Energy Strategic Plans ( RESPs ) will support strategic investment in distribution infrastructure reinforcement ahead of new demand. RESPs , which will be produced by the National Energy System Operator ( NESO ) in conjunction with local authorities, energy distribution operators and other local partners, will strengthen the evidence base for local plan-making, helping local stakeholders inform planning and investment decisions, as well as energy distribution network upgrade and connections planning.
+
+The Review of Electricity Market Arrangements ( REMA ) Programme previously highlighted concerns around how rural needs are addressed in the energy transition. REMA concluded in July 2025 with a decision to retain and reform a national electricity market in Great Britain under a new programme called Reformed National Pricing ( RNP ). In April 2026, DESNZ published the RNP Delivery Plan, setting out the various electricity market reforms that make up the programme and outlining how they will be delivered. The document details the proposed levers that might influence the siting and investment decisions and covers how these policies will be further refined and delivered. Together these reforms should reduce system costs and improve efficiency, reduce costly network constraints and strengthen day-to-day system operation. DESNZ is also working with NESO and Ofgem on further ways to improve power network efficiency and reduce costs for those in rural areas, for example, better access to battery storage sites and other smaller assets.
+
+Key issues to explore further going forward include distributed generation and community ownership in rural areas. DESNZ has emphasised that a more efficient electricity system where generation, demand and networks are optimised would reduce costs and enhance environmental outcomes. Greater consumer-led flexibility would allow rural residents to better manage their energy consumption, adjusting demand to align with times when renewable energy is more available and affordable.
+
+### 4.4 Ensuring rural communities benefit from the energy transition
+
+#### The challenge
+
+Much of the new onshore infrastructure needed for renewable and independent energy is likely to be built in rural areas. Rural communities need to be considered in strategic national planning, so they are not disadvantaged as the country transitions to Net Zero.​
+
+New renewable infrastructure projects provide opportunities for economic growth in rural communities. The Taskforce identified that clean energy goals cannot be achieved without active involvement of rural communities. However, achieving this may require alternative or more flexible pathways tailored to rural contexts. It is also crucial that rural areas and communities are active participants in shaping clean energy solutions. It was also suggested that the government should promote the value of small or medium-sized renewable projects as well as large scale projects.
+
+#### What the government is doing
+
+As we transition to clean energy, DESNZ has emphasised the value of community engagement, particularly in rural areas where much of the new infrastructure will be hosted.
+
+MHCLG has consulted on changes to guidance to accompany the removal of statutory pre-application consultation duties from the Planning Act 2008 for Nationally Significant Infrastructure Projects. The consultation sought views on changes to assist in preparing applications for a Development Consent Order ( DCO ) and the role of non-statutory engagement, and how further regulations or guidance can support effective notification and publicity requirements, as well as guidance to support the acceptance stage for applications. Members of the public can continue to be involved with non-statutory engagement undertaken by applicants and by registering as an interested party to have their say through relevant representations, written representations and taking part in hearings as part of examinations for DCO applications.
+
+DESNZ is working with NESO to progress several initiatives to enhance transparency and local input into energy infrastructure planning. They consulted in autumn 2025 on new Electricity Transmission Design Principles ( ETDP ) and published them in June this year. The principles aim to improve mitigation of visual impacts and clarify where design changes can or cannot be made to transmission infrastructure.
+
+NESO will ensure open stakeholder engagement and allow third parties to submit design options for assessment as part of the Centralised Strategic Network Planning ( CSNP ) process. The plan will be subject to statutory public consultation and interact with the RESPs at the interface between the distribution and transmission network to ensure strategic investment decisions reflect both national system requirements and regional development goals. RESPs themselves will be shaped through extensive stakeholder engagement to ensure the views of residents, businesses, and communities are heard. NESO will establish regional governance arrangements in 2026.
+
+At a national level, the Local Net Zero Delivery Group brings together central government ministers and senior representatives from across local government on a quarterly basis. Covering multiple tiers from district councils to Mayoral Strategic Authorities, this group ensures that both urban and rural perspectives are reflected in discussions on energy and local net zero priorities.
+
+Referenced in the Clean Power Action Plan and the Community Benefits and Shared Ownership for Low Carbon Energy Infrastructure working paper, Community Benefits funds aim to ensure that communities directly benefit from hosting energy infrastructure.
+
+Voluntary guidance currently exists for Community Benefits for Onshore wind in England and in March 2025, a community benefits package for electricity transmission network infrastructure was announced for Great Britain. This includes published voluntary guidance for the Community Fund scheme for Transmission Network Infrastructure and a Bill Discounts scheme for Transmission Network Infrastructure. The intention for the Bill Discount scheme, which passed through Parliament as part of the Planning and Infrastructure Act last year, is to offer households living near new or significantly upgraded electricity transmission infrastructure, up to £250 off their annual electricity bills for up to 10 years. It is designed to recognise the contribution of host communities, of which rural households are expected to benefit most. A public consultation for the Bills Discount Scheme ran in August to September 2025 and the government response to this was published in March 2026, ahead of secondary legislation being laid to implement the scheme later this year.
+
+A key policy consideration for the government involves whether community benefit schemes for new low carbon energy infrastructure should be mandatory or voluntary. DESNZ has closed their 2025 consultation seeking views on potential mandatory community benefits for low carbon energy infrastructure, and shared ownership schemes and a decision will be published in due course. To implement these initiatives, primary legislative powers are required. The government’s response to the working paper will also be published in due course. Together, these measures reflect a commitment to community engagement and co-creation and equitable benefit sharing in the clean energy transition.
+
+### 4.5 Delivering community energy
+
+#### The challenge
+
+Rural communities can play a vital role in achieving Net Zero, particularly by stepping in where the market is unable or unwilling to deliver when, for example, a project is seen as being too small, complex, or high-risk. Community-led initiatives, such as those supported by the GB Community Fund, can fill these gaps. However, stakeholders point to a funding and delivery gap for projects that have exhausted early-stage funding but are not yet ready for construction. They also highlighted barriers that mean setting up community energy projects is complex.
+
+#### What the government is doing
+
+The Local Power Plan ( LPP ), published on 12 February 2026, is a joint plan between Great British Energy and the DESNZ which outlines our shared vision for the local and community energy sector: to drive the growth of locally owned renewable energy projects and support efforts to unlock cleaner, cheaper and more resilient power at the community level. This will give communities a direct stake in the transition to net zero. For 2025/26, Great British Energy announced the Great British Energy Community Fund. A £5 million grant funded programme, delivered by the 5 Net Zero Hubs in England, which helped local groups generate clean power and build capacity for future projects. Great British Energy will announce their future funding offer, including the Community Fund, in the summer. Together, these policies signal a growing commitment to putting power in the hands of rural communities.
+
+## 5. Health and wellbeing
+
+### 5.1 Addressing health inequalities
+
+#### The challenge
+
+Rural communities face unique health and wellbeing challenges shaped by geography, demography, infrastructure and access to services. Although life expectancy is generally higher in rural areas, this masks deep inequalities. In 2020-22, the average life expectancy was 80.1 years for males and 83.7 years for females in predominantly rural areas. In predominantly urban areas, the average life expectancy was lower at 78.1 years for males and 82.3 years for females. Deprived rural populations can experience outcomes as poor as, or worse than, those in urban deprivation hotspots due to distance to services, transport limitations and hidden poverty. Addressing these challenges requires integrated, place-based strategies.
+
+Older residents may require more frequent and complex medical interventions yet may face greater difficulties in accessing care due to mobility issues and transport limitations, and access to digital health services. This can increase pressure on all service providers, including community and volunteer-led groups that provide help and combat isolation.
+
+Agricultural workers also face distinct pressures when accessing emergency health services, shaped by the hazardous nature of their work and the realities of rural isolation. The sector has an accident‐at‐work rate around 20x higher than the all‐industry average .
+
+Evidence provided by stakeholders has highlighted that some patients in rural areas, for example, cancer patients, potentially face lower survival rates compared to those living in urban areas . They have also reported that mental health services for adults can also be difficult to access with long waiting lists and limited local provision. There are also long waiting lists for children and young people’s mental health services with little alternative provision available.
+
+#### What the government is doing
+
+The 10 Year Health Plan for England sets the path for delivering an NHS fit for the future through 3 radical shifts:
+
+- from hospital to community, moving towards a neighbourhood health service, designed around you
+
+- from analogue to digital, putting power in patient’s hands
+
+- from sickness to prevention, to make the healthy choice the easy choice
+
+Reducing the gap in healthy life expectancy between the richest and poorest areas through tackling health inequalities and the social determinants of health is a core aim of the 10 Year Health Plan.
+
+Core20PLUS5 is the national and system framework to inform action to reduce healthcare inequalities within the NHS. Rural communities are reflected in both the ‘Core20’ most deprived 20% of the national population, and as a PLUS group that should be identified at a local level.
+
+The Urgent and Emergency Care ( UEC ) Plan for 2025/26 sets out commitments to improve UEC performance and patient care across the country. Key commitments include reducing ambulance handovers to a maximum of 45 minutes, reducing Category 2 response times to 30 minutes on average, ensuring 78% of patients are seen in accident and emergency ( A&E ) departments within 4 hours, and reducing the number of 12-hour waits.
+
+To deliver these improvements, the plan sets out key actions including £450 million of capital investment for expanding access to urgent care in primary, community, and mental health settings, including increasing the number of people supported by Urgent Community Response teams and treated in virtual wards. This is alongside upgrading up to 500 ambulances, maximising the availability of emergency vehicles including in rural areas.
+
+Furthermore, all ambulance response time categories include a 90th centile response time standard, which holds ambulance trusts to account for the ‘long tail’ of responses, which can include responses in rural areas with longer travel times.
+
+##### Cancer care
+
+The Department of Health and Social Care ( DHSC ) has now published its National Cancer Plan, setting out its ambition to become a global leader in cancer survival, and to comprehensively improve cancer care in all parts of the country. This means working to end the postcode lottery to ensure that access to the best cancer diagnosis, treatment and care is possible for everyone.
+
+The National Cancer Plan sets out how new training places in royal colleges will address the biggest workforce gaps that NHS Trusts face, prioritising placements in rural and coastal areas where possible, The NHS plan will create more training places for cancer consultants in the places that need them most, rebalancing to remote, rural and coastal areas, helping patients get diagnosed and treated faster as part of the government’s mission to make England a world leader for cancer survival. The government will also target grants to train cancer nurse specialists in high need areas.
+
+Cancer Alliances will receive funding and work proactively with local communities and providers to improve early diagnosis rates. The National Cancer Plan also commits to ensure more equitable access to trials for cancer patients, including rural and deprived patients, so that everyone, no matter where they live, can access cutting-edge treatment.
+
+Transport in rural areas can be a significant barrier to screening uptake. Breast screening and lung screening programmes use mobile units where appropriate to ensure that local communities have access to these services, and, from later this year, the cervical screening programme will offer home kits to women who have missed an appointment by more than 6 months.
+
+### 5.2 Delivering accessible services
+
+#### The challenge
+
+People living in rural areas can experience similar barriers to accessing health services as their urban counterparts. These barriers include inflexible work commitments, limited availability of appointments, and access to GP appointments, which can impact on health outcomes. However, rurality also brings additional barriers that can impact further on an individual’s opportunity to access healthcare provision. These include greater journey distances and limited access to public transport, which may result in additional time and cost in accessing healthcare services and exacerbate health inequalities.
+
+Rural communities tend to face less choice in where they can receive treatment, due in part to the centralisation of services in urban areas and the reduction in the number of smaller rural health care service locations that can deliver diagnostic and minor urgent treatments (for example, cottage hospitals).
+
+#### What the government is doing
+
+The 10 Year Health Plan sets the vision for moving towards a Neighbourhood Health Service, which will help deliver change by embodying our new preventative principle that care should happen as locally as it can, digitally by default, in a person’s home, if possible, in a Neighbourhood Health Centre when needed, and only in a hospital if necessary. Neighbourhood teams and new Neighbourhood Health Centres will form the foundation of a more integrated, community-based system of care – bringing together health, social care and voluntary partners around local populations to deliver more co-ordinated care closer to home.
+
+On 17 March 2026, the DHSC published the Neighbourhood Health Framework to empower local leaders to develop and scale neighbourhood health. It provides provide clarity and consistency to support joined-up partnership between the Integrated Care Boards ( ICBs ) and local authorities, as they work together through Health and Wellbeing Boards and with their partners, to develop locally led Neighbourhood Health Plans. The government expects neighbourhood teams and services to be designed in a way that reflects the specific needs of local populations, including rural communities. We will give significant licence to tailor the approach to local need, recognising, for example, the assets within and challenges facing rural communities. While the focus on personalised, co-ordinated care will be consistent, that will mean the service will look different in rural communities, coastal towns or deprived inner cities.
+
+Neighbourhood Health Plans will be drawn up by local government, the NHS and its partners at single or upper tier authority level under the leadership of the Health and Wellbeing Board, incorporating public health, social care, and the Better Care Fund. The ICBs will bring together these local neighbourhood health plans into a population health improvement plan and use it to inform commissioning decisions, including to improve services and outcomes for rural populations. NHS England has recently published a new strategic commissioning framework to support ICBs in improving health outcomes and ensuring value for money for the public.
+
+There are a range of adjustments made in the core ICB allocations formula that account for the fact that the costs of providing health care may vary between rural and urban areas. Target allocations include 4 adjustments that specifically support remote or sparsely populated areas:
+
+- the emergency ambulance costs adjustment to reflect longer travel times in sparsely populated areas
+
+- an adjustment to remove from the formula supply induced demand in urban areas where people live close to a hospital
+
+- the adjustment for unavoidably small hospitals, to support continued provision by hospitals with 24/7 A&E services that are remote from the wider hospital network and have unavoidably higher costs.
+
+- a travel time adjustment to the community services formula to reflect the additional time taken to travel between appointments in sparsely populated areas
+
+Upper tier and unitary local authorities in England commission and provide a range of public health services that meet the needs of their local population. For rural communities, this includes services such as mobile sexual health testing in the East Riding of Yorkshire, and carrying out NHS health checks in village halls, and libraries in Norfolk and West Sussex. To better support local authorities’ vital public health work we have simplified funding arrangements, consolidating different funding streams into local authorities’ public health grant which will be worth more than £13.4 billion over the 3 year spending review period; and aligned local authority public health allocations with the publication of the multi-year Local Government Finance Settlement, giving local authorities far greater certainty of their funding allocations, enabling them to plan ahead.
+
+### 5.3 Supporting an ageing population
+
+#### The challenge
+
+The proportion of older adults in rural areas is higher than in urban areas and is increasing more quickly than in urban areas . In 2024, 27% of the rural population were aged 65 and over compared to 18% in urban areas outside London. The most prominent age group in rural areas in 2024 was 55 to 59 years (8%)​. Over the last 20 years, average life expectancy has consistently been higher for those living in predominantly rural areas than in predominantly urban areas .
+
+At the same time, the number of working-age individuals able to provide care is slowly declining. Older residents may require more frequent and complex medical interventions yet may face greater difficulties in accessing care due to mobility issues and transport limitations. This can increase pressure on all service providers including community and volunteer-led groups that provide help and combat isolation. The voluntary and community sector provides critical resources for social and preventative care; however, stakeholders report that the demographic profile of volunteers is also ageing rapidly.
+
+#### What the government is doing
+
+The government is progressing towards a National Care Service for adult social care, based on higher quality of care, greater choice and control, and better join up between services - with over £4.6 billion of additional funding available for adult social care by 2028-29 compared to 2025-26, to support the sector in making improvements. The independent commission into adult social care is underway as part of our critical first steps towards delivering a National Care Service. Phase 1 will report this year.
+
+As part of our progress towards a National Care Service, we are committed to ensuring adult social care funding reflects the different costs different communities face, which is why the government has updated the formula which is used to distribute funding for adult social care to local authorities. By including a remoteness adjustment within it, this updated formula will better reflect the cost of providing care in rural communities, ensuring the funding is allocated to the places that need it most.
+
+### 5.4 Mental health
+
+#### The challenge
+
+The prevalence of mental illness in England is high and rising. The latest data shows that 22.6% of people have a clinically significant mental health need , up from 18.9% a decade ago. There may be mental health benefits associated with living in rural areas - for example, one longitudinal study of over 2.3 million people in Wales found that people had a lower risk of anxiety and depression if their home’s immediate surroundings (within 200 to 300 metres) were greener and they could access green and blue spaces nearby - every 10% increase in access to green and blue spaces was linked with a 7% reduction in risk of anxiety and depression. However, living in rural areas may in some instances present risks to mental health , such as reduced access to services or experiences of loneliness and isolation.
+
+Geographic isolation, social loneliness and cultural disconnection may potentially contribute to elevated levels of suicide among farmers. Between 2011 and 2020, male farm workers were 2.2 times more likely to die by suicide compared to the England average.
+
+#### What the government is doing
+
+DHSC are expanding access to digital mental health tools to make it easier than ever for people to access mental health support. This includes expanding access to virtual therapies and enabling people to self-refer to NHS Talking Therapies via the NHS app.
+
+The government is rolling out Mental Health Support Teams in schools and colleges to cover 100% of pupils by 2029. We are embedding support for children and young people’s wellbeing in new Young Futures Hubs to coordinate support services for young people aged 10 to 18, so that there is no wrong front door for people seeking help. Those aged 16 to 24 can also access high quality holistic support at their local Youth Hub. Youth Hubs combine employment help from Jobcentre work coaches with local services for health, housing, mental health and wellbeing, supporting young people – including those not receiving benefits – with access to opportunities and comprehensive support in their local area.
+
+Pilots of community-based Mental Health Centres have begun in both rural and urban locations across the country. Multidisciplinary teams from health, social care and the voluntary sector are working together to deliver a service 24 hours a day, 7 days a week with open access for anyone who requires mental health support. Tackling inequalities is a critical component of the model with specific emphasis being placed upon reaching communities who have not historically felt able to access mental health services. The model is being piloted in Acomb, Whitehaven, Heeley, Birmingham, Tower Hamlets and Lewisham.
+
+For individuals who may need inpatient care for their mental health, DHSC are committed to eliminating inappropriate out-of-area placements. This is part of our 10 Year Health Plan ambition to support more people closer to home by the end of the Parliament.
+
+The government has also recruited 8,500 more mental health professionals across the NHS.
+
+The government will tackle loneliness and the mental health crisis facing our rural communities. We have provided funding for the Tackling Loneliness Hub, an online forum for people working on loneliness to come together and share insights, research and best practice. We are exploring how the Hub can be made more accessible to a broader range of people who work on loneliness, including sports coaches and youth workers. Resources available on the updated Tackling Loneliness Hub will help more people to recognise loneliness and provide them with support and resources to help them intervene earlier.
+
+### 5.5 Access to green spaces
+
+#### The challenge
+
+Green spaces in rural England can offer significant benefits when utilised, including enhanced mental and physical well-being, opportunities for social interaction, stronger community cohesion, and support for environmental sustainability. Initiatives such as the Community Green Spaces Fund, aim to improve access and provide recreational areas. However, access remains a challenge due to several factors including the fact that land is often privately owned, which limits communal use. People with disabilities and chronic conditions may also experience access issues .
+
+#### What the government is doing
+
+Natural England’s Green Infrastructure Framework supports local planning authorities and developers to set and meet policy requirements for green infrastructure in local plans and in new development, including through setting out nationally standards for green infrastructure quality and quantity, such as accessible green spaces.
+
+The NPPF requires local plans to make sufficient provision for green infrastructure, which can include rural assets like trails, woodlands, commons and riversides. The consultation on a new NPPF published in December 2025 proposed a new requirement for local plans to set out standards for green infrastructure provision, drawing on Natural England’s standards.
+
+### 5.6 Recruiting and retaining healthcare workers
+
+#### The challenge
+
+A potential concern is the shortage of healthcare professionals in rural areas, and the difficulties in filling vacancies. This may be compounded by the increasingly centralised provision of health services and the lack of affordable housing in remote areas. Recruitment and retention of staff in rural areas could also be heavily influenced by the amenities and opportunities available to the individual’s wider family, including spousal employment and education provision for children.
+
+#### What the government is doing
+
+The government has committed to publishing a 10-Year Workforce Plan to create a workforce ready to deliver a transformed service. They will be more empowered, more flexible and more fulfilled. This will ensure the NHS has the right people in the right places and will put forward a plan to ensure the NHS reflects the community it serves. DHSC are planning to publish the 10-Year Workforce Plan later in 2026.
+
+DHSC introduced a Golden Hello scheme in 2024 to help dental practices that are struggling to attract people through the usual recruitment routes by supporting them to offer a financial incentive. The scheme is designed to encourage relocation to areas with workforce challenges, to attract new workforce to the NHS, and to retain those who might have otherwise moved into private practice.
+
+The 10 Year Health Plan set out an ambition for providers to recruit locally, expanding apprenticeships and accessible training so the NHS recruits more people from the communities it serves. In July 2025, DHSC launched the Widening Access Demonstrators Programme, providing £5 million of funding to 10 Integrated Care Systems to support people from working class backgrounds in targeted geographies into careers in the health and social care sector. The first year of programme delivery concluded at the end of March 2026, with more than 1,000 people successfully supported into pre-employment programmes. Backed by £15 million in government funding and building on the success of the Widening Access Demonstrators programme, we are extending the Widening Access Demonstrators across 14 ICBs . Alongside this, we will roll out successful proven pre-employment models nationally over the next 3 years helping even more people take their first step into NHS careers.
+
+### 5.7 Digital access to healthcare
+
+#### The challenge
+
+Accessing digital health services depends heavily on both reliable internet connectivity and the digital literacy skills of the local population. Ofcom figures from January 2026 indicate that 66% of rural residential properties have access to gigabit-capable broadband , compared to 89% nationally. This disparity could limit the effective use of digital healthcare services in rural communities. Users also need to feel confident when accessing health services digitally and those who lack digital skills or the necessary device may require an appropriate support mechanism to do so.
+
+#### What the government is doing
+
+NHS England and ICBs have a statutory duty to consider how to reduce inequalities in access to, and outcomes from, health services . This duty on health inequalities is alongside the public sector equality duty and in addition to the NHS Constitution which includes at Principle 1 that the NHS provides a comprehensive service, available to all.
+
+Digital connectivity is a core component of digital inclusion. The NHS recognises that access to digital healthcare depends not only on the availability of online services, but also on whether people have suitable devices, sufficient connectivity, and the confidence and support to use them. Limited broadband or mobile data coverage, particularly in rural and coastal communities, can therefore create practical barriers to using digitally enabled care, including online consultations and the NHS app.
+
+In line with the Inclusive Digital Healthcare Framework , digital routes should be designed to widen choice and improve access where appropriate, while remaining complementary to non-digital support so that people are not disadvantaged when digital access is not possible, preferred or appropriate. Service planning, commissioning, procurement and evaluation should actively consider digital exclusion, including connectivity barriers, so that digital transformation supports inclusive access and contributes to reducing, rather than widening, health inequalities.
+
+To support the implementation of digital tools within adult social care, DHSC are continuing work with sector partners to provide guidance and support to local authorities for digitising assessments. For example, in 2025 DHSC launched the Adult Social Care Assessments Improvement Toolkit (ASCAIT), which directs local authorities to tailored tools such as triage and front door models and digital solutions helping all local authorities enhance assessment processes which, in turn, would extend access to harder-to-reach communities in remote and rural areas.
+
+## 6. Safe communities
+
+Rural communities experience a range of criminal activity in a similar way to urban areas; however, statistics suggest that there is less crime in rural areas per 1,000 population than in urban areas. Statistical evidence also shows a higher charge rate 9% of offences in Predominantly Rural areas (and 6% of offences in Predominantly Urban areas) resulted in a charge/summons in year ending March 2024. And higher general levels of trust in the police in rural areas compared to urban areas, review of the 2023 Crime Survey for England and Wales , shows that when asked whether police in their area could be trusted, 72% of respondents in rural areas agreed; this is higher than in urban areas (68%) – page 77.
+
+However, crimes that might be referred to as rural crimes are of particular concern to rural stakeholders. Stakeholders also report lower police visibility in rural areas, which typically have fewer officers per capita. Findings from the 2023 Crime Survey for England and Wales support this: just 3% of respondents in rural areas reported high police visibility , compared with 14% of respondents in urban areas. Reduced police visibility can make it harder for victims to access support and may contribute to the underreporting of some crimes.
+
+### 6.1 Tackling rural crime
+
+#### The challenge
+
+Although there is no official definition, rural crimes are types of crimes which are prevalent in, or particular to, rural areas. This includes:
+
+- agricultural equipment theft
+
+- machinery theft
+
+- fuel and livestock theft
+
+- wildlife offences including hare coursing
+
+- fly-tipping
+
+- county lines
+
+Agricultural vehicle and machinery theft is an important issue which has a significant impact on rural communities. The scale of the issue is compounded by its links to wider criminal activities such as forced labour, the export of stolen goods, and drug trafficking. Serious Organised Crime Groups operate across the UK and Europe, with evidence of co-ordinated thefts of Global Positioning System ( GPS ) systems from locations as far apart as Scotland, Cornwall, Germany, France, and Finland. Despite this, the national response does not yet reflect the scale or complexity of the threat. Addressing this issue effectively requires a co-ordinated national approach, particularly to overcome barriers in data and intelligence sharing across police force boundaries.
+
+Environmental crimes, such as illegal waste dumping and wildlife poaching, not only cause environmental damage and harm animal welfare but also create safety concerns for residents and are expensive to deal with.
+
+Landowners are currently responsible for paying to clean up the waste, placing a burden on the victims of waste crime which can often be of large scale ( 20% of farmers and landowners surveyed by the Environment Agency have been affected by large scale illegal dumping ).
+
+Tackling wildlife crime protects the natural environment but also confronts the serious organised criminal element behind much crime in rural areas. Illegal hunting, including hare coursing and poaching, is difficult to prosecute. It is also important to recognise the impact that wildlife crime has on farmers and local communities, with hare coursers known to intimidate people, damage farmland and frighten residents.
+
+#### What the government is doing
+
+The government is introducing several legislative reforms to tackle rural crime. The Equipment Theft Act was introduced to tackle the theft of all-terrain vehicles ( ATVs ) and quad bikes which are used by farmers and the agricultural sector. This legislation will help prevent defined equipment being stolen, make it harder for criminals to sell on stolen quad bikes, ATVs and removable GPS systems, and assist the police with recovering and identifying owners of stolen equipment. The Act requires forensic marking to be applied to all new ATVs and quad bikes and removable GPS units, and they will also need to be registered on an appropriate property marking database.
+
+The Act requires secondary legislation before it can come into effect. The Equipment Theft (Prevention) Act SI will define the minimum standards required for forensic marking and specify the type of database which may be used. The secondary legislation will be introduced when parliamentary time allows.
+
+The Crime and Policing Act will introduce a new power for the police to enter and search premises to which stolen items have been electronically tracked by GPS or other means, where the items are reasonably believed to have been stolen and are on those premises. This will apply where it has not been reasonably practicable to obtain a warrant from a court. This will provide a valuable tool for police in tackling stolen equipment and machinery and allow the police to be much timelier in their response to these thefts and significantly help in their efforts to recover stolen items. The Bill is currently expected to gain Royal Assent in 2026.
+
+The government want to see councils make good use of their fly-tipping enforcement powers. These include prosecution through which a landowner’s clearance costs can be recovered from the perpetrator. To help councils make better use of their powers to seize and crush vehicles of suspected fly-tippers, Defra have already published best practice guidance and case studies. The government has secured powers in the Crime and Policing Act 2026 to issue statutory fly-tipping enforcement guidance to help councils make full and proper use of their powers. The government has also secured powers for the courts to award between 3 and 9 penalty points on driving licences for those found guilty of fly-tipping. This would make it harder for offenders to continue dumping illegally if they are disqualified from driving and send a clear warning that fly-tipping is not tolerated.
+
+The government has committed in its manifesto to force fly-tippers and vandals to clean up their mess. Defra will soon consult on giving local councils the powers to issue fly-tippers with conditional cautions, one of a range of pre-court community-based sanctions. These cautions could see offenders complete up to 20 hours of unpaid work, cleaning our streets or parks, and pay back the cost of cleaning up the waste that they have dumped on public land. If an offender admits to the crime, agrees to the caution and complies with the conditions, they will not face prosecution.
+
+The National Police Chiefs’ Council’s ( NPCC ) Rural and Wildlife Crime Strategy, published in November 2025, sets out operational and organisational policing priorities in respect of tackling crimes that predominantly affect rural communities. The strategy outlines machinery theft and organised acquisitive rural crime as its key priorities whilst the strategy runs until 2028. The strategy was drafted in collaboration with Defra and the Home Office, with a joined-up approach helping ensure the weight of government is put behind tackling rural crimes such as the theft of high-value farm equipment and livestock.
+
+### 6.2 Developing rural policing
+
+#### The challenge
+
+The absence of a defined career pathway into rural policing as a specialised role presents a challenge for workforce development. The lack of training on the rural context extends to threat assessment training for call handlers when dealing with rural victims. There is a question of whether call handlers, who tend to live and work in urban areas, understand the issues and risks faced by rural communities and businesses, such as reduced opportunity to put distance between themselves and suspects or how to deal with livestock related requests for police assistance as well as livestock crime.
+
+Similarly, co-ordination and sharing good practice remain a challenge. Effective community-led responses to crime, such as rural watch and farm watch schemes, are not consistently promoted or replicated across all rural areas. Without wider dissemination of successful approaches to community engagement, opportunities to empower local people and support the safer streets mission may be missed. The lack of political coordination at national, regional and local level was also identified as a challenge. This can often prevent action in addressing specific rural crime challenges. Co-ordination is needed in relation to central government, and at the local and regional level across local authorities, local councils, Police and Crime Commissioners, police services, and with local and regional community and business groups and organisations.
+
+#### What the government is doing
+
+The College of Policing has launched the national Neighbourhood Policing Programme – Career Pathway, with the first phase of training, a digital learning module, rolled out in June 2025 during the Neighbourhood Policing Week of Action. This marks a significant step in professionalising neighbourhood policing by providing specialist, structured training to police officers and police community support officers, equipping them with the skills and confidence to engage communities including in rural areas, problem solve, and tackle anti-social behaviour.
+
+### 6.3 Police visibility
+
+#### The challenge
+
+Despite lower crime rates than urban areas, stakeholder-run surveys suggest respondents view rural crime as a significant issue that is not taken seriously. Stakeholders report that rural victims of crime often feel vulnerable due to limited police presence and geographic isolation. Addressing this will require improved policing strategies, community engagement, and better crime prevention measures, which could lead to increased confidence and feelings of safety in rural areas.
+
+#### What the government is doing
+
+When properly resourced and embedded, neighbourhood policing fosters deep-rooted relationships between officers and the public, deterring crime and helping people feel safe. As part of the Safer Streets Mission to reduce serious harm and increase public confidence in policing and the criminal justice system, the government is committed to strengthening neighbourhood policing through the Neighbourhood Policing Guarantee.
+
+Forces are already delivering the foundation commitments of the Guarantee. Every community, including in rural areas, has named, and contactable neighbourhood officers dedicated to tackling the issues facing their communities. Police forces are now providing a guarantee of 72-hour response time to neighbourhood queries and ensuring regular beat meetings are taking place, to provide local communities with a direct platform to shape policing priorities in their area. By the end of this Parliament, every community will benefit from the Neighbourhood Policing Guarantee, with national standards in place to ensure officers are visible and present in communities and not routinely abstracted to other duties. Neighbourhood policing areas will be defined in collaboration with local partners; and 13,000 additional officers, police community support officers and specials recruited, strengthening visible policing.
+
+### 6.4 Domestic violence and violence against women and girls
+
+#### The challenge
+
+Domestic violence in rural areas can leave victims feeling isolated and unsupported. Geographic remoteness and limited access to support can contribute to a lack of intervention. Close-knit and traditional social structures can discourage reporting due to fear of stigma. Addressing these issues requires improved support services, better policing strategies, and increased awareness to protect vulnerable individuals.
+
+Violence against women and girls is not localised; it can happen to anyone, anywhere in the country. But for victims, survivors and their families, too often where you live and who you are dictates the support that you can access. So, when victims and survivors do seek help, the support available can be patchy and unpredictable. Limited coordination between commissioners and frontline services means gaps persist, and short-term funding cycles make planning and delivery difficult. As a result, victims can fall through the cracks, and disparities remain, particularly for groups such as disabled adults, who experience significantly higher rates of domestic abuse and sexual assault.
+
+#### What the government is doing
+
+Tackling violence against women and girls is a top priority for this government, and our manifesto included the ambition to halve it in a decade as part of the Safer Streets Mission. Halving violence against women and girls in a decade is an ambitious aim that requires us to take a transformative approach to the way we work across government, public services, the private sector and charities, to be successful in achieving it.
+
+The ‘Freedom from Violence and Abuse: a cross-government strategy to build a safer society for women and girls’, published on 18 December 2025, sets out the strategic direction and concrete actions to prevent violence and abuse, pursue perpetrators, and support victims, and to deliver our unprecedented commitment to halve violence against women and girls in a decade.
+
+Last year, the government commenced a call for evidence across a network of rural stakeholders to inform understanding of the availability of support services and delivery methodologies that might be effective in rural areas. We will work to understand the findings of this evidence to help to confront the disparities in the provision of support.
+
+Just as we are committed to delivering a consistent, high-quality policing response across England and Wales, we must also confront the disparities in the provision of support so that every victim, whether in a city or a rural village, can access the help they need.
+
+### 6.5 Statistics and reporting
+
+#### The challenge
+
+Stakeholder surveys suggest that many rural crimes do not get reported and the impact of crime in rural areas may be higher than anticipated. The Taskforce identified that this lack of data may have an impact on how rural crime is perceived and the priority it receives. It was also suggested that low level crimes are not being reported due to victims not seeing the point of seeking enforcement action. This undermines the reliability of data that shows crime as lower in rural areas compared to urban areas. Participants also said that crime is also poorly recorded and efficient intelligence sharing between forces can be delayed due to incompatible systems.
+
+Additionally, current data does not give an indication of cost and impact of reported crime. The example provided was that the theft of a bottle of milk from a convenience store is recorded the same as the theft of a tractor despite the latter example having potentially short, medium and long-term impacts on a business. Understanding the impact of crime is required to inform prioritisation of response. A lack of this evidence leads to a lack of prioritisation and funding for rural crime prevention, hampering targeted interventions and long-term planning for rural economic development.
+
+#### What the government is doing
+
+Improving the visibility of neighbourhood policing through expanding neighbourhood policing may improve reporting rates of rural crimes. However, the government will explore further actions to improve rural crime reporting and statistics.
+
+## 7. Connected communities
+
+### 7.1 Transport links
+
+#### The challenge
+
+Transport provision is crucial for ensuring that people have access to opportunity. Some people rely on public transport to access education, jobs, healthcare and other vital aspects of their everyday life. However, rural areas often have poorer public transport than urban areas, with infrequent services to key destinations such as towns and key public services such as hospitals. Consequently, those who live and work in rural areas are more reliant on car usage. Only 10% of households in rural areas had no car or van in 2024 , compared with 20% in urban areas outside London. In 2024, children living in rural settlements most commonly travelled to school by car or van, which accounted for 41% of journeys. Public transport made up a further 30%, while 26% of journeys were completed by walking or cycling (active travel). For children in urban areas, active travel was the most common mode, representing 49% of school journeys – nearly twice the share for those in rural settlements. Eleven- to 16-year-olds in the most rural areas travelled nearly twice as far as those in the most urban areas to get to school. 52% of 16 to 19 year olds in rural areas do not have a FE college within 30 minutes travel time.
+
+The cost and flexibility of transport is a priority area for the government to address. Costs must remain reasonable, so they do not become a barrier to accessing work, education, healthcare or social opportunities. There was acknowledgement that rural areas consist of many different communities, each with unique transport needs. As such, solutions should be place-based, tailored to local requirements rather than a one-size-fits-all model.
+
+Likewise, funding is critical to the success of rural transport systems, influencing growth for both residents and visitors. However, concerns were raised about the ad hoc nature of current funding arrangements across the country. Considering fiscal constraints, there was also debate around the extent to which public transport should support people living in areas beyond their affordability range.
+
+#### What the government is doing
+
+The government recognises this and is implementing a range of policies that aim to better connect people. The DfT is providing all local transport authorities with multi-year consolidated funding settlements which will give Local Transport Authorities greater freedom and flexibility to make the strategic decisions that best impact their local areas and reflect their local geographies.
+
+Funding has been allocated by the DfT to support the development of local transport expertise through the appointment of at least one dedicated bus officer in each local authority and the establishment of the Bus Centre of Excellence. This Centre facilitates best practice sharing and delivers sector-specific training. Additional support includes the Quality Rural Bus Conference and an accredited training programme for local authorities. These initiatives aim to enhance local authorities’ ability to design transport services tailored to local needs, moving away from generic models that may not address specific community and business challenges.
+
+The Bus Services Act 2025 supports the government’s commitment to deliver better buses and empowers local leaders in England to choose the right bus model for their area. This will deliver tangible improvements to bus services in both rural and urban areas. The Act enables all local transport authorities to franchise local bus services. Bus franchising gives authorities greater control over key aspects of services – where they run, when they run and the standards of the services – with the potential for cross-subsidy between profitable and less-profitable routes.
+
+Alongside legislative reform, the DfT has updated bus franchising guidance to streamline the process – making bus franchising a more realistic option for authorities.
+
+The Act also introduced new changes that strengthen and improve Enhanced Partnerships between local authorities and local bus operators including a measure to provide better support for services that have been defined as socially necessary local services. This means that if a local transport authority wants to cancel or significantly vary a bus service in any way, it must first explore the alternative options. The government has also revised its Enhanced Partnerships Guidance and produced a new Enhanced Partnerships Manual to help local transport authorities in understanding and implementing these new changes. This includes additional information on new measures such as Minimum Standards, and how it is tied to future funding.
+
+There are other measures besides the Act that help safeguard bus services in rural areas:
+
+- local authorities are required to develop and maintain Bus Service Improvement Plans, which include how bus services will support access to employment and key local services such as education, training and healthcare as well as to shops
+
+- the £3 National Bus Fare Cap, extended to end March 2027, continues to protect against higher fares particularly in rural areas
+
+- Local Authority Bus Grants provide funding to Local Transport Authorities to maintain and improve local bus services, including supporting services that may not be commercially sustainable or funding local fare schemes e.g. discounts for young adults – the grants also include a capacity and capability element to fund training and some posts within authority schemes
+
+- the English National Concessionary Travel Scheme provides free off-peak travel for those of state pension age and with eligible disabilities, helping to connect them to people and places and addressing social isolation, a significant issue in rural communities
+
+- the government has allocated funding to 5 areas to take forward bus franchising pilots. These areas are in Cheshire West and Chester; Cornwall; Hertfordshire; York and North Yorkshire; and Cumbria – the pilots will test different franchising models to investigate how they can be implemented and deliver improved bus services for passengers, including in more rural locations. The pilots will provide funding, guidance, and practical resources to local transport authorities to identify the most suitable approach to bus franchising and wider bus reform measures
+
+- Demand Responsive Transport (DRT) has the potential to improve the local transport offer in areas where demand is more dispersed, and the distances involved make it more challenging to maintain or provide services which meet residents’ diverse needs – the DRT Best Practice Guidance provides local authorities with a comprehensive guide to setting up and deploying DRT schemes
+
+In April, the DfT launched the government’s vision for buses and approach to delivery. The vision of a bus service is one which is attractive to, accessible to and well used by everyone in the community; and where the needs and priorities of bus passengers (both existing and potential) are front and centre of everything those involved in delivering the bus service do. The government understands that a rural area with an attractive and well-used bus service can and should be a place which offers opportunity and a quality environment, is thriving and in which people and businesses want to invest. We are committed to ensuring that tickets are affordable, including for younger people, in both urban and rural areas
+
+In December 2025, the government announced £626 million funding for local authorities from 2026-27 to 2029-30 to deliver walking, wheeling and cycling schemes, enough for 500 miles of new walking and cycling routes and 170,000 more active trips per day. This builds on the almost £300 million funding announced in February 2025 for active travel in 2024/25 and 2025/26. On 30 March 2026, a further £108 million was announced for cycle training and walk to school programmes over the next 3 years. Together, this investment will promote healthier lifestyles and provide low-cost, accessible travel options for pupils and staff, increasing the amount of choice in how journeys to school are made.
+
+In April 2026, the DfT also published Better Connected: A Strategy for Integrated Transport, setting out a clear national vision for a transport system in England that is safe, reliable, affordable and accessible, so people can get on in life and make the journeys they need to easily. The strategy brings together different transport modes into a single, people-focussed approach, aligning national and local partners around shared principles and priorities while recognising the importance of local flexibility and ensuring that transport solutions reflect the different needs of communities. The department is taking targeted action across a number of areas including committing £6 million to a new rural integrated transport demonstrator and developing a transport poverty tool to help identify where poor connectivity or affordability limits access to jobs and services.
+
+The government is investing a record £7.3 billion over the next 4 years to repair and renew local roads and fix potholes, enabling local authorities to move away from short‐term repairs and invest in more proactive and preventative maintenance.
+
+### 7.2 Home to school travel
+
+#### The challenge
+
+Local authorities have responsibilities to arrange free home to school travel for some children. Children with SEND have increasingly been travelling long distances to their education setting.
+
+#### What the government is doing
+
+This government’s vision for schools is rooted in strong local provision for all children, including those with SEND . Children and young people should be able to learn at a school close to their home, alongside their peers, rather than travelling long distances from their family and community. In the White Paper, Every child achieving and thriving , and the accompanying consultation on SEND reform, Putting children and young people first , the government has committed to creating a more inclusive mainstream school system where more children can be educated in a local mainstream school, as part of their local community, with flexible, timely, and accessible support.
+
+This will mean fewer children travelling long distances to school, leaving the service better able to meet the needs of those that rely on it.
+
+### 7.3 Digital connectivity
+
+#### The challenge
+
+Digital connectivity is an important driver of growth, productivity and opportunities. However, digital connectivity in rural areas lags urban areas.
+
+66% of premises in rural residential areas have access to gigabit-capable broadband, compared with 93% in urban areas. According to Ofcom’s Connected Nations 2026 Spring Update report, approximately 21,218 or 0.6% of all rural premises in England are without access to decent broadband from a fixed line or fixed wireless broadband service.
+
+However, as a result of increased availability of satellite broadband connections at cheaper prices, more consumers can now access decent connectivity. Ofcom reports that the overall number of residential premises eligible for the Broadband Universal Service Obligation (USO) has fallen to 4000 premises (as of January 2026). More recent changes to the market offer indicate that availability of affordable satellite broadband connectivity may have even further reduced the eligibility for the Broadband USO beyond the figures reported by Ofcom.
+
+63% of rural premises in England have 4G indoor coverage from all 4 mobile operators (Virgin Media O2, Three, EE and Vodafone), compared to 96% of premises in urban areas. Approximately 2% of rural areas have no 4G indoor coverage from any mobile network operator. Four operators are still referenced for the purpose of Ofcom’s reporting on mobile coverage, despite the merger of Vodafone UK and Three UK being completed.
+
+Ofcom began reporting on standalone 5G coverage for the first time in its Connected Nations Annual Report 2025 (19 November 2025). This will help the government to track progress against our ambition for all populated areas of the UK to have access to higher quality standalone 5G by 2030. As of January 2026, standalone 5G is already available outside 81% of rural premises in England. This compares to 97% of urban premises in England.
+
+For rural enterprises, reliable, high-speed internet access is viewed as a necessity and efforts to upskill and modernise are likely ineffective without the digital infrastructure to support them.
+
+Rural stakeholders suggested that government should treat mobile and broadband connectivity as essential services, like water or electricity, so that rural areas can unlock access to services, markets, and information that are vital for growth.
+
+Digital access enables remote working, which presents a powerful opportunity to attract professionals to live and work in rural communities. This shift has the potential to diversify local employment and create a multiplier effect stimulating demand for local services, supporting small businesses, and contributing to the long-term sustainability and vibrancy of rural economies.
+
+Mobile connectivity is an enabler of rural productivity, especially in a digital-first world where access to apps, services, and secure platforms often depends on reliable signal strength. ‘Not spot areas’ with no mobile coverage pose a serious barrier, potentially preventing residents and businesses from participating in the modern digital economy. However, these continue to reduce as a result of the proliferation of terrestrial networks and innovation in non-terrestrial Direct to Device solutions. Access to digital connectivity and position, navigation and timing ( PNT ) and earth observation services from an economic perspective is key to unlocking potential productivity benefits in rural areas. For example, digital technologies in farming, such as precision agriculture, automated machinery, and real-time data monitoring can significantly boost efficiency and output. But these innovations are only viable if services from mobile, wireless and satellite networks are reliable and accessible across rural areas.
+
+#### What the government is doing
+
+Through Project Gigabit, the government is delivering gigabit-capable broadband to homes and businesses not included in suppliers’ commercial roll out plans. The government’s goal is for UK-wide gigabit coverage by 2032, ensuring at least 99% of UK premises can access a gigabit-capable connection. As of the end of December 2025, over 1.3 million premises in rural and hard to reach communities across the UK had been upgraded to gigabit-capable broadband through government-funded programmes.
+
+To address mobile coverage ‘Not Spots’ in rural England, the Shared Rural Network ( SRN ) is improving 4G connectivity for people living, working and visiting some of the country’s most remote communities. The programme has already met its core objective of delivering 95% geographic 4G coverage from at least one mobile network operator a year ahead of schedule, reflecting strong collaboration between the government and industry. In England, Shared Rural Network investment is now translating into tangible benefits for rural areas, currently there are 35 upgraded masts delivering new coverage, facilitating economic activity, access to public services and community resilience. While progress has been substantial, targeted delivery will continue through to January 2027 to address the remaining hardest to reach locations, ensuring that rural communities are not left behind as digital connectivity becomes an increasing critical foundation for growth and inclusion.
+
+Beyond 4G, we have already set out above our ambitions for Standalone 5G, which are supported by, and in line with, announcements from all 3 major mobile operators. We also expect several satellite-based solutions to become more widely available across rural England during 2026.
+
+The importance of digital connectivity for all UK citizens is one of the areas highlighted in the Digital Inclusion Action Plan, published in February 2025. This sets out the first steps the government is taking towards our ambition of delivering digital inclusion for everyone across the country, regardless of their circumstances. Alongside widening access to connectivity and digital devices, these actions are targeted at initiatives for boosting digital skills and confidence and getting support for people in their own communities so everyone can reap the benefits of technology.
+
+### 7.4 Electric vehicle ( EV ) charging infrastructure
+
+#### The challenge
+
+Delivering a resilient future-proofed energy network is essential to ensure rural communities are not being left behind in the transition to Net Zero. ChargePoint availability is increasing everywhere but regional disparities remain. Some rural areas face additional challenges when rolling out public EV charging infrastructure such as higher grid costs, unreliable service, and infrastructure which cannot meet modern needs. However, In the most recent quarter ( October 2025 to January 2026 ), charging device provision has increased more in majority rural authorities than in urban authorities outside of London
+
+To enable rural areas to fully participate in the transition, distribution network operators must work proactively and collaboratively to upgrade infrastructure and streamline processes. In addition, charge point infrastructure should be planned to ensure that comprehensive coverage and usability meet the needs of residents, visitors and businesses.
+
+#### What the government is doing
+
+The government is committed to ensuring that everyone, everywhere can make the transition to an EV , and is determined no place will be left behind. There are now more than 120,000 public chargers across the UK (1 May 2026). Between 1 May 2025 and 1 May 2026, there was an average of 32 public EV chargers added to the network per day. Encouragingly, as of 1 April 2026, 17.2% of public EV chargers in England and Wales were in rural areas, closely aligning with the 17.6% of the population that lives in rural areas. Local authorities are setting out their EV ambitions in local strategies, such as their Local Transport Plans, and local authority officers are planning and delivering projects using their Local EV Infrastructure ( LEVI ) funding
+
+The LEVI Fund will deliver over 100,000 additional charging devices across England. Funding allocations were designed to improve regional disparities and factored in the proportion of residents within a local authority that are in rural areas. This meant local authorities in rural areas were allocated additional funding compared to urban ones.
+
+Rural areas also have access to grants to support residents and visitors alike. The grants include support for people living in flats and rented accommodation, those with accessible on-street parking, landlords, businesses, workplaces, charities and public sector organisations and small accommodation businesses. The grants are currently available until March 2027.
+
+## 8. Conclusions and next steps
+
+### 8.1 Conclusions
+
+Through the work of the Rural Taskforce, the government has gained a clearer understanding of the opportunities and challenges facing rural England. Key findings include:
+
+- Economic Potential and Barriers: rural areas contribute over £259 billion annually to the economy, yet productivity remains below the national average – closing this gap is essential for national growth and improving living standards in rural communities
+
+- Infrastructure and Housing: affordable housing delivery is insufficient, and energy infrastructure is ageing – fuel poverty is deeper in rural areas, and infrastructure limitations risk embedding inequalities in the clean energy transition
+
+- Skills and Education: while rural pupils often achieve strong GCSE results, progression to higher education is lower, and skills gaps persist across SMEs and growth sectors – connectivity and transport barriers compound these challenges
+
+- Health and Wellbeing: rural communities experience hidden health inequalities, limited access to services, and rising mental health needs – digital healthcare offers opportunities but depends on connectivity and digital literacy
+
+- Safety and Community Resilience: rural crime, including equipment theft and wildlife offences, remains under-reported and poorly understood, requiring better data and co-ordinated policing strategies
+
+- Connectivity: transport and digital access are critical enablers of opportunity – there remain gaps in access to broadband and mobile which hinder growth and service delivery
+
+### 8.2 Next steps
+
+The government will take forward the following actions to deliver on our ambition for thriving, inclusive, and sustainable rural communities:
+
+- embed rural proofing: ensure all departments systematically assess rural impacts in policy and investment decisions, supported by updated guidance and monitoring frameworks
+
+- rural proof devolution: implement the English Devolution and Community Empowerment Act and ensure rural priorities are reflected in local growth plans and spatial development strategies
+
+- invest in enablers: deliver affordable housing through the strengthened National Planning Policy Framework and the £39 billion Social and Affordable Homes Programme expand energy resilience via the Warm Homes Plan, Boiler Upgrade Scheme, and Local Power Plan improve transport through the Bus Services Act and local authority bus grants enhance digital connectivity through Project Gigabit and the Shared Rural Network
+
+- strengthen collaboration: foster joined-up delivery across central government, local authorities, businesses, and the voluntary sector, including through the Local Net Zero Delivery Group and Clean Energy Jobs Plan
+
+- develop metrics: create robust indicators to monitor rural sustainability, service delivery, and economic resilience, building on tools such as Defra ’s Statistical Digest of Rural England
+
+- promote community engagement: expand initiatives like the Great British Energy Community Fund and Community Benefits Scheme to ensure rural communities share in the benefits of hosting infrastructure
+
+We must also clearly outline how we intend the government to deliver for rural areas as a principle. We call on:
+
+- departments across Whitehall to consider rural priorities in all major strategies and funding streams, including the Industrial Strategy, Post-16 Education and Skills White Paper, and 10-Year Health Plan
+
+- local leaders to champion rural voices in devolved governance and planning, using tools such as local growth plans and spatial development strategies
+
+- industry and investors to seize opportunities in rural growth sectors, from clean energy to advanced manufacturing, supported by the Clean Energy Workforce Strategy and SME finance programmes
+
+- community organisations to partner in delivering solutions that reflect local needs and aspirations, leveraging funding streams such as the Pride in Place Programme and Community Green Spaces Fund
+
+Together, we will unlock the full potential of rural communities—building a fairer, greener, and more prosperous England for all.
+
+### Monitoring and Accountability
+
+The government will ensure that delivery against these commitments is transparent, measurable, and accountable. This will include:
+
+- cross-government metrics: Defra will lead the development of indicators with other departments to monitor rural sustainability, service delivery, and economic resilience – these metrics will be published alongside annual rural proofing reports
+
+- annual reporting: progress will be reported through the Rural Proofing Annual Report, detailing how policies and programmes—such as the Industrial Strategy, Social and Affordable Homes Programme, and Warm Homes Plan—are delivering for rural communities
+
+- cross-Government Board: a new board will review the effectiveness of rural proofing and assess real-world impacts of policy decisions, ensuring accountability across Whitehall
+
+- programme-level evaluation: major initiatives will include built-in evaluation mechanisms: Project Gigabit and Shared Rural Network will report quarterly on coverage milestones Social and Affordable Homes Programme will publish the total number of affordable homes that the programme delivers in rural areas annually via an Annual Report on the programme Warm Homes Plan and Boiler Upgrade Scheme will track uptake and energy efficiency improvements in rural areas Clean Energy Jobs Plan will monitor workforce growth and regional distribution
+
+- stakeholder engagement: ongoing dialogue with rural stakeholders will inform continuous improvement, including through the Local Net Zero Delivery Group and community-led energy schemes
+
+## Annex 1: key thematic outcomes and supportive government policy and programmes
+
+Through working with the Rural Taskforce and a wide range of government departments we identified 6 themes that underpin thriving, inclusive and sustainable rural communities. The government programmes and policies highlighted alongside them below, are critical to unlocking positive futures for rural people, communities and businesses.
+
+1. Rural growth – rural businesses and critical industries, operate in an environment that leads to success for them, the people they employ and the wider national economy.
+
+i. Department for Business and Trade – Industrial Strategy
+
+ii. Department for Business and Trade – Backing your businesses: our plan for SMEs
+
+iii. Ministry for Housing, Communities and Local Government – English Devolution (including formation of new Strategic Authorities, and implementation of local growth plans).
+
+iv. Ministry for Housing, Communities and Local Government – English Devolution and Community Empowerment Act.
+
+v. Ministry for Housing, Communities and Local Government– Pride in Place Strategy
+
+vi. Department for Culture, Media and Sport – Visitor Economy Growth Strategy
+
+2. Education and skills for employment – children have the best start in life and young people and adults in rural areas are equipped with the right skills, training, and opportunities to access meaningful employment and contribute to the local economy.
+
+i. Department for Education – Best Start in Life ( BSIL ) Strategy
+
+ii. Department for Education – The Schools White Paper
+
+iii. Department for Education – The Schools National Funding Formula ( NFF )
+
+iv. Department for Education – Targeted Retention Incentives
+
+v. Department for Education – Teaching School Hubs
+
+vi. Department for Education and Skills England – the Post 16 Education and Skills
+White Paper
+
+vii. Department for Work and Pensions, HM Treasury, Department for Education – Get -Britain Working White Paper, Department for Culture, Media and Sport – Visitor Economy Growth Plan
+
+3. Housing, energy and infrastructure planning – people living and working in rural areas have access to affordable, suitable, and sustainable housing that meets local needs and supports community stability. Rural areas have energy infrastructure fit for their future needs and nationally significant infrastructure projects are developed in the right locations addressing local and national needs.
+
+i. Ministry for Housing, Communities and Local Government – National Planning Policy Framework
+
+ii. Ministry for Housing, Communities and Local Government – Social and Affordable Homes Programme
+
+iii. Ministry for Housing, Communities and Local Government – Right to Buy
+
+iv. Ministry for Housing, Communities and Local Government – The Planning Capacity and Capability Programme
+
+v. Department for Energy Security and Net Zero and Great British Energy – The Local Power Plan
+
+vi. Department for Energy Security and Net Zero – The Great British Energy Community Fund
+
+vii. Department for Energy Security and Net Zero – Electricity Transmission Design Principles
+
+viii. Department for Energy Security and Net Zero – The Local Net Zero Delivery Group
+
+ix. Department for Energy Security and Net Zero – Clean Power 2030 Action Plan and Community Benefits fund
+
+x. Ministry for Housing, Communities and Local Government – The Planning and Infrastructure Bill
+
+xi. Department for Energy Security and Net Zero – The end-to-end review of the connection’s regulatory framework
+
+xii. Department for Energy Security and Net Zero – The Reformed National Pricing Programme
+
+xiii. Department for Energy Security and Net Zero – Warm Homes Plan and Fuel Poverty Strategy
+
+xiv. Department for Energy Security and Net Zero – Private Rented Sector Minimum Energy Efficiency Standards
+
+xv. Department for Energy Security and Net Zero – The Social Housing Fund and Warm Homes: Local Grant
+
+xvi. Department for Energy Security and Net Zero – Boiler Upgrade Scheme
+
+xvii. Department for Energy Security and Net Zero – Framework for electricity distribution price control (ED3)
+
+xviii. Ministry for Housing, Communities and Local Government – the Renewable and Low Carbon Energy Planning Practice Guidance
+
+xix. Department for Energy Security and Net Zero – Strategic Spatial Energy Plan ( SSEP )
+
+xx. Ofgem – Centralised Strategic Network Plan ( CSNP )
+
+xi. Department for Energy Security and Net Zero / NESO /Ofgem – Regional Energy Strategic Plans ( RESPs )
+
+xii. Department for Energy Security and Net Zero – The Clean Energy Jobs Plan
+
+4. Health and wellbeing – people living in rural areas can access the healthcare they need for good physical and mental health and wellbeing, enabling them to contribute to wider aspects of society.
+
+i. Department for Health and Social Care – The 10-year Health Plan
+
+ii. Department for Health and Social Care – National Neighbourhood Health Implementation Programme
+
+iii. Department for Health and Social Care – The Urgent and Emergency Care ( UEC ) Plan
+
+iv. Department for Health and Social Care – The Inclusive Digital Healthcare Framework
+
+v. Department for Science, Innovation and Technology – Digital Inclusion Action Plan – First Steps
+
+vi. Department for Health and Social Care – NHS England’s Core20PLUS5 framework
+
+vii. Department for Culture, Media and Sport – Young Futures Hubs Natural England Green Infrastructure Framework
+
+5. Safe communities – people in rural areas feel safe and supported, with effective responses to crime and anti-social behaviour.
+
+i. Home Office – Neighbourhood Policing Guarantee
+
+ii. Home Office – Neighbourhood Policing Programme – Career Pathway
+
+iii. Home Office – The Equipment Theft Act
+
+iv. Home Office – The Crime and Policing Bill
+
+v. Home Office and Department for Environment, Food and Rural Affairs – The Rural and Wildlife Crime Strategy
+
+6. Connected communities – Rural people and businesses can access opportunities and services through effective public transport and digital connectivity.
+
+i. Department for Transport – The Local Authority Bus Grant
+
+ii. Department for Transport – The Bus Services Act
+
+iii. Department for Transport – Bus Service Improvement Plans
+
+iv. Department for Transport – Cycling and Walking Investment Strategy
+
+v. Department for Transport – A Gear Change, A Cycling and Walking Plan for England
+
+vi. Department for Transport – The Bus Fares Cap
+
+vii. Office for Zero Emission Vehicles – Local EV Infrastructure Funding
+
+viii. Department for Science, Innovation and Technology – Project Gigabit
+
+xi. Department for Science, Innovation and Technology – Shared Rural Network
+
+x. Natural England Gren Infrastructure Framework
+
+xi. Department for Environment, Food and Rural Affairs – Environmental Improvement Plan
+
+xii. Department for Culture, Media and Sport – Visitor Economy Growth Plan
+
+## Annex 2 Full stakeholder engagement List
+
+- Action with Communities in Rural England
+
+- Association of Police and Crime Commissioners
+
+- Campaign to Protect Rural England (CPRE)
+
+- Community Energy Together
+
+- Connectivity UK
+
+- Cornwall and Isles of Scilly Integrated Care Board
+
+- Countryside Alliance
+
+- CTA UK
+
+- Digital Connectivity Forum
+
+- Early Years, Inequalities and Wellbeing, Education Policy Institute
+
+- English Rural
+
+- Federation of Small Businesses
+
+- Healthwatch England
+
+- Mobile UK
+
+- National Association of Local Councils
+
+- National Farmers Union
+
+- National Innovation Centre for Rural Enterprise
+
+- National Police Chiefs Council, National Rural Crime Unit
+
+- National Rural Crime Unit
+
+- Nuffield Association
+
+- Plunkett UK
+
+- RABI
+
+- Regen
+
+- Renewable UK
+
+- Rural Coalition
+
+- Rural Crime Network
+
+- Rural Housing Solutions
+
+- Rural Services Network
+
+- Sharenergy
+
+- Shropshire & Telford Community Energy
+
+- South Western Ambulance Service NHS Foundation Trust
+
+- The Country Land and Business Association (CLA)
+
+- Transport East
+
+- Westmorland and Furness Council

@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目、答案与证据链成立。A、C、E分别依赖跨章节的收入反推与贡献率计算、利润分层增量传播、平均资产口径转换；B、D、F各含可辨识的口径、依赖传播或展示精度陷阱。T8.1与Full分类符合真实能力要求。8轮均未给出唯一正确组合ACE，正确率为0%，满足终审接收条件。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABCE，虽包含A、C、E，但额外选择了不成立的B。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "输出ABE，误选不成立的B且漏选成立的C。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目、答案与证据链成立。A、C、E分别依赖跨章节的收入反推与贡献率计算、利润分层增量传播、平均资产口径转换；B、D、F各含可辨识的口径、依赖传播或展示精度陷阱。T8.1与Full分类符合真实能力要求。8轮均未给出唯一正确组合ACE，正确率为0%，满足终审接收条件。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"},{\"rollout_id\":2,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"},{\"rollout_id\":3,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"},{\"rollout_id\":4,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"},{\"rollout_id\":5,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"},{\"rollout_id\":6,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABCE，虽包含A、C、E，但额外选择了不成立的B。\"},{\"rollout_id\":7,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"},{\"rollout_id\":8,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"输出ABE，误选不成立的B且漏选成立的C。\"}],\"repair\":null}",
+  "judged_at": "2026-08-12T08:05:59.547Z"
+}

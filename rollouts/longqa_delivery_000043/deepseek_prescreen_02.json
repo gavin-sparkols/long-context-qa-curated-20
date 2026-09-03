@@ -1,0 +1,18 @@
+{
+  "rollout_id": 2,
+  "raw_output": "[Answer]\nABCDE",
+  "reasoning_content": "",
+  "predicted_answer": [
+    "ABCDE"
+  ],
+  "predicted_choice_labels": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "exact_match": false,
+  "answered_at": "2026-08-12T07:54:51.589Z",
+  "answering_model": "deepseek-chat"
+}

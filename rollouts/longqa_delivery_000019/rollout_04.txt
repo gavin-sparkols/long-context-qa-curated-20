@@ -1,0 +1,4 @@
+[Answer]
+1.C与B：前者更早；A与D：文档无法确定；E与F：文档无法确定；A与E：前者更早；D与E：前者更早；B与D：后者更早；C与A：文档无法确定。
+2.含新功能的Microsoft 365 Family计划比Classic Family每年贵25英镑。
+3.不能。文档实际表明CMA的调查基于“现有和既定的相关不公平商业惯例立法”，且明确指出该调查与关于Digital Markets, Competition, and Consumers Act 2024的政府咨询是分开进行的（separate），并未确认该法案是执法权力的直接法源。

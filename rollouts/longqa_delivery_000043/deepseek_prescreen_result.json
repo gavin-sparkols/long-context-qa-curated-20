@@ -1,0 +1,13 @@
+{
+  "skipped": false,
+  "passed": true,
+  "correct": 0,
+  "total": 4,
+  "expected_choice_labels": [
+    "A",
+    "C",
+    "E"
+  ],
+  "rule": "仅0/4完全匹配进入千问",
+  "screened_at": "2026-08-12T07:54:51.589Z"
+}

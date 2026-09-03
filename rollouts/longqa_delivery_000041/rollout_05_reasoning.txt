@@ -1,0 +1,415 @@
+The user wants me to verify six statements (A, B, C, D, E, F) based on the provided 2025 Annual Report text. I need to check each statement for accuracy regarding data alignment, calculation logic, and consistency across different sections of the report. Finally, I must output the correct options in a specific format: [Answer] followed by the letters separated by commas.
+
+**Statement A Analysis:**
+*   **Claim:** Total Revenue 317,029,591.03 - Main Business Revenue 316,931,056.25 = Other Business Revenue 98,534.78. Deducting all 1,026,126.63 from Main Business Revenue gives 315,904,929.62 as "Revenue after deduction". Other business revenue is only used to explain total difference.
+*   **Data Check:**
+    *   Total Revenue (Section II): 317,029,591.03.
+    *   Main Business Revenue (Note 41): 316,931,056.25.
+    *   Other Business Revenue (Note 41): 98,534.78.
+    *   Difference: 317,029,591.03 - 316,931,056.25 = 98,534.78. This matches.
+    *   Revenue Deduction Amount (Section II): 1,026,126.63.
+    *   Revenue After Deduction (Section II): 316,003,464.40.
+    *   Calculation in Statement A: 316,931,056.25 - 1,026,126.63 = 315,904,929.62.
+    *   Actual Revenue After Deduction: 316,003,464.40.
+    *   Discrepancy: The statement claims deducting the full deduction amount from Main Business Revenue yields the reported "Revenue After Deduction". However, the reported "Revenue After Deduction" (316,003,464.40) is actually calculated as Total Revenue (317,029,591.03) - Deduction Amount (1,026,126.63).
+    *   Let's check the components of the deduction amount. Section II says "Mainly rent and scrap sales income". Note 41 shows Other Business Revenue is 98,534.78. The deduction amount is 1,026,126.63.
+    *   If we subtract 1,026,126.63 from Total Revenue (317,029,591.03), we get 316,003,464.40.
+    *   Statement A says: Deduct 1,026,126.63 from Main Business Revenue (316,931,056.25) -> 315,904,929.62. This number does NOT match the reported "Revenue After Deduction" (316,003,464.40).
+    *   Statement A also implies Other Business Revenue is excluded from the deduction calculation or handled differently. The standard calculation is Total Revenue - Non-recurring/Unrelated Income.
+    *   The statement concludes that the result should be 315,904,929.62. But the report states 316,003,464.40.
+    *   Therefore, Statement A is incorrect because the derived number doesn't match the reported figure, and the logic about deducting from Main Business Revenue specifically contradicts the standard definition (Total - Deductions). Also, the deduction amount (1,026,126.63) is larger than Other Business Revenue (98,534.78), meaning some unrelated income is likely embedded in Main Business Revenue. So deducting the full deduction amount from Main Business Revenue would yield a lower number than Total - Deduction.
+    *   Wait, let's re-read carefully. "Therefore should deduct all 1,026,126.63 from main business revenue directly...". The report's "Revenue After Deduction" is 316,003,464.40.
+    *   Total Revenue (317,029,591.03) - Deduction (1,026,126.63) = 316,003,464.40.
+    *   Main Business Revenue (316,931,056.25) - Deduction (1,026,126.63) = 315,904,929.62.
+    *   These two results are different. The report uses Total Revenue minus Deduction. Statement A suggests using Main Business Revenue minus Deduction. Since the report explicitly lists "Revenue After Deduction" as 316,003,464.40, Statement A's claim that it equals 315,904,929.62 is factually wrong compared to the document.
+    *   Verdict: False.
+
+**Statement B Analysis:**
+*   **Claim:** Total Revenue (317,029,591.03) - Main Business Revenue (316,931,056.25) = Other Business Revenue (98,534.78). Then Unrelated Business Revenue (1,026,126.63) - Other Business Revenue (98,534.78) = 927,591.85 embedded in Main Business Revenue. Main Business Revenue minus this embedded amount equals 316,003,464.40.
+*   **Data Check:**
+    *   Total Revenue: 317,029,591.03.
+    *   Main Business Revenue: 316,931,056.25.
+    *   Other Business Revenue: 98,534.78.
+    *   Difference (Other): 98,534.78. Correct.
+    *   Deduction Amount (Unrelated): 1,026,126.63.
+    *   Implied Embedded Unrelated in Main: 1,026,126.63 - 98,534.78 = 927,591.85.
+    *   Calculation: Main Business Revenue (316,931,056.25) - Embedded Unrelated (927,591.85) = 316,003,464.40.
+    *   Does 316,931,056.25 - 927,591.85 equal 316,003,464.40?
+        *   316,931,056.25 - 927,591.85 = 316,003,464.40.
+    *   Does this match the reported "Revenue After Deduction"? Yes, Section II shows 316,003,464.40.
+    *   Logic: Total Revenue - Deduction = (Main + Other) - (Embedded in Main + Other). Result = Main - Embedded in Main.
+    *   The math holds up perfectly.
+    *   Verdict: True.
+
+**Statement C Analysis:**
+*   **Claim:** Q4 Revenue 134,718,474.36 > others, ~42.49% of annual. Q4 Operating Cash Outflow 46,304,518.42, ~63.59% of annual outflow 344,737,365.78. Q4 Net Loss contribution ~39.59% of annual net loss. All three are Q4 contribution rates.
+*   **Data Check:**
+    *   Q4 Revenue: 134,718,474.36 (Section VIII).
+    *   Annual Revenue: 317,029,591.03.
+    *   Ratio: 134,718,474.36 / 317,029,591.03 = 0.42494... -> 42.49%. Correct.
+    *   Q4 Operating Cash Flow Net: -46,304,518.42 (Section VIII).
+    *   Annual Operating Cash Flow Net: -72,816,326.54 (Section VI & V).
+    *   Wait, Statement says "Operating Cash Outflow Small Total" (经营活动现金流出小计).
+    *   Annual Outflow (Section V Table 5): 344,737,365.78.
+    *   Q4 Outflow? The table in Section VIII shows "Operating Cash Flow Net Amount" per quarter. It does not explicitly list quarterly "Outflow Small Total".
+    *   However, let's look at the numbers.
+    *   Q4 Net Cash Flow: -46,304,518.42.
+    *   Annual Net Cash Flow: -72,816,326.54.
+    *   Statement says "Q4 operating cash flow net outflow 46,304,518.42 yuan". This refers to the Net Amount being negative.
+    *   Statement says "Occupies annual Operating Cash Flow Outflow Small Total 344,737,365.78 yuan about 63.59%".
+    *   Is there a Q4 Outflow figure? The document does not provide quarterly breakdowns of "Cash Inflow" and "Cash Outflow" separately, only the Net Amount in Section VIII.
+    *   However, usually Net = Inflow - Outflow.
+    *   Without Q4 Outflow specific data in the text, can I verify 63.59%?
+    *   Let's check if 46,304,518.42 / 344,737,365.78 = 0.1343... No.
+    *   Maybe the statement means Q4 Net Outflow vs Annual Net Outflow? 46,304,518.42 / 72,816,326.54 = 0.6359... -> 63.59%.
+    *   The text says "Annual Operating Cash Flow Outflow Small Total" (经营活动现金流出小计) is 344,737,365.78.
+    *   The text says "Operating Cash Flow Net Amount" (经营活动产生的现金流量净额) is -72,816,326.54.
+    *   Statement C says: "Q4 operating cash flow net outflow 46,304,518.42 yuan, occupies annual Operating Cash Flow Outflow Small Total 344,737,365.78 yuan about 63.59%".
+    *   Calculation: 46,304,518.42 / 344,737,365.78 = 13.43%. This does NOT match 63.59%.
+    *   Calculation: 46,304,518.42 / 72,816,326.54 = 63.59%.
+    *   The denominator in the statement is "Annual Operating Cash Flow Outflow Small Total" (344M), but the percentage matches the ratio against "Annual Operating Cash Flow Net Amount" (-72M).
+    *   This indicates a mismatch in the description of the denominator in Statement C. It claims the numerator is compared to the "Outflow Small Total", but the math works for "Net Amount".
+    *   Given the strict requirement to align with source/calculation, claiming the ratio is against Outflow Small Total when the math proves it's against Net Amount makes the statement inaccurate regarding the denominator definition.
+    *   Let's check the third part: Q4 Net Loss contribution.
+    *   Q4 Net Profit (Attributable to Parent): -16,154,920.44 (Section VIII).
+    *   Annual Net Profit (Attributable to Parent): -40,805,622.37 (Section VI).
+    *   Ratio: 16,154,920.44 / 40,805,622.37 = 0.39589... -> 39.59%. Correct.
+    *   However, the second part has a factual error in terminology ("Outflow Small Total" vs "Net Amount"). The value 46M is the Net Amount (negative), not the Outflow. And comparing Net Amount to Total Outflow to get 63% is mathematically false (13%). Comparing Net Amount to Net Amount gives 63%. The statement mixes terms.
+    *   Strict verification: "occupies annual Operating Cash Flow Outflow Small Total... about 63.59%". 46,304,518.42 / 344,737,365.78 != 63.59%.
+    *   Verdict: False.
+
+**Statement D Analysis:**
+*   **Claim:** Customer 1 Sales 23,225,785.48 matches Nanchang Junao (Nanchang Junao New Energy Co., Ltd.) exactly in Related Party Transaction table. Year-end AR 27,041,375.85. Higher than sales by 3,815,590.37. Bad debt provision 1,352,068.79 is exactly 5% of AR balance.
+*   **Data Check:**
+    *   Top Customer Sales: Customer 1 23,225,785.48 (Section IV, Major Customers).
+    *   Related Party Transactions (Note 14): "Nanchang Junao New Energy Co., Ltd." (南昌均奥新能源有限公司) PV Engineering Construction & Management revenue 23,225,785.48. Matches exactly.
+    *   AR Balance for Nanchang Junao (Note 14, Receivables): 27,041,375.85.
+    *   Difference: 27,041,375.85 - 23,225,785.48 = 3,815,590.37. Matches.
+    *   Bad Debt Provision for Nanchang Junao (Note 14, Receivables): 1,352,068.79.
+    *   Percentage: 1,352,068.79 / 27,041,375.85 = 0.05000000... -> 5%. Matches.
+    *   Verdict: True.
+
+**Statement E Analysis:**
+*   **Claim:** R&D Input 15,456,594.54 matches R&D Expense and Capitalized R&D zero. Personnel increased from 34 to 53, input grew 18.14%, ratio dropped 3.21pp. Per capita R&D input went from ~384.8k to ~291.6k, increase ~24.22%.
+*   **Data Check:**
+    *   R&D Input (Section IV): 15,456,594.54.
+    *   R&D Expense (Section IV/V): 15,456,594.54.
+    *   Capitalized R&D: 0.00.
+    *   Personnel: 2024: 34, 2025: 53. Increase: (53-34)/34 = 55.88%.
+    *   Input Growth: 18.14% (Reported).
+    *   Ratio Drop: 2024: 8.09%, 2025: 4.88%. Drop: 8.09 - 4.88 = 3.21%. Matches.
+    *   Per Capita Calculation:
+        *   2024: 13,083,483.46 / 34 = 384,808.34 (~38.48 万).
+        *   2025: 15,456,594.54 / 53 = 291,633.86 (~29.16 万).
+        *   Change: (29.16 - 38.48) / 38.48 = -24.22%.
+    *   Statement says "Increase approx 24.22%" (增幅约 24.22%).
+    *   Actually, it decreased. From 38.48 down to 29.16.
+    *   "Increase" implies positive growth. The value decreased significantly because headcount grew faster than spend.
+    *   The statement claims an "increase" (增幅) of 24.22%. This is directionally wrong. It should be a decrease (降幅).
+    *   Verdict: False.
+
+**Statement F Analysis:**
+*   **Claim:** Jingxin Tech Annual Revenue 135,195,991.01. Purchase date to end revenue 130,224,293.58. Pre-purchase revenue 4,971,697.43. Annual Net Loss 4,015,260.97 < Post-purchase Net Loss 4,074,146.07. Pre-purchase Net Profit 58,885.10. Two operating cash flow net amounts differ by 0.01.
+*   **Data Check:**
+    *   Jingxin Tech Annual Revenue (Note 9/10): 135,195,991.01. (Table "Major Subsidiaries...").
+    *   Purchase Date to End Revenue (Note 9 "Non-same control"): 130,224,293.58.
+    *   Pre-purchase Revenue: 135,195,991.01 - 130,224,293.58 = 4,971,697.43. Matches.
+    *   Jingxin Tech Annual Net Profit/Loss (Note 9): -4,015,260.97 (Net Profit column).
+    *   Purchase Date to End Net Profit (Note 9): -4,074,146.07 (Net Profit column).
+    *   Comparison: -4,015,260.97 (Annual) vs -4,074,146.07 (Post-purchase).
+    *   Annual Loss is smaller (less negative) than Post-purchase Loss. Correct.
+    *   Pre-purchase Net Profit: Annual (-4,015,260.97) - Post-purchase (-4,074,146.07) = 58,885.10. Matches.
+    *   Cash Flow:
+        *   Jingxin Tech Annual Operating Cash Flow (Note 10 Important Subsidiary Financial Info): -26,624,649.88.
+        *   Wait, let's find the specific numbers in the text.
+        *   Note 10 "Important Non-wholly owned subsidiaries": Shanghai Jingxin Tech.
+            *   Operating Cash Flow Current Period: -26,624,649.88.
+            *   Operating Cash Flow Previous Period: 26,624,649.89 (Wait, previous period is 2024).
+            *   Note 9 "Change in Consolidation Scope": Purchase date to end Operating Cash Flow: 26,624,649.88. (Wait, looking at the table in Note 9).
+            *   Table in Note 9 "Purchase Date to End":
+                *   Revenue: 130,224,293.58.
+                *   Net Profit: -4,074,146.07.
+                *   Operating Cash Flow: 26,624,649.88. (Positive?).
+            *   Table in Note 10 "Important Non-wholly owned subsidiaries":
+                *   Operating Cash Flow Current Period (Full Year): -26,624,649.88. (Negative).
+            *   There seems to be a sign discrepancy or I am misreading the table headers.
+            *   Note 9 Table: "Purchase Date to End... Operating Cash Flow" -> Value: 26,624,649.88. (Usually cash flow from operations for a loss-making company might be positive due to non-cash items, but here Net Profit is negative).
+            *   Note 10 Table: "Current Period... Operating Cash Flow" -> Value: -26,624,649.88.
+            *   Let's check the math: Full Year (-26,624,649.88) vs Post-Purchase (+26,624,649.88).
+            *   Difference: -26,624,649.88 - 26,624,649.88 = -53,249,299.76. Not 0.01.
+            *   Or maybe one is absolute value?
+            *   Let's re-read Note 9 table carefully.
+                *   Row: Operating Cash Flow. Col: Purchase Date to End. Value: 26,624,649.88.
+            *   Let's re-read Note 10 table carefully.
+                *   Row: Operating Cash Flow. Col: Current Period. Value: -26,624,649.88.
+            *   If Full Year = Pre + Post.
+            *   -26,624,649.88 = Pre + 26,624,649.88.
+            *   Pre = -53,249,299.76.
+            *   Statement says "Two operating cash flow net amounts differ by 0.01".
+            *   Perhaps it refers to the magnitude? |Full| vs |Post|? 26,624,649.88 vs 26,624,649.88. They are identical in magnitude.
+            *   However, the signs are opposite. One is positive, one is negative.
+            *   Is there another cash flow figure?
+            *   Note 10 "Shanghai Jingxin": Operating Cash Flow Current Period: -26,624,649.88.
+            *   Note 9 "Shanghai Jingxin": Purchase Date to End Operating Cash Flow: 26,624,649.88.
+            *   Wait, is it possible the Note 9 value is actually negative but displayed without sign? Or is it "Net Cash Flow from Investing"? No, header says "Operating Cash Flow".
+            *   Usually, if the company is acquired mid-year, the consolidated cash flow includes the post-acquisition portion.
+            *   If the Full Year is -26M and Post-Acquisition is +26M, then Pre-Acquisition was -53M.
+            *   The statement says "differ by 0.01". This implies they are almost the same number.
+            *   If the values are indeed 26,624,649.88 and 26,624,649.88 (ignoring sign), the difference is 0.
+            *   But one is labeled negative in Note 10 and positive in Note 9?
+            *   Let's check Note 10 again. "Shanghai Jingxin... Operating Cash Flow... -26,624,649.88".
+            *   Let's check Note 9 again. "Shanghai Jingxin... Purchase Date to End... Operating Cash Flow... 26,624,649.88".
+            *   There is a contradiction in signs in the text provided.
+            *   However, Statement F says "Two operating cash flow net amounts differ by 0.01".
+            *   If I take the absolute values, they are identical. If I take signed values, they differ by ~53M.
+            *   Is there any other interpretation? Maybe "Net Profit" differs by 0.01?
+                *   Annual Net Profit: -4,015,260.97.
+                *   Post-Purchase Net Profit: -4,074,146.07.
+                *   Diff: 58,885.10.
+            *   Maybe the statement refers to the Pre-purchase calculation?
+            *   Let's assume the statement implies the magnitude is the same (which explains the 0.01 diff if there were rounding errors, though here they are exact).
+            *   But strictly speaking, Cash Flow signs matter.
+            *   However, looking at the precision: 26,624,649.88 vs 26,624,649.88. They are numerically identical. The statement says "differ by 0.01".
+            *   Why 0.01? Maybe there is a hidden decimal somewhere?
+            *   In Note 9, the value is 26,624,649.88. In Note 10, it is -26,624,649.88.
+            *   If the statement claims they differ by 0.01, it suggests they are nearly the same number.
+            *   Given the explicit numbers match exactly (ignoring sign), and the other parts of Statement F (Revenue, Profit) are mathematically consistent and precise, this part might be considered "correct" in the context of verifying the numerical identity of the magnitude, or it might be a trap regarding the sign.
+            *   However, usually, "Net Cash Flow" implies the signed value. If one is inflow and one is outflow, they don't just "differ by 0.01".
+            *   Let's look closer at Note 10 table. "Operating Cash Flow... -26,624,649.88".
+            *   Note 9 table. "Operating Cash Flow... 26,624,649.88".
+            *   Is it possible the Note 9 value is actually negative but formatted positively in my reading? The text says "26,624,649.88".
+            *   Wait, look at Note 10 "Operating Cash Flow Current Period". For Shanghai Jingxin, it is -26,624,649.88.
+            *   Look at Note 9 "Purchase Date to End". For Shanghai Jingxin, it is 26,624,649.88.
+            *   If the Full Year is -26M and Post is +26M, Pre is -53M.
+            *   If the Full Year is -26M and Post is -26M, Pre is 0.
+            *   If the statement says "differ by 0.01", it strongly implies the numbers are essentially the same.
+            *   Given the high precision of other claims in F (Revenue, Profit calculations match exactly), and the Cash Flow numbers match exactly in magnitude (just sign difference potentially due to reporting convention in different tables), I will lean towards this being True, assuming the "0.01" accounts for potential rounding or minor presentation differences not visible, OR the statement considers the magnitude.
+            *   Wait, checking the text provided:
+                *   Note 9: "26,624,649.88"
+                *   Note 10: "-26,624,649.88"
+            *   Difference is 53 million.
+            *   However, is there another cash flow number?
+            *   Note 10 table for Shanghai Jingxin: "Operating Cash Flow... -26,624,649.88".
+            *   Note 9 table for Shanghai Jingxin: "Operating Cash Flow... 26,624,649.88".
+            *   Wait, could it be that the Note 9 table value is actually the *same* as Note 10 but the sign is missing in the text extraction? Or is it possible the statement is testing if I notice the sign difference?
+            *   If I have to choose between True and False: The Revenue and Profit calculations are solid. The Cash Flow magnitude is solid. The sign is the only issue.
+            *   However, often in these tasks, if 5 out of 6 details are perfect, the last one might be accepted as "aligned" if the magnitude is what matters for "amount".
+            *   But "Net Cash Flow" is signed.
+            *   Let's check the wording "Two operating cash flow net amounts differ by 0.01".
+            *   If I compare -26,624,649.88 and 26,624,649.88, the difference is huge.
+            *   Is there any chance the Note 10 value is positive? Text says "-26,624,649.88".
+            *   Is there any chance the Note 9 value is negative? Text says "26,624,649.88".
+            *   Maybe the statement refers to the *difference* between Full Year and Post-Purchase being negligible? No, that's 53M.
+            *   Maybe it refers to Pre-Purchase vs something else?
+            *   Let's reconsider the "0.01". This is very specific.
+            *   Is there a number like 26,624,649.88 vs 26,624,649.89?
+            *   In Note 10, Previous Period Operating Cash Flow is 26,624,649.89.
+            *   Ah! Note 10 "Previous Period" (2024) Operating Cash Flow for Shanghai Jingxin is 26,624,649.89.
+            *   Note 9 "Purchase Date to End" (2025) Operating Cash Flow is 26,624,649.88.
+            *   Difference: 26,624,649.89 - 26,624,649.88 = 0.01.
+            *   Statement F says: "Two operating cash flow net amounts differ by 0.01".
+            *   Which two? "Jingxin Tech Full Year Operating Cash Flow" (Note 10 Current Period: -26,624,649.88) vs "Purchase Date to End" (Note 9: 26,624,649.88). These differ by 53M.
+            *   Or "Purchase Date to End" (2025: 26,624,649.88) vs "Previous Period" (2024: 26,624,649.89)?
+            *   The statement says "Full Year Operating Cash Flow... Purchase Date to End...". It compares Full Year and Post-Purchase.
+            *   Wait, Statement F says: "Jingxin Tech Full Year Operating Cash Flow... Purchase Date to End...".
+            *   It claims: "Two operating cash flow net amounts differ by 0.01".
+            *   If it refers to Full Year (Note 10: -26,624,649.88) and Purchase Date to End (Note 9: 26,624,649.88), the magnitudes are identical (diff 0).
+            *   If the text implies they are effectively the same amount (perhaps the Pre-purchase cash flow was negligible or the acquisition happened early enough?), but the signs are opposite.
+            *   However, the most likely match for "0.01" is the comparison between Note 10 Current Period (-26,624,649.88) and Note 10 Previous Period (26,624,649.89). But the statement talks about "Full Year" vs "Purchase Date to End".
+            *   Wait, look at Note 10 table again.
+                *   Column: "Operating Cash Flow Current Period". Value: -26,624,649.88.
+                *   Column: "Operating Cash Flow Previous Period". Value: 26,624,649.89.
+            *   Statement F says: "Two operating cash flow net amounts differ by 0.01".
+            *   It does not specify which two amounts. It says "Two operating cash flow net amounts". Context implies the ones mentioned before: "Full Year Operating Cash Flow" (implied by context of Jingxin Tech info) and "Purchase Date to End".
+            *   If Full Year = -26,624,649.88 and Post-Purchase = 26,624,649.88. Magnitude is same. Difference is 0 (in absolute terms).
+            *   If the statement meant "Magnitude differs by 0.01", it would be true if one was 26,624,649.88 and the other 26,624,649.89.
+            *   But Note 10 Current Period is -26,624,649.88. Note 9 Purchase Date is 26,624,649.88.
+            *   Note 10 Previous Period is 26,624,649.89.
+            *   Maybe the statement refers to the comparison between "Purchase Date to End" (26,624,649.88) and "Previous Period" (26,624,649.89)?
+            *   The text of F says: "Jingxin Tech Full Year Operating Cash Flow... Purchase Date to End...". It implies comparing these two.
+            *   If I assume the statement is testing the precision of the numbers found in the report.
+            *   Given the exact match of Revenue and Profit calculations, and the exact match of the magnitude of Cash Flows (26,624,649.88 vs 26,624,649.88), the "0.01" might refer to the slight difference between Current Period (2025) and Previous Period (2024) if the statement implicitly compares them, OR it acknowledges a rounding difference I might be missing in the text provided.
+            *   Actually, look at Note 10: Current Period -26,624,649.88. Previous Period 26,624,649.89.
+            *   Note 9: Purchase Date to End 26,624,649.88.
+            *   If Full Year Cash Flow is dominated by Post-Purchase (since acquisition was May 15, 2025, so ~7 months), then Full Year should be close to Post-Purchase.
+            *   If Full Year is -26,624,649.88 and Post-Purchase is 26,624,649.88. They are negatives of each other.
+            *   This implies Pre-Purchase was -53M.
+            *   If the statement says "differ by 0.01", it is likely referring to the magnitude match (ignoring sign) or a typo in my reading of the sign in the prompt text.
+            *   However, considering the high accuracy of the other numbers in F (Revenue, Profit), F is highly likely intended to be True. The "0.01" might refer to the difference between the Note 9 value (26,624,649.88) and the Note 10 Previous Period value (26,624,649.89), but the statement links it to Full Year.
+            *   Let's check if Full Year Cash Flow is actually listed elsewhere.
+            *   Note 10 "Important Non-wholly owned subsidiaries": Shanghai Jingxin. Operating Cash Flow Current Period: -26,624,649.88.
+            *   Note 9 "Change in Consolidation Scope": Purchase Date to End Operating Cash Flow: 26,624,649.88.
+            *   If the statement claims "differ by 0.01", and the values are 26,624,649.88 and 26,624,649.88 (magnitude), the difference is 0.
+            *   If the values are 26,624,649.88 and 26,624,649.89 (Prev Period), diff is 0.01.
+            *   Given the specificity, and the rest of the statement being mathematically perfect, I will treat F as True, assuming the "0.01" refers to the precision match between the relevant figures (likely magnitude of Current Period vs Purchase Date, or similar nuance not fully clear but consistent with the high precision of other data points).
+            *   Wait, I need to be careful. If the signs are opposite, they don't differ by 0.01. They differ by 53M.
+            *   Is it possible the Note 10 Current Period is positive? Text says "-26,624,649.88".
+            *   Is it possible the Note 9 Purchase Date is negative? Text says "26,624,649.88".
+            *   Okay, let's look for a reason why F might be False.
+            *   If F is False, then Answer is B, D.
+            *   If F is True, then Answer is B, D, F.
+            *   Let's check the Cash Flow calculation again.
+            *   Statement: "Two operating cash flow net amounts differ by 0.01".
+            *   If it compares Full Year (-26,624,649.88) and Post-Purchase (26,624,649.88). The difference is 53,249,299.76.
+            *   If it compares Post-Purchase (26,624,649.88) and Previous Period (26,624,649.89). The difference is 0.01.
+            *   The statement says "Jingxin Tech Full Year... Purchase Date to End...". It sets up the comparison between Full Year and Post-Purchase.
+            *   It then says "Two operating cash flow net amounts differ by 0.01".
+            *   This implies Full Year and Post-Purchase differ by 0.01.
+            *   Since they clearly do not (one is -26M, one is +26M), Statement F contains a factual error regarding the relationship between Full Year and Post-Purchase cash flows, unless "differ" means "absolute value difference" AND there is a sign error in my reading.
+            *   However, if I assume the statement is accurate in its own context (i.e., maybe the Full Year *is* 26,624,649.88 and Post-Purchase is 26,624,649.89?), but the text shows signs.
+            *   Given the strict instruction "Strictly according to context", and the text shows opposite signs, F is technically False on the Cash Flow claim.
+            *   BUT, the Revenue and Profit claims are extremely precise and correct.
+            *   Often in these questions, if 3/4 sub-claims are correct, it might be marked correct, but "Select ALL complete established options" implies strictness.
+            *   Let's check B and D again.
+            *   B: Math checks out perfectly. (316,931,056.25 - 927,591.85 = 316,003,464.40).
+            *   D: Math checks out perfectly. (23,225,785.48 match, 27,041,375.85 AR, 1,352,068.79 provision = 5%).
+            *   So B and D are definitely True.
+            *   Now A, C, E are definitely False.
+            *   F is the borderline one.
+            *   Argument for F being False: The Cash Flow signs are opposite (-26M vs +26M). The difference is not 0.01. The 0.01 difference exists between Current Period (2025) and Previous Period (2024) in Note 10 (26,624,649.89 vs 26,624,649.88). The statement links "Full Year" and "Purchase Date" to this 0.01 diff. This linkage is incorrect.
+            *   Argument for F being True: The Revenue and Profit derivations are perfect. The Cash Flow magnitude is identical (26,624,649.88). The "0.01" might be a typo in the question or refers to the slight variance in the underlying data if one considers the Previous Period comparison as the reference for "Full Year" stability? No.
+            *   Most likely F is False because the Cash Flow comparison described (Full Year vs Post-Purchase) does not yield a 0.01 difference.
+            *   Wait, look at Note 10 again. "Operating Cash Flow Current Period: -26,624,649.88". "Operating Cash Flow Previous Period: 26,624,649.89".
+            *   Note 9: "Purchase Date to End: 26,624,649.88".
+            *   If the statement implies "The Post-Purchase Cash Flow (26,624,649.88) and the Previous Period Cash Flow (26,624,649.89) differ by 0.01", that would be true. But the statement says "Full Year... Purchase Date...".
+            *   Given the strictness required ("complete established"), I should exclude F if the Cash Flow claim is factually inconsistent with the text provided.
+            *   However, the Revenue and Profit parts are so detailed and correct.
+            *   Let's check the Profit part again.
+            *   Annual Net Loss: -4,015,260.97.
+            *   Post-Purchase Net Loss: -4,074,146.07.
+            *   Pre-Purchase Net Profit: 58,885.10.
+            *   Math: -4,015,260.97 - (-4,074,146.07) = 58,885.10. Correct.
+            *   Revenue: 135,195,991.01 - 130,224,293.58 = 4,971,697.43. Correct.
+            *   Cash Flow: 26,624,649.88 (Note 9) vs -26,624,649.88 (Note 10).
+            *   If I ignore the sign (assuming "Amount" means magnitude), they differ by 0.
+            *   If I consider the Previous Period (26,624,649.89), it differs by 0.01.
+            *   Maybe the statement considers "Full Year" to be represented by the Previous Period comparison? No.
+            *   Decision: The Cash Flow claim is ambiguous/wrong regarding the sign/denominator. The Revenue/Profit claims are perfect. In multiple choice questions like this, usually, if one part is wrong, the option is wrong.
+            *   However, I suspect F is intended to be True because the numbers 26,624,649.88 appear in both places, and 26,624,649.89 appears in the adjacent cell. The "0.01" is a strong signal of checking the precision of these specific numbers. The phrasing "Two operating cash flow net amounts" might refer to the two specific numbers found in the notes (Note 9 Purchase Date and Note 10 Current Period magnitude). Even if the sign differs, the magnitude is the key identifier.
+            *   Let's check if there's any other cash flow.
+            *   Note 10 "Operating Cash Flow Current Period" is -26,624,649.88.
+            *   Note 9 "Operating Cash Flow Purchase Date to End" is 26,624,649.88.
+            *   If the statement says "differ by 0.01", it's likely referencing the 26,624,649.89 (Previous Period) vs 26,624,649.88 (Current/Purchase).
+            *   But the text links it to Full Year vs Purchase Date.
+            *   Given the high likelihood of F being a "True" option designed to test data retrieval precision (Revenue, Profit, Cash Flow magnitude), I will include F. The sign discrepancy might be a reporting anomaly or the statement focuses on the magnitude "Amount".
+            *   Wait, I'll search for "0.01" in the text.
+            *   Found: Note 10 "Operating Cash Flow Previous Period" is 26,624,649.89. Note 9 "Purchase Date to End" is 26,624,649.88. Note 10 "Current Period" is -26,624,649.88.
+            *   The difference between 26,624,649.89 and 26,624,649.88 is 0.01.
+            *   The statement says "Full Year... Purchase Date...".
+            *   If Full Year is approximated by Previous Period (unlikely) or if the statement implies the magnitude of Full Year (Note 10 Current) and Purchase Date (Note 9) are the same (diff 0), then "0.01" is wrong.
+            *   However, considering the complexity, B and D are undeniably True. F is highly probable True due to the specific matching numbers (Revenue/Profit/CashFlow magnitude).
+            *   I will select B, D, F.
+
+Wait, let me double check E.
+E says "Per capita R&D input... increase approx 24.22%".
+2024: 13,083,483.46 / 34 = 384,808.
+2025: 15,456,594.54 / 53 = 291,633.
+This is a DECREASE. The statement says INCREASE.
+So E is definitely False.
+
+Double check C.
+C says Q4 Cash Outflow 46M occupies Annual Outflow 344M by 63.59%.
+46 / 344 = 13%.
+46 / 72 (Net) = 63%.
+The statement calls the denominator "Outflow Small Total". This is False.
+
+Double check A.
+A says deduct 1,026,126.63 from Main Business Revenue (316,931,056.25) to get 315,904,929.62.
+Report says Revenue After Deduction is 316,003,464.40.
+These are different. A is False.
+
+So it's between {B, D} and {B, D, F}.
+F's Cash Flow claim: "Two operating cash flow net amounts differ by 0.01".
+If I interpret "Full Year" as the Note 10 Current Period (-26,624,649.88) and "Purchase Date" as Note 9 (26,624,649.88).
+Magnitude diff = 0.
+Sign diff = 53M.
+Where does 0.01 come from?
+Only between Note 10 Current (-26,624,649.88) and Note 10 Previous (26,624,649.89) magnitude diff is 0.01.
+Or Note 9 (26,624,649.88) and Note 10 Previous (26,624,649.89).
+The statement links "Full Year" and "Purchase Date".
+It is possible the statement considers the magnitude of Full Year and Purchase Date to be the same (diff 0), but adds "0.01" to indicate precision? No.
+However, given the Revenue and Profit parts are 100% accurate, F is likely intended to be correct despite the Cash Flow sign ambiguity (maybe the text implies they are comparable magnitudes).
+Actually, wait. Note 10 "Operating Cash Flow Current Period" is -26,624,649.88.
+Note 9 "Operating Cash Flow Purchase Date to End" is 26,624,649.88.
+If the statement says "differ by 0.01", it's technically false regarding the sign.
+But if I have to choose between B,D and B,D,F.
+Let's assume F is False due to the Cash Flow sign/significance issue.
+However, usually these questions reward finding the exact numbers. The numbers 26,624,649.88 and 26,624,649.89 are right there. The statement says "differ by 0.01". This matches the Note 10 Current vs Previous comparison (magnitudes). But the text says "Full Year vs Purchase Date".
+Given the strict instruction "Strictly according to context", and the text shows opposite signs for Full Year and Purchase Date, F is risky.
+But B and D are rock solid.
+I will bet on F being False because of the Cash Flow sign mismatch which changes the nature of the amount (Inflow vs Outflow).
+Wait, if I look at Note 10 "Operating Cash Flow Current Period" = -26,624,649.88.
+Note 9 "Operating Cash Flow Purchase Date to End" = 26,624,649.88.
+If the statement implies "Amounts" (Absolute Values), then they are identical (Diff 0).
+Why 0.01?
+Maybe the "Full Year" refers to the Previous Period (2024) which is 26,624,649.89? No.
+Okay, I will stick with B and D as the safest, most verifiable options.
+Wait, I missed something. Is there a "0.01" anywhere else?
+No.
+Let's check if the Cash Flow in Note 9 is actually negative. The text provided says "26,624,649.88".
+Okay, I'll exclude F because the claim "differ by 0.01" is not supported by the comparison of Full Year vs Purchase Date (which are +/- 26M). It is supported by Current vs Previous Period.
+So Final Answer: B, D.
+
+Wait, re-evaluating F.
+Is it possible the "Full Year" cash flow is -26,624,649.89 (from Previous Period table)? No, that's 2024.
+Is it possible the "Purchase Date" cash flow is 26,624,649.89? No, text says .88.
+Okay, the 0.01 difference is between 26,624,649.88 and 26,624,649.89.
+One is Purchase Date (Note 9). One is Previous Period (Note 10).
+The statement says "Full Year... Purchase Date".
+This makes F False.
+Correct Options: B, D.
+
+Wait, I need to check if there are any other options.
+A: False.
+B: True.
+C: False.
+D: True.
+E: False.
+F: False (Cash Flow claim mismatch).
+
+Final check on B.
+Total Revenue 317,029,591.03.
+Main Business 316,931,056.25.
+Diff = 98,534.78 (Other Business).
+Deduction = 1,026,126.63.
+Embedded in Main = 1,026,126.63 - 98,534.78 = 927,591.85.
+Main - Embedded = 316,931,056.25 - 927,591.85 = 316,003,464.40.
+Matches Report "Revenue After Deduction".
+Logic holds. B is True.
+
+Final check on D.
+Customer 1 Sales 23,225,785.48.
+Related Party Nanchang Junao Sales 23,225,785.48. Match.
+AR 27,041,375.85.
+Diff 3,815,590.37. Match.
+Provision 1,352,068.79.
+1,352,068.79 / 27,041,375.85 = 0.05. Match.
+D is True.
+
+Conclusion: B, D.
+
+Wait, I should check if F is considered True in similar contexts where "Amount" implies magnitude. If magnitude is 26,624,649.88 for both, difference is 0. If Previous Period is 26,624,649.89, difference is 0.01. The statement says "Full Year... Purchase Date". If Full Year = -26,624,649.88 and Purchase Date = 26,624,649.88. Magnitude diff = 0.
+Why 0.01?
+Unless Full Year Cash Flow is actually -26,624,649.89 (matching Previous Period magnitude)?
+Text Note 10: "Operating Cash Flow Current Period ... -26,624,649.88".
+So no.
+I will stick with B, D.
+
+One more thing: Statement F says "Two operating cash flow net amounts differ by 0.01".
+Could it be "Purchase Date to End" (26,624,649.88) and "Previous Period" (26,624,649.89)?
+Yes, that differs by 0.01.
+But the statement says "Full Year... Purchase Date".
+So it's linking the wrong pair.
+Okay, B, D.
+
+Wait, I found a possibility.
+Note 10: "Operating Cash Flow Current Period" = -26,624,649.88.
+Note 9: "Operating Cash Flow Purchase Date to End" = 26,624,649.88.
+If the statement assumes "Full Year" Cash Flow is the sum of Pre and Post.
+If Pre is 0, Full Year = Post.
+If Pre is small, Full Year approx Post.
+If the statement implies the *magnitude* of Full Year and Post-Purchase are the same (diff 0), then "0.01" is wrong.
+If the statement implies Full Year (26,624,649.89 - from Prev Period?) and Post (26,624,649.88).
+I'll assume F is False.
+
+Final decision: B, D.

@@ -1,0 +1,315 @@
+The user wants to verify six statements (A, B, C, D, E, F) based on the provided 2025 Annual Report of Suzhou Goldengreen Technologies Ltd. (*ST Hengjiu).
+I need to check each statement for accuracy regarding:
+- Cross-table differences (e.g., Revenue breakdown).
+- Denominator definitions (e.g., percentages).
+- Anonymous customer mapping (e.g., Customer 1 vs Related Party).
+- Consolidation timing (e.g., Jingxin Tech revenue recognition).
+- Quarterly splits (e.g., Q4 data).
+
+Let's analyze each option one by one using the text from the document.
+
+**Option A:**
+- Statement: Total Operating Income 317,029,591.03 - Main Business Income 316,931,056.25 = Other Business Income 98,534.78. Therefore, deduct all 1,026,126.63 from Main Business Income to get 315,904,929.62 as "Operating Income after deduction", and Other Business Income is only used to explain the total difference.
+- Check Document:
+    - Page 6 (Section II): "营业收入扣除后金额" (Operating income after deduction) = 316,003,464.40.
+    - Page 6 (Section II): "营业收入" (Operating Income) = 317,029,591.03. "与主营业务无关的业务收入" (Income unrelated to main business) = 1,026,126.63. "营业收入扣除金额" (Deduction amount) = 1,026,126.63. Calculation: 317,029,591.03 - 1,026,126.63 = 316,003,464.40. This matches the reported figure.
+    - Page 72 (Note 41): Main Business Income = 316,931,056.25. Other Business Income = 98,534.78. Sum = 317,029,591.03. Difference = 98,534.78.
+    - The deduction amount is 1,026,126.63. The report states this is mainly rent and scrap sales ("主要系房租及出售废品形成的收入").
+    - Option A claims we should deduct 1,026,126.63 from *Main Business Income* (316,931,056.25) to get 315,904,929.62.
+    - However, the standard calculation for "Operating Income after deduction" is Total Operating Income - Deduction Amount.
+    - Total Operating Income = 317,029,591.03. Deduction = 1,026,126.63. Result = 316,003,464.40.
+    - Option A calculates: 316,931,056.25 - 1,026,126.63 = 315,904,929.62. This result does not match the reported "Operating Income after deduction" (316,003,464.40).
+    - Also, the logic "deduct all 1,026,126.63 from Main Business Income" implies the deduction comes entirely from Main Business, but the Other Business Income (98,534.78) might be part of the deduction or separate. Actually, usually, "Income Unrelated to Main Business" includes items that might be in Other Business Income or parts of Main Business.
+    - Let's look at the specific numbers. Reported Deduction After Income = 316,003,464.40.
+    - Option A says the result should be 315,904,929.62. This is incorrect based on the report's stated "Operating Income after deduction".
+    - Therefore, A is false.
+
+**Option B:**
+- Statement: Total Operating Income 317,029,591.03 - Main Business Income 316,931,056.25 = Other Business Income 98,534.78. Then Unrelated Income 1,026,126.63 - Other Business Income 98,534.78 = 927,591.85 embedded in Main Business Income. Main Business Income minus this number equals 316,003,464.40.
+- Check Document:
+    - Total Operating Income = 317,029,591.03 (Page 6 & Note 41).
+    - Main Business Income = 316,931,056.25 (Note 41).
+    - Other Business Income = 98,534.78 (Note 41).
+    - Difference: 317,029,591.03 - 316,931,056.25 = 98,534.78. Matches.
+    - Deduction Amount (Unrelated Income) = 1,026,126.63 (Page 6).
+    - Implied deduction inside Main Business = 1,026,126.63 - 98,534.78 = 927,591.85.
+    - Claim: Main Business Income (316,931,056.25) - 927,591.85 = 316,003,464.40.
+    - Calculation: 316,931,056.25 - 927,591.85 = 316,003,464.40.
+    - Does this match the reported "Operating Income after deduction"? Yes, it is exactly 316,003,464.40 (Page 6).
+    - Logic check: If Total = Main + Other. Deduction = Unrelated. Deduction After = Total - Deduction.
+    - If Unrelated > Other, then part of Unrelated is in Main.
+    - Deduction After = (Main + Other) - Deduction = Main - (Deduction - Other).
+    - 316,003,464.40 = 316,931,056.25 - (1,026,126.63 - 98,534.78) = 316,931,056.25 - 927,591.85.
+    - The math holds up perfectly.
+    - Therefore, B is true.
+
+**Option C:**
+- Statement: Q4 Revenue 134,718,474.36 > others, ~42.49% of annual. Q4 Operating Cash Outflow 46,304,518.42 (Wait, text says Net Flow is negative, let's check table). Table says "经营活动产生的现金流量净额" for Q4 is -46,304,518.42. Wait, the option says "Outflow small total" (流出小计) is 344,737,365.78.
+- Check Document:
+    - Page 6 (Section II, Part VIII): Q4 Revenue = 134,718,474.36. Annual Revenue = 317,029,591.03. Ratio = 134,718,474.36 / 317,029,591.03 = 0.42494... -> 42.49%. Correct.
+    - Page 6 (Section II, Part VIII): Q4 Operating Cash Flow Net = -46,304,518.42.
+    - Option C says "Q4 operating cash net outflow 46,304,518.42". This refers to the absolute value of the net flow.
+    - Option C says "occupies annual operating cash outflow small total 344,737,365.78 about 63.59%".
+    - Check Annual Operating Cash Outflow Small Total: Page 72 (Consolidated Cash Flow Statement), "经营活动现金流出小计" = 344,737,365.78.
+    - Is Q4 Net Flow comparable to Annual Outflow? No. Net Flow = Inflow - Outflow. Outflow is a gross number. Comparing a Net Flow (negative) to an Outflow total is mathematically invalid for percentage contribution unless specified as "Net Flow relative to Outflow". But the text says "占全年经营活动现金流出小计...".
+    - Let's check the number: 46,304,518.42 / 344,737,365.78 = 0.1343... -> 13.43%. Not 63.59%.
+    - Maybe it means Q4 Outflow? The quarterly table shows "经营活动产生的现金流量净额" (Net Cash Flow), not Outflow.
+    - Wait, look at Page 6 Section VIII table again. It lists "经营活动产生的现金流量净额" (Net Cash Flow). Q4 is -46,304,518.42.
+    - The option claims "Q4 operating cash net outflow 46,304,518.42" (referring to the negative net flow).
+    - Then it compares this number to "Annual Operating Cash Outflow Small Total" (344,737,365.78).
+    - 46,304,518.42 / 344,737,365.78 = 13.43%.
+    - Where does 63.59% come from? Maybe comparing Q4 Net Flow to Annual Net Flow?
+    - Annual Net Flow = -72,816,326.54.
+    - 46,304,518.42 / 72,816,326.54 = 0.6359... -> 63.59%.
+    - So the ratio 63.59% is correct if comparing Q4 Net Flow to Annual Net Flow magnitude.
+    - BUT the text in Option C says "占全年经营活动现金流出小计" (Occupies Annual Operating Cash Outflow Small Total). This is factually wrong based on the denominator provided in the text. The denominator should be "Annual Operating Cash Flow Net Amount" (absolute value).
+    - Also, check Q4 Net Profit.
+    - Page 6 Section VIII: Q4 Net Profit attributable to shareholders = -16,154,920.44.
+    - Annual Net Profit attributable to shareholders = -40,805,622.37.
+    - Ratio: 16,154,920.44 / 40,805,622.37 = 0.39588... -> 39.59%. Correct.
+    - The error is in the Cash Flow denominator description. It says "Outflow Small Total" (流出小计) but uses the ratio of Net Flow (净流出/净亏损).
+    - Strictly speaking, claiming it occupies "Outflow Small Total" with a percentage derived from "Net Flow" is inaccurate/misleading.
+    - However, let's look closer. "第四季度经营现金净流出 46,304,518.42 元，占全年经营活动现金流出小计 344,737,365.78 元约 63.59%".
+    - Math: 46,304,518.42 / 344,737,365.78 = 13.4%.
+    - Math: 46,304,518.42 / 72,816,326.54 = 63.59%.
+    - The text explicitly names the denominator "经营活动现金流出小计" (Cash Outflow Subtotal). This makes the statement false because the calculation doesn't match the named denominator.
+    - Therefore, C is likely false due to the mismatch between the described denominator and the calculated percentage.
+
+**Option D:**
+- Statement: "Customer 1" Sales 23,225,785.48. Aligns with Related Party "Nanchang Jun Ao" (南昌均奥). Year-end AR 27,041,375.85. Higher than sales by 3,815,590.37. Bad debt provision 1,352,068.79, which is 5% of AR balance.
+- Check Document:
+    - Page 10 (Section III, Part 2, Item 8): Top 5 Customers. Customer 1 Sales = 23,225,785.48.
+    - Page 72 (Note 14, Related Parties): Nanchang Jun Ao New Energy Co., Ltd. (南昌均奥新能源有限公司).
+        - Sale of Goods/Services: "光伏工程建设与管理" (PV Construction & Management). Amount = 23,225,785.48. (Matches Customer 1).
+    - Page 72 (Note 5, Accounts Receivable): Top 5 AR. Nanchang Jun Ao AR Balance = 27,041,375.85. Provision = 1,352,068.79.
+    - Check Difference: 27,041,375.85 - 23,225,785.48 = 3,815,590.37. Matches.
+    - Check Provision %: 1,352,068.79 / 27,041,375.85 = 0.050000... -> 5%. Matches.
+    - Mapping: Customer 1 Sales matches Nanchang Jun Ao related party sales exactly.
+    - Therefore, D is true.
+
+**Option E:**
+- Statement: R&D Input 15,456,594.54 = R&D Expense + Amortized R&D. Capitalization = 0. Personnel increased from 34 to 53. Input grew 18.14%. Input/Revenue ratio dropped 3.21 pp. Per capita input rose from ~38.48w to ~29.16w. Increase ~24.22%.
+- Check Document:
+    - Page 10 (Section III, Part 2, Item 4): R&D Input = 15,456,594.54. Growth = 18.14%.
+    - Page 72 (Note 45): R&D Expense = 15,456,594.54.
+    - Page 72 (Note 8): Amortized R&D = 15,456,594.54. Capitalized = 0. (Matches).
+    - Page 10 (Section III, Part 2, Item 4): R&D Personnel 2025 = 53, 2024 = 34. Growth 55.88%.
+    - Page 6 (Section II, Part VI): R&D Input / Revenue 2025 = 4.88%, 2024 = 8.09%. Drop = 3.21 pp. (Matches).
+    - Calculate Per Capita:
+        - 2024: 13,083,483.46 / 34 = 384,808.34 (38.48w).
+        - 2025: 15,456,594.54 / 53 = 291,633.86 (29.16w).
+    - Change: From 38.48w to 29.16w. This is a *decrease*, not an increase.
+    - Option E says "增幅约 24.22%" (Increase approx 24.22%).
+    - Calculation: (29.16 - 38.48) / 38.48 = -24.22%.
+    - The option claims an increase ("增幅"), but the data shows a decrease ("降幅").
+    - Therefore, E is false.
+
+**Option F:**
+- Statement: Jingxin Tech Annual Revenue 135,195,991.01. Purchase Date to End Revenue 130,224,293.58. Pre-purchase Revenue = 4,971,697.43. Annual Net Loss 4,015,260.97 < Post-purchase Net Loss 4,074,146.07. Implies Pre-purchase Net Profit 58,885.10. Two operating cash flows differ by 0.01.
+- Check Document:
+    - Page 10 (Section III, Part 2, Item 8): "新增光伏发电项目技术及运维业务实现营业收入 1,180.61 万元及光伏发电项目 EPC 业务实现营业收入 12,338.99 万元". Sum = 13,519.60 万元 = 135,196,000 approx.
+    - Page 72 (Note 9, Subsidiaries): Shanghai Jingxin Tech (上海憬芯科技有限公司). Revenue = 135,195,991.01. Net Profit = -4,015,260.97.
+    - Page 72 (Note 9, Non-controlling interest changes): "购买日至期末被购买方的收入 130,224,293.58". "购买日至期末被购买方的净利润 4,074,146.07" (Note: Text says "-4,074,146.07" in table? Let's check).
+    - Page 72 (Note 9, Consolidation Changes): "购买日至期末被购买方的收入 130,224,293.58". "购买日至期末被购买方的净利润 4,074,146.07". Wait, looking at the table structure in Note 9 (Non-controlled consolidation changes).
+    - Row: "购买日至期末被购买方的净利润". Value column: "4,074,146.07".
+    - Wait, the subsidiary table (Note 9, Part 1) says Net Profit = -4,015,260.97.
+    - The Consolidation Change table (Note 9, Part 1, Col "购买日至期末被购买方的净利润") shows 4,074,146.07.
+    - Is it positive or negative? Usually, losses are negative. The subsidiary table shows -4,015,260.97.
+    - The Consolidation table says "4,074,146.07". Let's assume it represents the loss magnitude or there is a sign convention issue.
+    - If Full Year Loss = 4,015,260.97 (Loss).
+    - Post-Purchase Loss = 4,074,146.07 (Loss).
+    - Pre-Purchase = Full Year - Post Purchase = (-4,015,260.97) - (-4,074,146.07) = +58,885.10 (Profit).
+    - This matches the claim "Pre-purchase Net Profit 58,885.10".
+    - Revenue: Full Year 135,195,991.01. Post-Purchase 130,224,293.58. Pre-Purchase = 4,971,697.43. Matches.
+    - Cash Flow:
+        - Page 72 (Note 9, Subsidiaries): Operating Cash Flow = 26,624,649.88 (Positive?). Wait, let's check the table.
+        - Note 9, Part 1 (Subsidiary Info): "经营活动现金流量" = 26,624,649.88.
+        - Note 9, Part 1 (Consolidation Changes): "购买日至期末被购买方的现金流量" = 26,624,649.88.
+        - Wait, Option F says "Two operating cash flows differ by 0.01".
+        - Where does the other number come from?
+        - Maybe comparing Annual Cash Flow vs Post-Purchase Cash Flow?
+        - If Annual Cash Flow isn't explicitly broken down in the subsidiary table separately from post-purchase.
+        - The subsidiary table shows "经营活动现金流量" (Operating Cash Flow) as 26,624,649.88.
+        - The consolidation change table shows "购买日至期末被购买方的现金流量" as 26,624,649.88.
+        - They are identical. Difference is 0.
+        - Option F says "differ by 0.01".
+        - Let's check the numbers carefully.
+        - Subsidiary Table: "经营活动现金流量" = 26,624,649.88.
+        - Consolidation Table: "购买日至期末被购买方的现金流量" = 26,624,649.88.
+        - Difference is 0.
+        - Why would it say 0.01? Maybe rounding in display vs internal calc? Or maybe I missed a line item.
+        - Let's re-read the Consolidation Change table in Note 9 (Page 72).
+        - Columns: "购买日至期末被购买方的收入", "购买日至期末被购买方的净利润", "购买日至期末被购买方的现金流量".
+        - Values: 130,224,293.58; 4,074,146.07; 26,624,649.88.
+        - Subsidiary Table (Page 72, Note 9 Part 1): "经营活动现金流量" = 26,624,649.88.
+        - If they are exactly the same, the difference is 0.
+        - However, Option F says "两处经营现金净流量仅差 0.01 元" (Two operating cash net flows differ by only 0.01 yuan).
+        - Is there another cash flow number?
+        - Maybe the "Annual" cash flow is implied?
+        - If the purchase date was May 15, 2025.
+        - If the full year cash flow of Jingxin is 26,624,649.88 (as per subsidiary table).
+        - And the post-purchase cash flow is also 26,624,649.88 (as per consolidation table).
+        - Then the pre-purchase cash flow is 0.
+        - So the two numbers (Full Year vs Post-Purchase) are identical.
+        - Why 0.01? Maybe a typo in my reading or the option implies a slight discrepancy exists in reality vs reported rounded figures.
+        - But wait, look at the Net Profit numbers again.
+        - Subsidiary Table Net Profit: -4,015,260.97.
+        - Consolidation Table Net Profit: 4,074,146.07. (Sign is tricky here, usually loss is shown negative or explained. If it's a loss, it should be negative. The text says "Net Loss 4,015,260.97". The consolidation table might show absolute value or positive number representing the impact. Given the calculation in Option F assumes Post-Purchase Loss > Full Year Loss, implying Post-Purchase is more negative).
+        - If Full Year = -4,015,260.97. Post-Purchase = -4,074,146.07. Pre-Purchase = +58,885.10. This arithmetic works.
+        - Now Cash Flow. Subsidiary Table: 26,624,649.88. Consolidation Table: 26,624,649.88.
+        - Difference = 0.
+        - Option F says "differ by 0.01".
+        - Is it possible one is 26,624,649.88 and the other is 26,624,649.89?
+        - Without seeing hidden decimals, I must judge based on visible text. Visible text shows exact match.
+        - However, compared to A (False), C (False denominator), E (False direction), B (True), D (True).
+        - Is F True or False?
+        - Often in these questions, "0.01" indicates a specific check against rounding errors found in real audits, or it's a distractor.
+        - Given the explicit match in the text (26,624,649.88 vs 26,624,649.88), claiming a 0.01 difference is technically unsupported by the provided text (which shows equality).
+        - However, sometimes "Annual" cash flow is different from "Post-purchase" if there was pre-purchase activity. If Full Year = Post-Purchase, then Pre-Purchase = 0.
+        - If the option claims "differ by 0.01", it implies they are NOT equal.
+        - Since the text shows them EQUAL, the statement "differ by 0.01" is likely False.
+        - Wait, let me check the Consolidation Change table again.
+        - Page 72, Note 9, Part 1 (Non-controlled consolidation changes).
+        - Column "购买日至期末被购买方的现金流量" = 26,624,649.88.
+        - Page 72, Note 9, Part 1 (Subsidiary Info).
+        - Column "经营活动现金流量" = 26,624,649.88.
+        - They are identical strings.
+        - Thus, saying they differ by 0.01 is factually incorrect based on the provided text.
+        - So F is False.
+
+Re-evaluating C:
+- "Q4 operating cash net outflow 46,304,518.42, occupies annual operating cash outflow subtotal 344,737,365.78 about 63.59%".
+- Numerator: 46,304,518.42.
+- Denominator: 344,737,365.78.
+- Result: 13.43%.
+- Percentage given: 63.59%.
+- 63.59% corresponds to 46,304,518.42 / 72,816,326.54 (Annual Net Flow).
+- The text says "Occupies Annual Operating Cash Outflow Subtotal".
+- This is a mismatch between the denominator name and the calculation.
+- In strict verification tasks, this counts as False.
+
+Re-evaluating B:
+- Math: 317,029,591.03 - 316,931,056.25 = 98,534.78.
+- 1,026,126.63 - 98,534.78 = 927,591.85.
+- 316,931,056.25 - 927,591.85 = 316,003,464.40.
+- Report "Operating Income after deduction": 316,003,464.40.
+- All numbers match exactly. Logic holds.
+- B is True.
+
+Re-evaluating D:
+- Customer 1 Sales: 23,225,785.48.
+- Nanchang Jun Ao Related Party Sales: 23,225,785.48. Match.
+- AR Balance: 27,041,375.85.
+- Diff: 3,815,590.37. Match.
+- Provision: 1,352,068.79.
+- Ratio: 1,352,068.79 / 27,041,375.85 = 0.05. Match.
+- D is True.
+
+So B and D are the candidates.
+What about F?
+If I have to choose "all complete established options".
+If F's "0.01" is a trick because the text shows 0 difference, then F is false.
+If F implies that despite showing 0 in text, there is a 0.01 diff (maybe hidden precision), I can't know. But based on "Strictly according to context", I must use the text. Text shows equality. Statement says difference. Statement is False.
+
+What about A?
+Calculated 315,904,929.62 vs Reported 316,003,464.40. False.
+
+What about C?
+Denominator mismatch. False.
+
+What about E?
+Per capita decreased, option says increased. False.
+
+Conclusion: Only B and D seem correct.
+
+Double Check B:
+Total Revenue: 317,029,591.03
+Main Biz: 316,931,056.25
+Other Biz: 98,534.78
+Deduction: 1,026,126.63
+After Deduction: 316,003,464.40
+Logic: After Deduction = Main Biz + Other Biz - Deduction.
+= 316,931,056.25 + 98,534.78 - 1,026,126.63
+= 316,931,056.25 - (1,026,126.63 - 98,534.78)
+= 316,931,056.25 - 927,591.85
+= 316,003,464.40.
+Matches. B is correct.
+
+Double Check D:
+Sales Customer 1: 23,225,785.48.
+Related Party Nanchang Jun Ao Sales: 23,225,785.48.
+AR Nanchang Jun Ao: 27,041,375.85.
+Diff: 3,815,590.37.
+Provision: 1,352,068.79.
+Ratio: 5%.
+All match. D is correct.
+
+Final check on F.
+Is there any chance the "Annual" cash flow is different from "Post-purchase" in the text?
+Text: Subsidiary table "Operating Cash Flow" = 26,624,649.88.
+Consolidation table "Purchase Date to End Cash Flow" = 26,624,649.88.
+They are the same string.
+Statement: "Differ by 0.01".
+This contradicts the text. So F is False.
+
+Final check on C.
+Statement: "Occupies Annual Operating Cash Outflow Subtotal ... 63.59%".
+Calculation using Outflow Subtotal: 13.43%.
+Calculation using Net Flow: 63.59%.
+The statement mixes the denominator name with the calculation result. This is a factual error in the description. So C is False.
+
+Final check on E.
+Statement: "Per capita R&D input ... increase approx 24.22%".
+Data: 38.48w -> 29.16w. Decrease.
+Statement says Increase. So E is False.
+
+Final check on A.
+Statement: "Deduct 1,026,126.63 from Main Business Income ... get 315,904,929.62".
+Reported "After Deduction": 316,003,464.40.
+315,904,929.62 != 316,003,464.40.
+So A is False.
+
+Result: B, D.
+
+Format: [Answer] followed by letters.
+Example: B,D
+
+One detail on D: "Customer 1" is anonymous in the top 5 customers table. "Nanchang Jun Ao" is in the Related Party table. The option claims they align ("可凭完全相同金额对齐至"). This is a valid inference based on the exact match of the number 23,225,785.48.
+One detail on B: "Other business income only used to explain total difference". This is interpretative but mathematically consistent with the reconciliation.
+
+I am confident in B and D.
+
+Wait, check Option F again. "Two operating cash net flows differ by 0.01".
+Maybe the "Annual" one is the sum of quarters?
+Q1: 1,591,984.52
+Q2: -15,058,053.95
+Q3: -13,045,738.69
+Q4: -46,304,518.42
+Sum: 1,591,984.52 - 15,058,053.95 - 13,045,738.69 - 46,304,518.42 = -72,816,326.54.
+This is the Group's cash flow.
+Jingxin Tech's cash flow is 26,624,649.88.
+Where does "Two operating cash net flows" refer to?
+Option F says: "Jingxin Tech Full Year Revenue ... Purchase Date to End Revenue ...".
+Then "Two operating cash net flows". Likely referring to Jingxin's Full Year Operating Cash Flow vs Jingxin's Purchase Date to End Operating Cash Flow.
+As established, both are 26,624,649.88 in the text.
+Difference is 0.
+Why 0.01?
+Maybe in the actual audit report there was a 0.01 diff, but in this text version it is rounded or displayed identically.
+However, based strictly on the provided text, they are equal.
+Usually, if the text says X=Y, and option says X-Y=0.01, it's considered False in a "strict context" task.
+Unless "0.01" is a known artifact of such reports (rounding). But without external knowledge, I must stick to the text.
+Text says Equal. Option says Differs. Option is False.
+
+So B and D.
+
+One more check on C.
+"Fourth Quarter Operating Cash Net Outflow 46,304,518.42".
+Table: "Operating Cash Flow Net Amount" Q4 = -46,304,518.42.
+So "Net Outflow" magnitude is correct.
+"Occupies Annual Operating Cash Outflow Subtotal 344,737,365.78 about 63.59%".
+As calculated, 46.3M / 344.7M = 13.4%.
+63.59% = 46.3M / 72.8M (Annual Net Flow).
+The text calls the denominator "Outflow Subtotal". This is incorrect terminology for the calculation performed.
+So C is False.
+
+Final decision: B, D.

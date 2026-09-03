@@ -1,0 +1,332 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Source Material: A provided text containing "Python Language Specification" (Python 语言规范).
+    *   Task: Answer a specific question based *only* on the provided text.
+    *   Question: In the "Import" (导入) section, under the "Conclusion" (结论) subsection, filter import rules that meet two conditions:
+        1.  Explicitly give specific import syntax (明确给出具体导入语法).
+        2.  Explicitly specify the applicable scenario or usage restriction for that syntax (明确规定该语法的适用场景或使用限制).
+    *   Output Format: First output `[Answer]`, then output each answer line by line. Each line format: "Item Number: Import Rule" (条目编号：导入规则).
+    *   Ordering: Sort by item number in ascending order as per the conclusion list.
+    *   Constraint: Strictly follow the document, no explanations, only final answer.
+
+2.  **Locate the Relevant Section:**
+    *   Section: "导入" (Import).
+    *   Subsection: "结论" (Conclusion).
+
+3.  **Analyze the Content of "Conclusion" in "Import":**
+    The text under "导入" -> "结论" is:
+    ```
+    #. 用 ``import x`` 来导入包和模块.
+    #. 用 ``from x import y`` , 其中 x 是包前缀，y 是不带前缀的模块名.
+    #. 在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.
+    #. 仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)
+    ```
+    There are also some examples below, but the numbered list constitutes the main rules/conclusion points.
+
+4.  **Evaluate Each Item against Conditions:**
+    *   Condition 1: Explicitly give specific import syntax (明确给出具体导入语法).
+    *   Condition 2: Explicitly specify the applicable scenario or usage restriction for that syntax (明确规定该语法的适用场景或使用限制).
+
+    *   **Item 1:** `#. 用 ``import x`` 来导入包和模块.`
+        *   Syntax: ``import x``. (Meets Condition 1)
+        *   Scenario/Restriction: "来导入包和模块" (to import packages and modules). This is a general instruction, but does it specify a *scenario* or *restriction* beyond just saying what it does? It says "Use `import x` to import packages and modules." It implies this is the default/general way. However, looking at Item 3 and 4, they have specific conditions ("In the following situations...", "Only when..."). Item 1 is a general directive. Does it count as specifying a scenario/restriction? It says "Use ... to ...". It's more of a definition of usage than a conditional restriction like the others. Let's look closer. The prompt asks for "applicable scenario or usage restriction". "To import packages and modules" describes the purpose. Is that a scenario? Compared to Item 3 ("If there are two modules..."), Item 1 is less specific about *when* to use it versus other methods, though it implies it's the standard way. However, strictly speaking, it gives syntax (`import x`) and says what it's for (importing packages/modules). But Item 2 also has syntax (`from x import y`).
+        *   Let's re-read the condition: "明确规定该语法的适用场景或使用限制" (Explicitly specify the applicable scenario or usage restriction).
+        *   Item 1: "Use `import x` to import packages and modules." -> Usage: Importing packages/modules. Restriction: None explicit other than implied generality.
+        *   Item 2: "Use `from x import y`, where x is package prefix, y is module name without prefix." -> Usage: Importing module y from package x. Restriction: x must be package prefix, y must be module name without prefix.
+        *   Item 3: "In the following situations use `from x import y as z`: If two modules named y; If y conflicts with global name; If y is too long." -> Syntax: `from x import y as z`. Scenario/Restriction: Explicitly listed (conflict, length, etc.). This definitely meets both conditions.
+        *   Item 4: "Only when abbreviation z is a standard abbreviation can use `import y as z`." -> Syntax: `import y as z`. Scenario/Restriction: Only when z is a standard abbreviation. This definitely meets both conditions.
+
+    *   Re-evaluating Item 1 & 2 based on strict interpretation of "Scenario/Restriction".
+        *   Item 1 says "Use `import x` to import packages and modules." This defines the scope of `import x`. It doesn't explicitly say "Use this ONLY if..." or "Use this WHEN...". It's a general rule.
+        *   Item 2 says "Use `from x import y`, where x is..., y is...". This defines the structure.
+        *   Item 3 says "In the following situations use...". This is clearly a scenario.
+        *   Item 4 says "Only when... can use...". This is clearly a restriction.
+
+    *   However, usually in these tasks, the numbered items in the Conclusion section represent the rules. The question asks to filter rules within the "Conclusion" subsection.
+    *   Let's look at the phrasing again: "筛选同时满足以下条件的导入规则：1）明确给出具体导入语法；2）明确规定该语法的适用场景或使用限制。"
+    *   Item 1: Syntax `import x`. Scenario: To import packages and modules. Is "To import packages and modules" a scenario/restriction? It's the purpose.
+    *   Item 2: Syntax `from x import y`. Restriction: x is package prefix, y is module name without prefix. This specifies constraints on the variables x and y.
+    *   Item 3: Syntax `from x import y as z`. Scenario: Conflicts, length.
+    *   Item 4: Syntax `import y as z`. Restriction: z must be standard abbreviation.
+
+    *   Wait, let's look at the text again carefully.
+    *   Item 1: `#. 用 ``import x`` 来导入包和模块.`
+    *   Item 2: `#. 用 ``from x import y`` , 其中 x 是包前缀，y 是不带前缀的模块名.`
+    *   Item 3: `#. 在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.`
+    *   Item 4: `#. 仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)`
+
+    *   Criterion 1 (Syntax): All 4 items have syntax.
+    *   Criterion 2 (Scenario/Restriction):
+        *   Item 1: "来导入包和模块" (To import packages and modules). This is the function/purpose. Does it count as a scenario? It's vague compared to 3 and 4.
+        *   Item 2: "其中 x 是包前缀，y 是不带前缀的模块名" (Where x is..., y is...). This restricts what x and y can be.
+        *   Item 3: "在以下情况使用...: 如果..." (Use in following situations: If...). Explicit scenarios.
+        *   Item 4: "仅当...时才能使用" (Only when... can use). Explicit restriction.
+
+    *   Usually, in such extraction tasks, Items 3 and 4 are the strongest candidates because they explicitly mention "situations" or "conditions". Items 1 and 2 are more like general definitions of how to use them rather than conditional rules. However, Item 2 specifies constraints on the components (x is prefix, y is name). Item 1 is very broad.
+    *   Let's consider the phrase "明确规定该语法的适用场景或使用限制".
+    *   Item 1: "Use `import x` to import packages and modules." -> Scenario: Importing packages/modules. It doesn't say *when* to choose this over others, just what it does.
+    *   Item 2: "Use `from x import y`..." -> Defines the syntax structure.
+    *   Item 3: "Use `from x import y as z` in the following situations..." -> Matches perfectly.
+    *   Item 4: "Only use `import y as z` when..." -> Matches perfectly.
+
+    *   Are Items 1 and 2 included?
+    *   If I exclude 1 and 2, I might miss the point of the "rules". But the prompt asks to filter rules that meet *both* conditions.
+    *   Condition 2: "Explicitly specify the applicable scenario or usage restriction".
+    *   Item 1: "To import packages and modules". Is this a scenario? It's the object of the action.
+    *   Item 2: "Where x is..., y is...". This is a syntactic constraint/definition.
+    *   Item 3: "If...". This is a usage scenario.
+    *   Item 4: "Only when...". This is a usage restriction.
+
+    *   Comparing 3 and 4 vs 1 and 2. 3 and 4 describe *conditional* usage (When to use As-import vs When to use From-import). 1 and 2 describe *what* to use generally.
+    *   However, Item 2 says "Use `from x import y`, where x is...". This restricts the usage of the syntax components.
+    *   Item 1 says "Use `import x` to import packages and modules."
+    *   Let's check the context. The section is "Conclusion".
+    *   If I strictly interpret "Scenario/Restriction":
+        *   Item 3: Scenarios listed (conflict, length).
+        *   Item 4: Restriction listed (standard abbreviation).
+        *   Item 1: Purpose listed. Not really a scenario/restriction on *when* to use it specifically among alternatives, just what it imports.
+        *   Item 2: Definition of components.
+    *   Most likely, the question targets Items 3 and 4 because they contain the explicit "If" or "Only when" logic which matches "Applicable scenario or usage restriction" much better than the general statements in 1 and 2.
+    *   However, Item 2 does say "where x is package prefix, y is module name without prefix". This restricts the valid arguments for the syntax.
+    *   But Item 3 and 4 are much clearer on "Scenario/Restriction".
+    *   Let's look at the wording again. "明确规定该语法的适用场景或使用限制".
+    *   Item 3: "在以下情况使用...: 如果..." (Use in following situations: If...). This is a perfect match for "Applicable scenario".
+    *   Item 4: "仅当...时才能使用..." (Only when... can use...). This is a perfect match for "Usage restriction".
+    *   Item 1: "用...来..." (Use ... to ...). This states the purpose. Is purpose = scenario? Usually scenario implies "Under what circumstances". Purpose implies "For what goal".
+    *   Item 2: "用...，其中..." (Use ..., where...). This defines the syntax parameters.
+    *   Given the strict filtering nature, Items 3 and 4 are the most distinct regarding "Scenario/Restriction". Items 1 and 2 are basic syntax declarations.
+    *   However, if I look at Item 2: "Use `from x import y`". Is there a restriction? "x is package prefix, y is module name". That is a constraint on the syntax usage.
+    *   But Item 3 and 4 explicitly discuss *when* to use them relative to other options (implied conflict resolution, aliasing).
+    *   Let's assume the question wants all numbered items that fit.
+    *   Item 1: Syntax `import x`. Scenario: Importing packages/modules. (Weak match for "Scenario/Restriction" compared to 3 & 4).
+    *   Item 2: Syntax `from x import y`. Restriction: x=prefix, y=name. (Medium match).
+    *   Item 3: Syntax `from x import y as z`. Scenario: Conflict/Length. (Strong match).
+    *   Item 4: Syntax `import y as z`. Restriction: Standard abbreviation. (Strong match).
+
+    *   Decision: Items 3 and 4 are the clearest fits for "Scenario/Restriction". Items 1 and 2 are more like "General Rules". The prompt asks to filter rules meeting the conditions. "Explicitly specify applicable scenario OR usage restriction".
+    *   Item 1 doesn't specify a scenario (e.g., "if you want to avoid namespace pollution") or restriction (e.g., "do not use if..."). It just says "Use X to do Y".
+    *   Item 2 specifies the structure of x and y. Is that a restriction? Yes, x must be prefix, y must be name.
+    *   However, looking at the pattern of the question, it likely focuses on the conditional clauses found in 3 and 4.
+    *   Let's check if I should include 2. "明确规定该语法的适用场景或使用限制". Item 2 says "Use `from x import y`, where x is...". This limits the validity of x and y. It's a constraint.
+    *   But Item 3 and 4 are about *choosing* the syntax based on conditions.
+    *   Let's try to include all that have explicit constraints/scenarios.
+    *   Actually, looking closely at Item 1: "Use `import x` to import packages and modules." No scenario/restriction on *when* to use it vs others.
+    *   Item 2: "Use `from x import y`...". No scenario on *when* to use it vs `import x`. Just defines the parts.
+    *   Item 3: "In the following situations use...". Explicit scenarios.
+    *   Item 4: "Only when... can use...". Explicit restriction.
+    *   Therefore, only 3 and 4 strongly satisfy Condition 2 regarding "Scenario/Restriction" in the sense of conditional usage rules. 1 and 2 are declarative usage rules.
+    *   Wait, the prompt says "Filter import rules...". The numbered list *are* the rules. I need to select which ones of these rules meet the criteria.
+    *   Criteria 2: "Explicitly specify the applicable scenario or usage restriction".
+    *   Rule 3: "In the following situations use...". (Yes)
+    *   Rule 4: "Only when...". (Yes)
+    *   Rule 1: "Use... to...". (No scenario/restriction, just purpose).
+    *   Rule 2: "Use..., where...". (Defines syntax components, arguably a restriction on the identifiers, but not a usage scenario for the statement itself like 3 and 4).
+    *   I will select 3 and 4 as they are the most precise matches for "Scenario/Restriction".
+    *   Wait, let's reconsider Item 2. "x is package prefix, y is module name without prefix". This restricts what can be imported using this syntax (must be from a package, y must be the name). Is that a "usage restriction"? Yes.
+    *   But Item 3 and 4 are about the *aliasing* aspect (`as z`).
+    *   Let's look at the instruction again: "按结论中的条目编号升序输出".
+    *   If I include 2, is it correct? "明确规定该语法的适用场景或使用限制". Item 2 defines the syntax components. It doesn't say "Use this IF...". It says "Use this, AND here is what x/y mean".
+    *   Item 3 says "Use this IF [scenarios]".
+    *   Item 4 says "Use this ONLY IF [restriction]".
+    *   So 3 and 4 are definitely correct. 1 and 2 are borderline/incorrect regarding "Scenario/Restriction" (they define purpose/structure, not conditional applicability).
+    *   I'll stick with 3 and 4.
+    *   Wait, I need to check if there are any other lines in the Conclusion section.
+    *   Text:
+        ```
+        结论:
+
+            #. 用 ``import x`` 来导入包和模块.
+
+            #. 用 ``from x import y`` , 其中 x 是包前缀，y 是不带前缀的模块名.
+
+            #. 在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.
+
+            #. 仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)
+        ```
+    *   Okay, checking Item 2 again. "Use `from x import y`". Does it specify a scenario? No. Does it specify a restriction? It restricts x and y types. Is that "usage restriction of the syntax"? Yes, you can't use `from x import y` if x isn't a prefix or y isn't a name. But compared to 3 and 4, it's structural.
+    *   However, usually in these tasks, if a condition is met, it's included. "Usage restriction" can cover structural constraints. But "Applicable scenario" is key.
+    *   Item 3: "In the following situations". (Scenario).
+    *   Item 4: "Only when". (Restriction).
+    *   Item 1 & 2 lack the "When/If/Only" conditional language that defines a *scenario* or *restriction* on the decision to use that syntax over another, or under what conditions it is valid. They define the syntax itself.
+    *   I will output 3 and 4.
+    *   Wait, looking at Item 2: "其中 x 是包前缀，y 是不带前缀的模块名". This restricts the usage. If I use `from os.path import join`, x=os.path (prefix), y=join (name). It works. If I use `from os import path`, x=os, y=path. It works. It seems to define the syntax structure rather than a restriction on *when* to use it.
+    *   I'll prioritize 3 and 4.
+    *   Wait, let's look at the instruction "筛选同时满足以下条件的导入规则".
+    *   If I exclude 2, am I missing something? "明确规定该语法的适用场景或使用限制". Item 2 says "Use `from x import y`". It implies this is the way to import modules. It doesn't give a restriction like "Do not use if...". It gives a definition.
+    *   Okay, I'm confident with 3 and 4.
+    *   Wait, one more check. Item 1: "Use `import x` to import packages and modules." Is "importing packages and modules" a scenario? It's the target.
+    *   Okay, I will extract the text for 3 and 4 exactly as they appear in the conclusion.
+    *   Format: "条目编号：导入规则".
+    *   Example: "3：在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称."
+    *   Wait, should I include the markdown code blocks or just the text? The text contains backticks. I should preserve the text content.
+    *   The prompt asks for "Import Rule". I should copy the text of the rule.
+    *   Let's refine the text for Item 3 and 4.
+    *   Item 3: `#. 在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.`
+    *   Item 4: `#. 仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)`
+    *   I need to remove the `#.` numbering in the output line if the format is "条目编号：导入规则". The "条目编号" refers to the number (3, 4). The "导入规则" refers to the text content.
+    *   Format: "3：在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称."
+    *   Format: "4：仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)"
+
+    *   Wait, I need to double check if Item 2 counts. "明确规定该语法的适用场景或使用限制".
+    *   "其中 x 是包前缀，y 是不带前缀的模块名". This is a constraint on the variables used in the syntax. Is it a "usage restriction"? Yes.
+    *   Is it an "applicable scenario"? No.
+    *   Is it a "usage restriction"? Yes, it restricts what x and y can be.
+    *   However, Item 3 and 4 are much stronger candidates.
+    *   Let's think if the question implies *all* rules that have *any* scenario/restriction mentioned.
+    *   Item 1: "to import packages and modules". This is the purpose.
+    *   Item 2: "x is prefix, y is name". This is a constraint.
+    *   Item 3: "If...". This is a scenario.
+    *   Item 4: "Only when...". This is a restriction.
+    *   If I have to be strict, "Usage restriction" applies to Item 2 (constraints on x and y). But usually, "Usage restriction" in style guides means "Don't use this unless...". Item 2 says "Use this, where x is...". It's defining the syntax elements.
+    *   Given the ambiguity, 3 and 4 are the safest and most accurate interpretation of "Scenario/Restriction" regarding the *choice* of syntax.
+    *   However, I should check if I should include 2. "明确规定该语法的适用场景或使用限制". "x is package prefix" is a restriction on the usage of the syntax (you cannot use a non-prefix for x).
+    *   But Item 3 and 4 are explicitly about *when* to use the specific syntax variant (with `as z`).
+    *   Let's assume the question wants the conditional rules.
+    *   Wait, I'll check the exact wording "明确规定该语法的适用场景或使用限制".
+    *   Item 2: "Use `from x import y`, where x is..., y is...". This specifies the syntax components. It doesn't say "Use this syntax IF...".
+    *   Item 3: "Use ... IN THE FOLLOWING SITUATIONS".
+    *   Item 4: "ONLY WHEN ... CAN USE".
+    *   These match "Scenario" and "Restriction" much better.
+    *   I will proceed with 3 and 4.
+
+5.  **Final Formatting:**
+    *   `[Answer]`
+    *   `3：在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.`
+    *   `4：仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)`
+    *   Ensure no extra spaces or explanations.
+    *   Check if I need to keep the `#.` in the text. The prompt says "Entry Number: Import Rule". So I write "3:" and then the text content (excluding the `#.` marker itself as that's the numbering).
+    *   The text content includes the backticks. I should keep them as they are part of the rule text in the document.
+
+6.  **Review against constraints:**
+    *   Strictly based on document.
+    *   Output format: `[Answer]` then lines.
+    *   Line format: "条目编号：导入规则".
+    *   Ascending order.
+    *   No explanations.
+
+    One detail: Should I include Item 2?
+    "明确规定该语法的适用场景或使用限制".
+    Item 2 says "Use `from x import y`". It doesn't say "Use this IF". It says "Use this, WHERE".
+    "Where" defines the syntax. "If" defines the scenario.
+    So Item 2 is a definition, not a scenario/restriction on *applicability*.
+    Items 3 and 4 are about applicability.
+    So 3 and 4 are correct.
+
+    Wait, I should check if there are any other numbered items in the Conclusion section.
+    The text shows:
+    ```
+    结论:
+
+        #. 用 ``import x`` 来导入包和模块.
+
+        #. 用 ``from x import y`` , 其中 x 是包前缀，y 是不带前缀的模块名.
+
+        #. 在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.
+
+        #. 仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)
+    ```
+    There are 4 items.
+    I will select 3 and 4.
+
+    Wait, re-reading Item 1: "Use `import x` to import packages and modules."
+    Is "importing packages and modules" a scenario? It's the domain.
+    Is there a restriction? No.
+    Item 2: "Use `from x import y`, where x is..., y is...".
+    Is there a restriction? Yes, x must be prefix, y must be name.
+    Is there a scenario? No.
+    Condition 2 says "Scenario OR Restriction".
+    So Item 2 technically has a "Restriction" (x is prefix, y is name).
+    However, is that a restriction on the *syntax usage* or a definition of the *syntax components*?
+    In the context of "Import Rules", defining that `x` must be a prefix is a restriction on how you use the rule.
+    But compared to 3 and 4, it's less about "When to use" and more about "What this syntax means".
+    Given the strictness, 3 and 4 are unambiguous. 2 is debatable.
+    However, often in these extraction tasks, if a condition is technically met, it should be included.
+    "明确规定该语法的适用场景或使用限制".
+    Item 2: "其中 x 是包前缀，y 是不带前缀的模块名". This restricts the valid values for x and y.
+    But does it restrict the *usage* of the syntax? It defines the syntax.
+    Item 3: "In the following situations use...". This restricts the usage based on situation.
+    Item 4: "Only when...". This restricts the usage based on condition.
+    I will stick with 3 and 4 because they explicitly talk about "Using" the syntax under certain conditions. Item 2 talks about the components of the syntax.
+    Actually, looking at Item 1: "Use `import x` to import packages and modules." This is also a definition of usage.
+    So 1 and 2 are definitions. 3 and 4 are conditional rules.
+    The prompt asks for "Rules" that specify "Scenario/Restriction".
+    Conditional rules fit best.
+    I'll output 3 and 4.
+
+    Wait, I need to make sure I don't miss Item 2 if "Restriction" covers component constraints.
+    "Usage restriction" (使用限制).
+    If I say "You must use `import x`", is there a restriction? No.
+    If I say "Use `from x import y` where x is prefix", is there a restriction? Yes, x must be prefix.
+    But is that a "Usage restriction of the syntax"? Or a "Definition of the syntax"?
+    It's a definition.
+    The "Scenario/Restriction" usually implies "Under what circumstances should this be applied".
+    Item 3: Circumstances (conflict, length).
+    Item 4: Circumstances (standard abbreviation).
+    Item 1 & 2: General application.
+    I will filter for 3 and 4.
+
+    Final check on formatting.
+    `[Answer]`
+    `3：...`
+    `4：...`
+    Text should be copied accurately.
+    Backticks should be preserved.
+    Punctuation should be preserved.
+
+    One more thing: The prompt asks for "条目编号" (Item Number).
+    The text uses `#. `.
+    I should output `3:` and `4:`.
+    The rule text starts after the number.
+    For Item 3: `在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.`
+    For Item 4: `仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)`
+
+    Wait, I notice the text has `.. tip::` before the section, but the Conclusion is inside the section.
+    The Conclusion text is clearly marked.
+    Okay, ready to generate.
+
+    Wait, I should check if Item 2's "Restriction" is strong enough.
+    "明确规定该语法的适用场景或使用限制".
+    Item 2: "其中 x 是包前缀，y 是不带前缀的模块名".
+    This is a constraint.
+    However, Item 3 and 4 are much more explicit about "Scenarios" (情况) and "Restrictions" (仅当...才能).
+    If I include 2, it might be considered noise (defining syntax vs restricting usage).
+    I will exclude 2 to be safe and precise.
+
+    Wait, looking at the instruction again: "筛选同时满足以下条件的导入规则".
+    If I exclude 2, I am making a judgment call.
+    Let's look at Item 1 again. "Use `import x` to import packages and modules."
+    Does this specify a scenario? "To import packages and modules".
+    Does this specify a restriction? No.
+    Item 2. "Use `from x import y`, where x is..., y is...".
+    Does this specify a scenario? No.
+    Does this specify a restriction? "x is prefix, y is name". This restricts the input to the syntax.
+    Is it a "Usage restriction"? Yes.
+    But is it the *intended* meaning of the question?
+    Usually, questions like this target the conditional logic.
+    I'll stick with 3 and 4.
+
+    Wait, I'll check the text for Item 3 and 4 again to ensure exact copying.
+    Item 3: `#. 在以下情况使用 ``from x import y as z``: 如果有两个模块都叫 ``y``; 如果 ``y`` 和当前模块的某个全局名称冲突; 如果 ``y`` 是长度过长的名称.`
+    Item 4: `#. 仅当缩写 ``z`` 是标准缩写时才能使用 ``import y as z``.(比如 ``np`` 代表 ``numpy``.)`
+
+    Okay, I will format the output now.
+    Note: The prompt says "只输出最终答案，不添加解释".
+    And "请先输出 [Answer]，再逐行输出答案".
+    So:
+    [Answer]
+    3：...
+    4：...
+
+    Wait, one detail in Item 4 text: `(比如 ``np`` 代表 ``numpy``.)`
+    I should include the full sentence.
+
+    Final check on Item 2.
+    If I search for "限制" (restriction) in the text.
+    Item 4 has "才能使用" (can only use).
+    Item 3 has "在以下情况使用" (use in following situations).
+    Item 2 has "其中...是..." (where... is...).
+    Item 1 has "来..." (to...).
+    Clearly 3 and 4 are the intended answers for "Scenario/Restriction".
+
+    Ready.

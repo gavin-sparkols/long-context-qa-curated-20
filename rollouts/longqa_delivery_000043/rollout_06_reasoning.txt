@@ -1,0 +1,395 @@
+The user wants me to verify several conclusions based on the provided text "2025 年全国文化及相关产业发展情况报告" (Document 1/3).
+I need to check each option (A, B, C, D, E, F) against the data in Document 1.
+
+**Data Extraction from Document 1:**
+
+*   **Total Cultural Industry Revenue (2025):** 208254 billion yuan. Growth: 8.8%.
+*   **New Business Forms Revenue (2025):** 76651 billion yuan. Growth: 15.1%. Share of total: 36.8% (up 2.0 percentage points). Contribution to growth: 59.7% (up 1.8 percentage points).
+*   **Cultural Service Industry Revenue (2025):** 123052 billion yuan. Growth: 12.8%. Share of total: 59.1% (up 2.1 percentage points). Contribution to growth: 82.7%.
+*   **Profit (2025):** 19034 billion yuan. Growth: 7.3%.
+    *   Above-scale profit: 13933 billion yuan. Growth: 5.6%.
+    *   Below-scale profit: 5101 billion yuan. Growth: 12.2%.
+*   **R&D Personnel (Above-scale):** 500,000 people. Growth: 5.2%. Share of above-scale employees: 7.1% (up 0.5 percentage points).
+*   **Revenue per 100 Yuan Assets (2025):** 58.0 yuan. Up 1.0 yuan.
+*   **Total Assets (End of 2025):** 374474 billion yuan. Growth: 8.9%.
+*   **Core Field Assets (End of 2025):** 294145 billion yuan. Growth: 8.7%. Contribution to asset growth: 77.4% (up 1.0 percentage point).
+
+**Calculations and Verification for Each Option:**
+
+**Option A:**
+*   **Claim:** New business forms last year revenue approx 66595.1 billion yuan. Share of cultural industry last year approx 34.8%. This year share 36.8%, up 2.0 percentage points. Total increment contribution rate approx 59.7%.
+*   **Calculation:**
+    *   Last year revenue = $76651 / (1 + 15.1\%) = 76651 / 1.151 \approx 66595.13$ billion yuan. Matches "66595.1".
+    *   Last year total revenue = $208254 / (1 + 8.8\%) = 208254 / 1.088 \approx 191409.9$ billion yuan.
+    *   Last year share = $66595.1 / 191409.9 \approx 0.3479$ or $34.8\%$. Matches "34.8%".
+    *   This year share: Text says "36.8%". Matches.
+    *   Increase in share: Text says "up 2.0 percentage points". Matches.
+    *   Contribution to growth: Text says "59.7%". Matches.
+*   **Conclusion:** Option A seems correct based on the text.
+
+**Option B:**
+*   **Claim:** Service industry last year revenue approx 109088.7 billion yuan. Share of cultural industry last year approx 57.0%. This year share increase 2.1 percentage points. Contribution rate to total increment approx 82.7%.
+*   **Calculation:**
+    *   Last year service revenue = $123052 / (1 + 12.8\%) = 123052 / 1.128 \approx 109088.65$ billion yuan. Matches "109088.7".
+    *   Last year total revenue = $191409.9$ (calculated in A).
+    *   Last year share = $109088.7 / 191409.9 \approx 0.5699$ or $57.0\%$. Matches "57.0%".
+    *   This year share increase: Text says "up 2.1 percentage points". Matches.
+    *   Contribution to growth: Text says "82.7%". Matches.
+*   **Conclusion:** Option B seems correct.
+
+**Option C:**
+*   **Claim:** Above-scale + Below-scale profit last year sum approx 17740.5 billion yuan. Higher than total restored value by approx 1.4 billion yuan. Below-scale share of this year profit approx 26.8%, but share of two-layer increment approx 42.9%.
+*   **Calculation:**
+    *   Above-scale last year profit = $13933 / (1 + 5.6\%) = 13933 / 1.056 \approx 13194.13$ billion yuan.
+    *   Below-scale last year profit = $5101 / (1 + 12.2\%) = 5101 / 1.122 \approx 4546.35$ billion yuan.
+    *   Sum last year = $13194.13 + 4546.35 = 17740.48$ billion yuan. Rounds to "17740.5". Matches.
+    *   Total profit last year (restored from total): $19034 / (1 + 7.3\%) = 19034 / 1.073 \approx 17739.05$ billion yuan.
+    *   Difference: $17740.48 - 17739.05 = 1.43$ billion yuan. Matches "higher by approx 1.4 billion yuan".
+    *   Below-scale share of this year profit: $5101 / 19034 \approx 0.2679$ or $26.8\%$. Matches.
+    *   Increment calculation:
+        *   Above-scale increment = $13933 - 13194.13 = 738.87$.
+        *   Below-scale increment = $5101 - 4546.35 = 554.65$.
+        *   Two-layer increment sum = $738.87 + 554.65 = 1293.52$.
+        *   Below-scale share of two-layer increment = $554.65 / 1293.52 \approx 0.4288$ or $42.9\%$. Matches.
+*   **Conclusion:** Option C seems correct.
+
+**Option D:**
+*   **Claim:** R&D personnel 500k, growth 5.2%, share up 0.5 pp. Last year R&D personnel approx 47.5万人，total employees approx 689.0万人。This year total employees approx 704.2万人，growth approx 2.2%.
+*   **Calculation:**
+    *   Last year R&D personnel = $50 / (1 + 5.2\%) = 50 / 1.052 \approx 47.528$万人。Matches "47.5".
+    *   This year share of R&D personnel in above-scale employees = 7.1%.
+    *   This year total above-scale employees = $50 / 7.1\% = 50 / 0.071 \approx 704.225$万人。Matches "704.2".
+    *   Last year share = $7.1\% - 0.5\% = 6.6\%$.
+    *   Last year total above-scale employees = $47.528 / 6.6\% = 47.528 / 0.066 \approx 719.97$万人。
+    *   Wait, let's check the growth rate calculation.
+    *   Total employees growth: $(704.2 - 720.0) / 720.0$? Or use the calculated values.
+    *   Let's re-calculate last year total employees using the share logic strictly.
+    *   If share increased by 0.5pp to 7.1%, then last year share was 6.6%.
+    *   Last year R&D = 47.528. Last year Total = $47.528 / 0.066 = 720.12$.
+    *   This year Total = $50 / 0.071 = 704.23$.
+    *   Growth rate = $(704.23 - 720.12) / 720.12 \approx -2.2\%$.
+    *   The option claims growth is approx 2.2% (positive).
+    *   Let's check the text again. "占规模以上文化企业全部从业人员的比重为 7.1%，比上年提高 0.5 个百分点".
+    *   Last year share = 6.6%.
+    *   Last year R&D = $50 / 1.052 = 47.53$.
+    *   Last year Total Employees = $47.53 / 0.066 = 720.15$.
+    *   This year Total Employees = $50 / 0.071 = 704.23$.
+    *   Change = $704.23 - 720.15 = -15.92$.
+    *   Growth rate = $-15.92 / 720.15 \approx -2.2\%$.
+    *   Option D says "增长约 2.2%" (Growth approx 2.2%). It should be a decrease (-2.2%).
+    *   Therefore, Option D is incorrect regarding the growth direction/sign.
+    *   Wait, let's double check if I misinterpreted "share". "R&D personnel... account for 7.1%... up 0.5 percentage points". Yes, implies previous was 6.6%.
+    *   R&D grew 5.2%. Total employees must have grown slower than 5.2% for the share to rise.
+    *   If Total grew 2.2%, then share would rise less than 5.2% - 2.2% = 3% roughly? No, math: $(1+r_R)/(1+r_T) = (1+s_{new})/(1+s_{old})$.
+    *   $(1.052)/(1+x) = 0.071/0.066 = 1.0757$.
+    *   $1+x = 1.052 / 1.0757 = 0.978$. So x = -2.2%.
+    *   The option states "growth approx 2.2%". This implies positive growth. The calculation shows negative growth.
+    *   So Option D is False.
+
+**Option E:**
+*   **Claim:** Directly dividing Revenue by End Assets gives approx 55.6 yuan per 100 yuan. According to formula, 58.0 yuan corresponds to Average Assets approx 359058.6 billion yuan, which is about 4.1% lower than End Assets.
+*   **Calculation:**
+    *   Revenue = 208254. End Assets = 374474.
+    *   Ratio = $208254 / 374474 \approx 0.5563$. Per 100 yuan assets -> 55.6 yuan. Matches "55.6".
+    *   Formula given in Note 1: "每百元资产实现营业收入 = 营业收入÷平均资产× 100".
+    *   Value = 58.0.
+    *   $58.0 = (208254 / \text{AvgAssets}) \times 100$.
+    *   $\text{AvgAssets} = 208254 / 0.58 = 359058.62$. Matches "359058.6".
+    *   Difference with End Assets: $374474 - 359058.6 = 15415.4$.
+    *   Percentage difference relative to End Assets: $15415.4 / 374474 \approx 0.04116$ or $4.1\%$. Matches "lower by approx 4.1%".
+*   **Conclusion:** Option E seems correct.
+
+**Option F:**
+*   **Claim:** Core field and all cultural industry last year assets approx 270602.6 billion yuan, 343869.6 billion yuan. Calculated core field asset increment contribution rate approx 77.4%, can precisely reproduce the report value.
+*   **Calculation:**
+    *   Core Field Assets (Current): 294145. Growth: 8.7%.
+    *   Last Year Core Field Assets = $294145 / 1.087 \approx 270602.57$. Matches "270602.6".
+    *   Total Assets (Current): 374474. Growth: 8.9%.
+    *   Last Year Total Assets = $374474 / 1.089 \approx 343869.60$. Matches "343869.6".
+    *   Core Field Increment = $294145 - 270602.6 = 23542.4$.
+    *   Total Increment = $374474 - 343869.6 = 30604.4$.
+    *   Contribution Rate = $23542.4 / 30604.4 \approx 0.7692$ or $76.9\%$.
+    *   The option claims "approx 77.4%".
+    *   Let's check the text: "文化核心领域资产对全部文化产业资产增长的贡献率达到 77.4%".
+    *   My calculation: $23542.4 / 30604.4 = 0.76924$.
+    *   Why the discrepancy? Maybe rounding in the reported growth rates or numbers.
+    *   Let's try to calculate using the exact numbers without intermediate rounding if possible, but I only have the rounded ones.
+    *   Text says contribution rate is 77.4%.
+    *   Calculation result is 76.9%.
+    *   Is 76.9% considered "precisely reproducing"? Usually "precise reproduction" means matching the number exactly or within very tight tolerance. 76.9 vs 77.4 is a 0.5 percentage point difference.
+    *   However, let's look at the instruction: "暂将表中金额、增速和占比视为精确值；上年金额按“本期金额÷（1＋增速）”还原。... “总计增量贡献率”以总计行还原出的增量为分母".
+    *   Using the instructions:
+        *   Last Year Core = $294145 / 1.087 = 270602.5759...$
+        *   Last Year Total = $374474 / 1.089 = 343869.6051...$
+        *   Core Increment = $294145 - 270602.5759 = 23542.4241$
+        *   Total Increment = $374474 - 343869.6051 = 30604.3949$
+        *   Contribution = $23542.4241 / 30604.3949 = 0.76924... \rightarrow 76.9\%$.
+    *   The report says 77.4%.
+    *   The calculated value (76.9%) does not match the report value (77.4%).
+    *   The option says "can precisely reproduce the report value" (可精确复现公报值). Since my calculation yields 76.9% and the report says 77.4%, this statement is false.
+    *   Wait, is there another way to calculate? Sometimes contribution rate is calculated as (Sector Growth * Sector Weight) / Total Growth? No, that's contribution to growth rate. Contribution to increment is Increment_Sector / Increment_Total.
+    *   Perhaps the growth rates in the table are rounded, so calculating backwards creates errors. But the instruction says "treat amounts, growth rates and shares in the table as precise values".
+    *   Under this strict instruction, the calculation yields 76.9%. The report value is 77.4%. They do not match. Thus, claiming it "can precisely reproduce" is false.
+    *   Let's check if the text says "contribution rate reached 77.4%". Yes.
+    *   Let's check if my calculation is wrong.
+    *   $294145 / 1.087 = 270602.5759$. Increment = 23542.4241.
+    *   $374474 / 1.089 = 343869.6051$. Increment = 30604.3949.
+    *   Ratio = 0.76924.
+    *   Is it possible the growth rate 8.7% is rounded? If we assume the text's 77.4% is correct, then the calculation doesn't match the derived numbers.
+    *   Given the instruction "treat... as precise values", I must use the numbers given. With those numbers, the result is 76.9%. The claim is that it reproduces 77.4%. This is a contradiction. So F is likely False.
+    *   Wait, let's re-read carefully: "由表中金额和增速算得核心领域资产增量贡献率约 77.4%，可精确复现公报值。" (Calculated from table amount and growth rate... approx 77.4%, can precisely reproduce report value).
+    *   If I calculate 76.9%, I cannot say it is approx 77.4% (0.5pp diff is significant in stats usually) AND that it reproduces the report value.
+    *   However, sometimes "approx" allows some leeway. But "precisely reproduce" (精确复现) suggests they should match.
+    *   Let's check other options again to see if F is intended to be True due to some nuance I missed.
+    *   Maybe the "Total Asset Growth" 8.9% is also rounded?
+    *   If I use the increments directly? No, I don't have them.
+    *   Let's check Option A, B, C, E again. They seem very consistent with calculations.
+    *   Option D is definitely False (sign error).
+    *   Option F: The calculated value is 76.9%. The text says 77.4%. The option claims the calculation gives 77.4%. This is factually incorrect based on the provided numbers. So F is False.
+
+**Summary of Valid Options:**
+A: Correct.
+B: Correct.
+C: Correct.
+D: Incorrect (Growth direction wrong).
+E: Correct.
+F: Incorrect (Calculation mismatch).
+
+Wait, let me double check F's calculation one more time.
+Maybe the "Total Asset Growth" 8.9% applies to something else? No, "文化产业资产总量持续增长... 比上年末增长 8.9%".
+Maybe the "Core Field" 8.7%? "文化核心领域... 比上年末增长 8.7%".
+Is it possible the contribution rate is defined differently? "贡献率" usually = Increment_Sector / Increment_Total.
+Increment_Core = $294145 - 294145/1.087 = 23542.4$.
+Increment_Total = $374474 - 374474/1.089 = 30604.4$.
+Ratio = 0.769.
+Report says 77.4%.
+Difference is 0.5%.
+In statistical reports, contribution rates are often calculated before rounding the growth rates used for the final text. If I am forced to use the rounded growth rates as "precise values" per the prompt ("暂将表中金额、增速和占比视为精确值"), then I must get 76.9%. The option claims I get 77.4%. So the statement "Calculated... approx 77.4%" is false under the prompt's constraints.
+So F is False.
+
+Let's re-verify D.
+R&D Personnel: 500,000. Growth 5.2%.
+Share: 7.1%. Up 0.5pp -> Last year 6.6%.
+Last Year R&D = $50 / 1.052 = 47.528$.
+Last Year Total = $47.528 / 0.066 = 720.12$.
+This Year Total = $50 / 0.071 = 704.23$.
+Growth = $(704.23 - 720.12) / 720.12 = -2.2\%$.
+Option D says "Growth approx 2.2%". It misses the negative sign. In Chinese context, "增长" usually implies positive. If it decreased, it would say "下降" or "-2.2%".
+So D is definitely False.
+
+Let's re-verify A, B, C, E.
+A:
+Last Year New Biz = $76651 / 1.151 = 66595.13$. (Matches 66595.1)
+Last Year Total = $208254 / 1.088 = 191409.9$.
+Share = $66595.13 / 191409.9 = 34.79\% \approx 34.8\%$. (Matches)
+Contribution = 59.7% (Text). (Matches)
+Seems solid.
+
+B:
+Last Year Service = $123052 / 1.128 = 109088.65$. (Matches 109088.7)
+Share = $109088.65 / 191409.9 = 56.99\% \approx 57.0\%$. (Matches)
+Contribution = 82.7% (Text). (Matches)
+Seems solid.
+
+C:
+Above Scale Profit Last Year = $13933 / 1.056 = 13194.13$.
+Below Scale Profit Last Year = $5101 / 1.122 = 4546.35$.
+Sum = $17740.48 \approx 17740.5$. (Matches)
+Total Profit Last Year = $19034 / 1.073 = 17739.05$.
+Diff = $1.43 \approx 1.4$. (Matches)
+Below Scale Share This Year = $5101 / 19034 = 26.79\% \approx 26.8\%$. (Matches)
+Below Scale Increment = $5101 - 4546.35 = 554.65$.
+Two Layer Increment Sum = $(13933 - 13194.13) + 554.65 = 738.87 + 554.65 = 1293.52$.
+Share of Increment = $554.65 / 1293.52 = 42.88\% \approx 42.9\%$. (Matches)
+Seems solid.
+
+E:
+Revenue/End Assets = $208254 / 374474 = 0.5561 \rightarrow 55.6$. (Matches)
+Formula: Rev / Avg Assets * 100 = 58.0.
+Avg Assets = $208254 / 0.58 = 359058.62$. (Matches 359058.6)
+Diff % = $(374474 - 359058.6) / 374474 = 15415.4 / 374474 = 4.11\% \approx 4.1\%$. (Matches)
+Seems solid.
+
+So A, B, C, E are correct. D and F are incorrect.
+
+Wait, check F again. Is there any ambiguity?
+"由表中金额和增速算得核心领域资产增量贡献率约 77.4%".
+If I calculate 76.9%, can I call it "approx 77.4%"?
+Usually, 76.9 is not approx 77.4. That's a 0.5 gap.
+Also "可精确复现公报值" (Can precisely reproduce the report value). 76.9 != 77.4.
+So F is definitely incorrect based on the strict instruction to treat table values as precise.
+
+Check D again.
+"增长约 2.2%".
+If the actual growth is -2.2%, saying "Growth 2.2%" is wrong. It should be "Decrease 2.2%".
+So D is incorrect.
+
+Final check on A, B, C, E.
+All calculations align perfectly with the "round to 1 decimal place" instruction where applicable.
+A: 66595.1 (1 dec), 34.8 (1 dec), 59.7 (1 dec).
+B: 109088.7 (1 dec), 57.0 (1 dec), 82.7 (1 dec).
+C: 17740.5 (1 dec), 1.4 (1 dec), 26.8 (1 dec), 42.9 (1 dec).
+E: 55.6 (1 dec), 359058.6 (1 dec), 4.1 (1 dec).
+
+Looks good.
+
+One detail on E: "直接用营业收入除以年末资产只能得到每百元约 55.6 元".
+$208254 / 374474 = 0.55612... \times 100 = 55.612... \approx 55.6$. Correct.
+"按指标公式，公报 58.0 元对应平均资产约 359058.6 亿元".
+$208254 / 0.58 = 359058.62... \approx 359058.6$. Correct.
+"比年末资产低约 4.1%".
+$(374474 - 359058.6) / 374474 = 0.04116... \approx 4.1\%$. Correct.
+
+One detail on C: "规模以下占本年利润约 26.8%".
+$5101 / 19034 = 0.26799... \approx 26.8\%$. Correct.
+"却占两层增量约 42.9%".
+Increment Below = $5101 - 4546.35 = 554.65$.
+Increment Above = $13933 - 13194.13 = 738.87$.
+Total Increment = $1293.52$.
+Ratio = $554.65 / 1293.52 = 0.42879... \approx 42.9\%$. Correct.
+"上年利润合计约 17740.5 亿元".
+$13194.13 + 4546.35 = 17740.48 \approx 17740.5$. Correct.
+"比总计还原值高约 1.4 亿元".
+Total Restored = $19034 / 1.073 = 17739.049$.
+Diff = $17740.48 - 17739.05 = 1.43 \approx 1.4$. Correct.
+
+One detail on A: "新业态上年收入约 66595.1 亿元".
+$76651 / 1.151 = 66595.134... \approx 66595.1$. Correct.
+"占同期文化产业约 34.8%".
+$66595.134 / 191409.908 = 0.3479... \approx 34.8\%$. Correct.
+"本年占比约 36.8%". Text says 36.8%. Correct.
+"提高约 2.0 个百分点". Text says 2.0. Correct.
+"其总计增量贡献率约 59.7%". Text says 59.7%. Correct.
+
+One detail on B: "服务业上年收入约 109088.7 亿元".
+$123052 / 1.128 = 109088.65... \approx 109088.7$. Correct.
+"占同期文化产业约 57.0%".
+$109088.65 / 191409.9 = 0.5699... \approx 57.0\%$. Correct.
+"本年占比提高约 2.1 个百分点". Text says 2.1. Correct.
+"以总计增量为分母的贡献率约 82.7%". Text says 82.7%. Correct.
+
+Everything confirms A, B, C, E.
+
+Double Check D:
+"上年 R&D 人员约 47.5 万人". $50/1.052 = 47.528 \approx 47.5$. OK.
+"总从业约 689.0 万人".
+Wait, earlier I calculated 720.1. Where did 689 come from?
+If I assume the option's number 689.0 is correct, what implies it?
+Maybe Last Year Share was different?
+If Last Year Total = 689.0, Last Year R&D = 47.5. Share = $47.5/689 = 6.89\%$.
+This year Share = 7.1%. Increase = 0.21 pp.
+But text says "increase 0.5 percentage points".
+So 689.0 is inconsistent with the text's "increase 0.5pp".
+My calculation yielded 720.1.
+Why does the option say 689.0?
+Maybe it assumes Last Year Share = 7.1% - 0.5% = 6.6%.
+Then Total = $47.5 / 0.066 = 719.7$.
+Where does 689 come from?
+Maybe it uses Current Total (704.2) minus growth?
+Or maybe it calculates Last Year Total using Current Total / (1+Growth)?
+Current Total = 704.2. Growth = 2.2% (claimed in option).
+Last Year = $704.2 / 1.022 = 689.04$.
+Ah! The option claims Growth is 2.2%. If I assume Growth is 2.2%, then Last Year Total is 689.0.
+But I found Growth is -2.2%.
+So the option contains a circular logic error or simply gets the sign wrong.
+Since the sign is wrong, the whole chain is wrong.
+So D is False.
+
+Double Check F:
+My calc: 76.9%. Report: 77.4%.
+Option says: Calc gives 77.4%, matches report.
+This is False.
+
+So correct options: A, B, C, E.
+
+Format:
+[Answer]
+ABCE
+
+Wait, need to check if there are any subtle traps.
+Option A: "占同期文化产业约 34.8%".
+Calculated: 34.79%. Rounds to 34.8%. OK.
+Option B: "占同期文化产业约 57.0%".
+Calculated: 56.99%. Rounds to 57.0%. OK.
+Option C: "上年利润合计约 17740.5 亿元".
+Calculated: 17740.48. Rounds to 17740.5. OK.
+Option E: "每百元约 55.6 元".
+Calculated: 55.61. Rounds to 55.6. OK.
+
+Are there any other options? No, just A-F.
+So the answer is ABCE.
+
+Wait, looking at Option F again.
+Is it possible that the "Total Asset Growth" 8.9% is derived from the components such that the contribution rate works out to 77.4%?
+But the instruction says "Treat amounts, growth rates... in the table as precise values".
+So I must use 8.9% and 8.7% as exact inputs.
+With these inputs, the result is 76.9%.
+The claim is that it reproduces 77.4%.
+This is a factual error in the option statement regarding the calculation result.
+So F is False.
+
+Final check on D.
+"上年 R&D 人员约 47.5 万人". Correct ($50/1.052$).
+"总从业约 689.0 万人". Incorrect (Should be ~720).
+"本年总从业约 704.2 万人". Correct ($50/0.071$).
+"增长约 2.2%". Incorrect (Should be -2.2%).
+So D is False.
+
+So A, B, C, E are the correct ones.
+
+One more check on E: "比年末资产低约 4.1%".
+$(374474 - 359058.6) / 374474 = 4.11\%$. Rounds to 4.1%. OK.
+
+One more check on C: "规模以下占本年利润约 26.8%".
+$5101 / 19034 = 26.799\%$. Rounds to 26.8%. OK.
+"却占两层增量约 42.9%".
+$554.65 / 1293.52 = 42.879\%$. Rounds to 42.9%. OK.
+
+Okay, confident in ABCE.
+
+Wait, I should check if there's any hidden constraint. "少选、多选或错选均判错".
+Just output the letters.
+
+One thing: Option A says "占同期文化产业约 34.8%".
+Calculated: $66595.13 / 191409.91 = 34.79\%$.
+Option B says "占同期文化产业约 57.0%".
+Calculated: $109088.65 / 191409.91 = 56.99\%$.
+Both round correctly.
+
+Option C says "上年利润合计约 17740.5 亿元".
+Calculated: $13194.13 + 4546.35 = 17740.48$. Rounds to 17740.5.
+"比总计还原值高约 1.4 亿元".
+Total Restored: $19034 / 1.073 = 17739.05$.
+Diff: $17740.48 - 17739.05 = 1.43$. Rounds to 1.4.
+Correct.
+
+Option E says "直接...得到每百元约 55.6 元".
+$208254 / 374474 = 0.5561$. 55.6. Correct.
+"对应平均资产约 359058.6 亿元".
+$208254 / 0.58 = 359058.62$. Correct.
+"比年末资产低约 4.1%".
+$15415.4 / 374474 = 4.11\%$. Correct.
+
+All checks passed for A, B, C, E.
+D and F failed.
+
+Final Answer seems to be ABCE.
+
+Wait, I need to make sure I don't miss anything in F.
+"由表中金额和增速算得核心领域资产增量贡献率约 77.4%".
+If I use the unrounded numbers from the text?
+The text provides rounded numbers. The instruction says treat them as precise.
+So I cannot use unrounded numbers.
+So 76.9% is the result.
+76.9% != 77.4%.
+So F is False.
+
+What if "Total Asset Growth" 8.9% is actually derived from the sum of increments?
+No, the instruction says treat the table values as precise.
+So F is definitely False.
+
+Okay, ready to write the response.
+
+Structure:
+[Answer]
+ABCE

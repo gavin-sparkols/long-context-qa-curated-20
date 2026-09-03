@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目类型、领域及T8.1/Full分类均与实际能力要求一致。问题需跨企业合并附注、现金流量表、借款附注、分部说明和流动性分析完成口径消歧、数值勾稽与合并抵销判断，证据完整且答案唯一。8轮均遗漏至少一项明确要求，尤其全部未写出循环信贷已偿还125,000千美元，因此correct为0，严格低于50%，终审接受。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "score": 0.72,
+      "format_only": false,
+      "reason": "主要勾稽金额和内部利息处理正确，但循环信贷仅写期末75,000，遗漏初始提款200,000及已偿还125,000；公司内部票据也未写十年期限。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "score": 0.86,
+      "format_only": false,
+      "reason": "对价勾稽、两项融资的初始或期末本金及上半年内部利息总额基本正确，但遗漏循环信贷已偿还125,000，且未注明内部票据十年期限。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.84,
+      "format_only": false,
+      "reason": "核心金额、融资存续状态和上半年内部利息总额正确，但遗漏循环信贷偿还125,000及内部票据十年期限。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.66,
+      "format_only": false,
+      "reason": "勾稽关系与融资期末余额正确，但遗漏循环信贷初始提款200,000和偿还125,000，也未量化Mortgage与Corporate各季度约10,000的内部利息影响。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "partial",
+      "score": 0.68,
+      "format_only": false,
+      "reason": "勾稽金额和内部利息上半年合计正确，但把第二项笼统写成银团贷款，仅给75,000期末额，遗漏循环信贷初始提款200,000、偿还125,000及内部票据十年期限。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.85,
+      "format_only": false,
+      "reason": "主要数字、融资余额及内部利息合计正确，但遗漏循环信贷已偿还125,000，且未注明内部票据十年期限。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.85,
+      "format_only": false,
+      "reason": "正确给出勾稽金额、两项融资规模与期末余额以及内部利息上半年合计，但遗漏循环信贷偿还125,000和内部票据十年期限。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.72,
+      "format_only": false,
+      "reason": "勾稽金额及两项融资本金基本正确，但遗漏循环信贷偿还125,000、内部票据十年期限，并未量化Mortgage和Corporate的内部利息影响。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目类型、领域及T8.1/Full分类均与实际能力要求一致。问题需跨企业合并附注、现金流量表、借款附注、分部说明和流动性分析完成口径消歧、数值勾稽与合并抵销判断，证据完整且答案唯一。8轮均遗漏至少一项明确要求，尤其全部未写出循环信贷已偿还125,000千美元，因此correct为0，严格低于50%，终审接受。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"partial\",\"score\":0.72,\"format_only\":false,\"reason\":\"主要勾稽金额和内部利息处理正确，但循环信贷仅写期末75,000，遗漏初始提款200,000及已偿还125,000；公司内部票据也未写十年期限。\"},{\"rollout_id\":2,\"verdict\":\"partial\",\"score\":0.86,\"format_only\":false,\"reason\":\"对价勾稽、两项融资的初始或期末本金及上半年内部利息总额基本正确，但遗漏循环信贷已偿还125,000，且未注明内部票据十年期限。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.84,\"format_only\":false,\"reason\":\"核心金额、融资存续状态和上半年内部利息总额正确，但遗漏循环信贷偿还125,000及内部票据十年期限。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.66,\"format_only\":false,\"reason\":\"勾稽关系与融资期末余额正确，但遗漏循环信贷初始提款200,000和偿还125,000，也未量化Mortgage与Corporate各季度约10,000的内部利息影响。\"},{\"rollout_id\":5,\"verdict\":\"partial\",\"score\":0.68,\"format_only\":false,\"reason\":\"勾稽金额和内部利息上半年合计正确，但把第二项笼统写成银团贷款，仅给75,000期末额，遗漏循环信贷初始提款200,000、偿还125,000及内部票据十年期限。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.85,\"format_only\":false,\"reason\":\"主要数字、融资余额及内部利息合计正确，但遗漏循环信贷已偿还125,000，且未注明内部票据十年期限。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.85,\"format_only\":false,\"reason\":\"正确给出勾稽金额、两项融资规模与期末余额以及内部利息上半年合计，但遗漏循环信贷偿还125,000和内部票据十年期限。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.72,\"format_only\":false,\"reason\":\"勾稽金额及两项融资本金基本正确，但遗漏循环信贷偿还125,000、内部票据十年期限，并未量化Mortgage和Corporate的内部利息影响。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T02:38:26.553Z"
+}

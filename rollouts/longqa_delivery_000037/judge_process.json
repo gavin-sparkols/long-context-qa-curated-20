@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "题目及分类有效：正文属于英国政府跨部门农村发展政策综合报告，domain正确；作答需综合前置农村影响评估、地方协作与定制、数字包容、监测问责等远距离证据，符合T10.1与Full门槛。方案B具有唯一性。8轮中仅第5轮完整覆盖四项规则，correct为1次，严格低于50%，终审接受。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "partial",
+      "score": 0.5,
+      "format_only": false,
+      "reason": "正确选择方案B，并覆盖前置评估、社区参与、因地制宜和指标问责；但未明确地方跨机构协同，也未说明连接、设备、技能或支持中的至少两项数字接入条件。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "score": 0.25,
+      "format_only": false,
+      "reason": "选择正确，但四项内容仅为抽象标签，未形成题目要求的完整政策规则，关键条件和约束均不可核验。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.5,
+      "format_only": false,
+      "reason": "覆盖前置社区参与、地方定制、非数字渠道和年度指标；缺少地方跨机构协同，也未完整概括连接、设备、技能等数字包容条件。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.5,
+      "format_only": false,
+      "reason": "正确概括前置评估、社区中心、渠道互补和结果问责；但没有地方跨机构协同，且未交代连接、设备和数字技能等接入约束。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "选择方案B，并完整覆盖前置农村影响评估与参与、地方多方协同和定制、基础设施与技能适配及非数字渠道、结果指标和年度公开监督。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.75,
+      "format_only": false,
+      "reason": "覆盖前置参与、本地定制、基础设施与技能差异、非数字支持及年度指标；但未明确地方政府、医疗机构等跨机构协同治理要求。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.5,
+      "format_only": false,
+      "reason": "覆盖前置评估、因地制宜、数字接入与非数字渠道、结果问责；但未包含社区参与，也未包含地方跨机构协同。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "partial",
+      "score": 0.5,
+      "format_only": false,
+      "reason": "覆盖前置评估、社区参与、渠道互补和年度问责；但缺少按本地农村需求定制及跨机构协同，也未列出连接、设备、技能或支持等数字接入条件。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"题目及分类有效：正文属于英国政府跨部门农村发展政策综合报告，domain正确；作答需综合前置农村影响评估、地方协作与定制、数字包容、监测问责等远距离证据，符合T10.1与Full门槛。方案B具有唯一性。8轮中仅第5轮完整覆盖四项规则，correct为1次，严格低于50%，终审接受。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"partial\",\"score\":0.5,\"format_only\":false,\"reason\":\"正确选择方案B，并覆盖前置评估、社区参与、因地制宜和指标问责；但未明确地方跨机构协同，也未说明连接、设备、技能或支持中的至少两项数字接入条件。\"},{\"rollout_id\":2,\"verdict\":\"partial\",\"score\":0.25,\"format_only\":false,\"reason\":\"选择正确，但四项内容仅为抽象标签，未形成题目要求的完整政策规则，关键条件和约束均不可核验。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.5,\"format_only\":false,\"reason\":\"覆盖前置社区参与、地方定制、非数字渠道和年度指标；缺少地方跨机构协同，也未完整概括连接、设备、技能等数字包容条件。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.5,\"format_only\":false,\"reason\":\"正确概括前置评估、社区中心、渠道互补和结果问责；但没有地方跨机构协同，且未交代连接、设备和数字技能等接入约束。\"},{\"rollout_id\":5,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"选择方案B，并完整覆盖前置农村影响评估与参与、地方多方协同和定制、基础设施与技能适配及非数字渠道、结果指标和年度公开监督。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.75,\"format_only\":false,\"reason\":\"覆盖前置参与、本地定制、基础设施与技能差异、非数字支持及年度指标；但未明确地方政府、医疗机构等跨机构协同治理要求。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.5,\"format_only\":false,\"reason\":\"覆盖前置评估、因地制宜、数字接入与非数字渠道、结果问责；但未包含社区参与，也未包含地方跨机构协同。\"},{\"rollout_id\":8,\"verdict\":\"partial\",\"score\":0.5,\"format_only\":false,\"reason\":\"覆盖前置评估、社区参与、渠道互补和年度问责；但缺少按本地农村需求定制及跨机构协同，也未列出连接、设备、技能或支持等数字接入条件。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T02:36:53.002Z"
+}

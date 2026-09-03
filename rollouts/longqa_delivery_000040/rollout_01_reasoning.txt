@@ -1,0 +1,389 @@
+The user wants me to answer a multiple-choice question based on three provided documents about Kubernetes.
+I need to evaluate each option (A, B, C, D, E, F) and check if all sub-judgments within them are true according to the provided context. If any sub-judgment is false, the entire option should not be selected.
+
+**Document Analysis:**
+
+*   **Document 1: Adding Linux Work Nodes**
+    *   Mentions `kubectl get nodes` output.
+    *   Mentions running `kubectl -n kube-system rollout restart deployment coredns` after at least one new node joins to rebalance CoreDNS Pods for high availability.
+    *   Mentions nodes are usually initialized sequentially.
+
+*   **Document 2: Object Names and IDs**
+    *   Objects have a Name (unique within kind/namespace) and UID (globally unique).
+    *   A Pod and a Deployment can have the same name in the same namespace.
+    *   Two objects of the same type (e.g., two Deployments) cannot have the same name in the same namespace, even with different API versions (v1 vs v1beta1). Version is not part of the unique identifier.
+    *   When re-creating a physical host with the same Node name without deleting the old Node object, K8s sees it as the old host (inconsistency risk).
+    *   `generateName`: Server tries to generate unique names up to 8 times before returning HTTP 409 starting from Kubernetes v1.31 (not v1.30).
+    *   Naming constraints: DNS Subdomain (max 253 chars, lowercase alphanumeric + `-` `.`, start/end with alnum), RFC 1123 Label (max 63 chars, lowercase alphanumeric + `-`, start letter, end alnum), RFC 1035 Label (similar), Path Segment Name (no `/`, `%`, `.`, `..`).
+    *   Service names can start with digits if `RelaxedServiceNameValidation` feature gate is enabled.
+    *   Secret names must be valid DNS subdomains.
+    *   Data keys can contain letters, numbers, `-`, `_`, `.`. No slashes mentioned for keys specifically in the "Secret" doc section, but Document 2 says path segment names shouldn't contain `/`. Let's check Document 3 for Secret data key constraints.
+
+*   **Document 3: Secret**
+    *   Secret contains sensitive info. Stored unencrypted in etcd by default.
+    *   Security: Enable static encryption, RBAC, limit access, external storage drivers.
+    *   Usage scenarios: Env vars, SSH keys, image pull.
+    *   Hidden files: Keys starting with `.` create hidden files (e.g., `.secret-file`). Use `ls -la` to see them.
+    *   Types: Opaque, service-account-token, dockercfg, dockerconfigjson, basic-auth, ssh-auth, tls, bootstrap.kubernetes.io/token.
+    *   **basic-auth**: Must contain `username` OR `password`? Text says: "data field must contain one of the following two keys: username... password...". It implies both might not be strictly required individually, but usually auth needs both. However, the text says "one of the following two keys" (包含以下两个键之一). Wait, let's read carefully: "必须包含以下两个键之一：- username ... - password ...". This phrasing suggests at least one is needed? Or does it mean standard basic auth needs both? The example shows both. But strict reading of "one of the following two keys" means having just username satisfies the constraint check? Actually, Basic Auth usually requires both. But looking at the text: "使用这种 Secret 类型时，Secret 的 data 字段必须包含以下两个键之一". This literally translates to "must contain one of the following two keys". So `username` alone technically meets the constraint described in the text, though functionally useless. I will treat this based strictly on the text provided.
+    *   **data vs stringData**: If a key exists in both, `stringData` has higher priority.
+    *   **Pod dependency**: If Pod depends on a Secret, Secret must be created first. Non-optional Secrets block Pod startup until available.
+    *   **Update propagation**: Updates propagate eventually consistent. Latency = sync cycle + cache propagation delay. Cache propagation depends on strategy (Watch, TTL, Polling). For polling (direct polling), propagation delay is zero. So latency upper bound = sync cycle.
+    *   **Static Pods**: Cannot use ConfigMap or Secret directly.
+    *   **imagePullSecrets**: Can be set manually or via ServiceAccount. ImagePullSecrets list references Secrets in the same namespace.
+    *   **Size limit**: Each Secret max 1 MiB. Many small Secrets can exhaust memory. ResourceQuota can constrain count.
+    *   **Naming**: Secret name must be valid DNS subdomain.
+    *   **Data keys**: Can contain letters, numbers, `-`, `_`, `.`. No mention of `/` being allowed in keys. Document 2 mentions Path Segment Name constraints (no `/`).
+    *   **Custom Types**: Add domain prefix separated by `/`. Example: `cloud-hosting.example.net/cloud-api-credentials`.
+    *   **TLS Secret**: `tls.crt` and `tls.key` required. API checks existence but doesn't validate PEM format or matching pair when using manifest. `kubectl create secret tls` checks matching.
+    *   **GenerateName retry**: Document 2 says "From Kubernetes v1.31 and higher... server tries to generate unique names up to 8 times". Option D says v1.30.
+
+**Option Evaluation:**
+
+*   **Option A:**
+    1.  "一份 basic-auth Secret 仅给出 username 也满足该内置类型的键约束" (A basic-auth Secret providing only username also satisfies the built-in type key constraint): Doc 3 says "must contain one of the following two keys: username... password...". Strictly reading the text provided, yes, it says "one of". (Sub-judgment True based on text).
+    2.  "若 username 同时出现在 data 与 stringData，生效值取后者" (If username appears in both data and stringData, effective value takes the latter): Doc 3 says "If a primary key appears in both data and stringData fields, the value specified by stringData has higher priority." (Sub-judgment True).
+    3.  "非可选 Pod 在该 Secret 创建后再创建，可通过此项依赖检查" (Non-optional Pod created after Secret creation passes dependency check): Doc 3 says "If Pod depends on a Secret, the Secret must be created before the Pod." And "All containers of the Pod will not start until all non-optional Secrets are available." If created after, it works. (Sub-judgment True).
+    4.  "采用完整卷和 TTL 缓存时，轮换可见延迟上限为同步周期加 TTL" (Using full volume and TTL cache, rotation visibility latency upper bound is sync cycle plus TTL): Doc 3 says "Latency upper bound is kubelet sync cycle plus cache propagation delay... depending on chosen cache type... Watch propagation delay, configured cache TTL, or zero for direct polling." So Sync Cycle + TTL is correct for TTL strategy. (Sub-judgment True).
+    5.  "新节点加入后再重启 CoreDNS 符合时序" (Restarting CoreDNS after a new node joins follows the sequence): Doc 1 says "Please ensure high availability, please use kubectl -n kube-system rollout restart deployment coredns command to rebalance CoreDNS Pods after at least one new node joins." (Sub-judgment True).
+    *   **Conclusion for A:** All seem true based on text.
+
+*   **Option B:**
+    1.  "名为 9.edge 的 Secret 符合其名称约束" (Secret named 9.edge conforms to its name constraint): Doc 3 says "Secret object name must be a valid DNS subdomain". Doc 2 says DNS Subdomain rules: "Start with alphanumeric", "End with alphanumeric", "Lowercase alphanumeric + `-` `.`". `9.edge` starts with a digit. Doc 2 says "Must start with alphanumeric". Doc 3 says "Secret object name must be valid DNS subdomain". Does DNS subdomain allow starting with digit? Doc 2 says "Must start with alphanumeric" (必须以字母数字开头). '9' is a number, so alphanumeric includes numbers. Wait, RFC 1123 label says "Must start with letter". DNS Subdomain rule in Doc 2 says "Must start with alphanumeric" (必须以字母数字开头). So `9.edge` starts with '9' which is alphanumeric. So it should be valid per Doc 2 rules for DNS Subdomain.
+        *Wait*, Doc 2 says under "DNS Subdomain": "Must start with alphanumeric". Under "RFC 1123 Label": "Must start with letter".
+        Secret name constraint is "Valid DNS Subdomain" (Doc 3). So `9.edge` starts with '9'. Is '9' alphanumeric? Yes. So it seems valid.
+        *However*, checking Doc 2 again: "DNS Subdomain... Must start with alphanumeric". "RFC 1123 Label... Must start with letter".
+        So `9.edge` is valid for DNS Subdomain.
+    2.  "通过原始清单提交时，只要 TLS Secret 的两个键存在且值可解码，API 不会核验其 PEM 格式和配对关系" (When submitting via raw manifest, as long as TLS Secret's two keys exist and values are decodable, API won't verify PEM format and pairing): Doc 3 says "When using this type of Secret, the Secret configuration's data (or stringData) field must contain tls.key and tls.crt main keys, although the API server actually does not perform further legality checks on the value of each key." (Although it doesn't say "decodable" explicitly, it implies validation is minimal). Later it says regarding `kubectl create secret tls`: "Public/Private key pair must exist beforehand, --cert public key cert must be .PEM encoded, and must match --key given private key." This distinction confirms raw manifest doesn't enforce matching/PEM. (Sub-judgment True).
+    3.  "改用 kubectl tls 子命令提交同一组不匹配文件也能成功" (Switching to kubectl tls subcommand to submit the same mismatched files also succeeds): Doc 3 says regarding `kubectl create secret tls`: "--cert public key cert must be .PEM encoded, and must match --key given private key." If they don't match, it should fail/error out. So "also succeeds" is False.
+    *   **Conclusion for B:** Sub-judgment 3 is False. Option B is incorrect.
+
+*   **Option C:**
+    1.  "静态 Pod 不能直接使用拉取凭据 Secret，故应改成由 API 管理的普通 Pod" (Static Pod cannot directly use pull credential Secret, so should be changed to API-managed regular Pod): Doc 3 says "You cannot use ConfigMap or Secret in Static Pods." ImagePullSecrets are defined in PodSpec. Since Static Pods bypass API (kubelet manages them directly), they cannot reference API resources like Secrets easily (though kubelet can mount files, the specific `imagePullSecrets` field in PodSpec requires API interaction/management usually). The text explicitly says "You cannot use ConfigMap or Secret in Static Pods." This applies to mounting secrets. Pulling images happens before pod spec execution usually, but `imagePullSecrets` is part of PodSpec. If you can't use Secret in Static Pod, you can't use `imagePullSecrets` referencing a Secret in Static Pod spec effectively. The statement "should be changed to API managed regular Pod" is a reasonable conclusion derived from the limitation. (Sub-judgment True).
+    2.  "拉取 Secret 与 Pod 置于同一名字空间并由其 ServiceAccount 引用后，凭据会进入该 Pod 的 imagePullSecrets" (Pull Secret and Pod placed in same namespace and referenced by its ServiceAccount, credentials enter Pod's imagePullSecrets): Doc 3 says "You can manually create imagePullSecret, and reference it in a ServiceAccount. For all Pods created using that ServiceAccount... their imagePullSecrets field will be set to that service account." (Actually it says "set to that service account"? No, it says "reference it... imagePullSecrets field will be set to that service account" - wait, let's read carefully).
+        Text: "You can manually create imagePullSecret, and reference it in a ServiceAccount. For all Pods created using that ServiceAccount... their imagePullSecrets field will be set to that service account." -> Wait, usually `imagePullSecrets` holds the Secret name, not the SA. Let's check text: "对使用该 ServiceAccount 创建的所有 Pod... 其 imagePullSecrets 字段都会设置为该服务账号。" (For all Pods created using that ServiceAccount... their imagePullSecrets field will be set to that service account). This sounds slightly odd phrasing (usually it sets the Secret ref), but if the text says it sets the field to the SA (implying automatic injection via SA config), then based on the text provided, it claims this happens. However, standard K8s behavior is injecting the Secret name. But I must follow the text. The text says "reference it in a ServiceAccount... imagePullSecrets field will be set to that service account". Wait, looking closer at the text provided: "请阅读 向服务账号添加 ImagePullSecret 来详细了解这一过程。" (Read Add ImagePullSecret to Service Account...). The text body says: "imagePullSecrets 字段是一个列表，包含对同一名字空间中 Secret 的引用。" (imagePullSecrets field is a list containing references to Secrets in the same namespace). Then under "Set imagePullSecrets to auto-mount": "You can manually create imagePullSecret, and reference it in a ServiceAccount... For all Pods created using that ServiceAccount... their imagePullSecrets field will be set to that service account." This phrasing is ambiguous ("set to that service account" vs "set to that secret"). But later it says "imagePullSecrets field is a list containing references to Secrets". If the SA references the Secret, the Pod gets the Secret reference. The statement "credentials enter Pod's imagePullSecrets" is conceptually true based on the mechanism described (SA references Secret -> Pod gets Secret ref).
+    3.  "另一个 Secret 的 .registry 键可以挂载成隐藏文件，需用 ls -la 查看" (Another Secret's .registry key can be mounted as hidden file, need ls -la to view): Doc 3 says "By defining a primary key starting with a dot (.), you can 'hide' your data... e.g., .secret-file... ls -l output hides them; must use ls -la". So `.registry` would work similarly. (Sub-judgment True).
+    4.  "这些必需 Secret 均应先于 Pod 创建" (These required Secrets must be created before the Pod): Doc 3 says "If Pod depends on a Secret, the Secret must be created before the Pod." (Sub-judgment True).
+    *   **Re-evaluating Sub-judgment 2:** The text says "imagePullSecrets field will be set to that service account". This is technically weird English translation or Chinese phrasing ("设置为该服务账号" - set to that service account). Usually it means the Secret associated with the SA. But the statement says "credentials enter Pod's imagePullSecrets". This is generally true. However, there is a potential trap. Static Pods (mentioned in point 1) cannot use Secrets. Point 2 talks about normal Pods using SA. Point 1 says change Static Pod to Regular Pod. Point 2 describes how Regular Pods get the Secret via SA. This logic flow holds.
+    *   **Wait**, let's look at Option C Point 1 again. "Static Pod cannot directly use pull credential Secret". Doc 3: "You cannot use ConfigMap or Secret in Static Pods." This covers mounting. `imagePullSecrets` is in PodSpec. Static Pods are managed by kubelet directly, ignoring API PodSpec updates usually, but they have a spec file. Can a static pod spec reference a Secret? The text says "You cannot use ConfigMap or Secret in Static Pods." This implies you cannot mount them. Can you use `imagePullSecrets`? That's for pulling images. The text doesn't explicitly distinguish between mounting and pulling in the "Static Pod" sentence, it just says "cannot use ConfigMap or Secret". Using `imagePullSecrets` involves referencing a Secret object. If you can't use Secret in Static Pod, you likely can't reference it for image pull either (since the node needs to authenticate). So changing to API managed Pod is the workaround suggested.
+    *   **Wait**, check Option C Point 3: ".registry key". The example in Doc 3 uses `.secret-file`. Any key starting with `.` creates a hidden file. `.registry` starts with `.`. So it works.
+    *   **Check Option C Point 2 again**: "credentials enter Pod's imagePullSecrets". The text says "imagePullSecrets field is a list containing references to Secrets". If SA references Secret, Pod gets it. This seems consistent enough.
+    *   **However**, is there a subtle error? "拉取 Secret 与 Pod 置于同一名字空间". Doc 3 says "imagePullSecrets field is a list, containing references to Secrets in the same namespace." So yes, same namespace.
+    *   **Is there any false part?** Let's compare with other options. Option A looked very strong. Option C looks plausible but Point 1's "change to API managed" is a recommendation derived from the constraint.
+    *   Let's check Option A again.
+    *   **Option A Point 1**: "basic-auth Secret only gives username also satisfies built-in type key constraint". Doc 3: "data field must contain one of the following two keys: username... password...". Strictly, yes.
+    *   **Option A Point 5**: "New node join then restart CoreDNS follows sequence". Doc 1: "after at least one new node joins, use kubectl ... rollout restart deployment coredns". Matches.
+    *   **Option A Point 4**: "Full volume and TTL cache, rotation visible latency upper bound is sync cycle plus TTL". Doc 3: "Latency upper bound is kubelet sync cycle plus cache propagation delay... depending on chosen cache type... Watch propagation delay, configured cache TTL...". So Sync + TTL is correct for TTL mode.
+    *   **Option A Point 2**: "stringData higher priority". Doc 3: "If a primary key appears in both data and stringData fields, the value specified by stringData has higher priority." Correct.
+    *   **Option A Point 3**: "Non-optional Pod created after Secret creation passes dependency check". Doc 3: "If Pod depends on a Secret, the Secret must be created before the Pod." If Secret exists, Pod can start. Correct.
+    *   **Option A seems fully correct.**
+
+    *   **Back to Option C**: "Static Pod cannot directly use pull credential Secret". Doc 3 says "You cannot use ConfigMap or Secret in Static Pods." This is a blanket statement. So True. "Should be changed to API managed regular Pod". Reasonable inference. "Pull Secret and Pod same namespace... credentials enter Pod's imagePullSecrets". Doc 3: "imagePullSecrets field is a list containing references to Secrets in the same namespace." "reference it in a ServiceAccount... imagePullSecrets field will be set to that service account". (Note: Text says "set to that service account", which might mean the Secret associated with the SA. In reality, it injects the Secret name. The statement says "credentials enter Pod's imagePullSecrets". This is semantically okay). "Another Secret's .registry key can be mounted as hidden file". Doc 3: "keys starting with '.'... represent files starting with '.'... ls -la". Correct. "Required Secrets must be created before Pod". Doc 3: "Secret must be created before Pod". Correct.
+    *   **Is there a catch?** Maybe "pull credential Secret" isn't the same as "ConfigMap or Secret in Static Pods". The text says "You cannot use ConfigMap or Secret in Static Pods." It doesn't explicitly exclude `imagePullSecrets` usage, but since `imagePullSecrets` references a Secret object, and the rule is "cannot use Secret", it implies you can't reference it.
+    *   **However**, look at Option D.
+    *   **Option D:**
+        1.  "Replace same-name physical host, delete old Node then register to avoid inheriting old entity identity, make new object get different UID": Doc 2: "When object represents a physical entity (e.g., Node)... if Node object not deleted and rebuilt, K8s treats new host as old host...". So deleting old Node is required to get new identity/UID. True.
+        2.  "Same namespace Pod and Deployment can be same name, but two same-name Deployments cannot coexist via different API versions": Doc 2: "In same namespace can only have one named myapp-1234 Pod, but can name Pod and Deployment same myapp-1234." "Two objects of same type... cannot have same name... even with different API versions". True.
+        3.  "From v1.30, generateName conflict retries max 8 times": Doc 2: "From Kubernetes v1.31 and higher version... server tries to generate unique names up to 8 times". Option says v1.30. **False**.
+        4.  "At least one new node join then restart CoreDNS". Doc 1: True.
+        *   **Conclusion for D:** Point 3 is False (v1.31 vs v1.30). Option D is incorrect.
+
+    *   **Option E:**
+        1.  "Entity able to create Deployment in namespace may indirectly read Secret in namespace": Doc 3: "Any person with permission to create Pod in namespace can use this access to read any Secret in that namespace... including indirect access, such as ability to create Deployment." True.
+        2.  "Only static encryption not eliminate API read risk, still need min privilege RBAC": Doc 3: "Default... stored unencrypted... Anyone with API access can retrieve... To use Secret securely... Enable static encryption... Min privilege access... enable/configure RBAC". True.
+        3.  "Split frontend and signature process, expose private key only to signature container, reduces leak surface": Doc 3: "This program can be split into two processes in two containers... Frontend container... cannot see private key; Signature container can see private key... Attackers now must trick app server... more complex than reading a file." True.
+        4.  "External Secret Storage and Operator issuing short-lived session tokens can be combined, Pod doesn't need to understand token refresh mechanism": Doc 3: "You can combine two or more of the above options... Implement (or deploy) an Operator... return short-lived session tokens... create Secret... Pod can use these session tokens... Operator ensures tokens are legal... Separation of responsibility means you can run Pods unaware of exact mechanism of token issuance and refresh." True.
+        *   **Conclusion for E:** All points seem supported by text.
+
+    *   **Option F:**
+        1.  "Two 700 KiB Secrets individually under 1 MiB, but API rejects due to total 1.4 MiB": Doc 3: "Each Secret size max 1 MiB." It does not mention a cluster-wide or namespace-wide limit on total Secret size summing up to reject individual objects. It says "Limit imposed to prevent users creating very large Secrets... Exhaust memory." It does not say "API rejects if sum > X". It says "Each Secret size max 1 MiB". So rejecting two valid-sized objects because their sum exceeds 1 MiB is NOT stated. **False**.
+        2.  "Many smaller Secrets may exhaust memory, use ResourceQuota to constrain count": Doc 3: "Creating many small Secrets may also exhaust memory. You can use ResourceQuota to constrain the number of Secrets...". True.
+        3.  "Secret name 7.prod is legal, data key tls/key illegal due to slash": Doc 3: "Secret object name must be valid DNS subdomain". Doc 2: DNS Subdomain "Max 253 chars... Lowercase alphanumeric + `-` `.`... Start/End alphanumeric". `7.prod` starts with '7' (alphanumeric), ends with 'd', contains `.`. Valid DNS Subdomain. Data keys: "Letters, numbers, `-`, `_`, `.`". Slash `/` is not listed. Also Doc 2 Path Segment Name forbids `/`. So `tls/key` is invalid. True.
+        4.  "Custom type corp.example/cred conforms to public type adding domain prefix convention": Doc 3: "If you want to define a publicly used Secret type... add domain prefix... separated by /". Example: `cloud-hosting.example.net/cloud-api-credentials`. `corp.example/cred` fits the pattern. True.
+        *   **Conclusion for F:** Point 1 is False (API rejects based on individual size, not sum). Option F is incorrect.
+
+    *   **Re-evaluating Option A vs Option C vs Option E.**
+    *   **Option A:**
+        *   Point 1: "basic-auth Secret only username satisfies constraint". Doc 3: "must contain one of the following two keys: username... password...". This is the tricky one. Standard Basic Auth needs both. But the text says "one of". If I strictly follow the text provided in Document 3: "Secret 的 data 字段必须包含以下两个键之一". This literally means "Must contain one of the following two keys". So having just username satisfies the *constraint described in the text*.
+        *   Point 2: stringData priority. Doc 3: "stringData has higher priority". True.
+        *   Point 3: Non-optional Pod created after Secret. Doc 3: "Secret must be created before Pod". True.
+        *   Point 4: Sync + TTL latency. Doc 3: "Sync cycle plus cache propagation delay... TTL". True.
+        *   Point 5: Restart CoreDNS after node join. Doc 1: "After at least one new node joins... restart deployment coredns". True.
+        *   **Verdict:** Option A seems correct based on strict text reading.
+
+    *   **Option C:**
+        *   Point 1: Static Pod cannot use Secret. Doc 3: "You cannot use ConfigMap or Secret in Static Pods." True.
+        *   Point 2: SA references Secret -> Pod gets imagePullSecrets. Doc 3: "Reference it in a ServiceAccount... For all Pods created using that ServiceAccount... their imagePullSecrets field will be set to that service account." (Text says "set to that service account", statement says "credentials enter Pod's imagePullSecrets"). This is slightly imprecise based on the text's own wording ("set to that service account"), but conceptually the credentials (via the Secret ref) enter the Pod's spec. However, the text says "imagePullSecrets field will be set to that service account". This is weird. Usually it's set to the Secret name. But does the statement "credentials enter Pod's imagePullSecrets" hold? Yes, effectively.
+        *   Point 3: `.registry` key hidden file. Doc 3: "Keys starting with '.'... hidden files... ls -la". True.
+        *   Point 4: Required Secrets before Pod. Doc 3: "Secret must be created before Pod". True.
+        *   **Potential Issue:** Point 2 phrasing. "Credentials enter Pod's imagePullSecrets". The text says "imagePullSecrets field will be set to that service account". This might imply the field value is the SA name, not the Secret. If the field value is the SA name, then the credentials don't enter `imagePullSecrets` directly, they enter via the SA linkage. However, `imagePullSecrets` stores Secret refs. If the SA links to the Secret, the Pod inherits the link. The statement says "credentials enter Pod's imagePullSecrets". This is functionally true (the Pod gets access).
+        *   **Comparison:** Option A Point 1 relies on interpreting "one of" strictly. Option C Point 2 relies on interpreting the SA injection mechanism correctly.
+        *   Let's check Option E again.
+    *   **Option E:**
+        *   Point 1: Create Deployment -> Indirect read Secret. Doc 3: "Any person with permission to create Pod... can use this access to read any Secret... including indirect access, such as ability to create Deployment." True.
+        *   Point 2: Static Encryption + RBAC. Doc 3: "Enable static encryption... Min privilege access... enable/configure RBAC". True.
+        *   Point 3: Split containers to reduce leak. Doc 3: "Split into two containers... Frontend... cannot see private key... Signature container can see...". True.
+        *   Point 4: External Storage + Operator. Doc 3: "Combine two or more... Operator... return short-lived session tokens... create Secret... Pod can use...". True.
+        *   **Verdict:** Option E seems completely correct based on text.
+
+    *   **So we have A and E potentially correct.**
+    *   Let's scrutinize A Point 1 again. "Basic-auth Secret only gives username also satisfies built-in type key constraint".
+        *   Text: "使用这种 Secret 类型时，Secret 的 data 字段必须包含以下两个键之一：- username... - password..." (When using this Secret type, Secret's data field must contain one of the following two keys: username... password...).
+        *   Interpretation: The constraint is "Contain {username} OR {password}". So having just `username` satisfies the condition "Contains one of".
+        *   Is there a nuance? "Basic Auth" implies username+password. But the text defines the *constraint* explicitly as "one of". So based on the text, it is True.
+    *   Let's scrutinize E Point 1 again. "Entity able to create Deployment in namespace may indirectly read Secret".
+        *   Text: "Anyone with permission to create Pod in namespace can use this access to read any Secret in that namespace... including indirect access, such as ability to create Deployment."
+        *   Statement: "Create Deployment" -> "Indirectly read Secret". Matches text.
+    *   Let's scrutinize E Point 4. "External Secret Storage and Operator... combined... Pod doesn't need to understand token refresh".
+        *   Text: "Implement... Operator... return short-lived session tokens... create Secret... Pod can use... Operator ensures tokens are legal... Separation of responsibility means you can run those Pods unaware of session token issuance and refresh exact mechanism."
+        *   Statement matches text perfectly.
+
+    *   **Are there any errors in A or E?**
+    *   Check A Point 5: "New node join then restart CoreDNS follows sequence". Doc 1: "After at least one new node joins... restart deployment coredns".
+        *   Text: "为了保证高可用，请在至少一个新节点加入后，使用 kubectl -n kube-system rollout restart deployment coredns 命令重新平衡 CoreDNS Pod。" (To ensure high availability, please use kubectl ... restart deployment coredns command to rebalance CoreDNS Pods after at least one new node joins.)
+        *   Statement: "New node join then restart CoreDNS follows sequence". Matches.
+    *   Check A Point 4: "Rotation visible latency upper bound is sync cycle plus TTL".
+        *   Text: "Latency upper bound is kubelet sync cycle plus cache propagation delay... Watch propagation delay, configured cache TTL...".
+        *   Statement: "Sync cycle plus TTL". Matches.
+    *   Check A Point 3: "Non-optional Pod created after Secret creation passes dependency check".
+        *   Text: "If Pod depends on a Secret, the Secret must be created before the Pod."
+        *   Statement: "Pod created after Secret creation passes". Matches.
+    *   Check A Point 2: "stringData priority".
+        *   Text: "stringData specified key value has higher priority." Matches.
+    *   Check A Point 1: "basic-auth username only".
+        *   Text: "Must contain one of... username... password". Matches.
+
+    *   **Check E again.**
+    *   E Point 1: "Create Deployment -> Read Secret". Text: "Ability to create Deployment" is cited as example of "indirect access".
+    *   E Point 2: "Static encryption not eliminate API read risk". Text: "Stored unencrypted... Anyone with API access can retrieve...". "Enable static encryption... Min privilege access...". Implies static encryption protects etcd storage, not API access. So API read risk remains. True.
+    *   E Point 3: "Frontend/Signature split". Text: "Frontend container... cannot see private key; Signature container can see...". Reduces exposure. True.
+    *   E Point 4: "Operator + External Storage". Text: "Combine two or more... Operator...". True.
+
+    *   **Wait, is there a conflict between A and E?**
+    *   Usually these questions expect a specific set of answers.
+    *   Let's check Option C again. "Static Pod cannot use pull credential Secret". Text: "You cannot use ConfigMap or Secret in Static Pods."
+        *   Does `imagePullSecrets` count as "using Secret"? It references a Secret. The restriction "Cannot use ConfigMap or Secret in Static Pods" usually refers to mounting volumes. `imagePullSecrets` is for authentication.
+        *   However, if the text says "Cannot use ConfigMap or Secret in Static Pods", it's a general prohibition.
+        *   But Point 2 of C says "Pull Secret and Pod same namespace... credentials enter Pod's imagePullSecrets". This refers to Normal Pods (since Static Pods were ruled out in Point 1).
+        *   Point 2 says "credentials enter Pod's imagePullSecrets". Text says "imagePullSecrets field will be set to that service account". This phrasing is suspicious. "Set to that service account" might mean the field value is the SA name, not the Secret name. If the field value is the SA name, then the credentials don't enter `imagePullSecrets` directly. But standard K8s behavior is injecting the Secret ref. Given the text says "set to that service account", maybe the statement "credentials enter Pod's imagePullSecrets" is considered inaccurate based on the provided text's specific (possibly mistranslated) wording.
+        *   Also, Point 1 says "Change to API managed regular Pod". This is a suggestion.
+        *   Compared to A and E, C feels slightly weaker on the technical accuracy of the SA injection description in the text.
+    *   Let's check Option F again. Point 1 is definitely false (sum limit not mentioned).
+    *   Let's check Option D again. Point 3 is definitely false (v1.31 vs v1.30).
+    *   Let's check Option B again. Point 3 is definitely false (kubectl tls validates matching).
+
+    *   **So it's between A and E.**
+    *   Let's re-read A Point 1 carefully. "一份 basic-auth Secret 仅给出 username 也满足该内置类型的键约束".
+        *   Context: "Secret 的 data 字段必须包含以下两个键之一：- username... - password...".
+        *   Constraint: Contains ONE of the two.
+        *   Scenario: Only username provided.
+        *   Result: Satisfies "Contains ONE of".
+        *   Is there a functional requirement implied? "Used for basic authentication". Basic auth requires username AND password. But the text defines the *validation constraint* as "Must contain one of". The prompt asks to audit conclusions based on the documents. Based *strictly* on the document text, the constraint is satisfied.
+        *   However, is there a catch? "Basic Auth Secret... used for basic authentication credentials". If you only provide username, is it a valid Basic Auth Secret? Functionally no. But does it satisfy the *type constraint* (schema validation)? The text says "Must contain one of". So schema-wise, yes.
+        *   Let's check E Point 1. "Entity able to create Deployment... may indirectly read Secret". Text: "Anyone with permission to create Pod... can use this access to read any Secret... including indirect access, such as ability to create Deployment."
+        *   Note: Text says "create Pod". Option says "create Deployment". Creating a Deployment allows creating Pods. So "ability to create Deployment" implies "ability to create Pod" (eventually). The text explicitly lists "ability to create Deployment" as an example of "indirect access". So this is a direct quote match.
+        *   Let's check E Point 4. "External Secret Storage... Operator...". Text: "Combine two or more...". Explicitly mentions Operator and External Storage (External Secret Storage Driver).
+        *   Let's check A Point 5. "New node join then restart CoreDNS". Text: "After at least one new node joins... restart deployment coredns". Direct match.
+        *   Let's check A Point 4. "Sync cycle plus TTL". Text: "Sync cycle plus cache propagation delay... TTL". Direct match.
+        *   Let's check A Point 2. "stringData priority". Text: "stringData... higher priority". Direct match.
+        *   Let's check A Point 3. "Non-optional Pod created after Secret". Text: "Secret must be created before Pod". Direct match.
+
+    *   **Is there any reason to exclude A?**
+    *   Maybe "rotation visible latency" refers to Secret update propagation. Text: "From Secret updated to new key projected to Pod... latency upper bound is kubelet sync cycle plus cache propagation delay". Option A says "rotation visible latency upper bound is sync cycle plus TTL". "Rotation" usually implies Secret content change. "Visible" means Pod sees it. This matches "update... projected to Pod".
+    *   Maybe "basic-auth" constraint. While text says "one of", practically it needs both. But instruction says "Strictly according to context". Context says "Must contain one of". So A is True based on context.
+    *   **Is there any reason to exclude E?**
+    *   E Point 1: "Create Deployment... indirectly read Secret". Text says "create Pod... including indirect access, such as ability to create Deployment". So creating Deployment grants the ability to create Pod, which grants read access. The statement says "Entity able to create Deployment... may indirectly read Secret". This is accurate.
+    *   E Point 2: "Static encryption... still need RBAC". Text lists both as steps. True.
+    *   E Point 3: "Split containers...". Text describes exactly this scenario. True.
+    *   E Point 4: "External... Operator...". Text describes exactly this. True.
+
+    *   **Wait, I need to check if I missed any detail in A.**
+    *   A Point 1: "basic-auth Secret... username... satisfies key constraint".
+    *   Text: "must contain one of the following two keys: username... password".
+    *   Wait, is it "one of" (OR) or "both" (AND)?
+    *   Text: "必须包含以下两个键之一" (Must contain one of the following two keys). "之一" means "one of". So OR logic.
+    *   So A Point 1 is True based on text.
+    *   A Point 5: "New node join then restart CoreDNS follows sequence".
+    *   Text: "After at least one new node joins... restart deployment coredns".
+    *   Statement: "New node join then restart CoreDNS follows sequence".
+    *   Matches.
+
+    *   **Let's check if there are multiple correct options.**
+    *   The prompt asks to "select all sub-judgments that hold". "Select all options where all sub-judgments hold". "Output correct letters...".
+    *   It implies there could be multiple correct options (A, C, E format).
+    *   So A and E could both be correct.
+    *   Let's double check C.
+    *   C Point 2: "credentials enter Pod's imagePullSecrets". Text: "imagePullSecrets field will be set to that service account".
+    *   If the text says "set to that service account", does that mean the field value is the SA name?
+    *   Standard K8s: `imagePullSecrets` is a list of `LocalObjectReference` (Secret names).
+    *   If the text says "set to that service account", it might be saying "set to [the secret associated with] that service account".
+    *   However, the statement says "credentials enter Pod's imagePullSecrets". This is semantically true (the secret ref enters).
+    *   But Point 1: "Static Pod cannot directly use pull credential Secret". Text: "You cannot use ConfigMap or Secret in Static Pods."
+    *   Does "use Secret" cover `imagePullSecrets`? `imagePullSecrets` references a Secret. If you can't use Secret, you can't reference it. So True.
+    *   Why might C be wrong?
+    *   Maybe "credentials enter Pod's imagePullSecrets" is considered wrong because the text says "set to that service account" (ambiguous).
+    *   Or maybe "Static Pod... should be changed to API managed regular Pod" is too prescriptive? No, it's a logical conclusion.
+    *   Let's look at A vs E again.
+    *   A Point 1: "basic-auth... username... satisfies constraint".
+    *   Is it possible the text implies "username AND password" despite saying "one of"?
+    *   "用于基本身份认证的凭据" (Credentials for basic authentication). Basic auth requires both. But the constraint section says "Must contain one of".
+    *   If I follow the instruction "Strictly according to context", I must follow the explicit constraint rule in the text ("one of").
+    *   So A is likely correct.
+    *   E is also likely correct.
+    *   Let's check F again. Point 1 is definitely wrong (Sum limit).
+    *   Let's check D again. Point 3 is definitely wrong (v1.30 vs v1.31).
+    *   Let's check B again. Point 3 is definitely wrong (kubectl tls validates).
+    *   So candidates are A, C, E.
+    *   Let's dig deeper into C Point 2. "拉取 Secret 与 Pod 置于同一名字空间... 凭据会进入该 Pod 的 imagePullSecrets".
+    *   Text: "imagePullSecrets 字段是一个列表，包含对同一名字空间中 Secret 的引用。" (imagePullSecrets field is a list containing references to Secrets in the same namespace).
+    *   Text: "对使用该 ServiceAccount 创建的所有 Pod... 其 imagePullSecrets 字段都会设置为该服务账号。" (For all Pods created using that ServiceAccount... their imagePullSecrets field will be set to that service account).
+    *   There is a discrepancy here. "Set to that service account" vs "List containing references to Secrets".
+    *   If the field is set to the SA, it's not a list of Secret refs (unless the SA *is* the ref, which is wrong).
+    *   The statement "credentials enter Pod's imagePullSecrets" implies the Secret ref enters.
+    *   If the text says "set to that service account", does that mean the *mechanism* is through the SA, but the *field content* is the Secret?
+    *   Usually, the text might be translated poorly ("set to that service account" meaning "linked to that service account").
+    *   However, compared to A and E which are more direct quotes, C has this ambiguity.
+    *   Also, C Point 1: "Static Pod cannot directly use pull credential Secret". Text: "You cannot use ConfigMap or Secret in Static Pods."
+    *   This is a direct quote.
+    *   But Point 2's phrasing makes C risky.
+    *   Let's assume A and E are the safest bets.
+    *   Wait, let's check A Point 5 again. "New node join then restart CoreDNS follows sequence".
+    *   Text: "After at least one new node joins... restart deployment coredns".
+    *   Is there a timing issue? "Several seconds later... see this machine join." Then "After at least one new node joins... restart".
+    *   So the sequence is: Join -> See Join -> Restart.
+    *   Option A says "New node join then restart CoreDNS follows sequence". This is correct.
+
+    *   Let's check E Point 1 again. "Entity able to create Deployment... may indirectly read Secret".
+    *   Text: "Anyone with permission to create Pod... can use this access to read any Secret... including indirect access, such as ability to create Deployment."
+    *   This explicitly links "Ability to create Deployment" to "Indirect access to read Secret".
+    *   So E is very strong.
+
+    *   Let's check A Point 1 again. "basic-auth... username... satisfies constraint".
+    *   Text: "Must contain one of... username... password".
+    *   This is a direct constraint definition.
+    *   So A is very strong.
+
+    *   Are there any hidden traps in A?
+    *   "Non-optional Pod... created after Secret creation passes dependency check".
+    *   Text: "If Pod depends on a Secret, the Secret must be created before the Pod."
+    *   If Secret is created first, Pod can proceed.
+    *   "Passes dependency check". Text says "Kubernetes checks Secret volume source... ensure reference points to Secret object". "If Secret content cannot be retrieved... kubelet retries". "If Pod depends on non-optional Secret... all containers will not start until all non-optional Secrets are available."
+    *   So if Secret exists, Pod starts. "Passes dependency check" is a fair summary.
+
+    *   What about A Point 4? "Rotation visible latency upper bound is sync cycle plus TTL".
+    *   Text: "Latency upper bound is kubelet sync cycle plus cache propagation delay... Watch propagation delay, configured cache TTL...".
+    *   So Sync + TTL is correct for TTL mode.
+
+    *   Okay, I'm confident in A and E.
+    *   What about C?
+    *   Point 2: "credentials enter Pod's imagePullSecrets".
+    *   Text: "imagePullSecrets field will be set to that service account".
+    *   If I interpret "set to that service account" literally, the field value is the SA name. But `imagePullSecrets` expects Secret refs.
+    *   If the text implies the SA *provides* the credentials to the Pod's `imagePullSecrets` (i.e. the SA config holds the Secret ref, and the Pod inherits it), then the statement "credentials enter Pod's imagePullSecrets" is functionally correct.
+    *   However, compared to A and E, C has more potential for misinterpretation of the text's specific wording ("set to that service account").
+    *   Also, C Point 1 says "Static Pod cannot directly use pull credential Secret". Text says "Cannot use ConfigMap or Secret". This is broad. Does it include `imagePullSecrets`? Yes, because it references a Secret.
+    *   But Point 2 says "Pull Secret... referenced by ServiceAccount... credentials enter Pod's imagePullSecrets".
+    *   If C is correct, why might it be excluded?
+    *   Maybe "Static Pod" limitation is about mounting, not pulling?
+    *   Text: "You cannot use ConfigMap or Secret in Static Pods." (Under "Use Secret in Static Pods").
+    *   It doesn't explicitly mention `imagePullSecrets` there. But `imagePullSecrets` is a PodSpec field. Static Pods have a spec file. If you can't use Secret in Static Pod, you can't reference a Secret in the spec.
+    *   So Point 1 is likely True.
+    *   But Point 2's "set to that service account" phrasing is the weak link.
+    *   Let's stick with A and E.
+
+    *   Wait, I need to check if there is any contradiction in E.
+    *   E Point 2: "Only static encryption not eliminate API read risk".
+    *   Text: "Default... stored unencrypted... Anyone with API access can retrieve...". "To use Secret securely... Enable static encryption... Min privilege access...".
+    *   So Static Encryption protects Etcd. API Access protection requires RBAC.
+    *   So "Only static encryption not eliminate API read risk" is True.
+    *   E Point 3: "Split frontend/signature...". Text supports this.
+    *   E Point 4: "External... Operator...". Text supports this.
+    *   E Point 1: "Create Deployment... Indirect read Secret". Text supports this.
+    *   So E is solid.
+
+    *   Re-check A Point 1. "basic-auth... username... satisfies constraint".
+    *   Text: "Must contain one of... username... password".
+    *   This is the only slight doubt. In real world, Basic Auth needs both. But text says "one of".
+    *   Instruction: "Strictly according to context".
+    *   So A is solid based on context.
+
+    *   Wait, look at Option F Point 3. "Secret name 7.prod legal".
+    *   Doc 3: "Secret object name must be valid DNS subdomain".
+    *   Doc 2: DNS Subdomain "Must start with alphanumeric". '7' is alphanumeric.
+    *   So 7.prod is legal.
+    *   "Data key tls/key illegal due to slash".
+    *   Doc 3: "Data and stringData keys can contain letters, numbers, -, _, . characters."
+    *   Slash is not allowed.
+    *   So F Point 3 is True.
+    *   F Point 4: "Custom type corp.example/cred".
+    *   Doc 3: "Add domain prefix... separated by /".
+    *   So F Point 4 is True.
+    *   F Point 2: "Many small Secrets exhaust memory... ResourceQuota".
+    *   Doc 3: "Creating many small Secrets may also exhaust memory. You can use ResourceQuota to constrain the number of Secrets...".
+    *   So F Point 2 is True.
+    *   F Point 1: "Two 700 KiB Secrets... API rejects due to total 1.4 MiB".
+    *   Doc 3: "Each Secret size max 1 MiB." "Limit imposed to prevent users creating very large Secrets...".
+    *   It does not mention a cluster/namespace aggregate limit causing rejection of valid individual objects.
+    *   So F Point 1 is False.
+    *   Thus F is incorrect.
+
+    *   So the choice is between A and E.
+    *   Wait, I need to check if A Point 5 "New node join then restart CoreDNS" is exactly what Doc 1 says.
+    *   Doc 1: "After at least one new node joins... restart deployment coredns".
+    *   Option A: "New node join then restart CoreDNS follows sequence".
+    *   Matches.
+
+    *   Wait, I need to check if E Point 1 "Create Deployment... Indirect read Secret" is exactly what Doc 3 says.
+    *   Doc 3: "Anyone with permission to create Pod... can use this access to read any Secret... including indirect access, such as ability to create Deployment."
+    *   Option E: "Entity able to create Deployment... may indirectly read Secret".
+    *   Matches.
+
+    *   So A and E are both correct.
+    *   Is there any reason to reject A?
+    *   "basic-auth Secret only gives username".
+    *   Text: "Must contain one of... username... password".
+    *   If I have only username, I satisfy "contain one of".
+    *   Is there any other constraint? "Used for basic authentication credentials".
+    *   But the constraint check is "Must contain one of".
+    *   So A is correct.
+
+    *   Is there any reason to reject E?
+    *   Seems correct.
+
+    *   Final check on C.
+    *   "Static Pod cannot directly use pull credential Secret".
+    *   Text: "You cannot use ConfigMap or Secret in Static Pods."
+    *   Does `imagePullSecrets` count as "using Secret"? Yes, it references it.
+    *   "Should be changed to API managed regular Pod".
+    *   Logical conclusion.
+    *   "Pull Secret... same namespace... referenced by ServiceAccount... credentials enter Pod's imagePullSecrets".
+    *   Text: "imagePullSecrets field will be set to that service account".
+    *   This phrasing is the problem. If the field is set to the SA, it's not the Secret.
+    *   So C is likely incorrect due to Point 2.
+
+    *   So Answer should be A, E.
+
+    *   Wait, let's check A Point 4 again. "Rotation visible latency upper bound is sync cycle plus TTL".
+    *   Text: "Latency upper bound is kubelet sync cycle plus cache propagation delay... Watch propagation delay, configured cache TTL...".
+    *   If strategy is TTL, delay is TTL.
+    *   So Sync + TTL is correct.
+    *   Wait, "Rotation" implies updating the Secret content.
+    *   Text says "Updates to Secret... propagate... latency upper bound is kubelet sync cycle plus cache propagation delay".
+    *   So "Rotation visible latency" = "Update propagation latency".
+    *   So A Point 4 is correct.
+
+    *   One more check on A Point 1. "basic-auth Secret only gives username".
+    *   Text: "Must contain one of... username... password".
+    *   Does "one of" mean "at least one"? Yes.
+    *   Does it mean "exactly one"? Usually "one of" implies selection from the set.
+    *   If I provide both, do I satisfy "one of"? Yes.
+    *   If I provide only username, do I satisfy "one of"? Yes.
+    *   So A Point 1 is correct.
+
+    *   Wait, is there any possibility that "basic-auth" implies functionality requiring both, thus violating the "type constraint" implicitly?
+    *   Text says "Used for basic authentication credentials".
+    *   But the validation constraint is explicitly "Must contain one of".
+    *   Given "Strictly according to context", I must follow the explicit validation rule.
+    *   So A is correct.
+
+    *   Final decision: A and E.

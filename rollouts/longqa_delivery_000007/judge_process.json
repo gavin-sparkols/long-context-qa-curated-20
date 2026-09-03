@@ -1,0 +1,181 @@
+{
+  "question_audit": {
+    "valid_for_difficulty": true,
+    "answer_supported_by_evidence": true,
+    "answer_unique": true,
+    "instructions_consistent": true,
+    "answer_leakage": false,
+    "format_trap": false,
+    "issues": [],
+    "reason": "题目要求在长文局部表格中筛选特定“项目进展”的项目，需检索、聚类并严格按序输出，答案有证据支持且唯一；题干未泄露答案，输出格式清晰，适合测量长上下文推理难度。",
+    "recommendation": "keep",
+    "checks": {
+      "evidence_support": {
+        "passed": true,
+        "reason": "证据给出两项项目进展为“项目目标已达成，项目结题”，与标准答案完全对应。"
+      },
+      "answer_uniqueness": {
+        "passed": true,
+        "reason": "对照证据显示其他进展为“已完成方案设计”等项目不满足条件，故答案唯一。"
+      },
+      "instruction_consistency": {
+        "passed": true,
+        "reason": "标准答案列出两个项目名称，符合输出要求；首行[Answer]为统一格式前缀，不构成冲突。"
+      },
+      "leakage": {
+        "passed": true,
+        "reason": "题干未给出项目名称，需在原文中定位。"
+      },
+      "long_context_necessity": {
+        "passed": true,
+        "reason": "需从长文本局部表格中提取多行项目进展并聚类，非简单复述。"
+      },
+      "difficulty_signal": {
+        "passed": true,
+        "reason": "候选答案存在项目名称增词和多余项，反映真实检索/推理差异，可用于难度区分。"
+      }
+    }
+  },
+  "judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "reason": "除第二项项目名称多出“研发”外，还额外列出不符合条件的“国产 T1000 级碳纤维材料制备技术研发”，存在事实错误和多余项。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}",
+        "{'field': '多余项', 'expected': '无', 'actual': '国产 T1000 级碳纤维材料制备技术研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "reason": "第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "factual",
+      "missing_points": [],
+      "wrong_points": [
+        "{'field': '第二项项目名称', 'expected': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化', 'actual': '航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发'}"
+      ],
+      "score": 0.0
+    }
+  ],
+  "question_issue": false,
+  "question_issue_reason": "",
+  "judge_policy_version": "comprehensive-v4",
+  "judge_model": "deepseek-reasoner",
+  "usage": {
+    "prompt_tokens": 2836,
+    "completion_tokens": 9913,
+    "total_tokens": 12749,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 8110
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 1556
+  },
+  "elapsed_seconds": 71.903,
+  "raw_judge_output": "{\n  \"question_audit\": {\n    \"valid_for_difficulty\": true,\n    \"answer_supported_by_evidence\": true,\n    \"answer_unique\": true,\n    \"instructions_consistent\": true,\n    \"answer_leakage\": false,\n    \"format_trap\": false,\n    \"issues\": [],\n    \"reason\": \"题目要求在长文局部表格中筛选特定“项目进展”的项目，需检索、聚类并严格按序输出，答案有证据支持且唯一；题干未泄露答案，输出格式清晰，适合测量长上下文推理难度。\",\n    \"recommendation\": \"keep\",\n    \"checks\": {\n      \"evidence_support\": {\n        \"passed\": true,\n        \"reason\": \"证据给出两项项目进展为“项目目标已达成，项目结题”，与标准答案完全对应。\"\n      },\n      \"answer_uniqueness\": {\n        \"passed\": true,\n        \"reason\": \"对照证据显示其他进展为“已完成方案设计”等项目不满足条件，故答案唯一。\"\n      },\n      \"instruction_consistency\": {\n        \"passed\": true,\n        \"reason\": \"标准答案列出两个项目名称，符合输出要求；首行[Answer]为统一格式前缀，不构成冲突。\"\n      },\n      \"leakage\": {\n        \"passed\": true,\n        \"reason\": \"题干未给出项目名称，需在原文中定位。\"\n      },\n      \"long_context_necessity\": {\n        \"passed\": true,\n        \"reason\": \"需从长文本局部表格中提取多行项目进展并聚类，非简单复述。\"\n      },\n      \"difficulty_signal\": {\n        \"passed\": true,\n        \"reason\": \"候选答案存在项目名称增词和多余项，反映真实检索/推理差异，可用于难度区分。\"\n      }\n    }\n  },\n  \"judgments\": [\n    {\n      \"rollout_id\": 1,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 2,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 3,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 4,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 5,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 6,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"除第二项项目名称多出“研发”外，还额外列出不符合条件的“国产 T1000 级碳纤维材料制备技术研发”，存在事实错误和多余项。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        },\n        {\n          \"field\": \"多余项\",\n          \"expected\": \"无\",\n          \"actual\": \"国产 T1000 级碳纤维材料制备技术研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 7,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    },\n    {\n      \"rollout_id\": 8,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"第一项项目名称正确，但第二项项目名称多出“研发”，与表中写法不符，构成事实错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"factual\",\n      \"missing_points\": [],\n      \"wrong_points\": [\n        {\n          \"field\": \"第二项项目名称\",\n          \"expected\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化\",\n          \"actual\": \"航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发\"\n        }\n      ]\n    }\n  ]\n}"
+}

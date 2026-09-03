@@ -1,0 +1,1 @@
+[Answer] 对价净额差异=79919；取得现金及受限现金=16945+62973=79918，取整差=1；融资及期末状态=Intercompany Note(600000 未偿还)|Revolving Credit Facility(75000 未偿还)；内部利息处理=Mortgage 净投资收益增加|Corporate 利息费用增加|合并抵消

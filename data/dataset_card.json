@@ -1,0 +1,76 @@
+{
+  "name": "Long Context QA · Curated 20",
+  "version": "2026-09-03",
+  "records": 20,
+  "short_answer": 15,
+  "choice": 5,
+  "languages": {
+    "Chinese": 10,
+    "English": 10
+  },
+  "domains": {
+    "软件与工程": 6,
+    "学术": 2,
+    "金融": 5,
+    "法律": 3,
+    "新闻": 1,
+    "政府事务": 3
+  },
+  "length_buckets": {
+    "8k": 3,
+    "32k": 3,
+    "128k": 6,
+    "64k": 4,
+    "16k": 3,
+    "256k": 1
+  },
+  "task_types": {
+    "检索与排序": 3,
+    "引用归因与对齐": 3,
+    "聚合与聚类": 2,
+    "版本与代码差异分析": 1,
+    "时序与结构重建": 2,
+    "结构化与数值推理": 4,
+    "对话记忆与长程跟踪": 1,
+    "摘要与综合": 1,
+    "一致性与合规检查": 1,
+    "规则归纳与上下文学习": 1,
+    "证据问答": 1
+  },
+  "rollouts_per_record": 8,
+  "raw_rollout_outputs": 160,
+  "overall_average_accuracy": 0.14375,
+  "selection_policy": [
+    "排除已知证据不足或答案不唯一的记录",
+    "每个context最多保留一道题",
+    "纳入源数据中全部5道有效选择题",
+    "平衡中英文、领域、长度桶与任务类型"
+  ],
+  "repairs": {
+    "longqa_delivery_000026": "标准答案改为题干要求的JSON数组",
+    "longqa_delivery_000037": "题型改为选择题"
+  },
+  "selected_track_ids": [
+    "longqa_delivery_000001",
+    "longqa_delivery_000004",
+    "longqa_delivery_000007",
+    "longqa_delivery_000014",
+    "longqa_delivery_000016",
+    "longqa_delivery_000017",
+    "longqa_delivery_000018",
+    "longqa_delivery_000019",
+    "longqa_delivery_000020",
+    "longqa_delivery_000021",
+    "longqa_delivery_000022",
+    "longqa_delivery_000024",
+    "longqa_delivery_000026",
+    "longqa_delivery_000030",
+    "longqa_delivery_000034",
+    "longqa_delivery_000037",
+    "longqa_delivery_000040",
+    "longqa_delivery_000041",
+    "longqa_delivery_000042",
+    "longqa_delivery_000043"
+  ],
+  "created_at": "2026-09-03T11:21:38.788661+08:00"
+}

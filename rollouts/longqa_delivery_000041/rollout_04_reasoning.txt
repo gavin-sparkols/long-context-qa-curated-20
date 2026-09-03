@@ -1,0 +1,225 @@
+The user wants me to verify six statements (A, B, C, D, E, F) based on the provided 2025 Annual Report of Suzhou Goldengreen Technologies Ltd. (*ST Hengjiu).
+I need to check each statement for accuracy regarding data consistency, calculation logic, and alignment with the report content.
+
+**Statement A:**
+*   **Claim:** Total Revenue = 317,029,591.03; Main Business Revenue = 316,931,056.25; Difference = 98,534.78 (Other Business Revenue). Therefore, deduct all 1,026,126.63 from Main Business Revenue to get 315,904,929.62 as Revenue Deducted Amount. Other Business Revenue is only used to explain total difference.
+*   **Check:**
+    *   Total Revenue: 317,029,591.03 (Section 2, Major Accounting Data).
+    *   Main Business Revenue: 316,931,056.25 (Section 8, Note 41).
+    *   Other Business Revenue: 98,534.78 (Section 8, Note 41).
+    *   Difference: 317,029,591.03 - 316,931,056.25 = 98,534.78. This matches Other Business Revenue.
+    *   Revenue Deducted Amount (Revenue after deduction): 316,003,464.40 (Section 2, Major Accounting Data table).
+    *   Non-operating/Non-main business revenue deduction amount: 1,026,126.63 (Section 2, Major Accounting Data table).
+    *   Calculation in Statement A: Main Business Revenue (316,931,056.25) - Deduction (1,026,126.63) = 315,904,929.62.
+    *   Actual Reported Revenue Deducted Amount: 316,003,464.40.
+    *   Discrepancy: The statement claims the deduction should be made from Main Business Revenue directly to get the reported figure. However, the reported "Revenue Deducted Amount" (316,003,464.40) + "Deduction Amount" (1,026,126.63) = 317,029,591.03 (Total Revenue).
+    *   Logic Check: The deduction amount (1,026,126.63) includes the Other Business Revenue (98,534.78) plus other items within Main Business Revenue (e.g., rent, scrap sales mentioned in notes).
+    *   If we subtract 1,026,126.63 from Total Revenue (317,029,591.03), we get 316,003,464.40. This matches the reported "Revenue Deducted Amount".
+    *   Statement A says: "Therefore should deduct all 1,026,126.63 from Main Business Revenue... to get 315,904,929.62". This calculated number (315,904,929.62) does NOT match the reported "Revenue Deducted Amount" (316,003,464.40). The difference is exactly the Other Business Revenue (98,534.78).
+    *   The logic in A implies that since Other Business Revenue is part of the deduction, it shouldn't be deducted again from Main Business? No, usually "Revenue Deducted Amount" = Total Revenue - Deductible Items.
+    *   Total Revenue = Main + Other.
+    *   Deductible Items = 1,026,126.63. This likely includes the Other Business Revenue (98,534.78) because it's often considered unrelated.
+    *   So Revenue Deducted = Total - Deductible = 317,029,591.03 - 1,026,126.63 = 316,003,464.40.
+    *   Statement A suggests calculating it as Main - Deductible = 316,931,056.25 - 1,026,126.63 = 315,904,929.62. This ignores that the deduction amount already covers the Other Business Revenue which is outside Main Business. If you deduct the full 1M from Main Business, you are double counting the deduction for the Other Business part if the goal is to arrive at the reported figure. Or rather, the reported figure is derived from Total - Deduction.
+    *   Statement A concludes "other business revenue is only used to explain total difference". But the calculation result 315,904,929.62 contradicts the reported 316,003,464.40.
+    *   Conclusion: Statement A is incorrect because the calculation leads to a number different from the reported "Revenue Deducted Amount".
+
+**Statement B:**
+*   **Claim:** Total Revenue (317,029,591.03) - Main Business Revenue (316,931,056.25) = Other Business Revenue (98,534.78). Then Deductible (1,026,126.63) - Other Business (98,534.78) = 927,591.85 embedded in Main Business. Main Business minus this number = 316,003,464.40.
+*   **Check:**
+    *   Total - Main = 317,029,591.03 - 316,931,056.25 = 98,534.78. Matches Other Business Revenue.
+    *   Deductible Amount = 1,026,126.63.
+    *   Embedded in Main = 1,026,126.63 - 98,534.78 = 927,591.85.
+    *   Main Business minus Embedded = 316,931,056.25 - 927,591.85 = 316,003,464.40.
+    *   Reported Revenue Deducted Amount = 316,003,464.40.
+    *   This logic holds perfectly. It explains how the deduction amount is composed (part from Other Business, part from Main Business) and derives the final figure correctly.
+    *   Conclusion: Statement B is correct.
+
+**Statement C:**
+*   **Claim:** Q4 Revenue 134,718,474.36. > others. Ratio to annual ~42.49%. Q4 Operating Cash Outflow 46,304,518.42. Ratio to annual outflow 344,737,365.78 ~63.59%. Q4 Net Loss attribution ratio to annual net loss ~39.59%. All three are Q4 contribution rates.
+*   **Check:**
+    *   Q4 Revenue: 134,718,474.36 (Section 2, Quarterly Data).
+    *   Annual Revenue: 317,029,591.03. Ratio: 134,718,474.36 / 317,029,591.03 = 0.42494... -> 42.49%. Correct.
+    *   Q4 Operating Cash Flow Net: -46,304,518.42 (Section 2, Quarterly Data). Note: The claim says "Outflow". The value is negative, meaning net outflow.
+    *   Annual Operating Cash Flow Outflow Small Total: 344,737,365.78 (Section 8, Cash Flow Statement or Section 3 Analysis). In Section 3 Analysis "Cash Flow", Operating Cash Outflow Small Total is 344,737,365.78.
+    *   Ratio: 46,304,518.42 / 344,737,365.78 = 0.1343... -> 13.43%.
+    *   Wait, the statement says "Q4 operating cash net outflow 46,304,518.42, accounts for annual operating cash outflow small total 344,737,365.78 about 63.59%".
+    *   Let's check the numbers. 46,304,518.42 / 344,737,365.78 = 13.4%. Where does 63.59% come from? Maybe they mean something else?
+    *   Is there another "outflow" number?
+    *   Section 2 Quarterly Data shows Q4 Operating Cash Flow Net = -46,304,518.42.
+    *   Section 3 Analysis "Cash Flow" table: Operating Cash Outflow Small Total 2025 = 344,737,365.78.
+    *   Maybe the statement refers to "Operating Cash Flow Net" vs "Net Increase"? No.
+    *   Maybe it refers to the sum of quarterly outflows? No.
+    *   Let's check the percentage 63.59%. 344,737,365.78 * 0.6359 = 219,229,796. This doesn't match Q4 outflow.
+    *   Perhaps it refers to the change in working capital or something specific? No, it explicitly cites the numbers.
+    *   Let's check the math again. 46,304,518.42 / 344,737,365.78 = 13.43%.
+    *   Is it possible the statement means Q4 Net Loss ratio?
+    *   Q4 Net Loss Attribution: -16,154,920.44 (Section 2 Quarterly Data).
+    *   Annual Net Loss Attribution: -40,805,622.37.
+    *   Ratio: 16,154,920.44 / 40,805,622.37 = 0.39589... -> 39.59%. This part is correct.
+    *   What about the cash flow part? "Q4 operating cash net outflow 46,304,518.42". The text says "Operating Cash Flow Net Amount".
+    *   Maybe the denominator is not the total outflow but something else? "Annual Operating Cash Outflow Small Total" is 344,737,365.78.
+    *   Is there a typo in the statement or my reading?
+    *   Wait, look at Section 3 Analysis "Cash Flow" table again.
+        *   Operating Cash Inflow: 271,921,039.24
+        *   Operating Cash Outflow: 344,737,365.78
+        *   Net: -72,816,326.54
+    *   Q4 Net: -46,304,518.42.
+    *   Ratio of Q4 Net to Annual Net: 46,304,518.42 / 72,816,326.54 = 63.59%.
+    *   Ah! The statement says "accounts for annual operating cash outflow small total...". But the calculation 46.3M / 72.8M = 63.59%.
+    *   So the denominator used in the calculation (72.8M) is the **Net Amount**, but the text labels it as **"annual operating cash outflow small total" (344.7M)**.
+    *   Text says: "占全年经营活动现金流出小计 344,737,365.78 元约 63.59%".
+    *   Math: 46,304,518.42 / 344,737,365.78 = 13.43%.
+    *   Math: 46,304,518.42 / 72,816,326.54 = 63.59%.
+    *   The statement claims the ratio is 63.59% against the denominator 344,737,365.78. This is mathematically false. It mixes up the denominator (Net vs Outflow).
+    *   Therefore, Statement C is incorrect due to the mismatch between the stated denominator and the resulting percentage.
+
+**Statement D:**
+*   **Claim:** Top Customer "Customer 1" Sales 23,225,785.48. Aligns with Related Party Transaction "Nanchang Junao" (南昌均奥). Year-end AR 27,041,375.85. Higher than sales by 3,815,590.37. Provision 1,352,068.79 is 5% of AR balance.
+*   **Check:**
+    *   Top Customer Sales: 23,225,785.48 (Section 3, Major Customers). Name is "Customer 1" (anonymous).
+    *   Related Party Transaction Table (Note 14): "Nanchang Junao New Energy Co., Ltd." (南昌均奥新能源有限公司).
+    *   Sales Amount in Related Party Table: 23,225,785.48 (Under "Sell Goods/Provide Services" -> Nanchang Junao -> PV Engineering Construction & Management). Matches exactly. So mapping is valid.
+    *   AR Balance for Nanchang Junao (Note 14, Receivables): 27,041,375.85. Matches Note 5 (Top 5 AR Debtors) where Nanchang Junao is listed with 27,041,375.85.
+    *   Difference: 27,041,375.85 - 23,225,785.48 = 3,815,590.37. Correct.
+    *   Provision (Bad Debt): 1,352,068.79 (Note 5, Top 5 AR Debtors).
+    *   Ratio: 1,352,068.79 / 27,041,375.85 = 0.050000... = 5%. Correct.
+    *   Conclusion: Statement D is correct.
+
+**Statement E:**
+*   **Claim:** R&D Input 15,456,594.54 matches R&D Expense and Amortized R&D Output. Capitalization 0. Personnel 34->53 (+19). Input growth 18.14%. Input/Revenue ratio drop 3.21 pp. Per capita R&D Input 2024: ~38.48k -> 2025: ~29.16k. Increase rate ~24.22%.
+*   **Check:**
+    *   R&D Input: 15,456,594.54 (Section 3, R&D Expenses). Matches Note 45.
+    *   Capitalization: 0.00 (Section 3, R&D Investment). Matches.
+    *   Personnel: 2024=34, 2025=53. Change = 19. Growth = 19/34 = 55.88%. Statement says "Input grew 18.14%".
+    *   Input Growth: (15,456,594.54 - 13,083,483.46) / 13,083,483.46 = 2,373,111.08 / 13,083,483.46 = 18.138% -> 18.14%. Correct.
+    *   Input/Revenue Ratio: 2025 = 4.88%, 2024 = 8.09%. Drop = 8.09 - 4.88 = 3.21%. Correct.
+    *   Per Capita R&D Input:
+        *   2024: 13,083,483.46 / 34 = 384,808.33 Yuan (~38.48 Wan).
+        *   2025: 15,456,594.54 / 53 = 291,633.86 Yuan (~29.16 Wan).
+        *   Change: From 38.48 to 29.16. This is a **decrease**.
+        *   Statement says: "increased from approx 38.48 wan to approx 29.16 wan, increase rate approx 24.22%".
+        *   Math: (29.16 - 38.48) / 38.48 = -24.22%. It decreased by 24.22%.
+        *   The statement claims an "increase rate" (增幅) of 24.22%. Since it went down, calling it an "increase" is wrong. Even if magnitude is right, direction is wrong.
+    *   Conclusion: Statement E is incorrect because it describes a decrease as an increase.
+
+**Statement F:**
+*   **Claim:** Jingxin Tech Full Year Revenue 135,195,991.01. Purchase Date to End Revenue 130,224,293.58. Pre-purchase Revenue = 4,971,697.43. Full Year Net Loss 4,015,260.97 < Post-purchase Net Loss 4,074,146.07. Implies Pre-purchase Net Profit = 58,885.10. Two Cash Flow Net amounts differ by 0.01.
+*   **Check:**
+    *   Jingxin Tech Revenue (Full Year): 135,195,991.01 (Section 3, Subsidiary Analysis). Matches Note 9 (Subsidiaries).
+    *   Purchase Date to End Revenue (Jingxin): 130,224,293.58 (Section 8, Note 9, Non-control merger details).
+    *   Pre-purchase Revenue = 135,195,991.01 - 130,224,293.58 = 4,971,697.43. Correct.
+    *   Jingxin Net Profit/Loss (Full Year): -4,015,260.97 (Section 3, Subsidiary Analysis). Matches Note 9.
+    *   Purchase Date to End Net Profit/Loss (Jingxin): -4,074,146.07 (Section 8, Note 9, Non-control merger details).
+    *   Comparison: Full Year (-4.015M) is greater (less loss) than Post-purchase (-4.074M).
+    *   Implied Pre-purchase Profit = Full Year - Post-purchase = (-4,015,260.97) - (-4,074,146.07) = 58,885.10. Correct.
+    *   Cash Flow:
+        *   Full Year Operating Cash Flow Net for Jingxin: Not explicitly given as a single line item for the subsidiary in the "Major Subsidiaries" table in Section 3? Wait, Section 3 "Major Subsidiaries" table lists "Net Profit". Does it list Cash Flow?
+        *   Section 8 Note 9 (Merger Details) lists "Purchase Date to End Cash Flow": 26,624,649.88 (Wait, looking at the table in Note 9).
+        *   Table in Note 9 (Non-control merger): "Purchase Date to End Cash Flow" for Shanghai Jingxin is 26,624,649.88.
+        *   Where is the "Full Year Cash Flow" for Jingxin?
+        *   Section 3 "Major Subsidiaries" table does not show Cash Flow.
+        *   Section 8 Note 10 (Rights in Other Entities) -> (3) Important Non-wholly owned Subsidiaries Financial Info.
+            *   Shanghai Jingxin Operating Cash Flow (Current Period): 26,624,649.89.
+            *   Shanghai Jingxin Operating Cash Flow (Previous Period): 26,624,649.89.
+            *   Wait, the table in Note 10 shows "Current Period" (2025) Operating Cash Flow for Shanghai Jingxin is 26,624,649.89.
+            *   The table in Note 9 (Merger Details) shows "Purchase Date to End Cash Flow" is 26,624,649.88.
+            *   Difference: 26,624,649.89 - 26,624,649.88 = 0.01.
+            *   The statement says "Two operating cash net flows differ by 0.01".
+            *   One is Full Year (from Note 10, assuming acquisition date was early enough or full year is same as post-acquisition period? Acquisition date May 15, 2025).
+            *   If Full Year Cash Flow is 26,624,649.89 and Post-Acquisition is 26,624,649.88.
+            *   Why would Full Year equal Post-Acquisition? Because the company started operations or cash flow happened mostly after acquisition? Or maybe the "Full Year" figure in Note 10 actually represents the consolidated impact which might align with the acquisition period if pre-acquisition was negligible?
+            *   Actually, Note 9 says Purchase Date to End Cash Flow = 26,624,649.88.
+            *   Note 10 says Current Period Operating Cash Flow = 26,624,649.89.
+            *   These two numbers represent the cash flow generated by the subsidiary. Since the subsidiary was acquired mid-year, the "Full Year" figure for the subsidiary in Note 10 should technically include pre-acquisition cash flow if it existed. However, the numbers are almost identical (diff 0.01). This implies pre-acquisition cash flow was negligible or zero.
+            *   The statement claims "Two operating cash net flows differ by 0.01". This matches the observation (26,624,649.89 vs 26,624,649.88).
+            *   Conclusion: Statement F appears correct based on the data points found in Note 9 and Note 10.
+
+**Summary:**
+*   A: Incorrect (Calculation logic vs reported figure mismatch).
+*   B: Correct (Logic and numbers align).
+*   C: Incorrect (Denominator mismatch for cash flow percentage).
+*   D: Correct (Data alignment and calculation).
+*   E: Incorrect (Direction of per capita change described as increase instead of decrease).
+*   F: Correct (Numbers align across Notes).
+
+So the correct options are B, D, F.
+
+Let me double check F.
+Note 9: Purchase Date to End Cash Flow = 26,624,649.88.
+Note 10: Current Period Operating Cash Flow = 26,624,649.89.
+Difference = 0.01.
+Statement says "Two operating cash net flows differ by 0.01". This is accurate.
+Statement says "Full Year Net Loss ... less than Post-purchase Net Loss". -4,015,260.97 > -4,074,146.07 (Less loss). Correct.
+Implies Pre-purchase Profit = 58,885.10. Correct.
+Revenue Pre-purchase = 4,971,697.43. Correct.
+So F is correct.
+
+Double check E.
+Per capita 2024: 13,083,483.46 / 34 = 384,808.33.
+Per capita 2025: 15,456,594.54 / 53 = 291,633.86.
+Change: Decrease.
+Statement says "Increase rate approx 24.22%".
+(29.16 - 38.48) / 38.48 = -24.22%.
+It is a decrease. Calling it an increase makes it false.
+
+Double check C.
+Q4 Net Loss: -16,154,920.44.
+Annual Net Loss: -40,805,622.37.
+Ratio: 39.59%. Correct.
+Q4 Cash Flow Net: -46,304,518.42.
+Annual Cash Flow Net: -72,816,326.54.
+Ratio: 63.59%. Correct.
+But Statement says "Accounts for Annual Operating Cash Outflow Small Total 344,737,365.78 about 63.59%".
+Math: 46,304,518.42 / 344,737,365.78 = 13.43%.
+The statement uses the Net Amount ratio (63.59%) but labels the denominator as "Outflow Small Total". This is a factual error in description. So C is incorrect.
+
+Double check A.
+Reported Revenue Deducted Amount: 316,003,464.40.
+Statement A Calculation: 316,931,056.25 - 1,026,126.63 = 315,904,929.62.
+These do not match.
+Why? Because the Deduction Amount (1,026,126.63) includes the Other Business Revenue (98,534.78).
+Total Revenue (317,029,591.03) - Deduction (1,026,126.63) = 316,003,464.40.
+If you take Main Business (316,931,056.25) and subtract Deduction (1,026,126.63), you are subtracting the Other Business part twice effectively (once implicitly by excluding it from Main, then explicitly in deduction).
+Actually, Main + Other = Total.
+Deduction = Other + Part_of_Main.
+Revenue Deducted = Total - Deduction = (Main + Other) - (Other + Part_of_Main) = Main - Part_of_Main.
+Part_of_Main = Deduction - Other = 1,026,126.63 - 98,534.78 = 927,591.85.
+Revenue Deducted = 316,931,056.25 - 927,591.85 = 316,003,464.40.
+Statement A says deduct ALL 1,026,126.63 from Main. That results in 315,904,929.62.
+This is inconsistent with the reported figure. So A is incorrect.
+
+Double check B.
+Matches the logic derived above. Correct.
+
+Double check D.
+Customer 1 Sales: 23,225,785.48.
+Related Party Nanchang Junao Sales: 23,225,785.48. Match.
+AR Balance: 27,041,375.85.
+Diff: 3,815,590.37. Match.
+Provision: 1,352,068.79.
+Ratio: 1,352,068.79 / 27,041,375.85 = 0.05. Match.
+Correct.
+
+Final check on F.
+Revenue: 135,195,991.01 (Full Year).
+Post-Purchase: 130,224,293.58.
+Pre-Purchase: 4,971,697.43.
+Net Loss Full Year: -4,015,260.97.
+Net Loss Post-Purchase: -4,074,146.07.
+Pre-Purchase Profit: 58,885.10.
+Cash Flow: 26,624,649.89 (Note 10) vs 26,624,649.88 (Note 9). Diff 0.01.
+All numbers check out.
+
+Correct Options: B, D, F.
+
+One detail on F: "两处经营现金净流量仅差 0.01 元" (Two operating cash net flows differ by only 0.01 yuan).
+Note 10 table header: "Operating Cash Flow" (经营活动现金流量). Value: 26,624,649.89.
+Note 9 table header: "Purchase Date to End Cash Flow" (购买日至期末的现金流量). Value: 26,624,649.88.
+These correspond to the same metric for the subsidiary. The difference is indeed 0.01.
+The statement says "Two operating cash net flows". This is acceptable terminology.
+
+So B, D, F.
+
+Format: [Answer] followed by letters.
+Example: [Answer]B,D,F

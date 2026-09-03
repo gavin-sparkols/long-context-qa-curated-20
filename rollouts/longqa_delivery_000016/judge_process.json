@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "正文类型与领域判断正确：属于美国联邦行政最终规则，domain为“法律法规与行业标准”。T1.1与Full分类成立，答案需要跨文首生效日期、公众意见答复、规则变更、监管影响分析、立法沿革及正式修订条文整合多类远距证据。8轮中仅第1、8轮完整覆盖实施起止边界、非追溯性及其余字段，correct为2/8，严格低于50%，题目质量与难度均通过，予以接受。以million表示表4金额可视为合理四舍五入，不单独按格式或精度差异判错；其余多轮的实质缺陷是遗漏2027-09-30适用截止边界。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "八个字段均得到支持，实施起止日期、非追溯性、覆盖标准、申请范围、例外、金额、未折现新增转移支付、资金分配及27%/75%均正确。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "partial",
+      "score": 0.875,
+      "format_only": false,
+      "reason": "遗漏正式条文规定的申请提交截止日2027-09-30，未完整回答“适用窗口”；以37.9 million和40.0 million表述估算金额在语义上可接受。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "partial",
+      "score": 0.875,
+      "format_only": false,
+      "reason": "遗漏2027-09-30收费适用截止日。其余核心条件成立，且37.90/40.00百万属于对表4金额的合理概括。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "partial",
+      "score": 0.875,
+      "format_only": false,
+      "reason": "虽然提供了两个日期，但“该日期后”与“2027年9月30日前”字面排除了生效日和截止日，而原文分别为自实施日起、截至并包括2027-09-30；属于适用边界的实质性偏差。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "partial",
+      "score": 0.875,
+      "format_only": false,
+      "reason": "遗漏2027-09-30截止日，因而将适用窗口表述成生效后无限期适用；其余字段正确。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "partial",
+      "score": 0.875,
+      "format_only": false,
+      "reason": "遗漏2027-09-30截止日。新增转移支付采用规则正文中的百万美元四舍五入口径，语义可接受。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "partial",
+      "score": 0.875,
+      "format_only": false,
+      "reason": "遗漏2027-09-30截止日，未完整限定适用窗口；其余字段及精确金额正确。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整给出2026-09-09至2027-09-30的适用窗口及非追溯规则，并正确覆盖其余七个字段；“所有延期”已在语义上排除旧Fraud Fee限制。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"正文类型与领域判断正确：属于美国联邦行政最终规则，domain为“法律法规与行业标准”。T1.1与Full分类成立，答案需要跨文首生效日期、公众意见答复、规则变更、监管影响分析、立法沿革及正式修订条文整合多类远距证据。8轮中仅第1、8轮完整覆盖实施起止边界、非追溯性及其余字段，correct为2/8，严格低于50%，题目质量与难度均通过，予以接受。以million表示表4金额可视为合理四舍五入，不单独按格式或精度差异判错；其余多轮的实质缺陷是遗漏2027-09-30适用截止边界。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"八个字段均得到支持，实施起止日期、非追溯性、覆盖标准、申请范围、例外、金额、未折现新增转移支付、资金分配及27%/75%均正确。\"},{\"rollout_id\":2,\"verdict\":\"partial\",\"score\":0.875,\"format_only\":false,\"reason\":\"遗漏正式条文规定的申请提交截止日2027-09-30，未完整回答“适用窗口”；以37.9 million和40.0 million表述估算金额在语义上可接受。\"},{\"rollout_id\":3,\"verdict\":\"partial\",\"score\":0.875,\"format_only\":false,\"reason\":\"遗漏2027-09-30收费适用截止日。其余核心条件成立，且37.90/40.00百万属于对表4金额的合理概括。\"},{\"rollout_id\":4,\"verdict\":\"partial\",\"score\":0.875,\"format_only\":false,\"reason\":\"虽然提供了两个日期，但“该日期后”与“2027年9月30日前”字面排除了生效日和截止日，而原文分别为自实施日起、截至并包括2027-09-30；属于适用边界的实质性偏差。\"},{\"rollout_id\":5,\"verdict\":\"partial\",\"score\":0.875,\"format_only\":false,\"reason\":\"遗漏2027-09-30截止日，因而将适用窗口表述成生效后无限期适用；其余字段正确。\"},{\"rollout_id\":6,\"verdict\":\"partial\",\"score\":0.875,\"format_only\":false,\"reason\":\"遗漏2027-09-30截止日。新增转移支付采用规则正文中的百万美元四舍五入口径，语义可接受。\"},{\"rollout_id\":7,\"verdict\":\"partial\",\"score\":0.875,\"format_only\":false,\"reason\":\"遗漏2027-09-30截止日，未完整限定适用窗口；其余字段及精确金额正确。\"},{\"rollout_id\":8,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整给出2026-09-09至2027-09-30的适用窗口及非追溯规则，并正确覆盖其余七个字段；“所有延期”已在语义上排除旧Fraud Fee限制。\"}],\"repair\":null}",
+  "judged_at": "2026-08-11T02:48:38.575Z"
+}

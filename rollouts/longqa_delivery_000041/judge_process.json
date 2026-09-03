@@ -1,0 +1,68 @@
+{
+  "phase_decision": "accept",
+  "quality_pass": true,
+  "difficulty_signal": true,
+  "summary": "财务报告类型与领域正确；T5.2、Partial分类与题目实际要求匹配。B、D、F均可由跨表映射、口径转换和期间拆分独立验证，A、C、E各含实质性隐蔽错误，答案唯一。8轮中仅2轮完全正确，正确率25%，严格低于50%，终审接受。",
+  "issue_codes": [],
+  "answer_judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整选择B、D、F，且格式符合要求。"
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏独立成立的F，少选属于实质错误。"
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏独立成立的F，少选属于实质错误。"
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "correct",
+      "score": 1,
+      "format_only": false,
+      "reason": "完整选择B、D、F，且格式符合要求。"
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏独立成立的F，少选属于实质错误。"
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏独立成立的F，少选属于实质错误。"
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏独立成立的F，少选属于实质错误。"
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "score": 0,
+      "format_only": false,
+      "reason": "遗漏独立成立的F，少选属于实质错误。"
+    }
+  ],
+  "repair": null,
+  "raw_output": "{\"phase_decision\":\"accept\",\"quality_pass\":true,\"difficulty_signal\":true,\"summary\":\"财务报告类型与领域正确；T5.2、Partial分类与题目实际要求匹配。B、D、F均可由跨表映射、口径转换和期间拆分独立验证，A、C、E各含实质性隐蔽错误，答案唯一。8轮中仅2轮完全正确，正确率25%，严格低于50%，终审接受。\",\"issue_codes\":[],\"answer_judgments\":[{\"rollout_id\":1,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整选择B、D、F，且格式符合要求。\"},{\"rollout_id\":2,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏独立成立的F，少选属于实质错误。\"},{\"rollout_id\":3,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏独立成立的F，少选属于实质错误。\"},{\"rollout_id\":4,\"verdict\":\"correct\",\"score\":1,\"format_only\":false,\"reason\":\"完整选择B、D、F，且格式符合要求。\"},{\"rollout_id\":5,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏独立成立的F，少选属于实质错误。\"},{\"rollout_id\":6,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏独立成立的F，少选属于实质错误。\"},{\"rollout_id\":7,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏独立成立的F，少选属于实质错误。\"},{\"rollout_id\":8,\"verdict\":\"incorrect\",\"score\":0,\"format_only\":false,\"reason\":\"遗漏独立成立的F，少选属于实质错误。\"}],\"repair\":null}",
+  "judged_at": "2026-08-12T05:30:06.475Z"
+}

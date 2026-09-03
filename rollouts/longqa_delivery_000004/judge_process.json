@@ -1,0 +1,196 @@
+{
+  "question_audit": {
+    "valid_for_difficulty": true,
+    "answer_supported_by_evidence": true,
+    "answer_unique": true,
+    "instructions_consistent": true,
+    "answer_leakage": false,
+    "format_trap": false,
+    "issues": [],
+    "reason": "题目要求将摘要句各部分与章节编号对齐，证据支持标准答案唯一，输出格式合规，无泄露，需要从全文检索分散信息，候选答案的差异（缺失子章节编号）体现实质推理与定位错误，适合用于衡量长上下文推理难度。",
+    "recommendation": "keep",
+    "checks": {
+      "evidence_support": {
+        "passed": true,
+        "reason": "证据分别指出研究1自由联想测验对应2.1.3、研究2相似性评分任务对应3.1.2、研究3调节效应首次在4.2报告，标准答案得到完整支持。"
+      },
+      "answer_uniqueness": {
+        "passed": true,
+        "reason": "三个研究的方法与发现分别指向唯一的首次详细阐述章节，不存在其他合理解读。"
+      },
+      "instruction_consistency": {
+        "passed": true,
+        "reason": "标准答案以[Answer]开头，后接三行精确章节编号，完全满足题目规定的输出格式与顺序要求。"
+      },
+      "leakage": {
+        "passed": true,
+        "reason": "题干仅提供摘要句，未包含任何章节编号，答案信息未在题干中直接泄露。"
+      },
+      "long_context_necessity": {
+        "passed": true,
+        "reason": "需要跨章节检索并整合研究1、2、3的方法与发现部分，属于长上下文下的事实定位与关联任务。"
+      },
+      "difficulty_signal": {
+        "passed": true,
+        "reason": "待评答案均只输出章级编号，缺少子节编号，无法唯一定位到标准答案中的精确章节，属于实质性定位错误而非措辞或格式差异。"
+      }
+    }
+  },
+  "judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "reason": "答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。",
+      "format_only_difference": false,
+      "format_compliance": false,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "substantive_omission",
+      "missing_points": [
+        "S1应输出2.1.3，实际输出2",
+        "S2应输出3.1.2，实际输出3",
+        "S3应输出4.2，实际输出4"
+      ],
+      "wrong_points": [],
+      "score": 0.0
+    }
+  ],
+  "question_issue": false,
+  "question_issue_reason": "",
+  "judge_policy_version": "comprehensive-v4",
+  "judge_model": "deepseek-reasoner",
+  "usage": {
+    "prompt_tokens": 2586,
+    "completion_tokens": 3918,
+    "total_tokens": 6504,
+    "prompt_tokens_details": {
+      "cached_tokens": 2560
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1838
+    },
+    "prompt_cache_hit_tokens": 2560,
+    "prompt_cache_miss_tokens": 26
+  },
+  "elapsed_seconds": 26.145,
+  "raw_judge_output": "{\n  \"question_audit\": {\n    \"valid_for_difficulty\": true,\n    \"answer_supported_by_evidence\": true,\n    \"answer_unique\": true,\n    \"instructions_consistent\": true,\n    \"answer_leakage\": false,\n    \"format_trap\": false,\n    \"issues\": [],\n    \"reason\": \"题目要求将摘要句各部分与章节编号对齐，证据支持标准答案唯一，输出格式合规，无泄露，需要从全文检索分散信息，候选答案的差异（缺失子章节编号）体现实质推理与定位错误，适合用于衡量长上下文推理难度。\",\n    \"recommendation\": \"keep\",\n    \"checks\": {\n      \"evidence_support\": {\n        \"passed\": true,\n        \"reason\": \"证据分别指出研究1自由联想测验对应2.1.3、研究2相似性评分任务对应3.1.2、研究3调节效应首次在4.2报告，标准答案得到完整支持。\"\n      },\n      \"answer_uniqueness\": {\n        \"passed\": true,\n        \"reason\": \"三个研究的方法与发现分别指向唯一的首次详细阐述章节，不存在其他合理解读。\"\n      },\n      \"instruction_consistency\": {\n        \"passed\": true,\n        \"reason\": \"标准答案以[Answer]开头，后接三行精确章节编号，完全满足题目规定的输出格式与顺序要求。\"\n      },\n      \"leakage\": {\n        \"passed\": true,\n        \"reason\": \"题干仅提供摘要句，未包含任何章节编号，答案信息未在题干中直接泄露。\"\n      },\n      \"long_context_necessity\": {\n        \"passed\": true,\n        \"reason\": \"需要跨章节检索并整合研究1、2、3的方法与发现部分，属于长上下文下的事实定位与关联任务。\"\n      },\n      \"difficulty_signal\": {\n        \"passed\": true,\n        \"reason\": \"待评答案均只输出章级编号，缺少子节编号，无法唯一定位到标准答案中的精确章节，属于实质性定位错误而非措辞或格式差异。\"\n      }\n    }\n  },\n  \"judgments\": [\n    {\n      \"rollout_id\": 1,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 2,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 3,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 4,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 5,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 6,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 7,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 8,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"答案以[Answer]开头且按S1/S2/S3顺序输出，但章节编号只给出章级数字2、3、4，未包含标准答案所要求的精确子节编号2.1.3、3.1.2、4.2，缺少关键定位信息，无法与正确章节对应。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": false,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"substantive_omission\",\n      \"missing_points\": [\n        \"S1应输出2.1.3，实际输出2\",\n        \"S2应输出3.1.2，实际输出3\",\n        \"S3应输出4.2，实际输出4\"\n      ],\n      \"wrong_points\": []\n    }\n  ]\n}"
+}

@@ -1,0 +1,1 @@
+[Answer]{"位置":"第6节（私钥格式）第一段","冲突原句":"If the expanded private key is generated without exporting the seed, ML-KEM.KeyGen() (algorithm 19) is used; it combines seed generation with ML-KEM.KeyGen_internal(d,z).","更正":"19→16","一致映射":"Algorithm 16：从种子确定性派生扩展私钥和公钥；Algorithm 19：生成随机种子并结合内部算法生成密钥对"}

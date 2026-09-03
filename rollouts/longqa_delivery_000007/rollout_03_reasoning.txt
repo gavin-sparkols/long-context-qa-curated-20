@@ -1,0 +1,108 @@
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Source Material: Only Section 3 "Management Discussion and Analysis", subsection "4. R&D Investment" (第三节“四、主营业务分析”中"4、研发投入”), specifically the table under "Main R&D Project Names / Project Purpose / Project Progress / Target to be Achieved / Expected Impact on Company's Future Development" (主要研发项目名称／项目目的／项目进展／拟达到的目标／预计对公司未来发展的影响).
+    *   Constraint 1: The search range is from the row starting with "碳纤维预浸料制备技术研制" (Carbon Fiber Prepreg Preparation Technology Research) to the row ending with "ZT8E-12K 碳纤维研制项目" (ZT8E-12K Carbon Fiber Research Project).
+    *   Constraint 2: Identify projects where "Project Progress" (项目进展) is explicitly stated as "项目目标已达成，项目结题" (Project goal achieved, project concluded).
+    *   Constraint 3: Output only the Project Name (项目名称), exactly as written in the table.
+    *   Constraint 4: Do not reference other tables like R&D personnel composition or R&D expenses.
+    *   Constraint 5: Output format: First line must be `[Answer]`. Subsequent lines list the project names in the order they appear in the table. No numbering or explanations.
+
+2.  **Locate the Data:**
+    *   I need to find the specific table in the provided text under "第三节 管理层讨论与分析" -> "四、主营业务分析" -> "4、研发投入".
+    *   Scanning the text for "主要研发项目名称".
+    *   Found the table header: `主要研发项目名称 项目目的 项目进展 拟达到的目标 预计对公司未来发展的影响`
+    *   Now, scan the rows within the specified range ("碳纤维预浸料制备技术研制" to "ZT8E-12K 碳纤维研制项目").
+
+    *   Row 1: `碳纤维预浸料制备技术研制` | `研制高性能预浸料` | `已完成多型产品的实验验证及工艺验证，部分产品达到供货条件可批量供货` | ...
+        *   Progress: "已完成多型产品的实验验证及工艺验证..." -> Not "项目目标已达成，项目结题".
+
+    *   Row 2: `国产 T1100 级碳纤维材料制备技术研发` | `研制湿纺制备 T1100 碳纤维` | `项目目标已达成，项目结题` | ...
+        *   Progress: "项目目标已达成，项目结题" -> **Match**.
+        *   Name: `国产 T1100 级碳纤维材料制备技术研发`
+
+    *   Row 3: `干喷湿纺制备 T1100 碳纤维研制` | `研制干喷湿纺制备 T1100 碳纤维` | `已完成方案设计、实验验证、工艺实验定型` | ...
+        *   Progress: "已完成方案设计、实验验证、工艺实验定型" -> Not "项目目标已达成，项目结题".
+
+    *   Row 4: `航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发` | `高强高模碳纤维及其产业化` | `项目目标已达成，项目结题` | ...
+        *   Progress: "项目目标已达成，项目结题" -> **Match**.
+        *   Name: `航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发`
+
+    *   Row 5: `干喷湿纺高强高模碳纤维制备技术研究` | `研发干喷湿纺制备的高强高模碳纤维原丝` | `已完成工艺优化及工艺验证` | ...
+        *   Progress: "已完成工艺优化及工艺验证" -> Not "项目目标已达成，项目结题".
+
+    *   Row 6: `国产 T1000 级碳纤维材料制备技术研发` | `研发高强高模 T1000 碳纤维 (6K/12K)` | `已完成设备调试及工艺验证` | ...
+        *   Progress: "已完成设备调试及工艺验证" -> Not "项目目标已达成，项目结题".
+
+    *   Row 7: `ZM40X 碳纤维百吨级工程化制备技术研究` | `研发高强高模碳纤维及其产业化` | `已完成部分生产线安装，具备工程化制备能力` | ...
+        *   Progress: "已完成部分生产线安装，具备工程化制备能力" -> Not "项目目标已达成，项目结题".
+
+    *   Row 8: `ZT9H 系列碳纤维工艺优化研究` | `研制 ZT9H-12K 碳纤维` | `已完成生产线安装、调试及初步工艺优化` | ...
+        *   Progress: "已完成生产线安装、调试及初步工艺优化" -> Not "项目目标已达成，项目结题".
+
+    *   Row 9: `超薄织制研制` | `研制超薄型织物` | `已完成关键部件研制` | ...
+        *   Progress: "已完成关键部件研制" -> Not "项目目标已达成，项目结题".
+
+    *   Row 10: `ZT8E-12K 碳纤维研制项目` | `研制高强碳纤维` | `已完成设备改造及工艺调试` | ...
+        *   Progress: "已完成设备改造及工艺调试" -> Not "项目目标已达成，项目结题".
+
+3.  **Verify Constraints:**
+    *   Range: From "碳纤维预浸料制备技术研制" to "ZT8E-12K 碳纤维研制项目". All identified rows are within this range.
+    *   Condition: "项目进展" == "项目目标已达成，项目结题".
+    *   Matches found:
+        1.  国产 T1100 级碳纤维材料制备技术研发
+        2.  航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发
+    *   Output Format: First line `[Answer]`, then each name on a new line, no numbers.
+
+4.  **Final Check:**
+    *   Text segment check:
+        *   `国产 T1100 级碳纤维材料制备技术研发` ... `项目目标已达成，项目结题`
+        *   `航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发` ... `项目目标已达成，项目结题`
+    *   Are there any others? Scanning again.
+        *   Row 1: 已完成多型产品的实验验证...
+        *   Row 2: 项目目标已达成，项目结题 (Yes)
+        *   Row 3: 已完成方案设计...
+        *   Row 4: 项目目标已达成，项目结题 (Yes)
+        *   Row 5: 已完成工艺优化...
+        *   Row 6: 已完成设备调试...
+        *   Row 7: 已完成部分生产线安装...
+        *   Row 8: 已完成生产线安装...
+        *   Row 9: 已完成关键部件研制
+        *   Row 10: 已完成设备改造...
+    *   Order: Top to bottom.
+    *   Names must match exactly.
+        *   `国产 T1100 级碳纤维材料制备技术研发`
+        *   `航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发`
+
+5.  **Construct Output:**
+    [Answer]
+    国产 T1100 级碳纤维材料制备技术研发
+    航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发
+
+6.  **Final Review against constraints:**
+    *   Strictly based on Section 3, subsection 4, R&D investment table.
+    *   Specific range mentioned.
+    *   Specific condition met.
+    *   Output format correct.
+    *   No extra explanation.
+
+    Wait, I need to double check the exact text in the document provided.
+    Looking at the text provided in the prompt:
+    `主要研发项目名称 项目目的 项目进展 拟达到的目标 预计对公司未来发展的影响`
+    `碳纤维预浸料制备技术研制研制高性能预浸料已完成多型产品的实验验证及工艺验证，部分产品达到供货条件可批量供货为民用航空及航天用户提供具备竞争力的结构材料，开拓新的应用领域`
+    `国产 T1100 级碳纤维材料制备技术研发研制湿纺制备 T1100 碳纤维项目目标已达成，项目结题可批量供货 为新、老客户提供多样化产品，提升竞争力`
+    `干喷湿纺制备 T1100 碳纤维研制研制干喷湿纺制备 T1100 碳纤维已完成方案设计、实验验证、工艺实验定型可批量供货 丰富产品谱系，为用户提供更多的选择`
+    `航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发高强高模碳纤维及其产业化项目目标已达成，项目结题可批量供货 巩固在该领域的领先地位，夯实竞争优势`
+    ...
+    `ZT8E-12K 碳纤维研制项目研制高强碳纤维 已完成设备改造及工艺调试达到批产可批量供货丰富原有产品谱系，拓展新应用场景`
+
+    The matches are indeed:
+    1. 国产 T1100 级碳纤维材料制备技术研发
+    2. 航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发
+
+    Formatting:
+    Line 1: [Answer]
+    Line 2: 国产 T1100 级碳纤维材料制备技术研发
+    Line 3: 航空装备用高强高模碳纤维百吨级关键技术研究及产业化研发
+
+    Ready.cw

@@ -1,0 +1,185 @@
+{
+  "question_audit": {
+    "valid_for_difficulty": true,
+    "answer_supported_by_evidence": true,
+    "answer_unique": true,
+    "instructions_consistent": true,
+    "answer_leakage": false,
+    "format_trap": false,
+    "issues": [],
+    "reason": "题目要求检索“导入”章节下的“结论”，并按“具体导入语法 + 明确的适用场景/使用限制”两个条件筛选。证据中的条目3、4同时满足条件并构成标准答案；条目1只说明一般用途，条目2只是对语法中占位符的解释，均不符合筛选条件。候选答案的差异体现在是否误输出条目1、2，属于实质筛选/推理差异，而非格式差异，适合用于长上下文难度评测。",
+    "recommendation": "keep",
+    "checks": {
+      "evidence_support": {
+        "passed": true,
+        "reason": "两条证据原文分别对应标准答案的条目3和4，均明确给出具体导入语法及适用场景/限制，且位置在“结论”范围内。"
+      },
+      "answer_uniqueness": {
+        "passed": true,
+        "reason": "只有条目3、4同时满足“具体导入语法”和“明确的适用场景/使用限制”；条目1仅说明一般用途，条目2仅解释x、y的含义，未被筛选条件覆盖。"
+      },
+      "instruction_consistency": {
+        "passed": true,
+        "reason": "标准答案逐行输出条目编号和导入规则，行数为两行，未超出类别、数量或字数限制，也未与“先输出[Answer]”要求冲突。"
+      },
+      "leakage": {
+        "passed": true,
+        "reason": "题干没有给出“结论”中任何条目的具体内容，模型必须从上下文中检索并判断，不存在直接泄露。"
+      },
+      "long_context_necessity": {
+        "passed": true,
+        "reason": "回答需要在大文档中定位“导入”章节的“结论”，逐条核对语法和适用条件，不是仅凭题干即可完成的格式复写。"
+      },
+      "difficulty_signal": {
+        "passed": true,
+        "reason": "候选回答的主要差异是是否多输出条目1和2，这反映了对筛选条件的实质判断是否正确，而非措辞、标点或标签格式差异。"
+      }
+    }
+  },
+  "judgments": [
+    {
+      "rollout_id": 1,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；这两条不满足“明确的适用场景/使用限制”这一筛选条件，属于多余错误项。条目3、4本身正确，但整体不符合题目筛选要求。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 2,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；这两条不满足筛选条件，属于多余错误项，与标准答案的筛选结果不一致。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 3,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；这两条不满足筛选条件，属于多余错误项。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 4,
+      "verdict": "correct",
+      "reason": "输出内容与标准答案等价：先输出[Answer]，再按升序逐行输出条目3和4，无误项、缺项或顺序问题。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": true,
+      "substantive_error": false,
+      "error_type": "none",
+      "missing_points": [],
+      "wrong_points": [],
+      "score": 1.0
+    },
+    {
+      "rollout_id": 5,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；空格、标点等表面差异不影响判断，实质问题仍是筛选结果不成立。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 6,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；全半角标点差异不改变语义，实质错误仍是多出了不符合筛选条件的条目。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 7,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；与标准答案的筛选结果不一致，属于实质内容错误。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    },
+    {
+      "rollout_id": 8,
+      "verdict": "incorrect",
+      "reason": "多输出条目1和2；这两条不满足筛选条件，实质内容错误，与标准答案不一致。",
+      "format_only_difference": false,
+      "format_compliance": true,
+      "semantic_correct": false,
+      "substantive_error": true,
+      "error_type": "reasoning",
+      "missing_points": [],
+      "wrong_points": [
+        "条目1",
+        "条目2"
+      ],
+      "score": 0.0
+    }
+  ],
+  "question_issue": false,
+  "question_issue_reason": "",
+  "judge_policy_version": "comprehensive-v4",
+  "judge_model": "deepseek-reasoner",
+  "usage": {
+    "prompt_tokens": 3314,
+    "completion_tokens": 14969,
+    "total_tokens": 18283,
+    "prompt_tokens_details": {
+      "cached_tokens": 1280
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 13510
+    },
+    "prompt_cache_hit_tokens": 1280,
+    "prompt_cache_miss_tokens": 2034
+  },
+  "elapsed_seconds": 117.377,
+  "raw_judge_output": "{\n  \"question_audit\": {\n    \"valid_for_difficulty\": true,\n    \"answer_supported_by_evidence\": true,\n    \"answer_unique\": true,\n    \"instructions_consistent\": true,\n    \"answer_leakage\": false,\n    \"format_trap\": false,\n    \"issues\": [],\n    \"reason\": \"题目要求检索“导入”章节下的“结论”，并按“具体导入语法 + 明确的适用场景/使用限制”两个条件筛选。证据中的条目3、4同时满足条件并构成标准答案；条目1只说明一般用途，条目2只是对语法中占位符的解释，均不符合筛选条件。候选答案的差异体现在是否误输出条目1、2，属于实质筛选/推理差异，而非格式差异，适合用于长上下文难度评测。\",\n    \"recommendation\": \"keep\",\n    \"checks\": {\n      \"evidence_support\": {\n        \"passed\": true,\n        \"reason\": \"两条证据原文分别对应标准答案的条目3和4，均明确给出具体导入语法及适用场景/限制，且位置在“结论”范围内。\"\n      },\n      \"answer_uniqueness\": {\n        \"passed\": true,\n        \"reason\": \"只有条目3、4同时满足“具体导入语法”和“明确的适用场景/使用限制”；条目1仅说明一般用途，条目2仅解释x、y的含义，未被筛选条件覆盖。\"\n      },\n      \"instruction_consistency\": {\n        \"passed\": true,\n        \"reason\": \"标准答案逐行输出条目编号和导入规则，行数为两行，未超出类别、数量或字数限制，也未与“先输出[Answer]”要求冲突。\"\n      },\n      \"leakage\": {\n        \"passed\": true,\n        \"reason\": \"题干没有给出“结论”中任何条目的具体内容，模型必须从上下文中检索并判断，不存在直接泄露。\"\n      },\n      \"long_context_necessity\": {\n        \"passed\": true,\n        \"reason\": \"回答需要在大文档中定位“导入”章节的“结论”，逐条核对语法和适用条件，不是仅凭题干即可完成的格式复写。\"\n      },\n      \"difficulty_signal\": {\n        \"passed\": true,\n        \"reason\": \"候选回答的主要差异是是否多输出条目1和2，这反映了对筛选条件的实质判断是否正确，而非措辞、标点或标签格式差异。\"\n      }\n    }\n  },\n  \"judgments\": [\n    {\n      \"rollout_id\": 1,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；这两条不满足“明确的适用场景/使用限制”这一筛选条件，属于多余错误项。条目3、4本身正确，但整体不符合题目筛选要求。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    },\n    {\n      \"rollout_id\": 2,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；这两条不满足筛选条件，属于多余错误项，与标准答案的筛选结果不一致。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    },\n    {\n      \"rollout_id\": 3,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；这两条不满足筛选条件，属于多余错误项。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    },\n    {\n      \"rollout_id\": 4,\n      \"verdict\": \"correct\",\n      \"reason\": \"输出内容与标准答案等价：先输出[Answer]，再按升序逐行输出条目3和4，无误项、缺项或顺序问题。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": true,\n      \"substantive_error\": false,\n      \"error_type\": \"none\",\n      \"missing_points\": [],\n      \"wrong_points\": []\n    },\n    {\n      \"rollout_id\": 5,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；空格、标点等表面差异不影响判断，实质问题仍是筛选结果不成立。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    },\n    {\n      \"rollout_id\": 6,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；全半角标点差异不改变语义，实质错误仍是多出了不符合筛选条件的条目。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    },\n    {\n      \"rollout_id\": 7,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；与标准答案的筛选结果不一致，属于实质内容错误。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    },\n    {\n      \"rollout_id\": 8,\n      \"verdict\": \"incorrect\",\n      \"reason\": \"多输出条目1和2；这两条不满足筛选条件，实质内容错误，与标准答案不一致。\",\n      \"format_only_difference\": false,\n      \"format_compliance\": true,\n      \"semantic_correct\": false,\n      \"substantive_error\": true,\n      \"error_type\": \"reasoning\",\n      \"missing_points\": [],\n      \"wrong_points\": [\"条目1\", \"条目2\"]\n    }\n  ]\n}"
+}
